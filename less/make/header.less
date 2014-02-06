@@ -1,314 +1,127 @@
-// Top Banner Ad
-#div-gpt-ad-664089004995786621-1 { 
-	margin:5px auto; 
-}
-// Set some variables that is only used in the main nav
-@secondary-color: #ebebeb;
-
-// Wrapper that contains both the main and secondary navigations
-.top-navigation-wrapper { 
-	.nav { margin-bottom:0; }
-}
-
-// Wrapper containing the main navigaiton
-.main-header {
-	padding:15px 0 10px;
-	border-top:@the-border solid @red;
-	border-bottom:@the-border solid #a4a4a4;
-	.row { position:relative; }
-	.logo {margin-top:67px;}
-	.hdr-sub-ad-01 {
-		margin-top:10px;
+	.navbar-inner {
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
+		background-image: -webkit-linear-gradient(top, #333333, #222222);
+		background-color: #2c2c2c;
+		border:none;
 	}
-	.additional-content {
-		position:absolute;
-		top:-15px;
-		right:0;
-		.subscribe, .search-make, { .pull-left; }
-		.subscribe {
-			> a {
-				margin-right:6px;
-				font-size:16px;
-				text-transform:uppercase;
-				background:@red;
-				color:#fff !important;
-				padding:5px 10px;
-				position:relative;
-				top:4px;
-				.border-bottom-right-radius(5px);
-				.border-bottom-left-radius(5px);
-			}
-			.dropdown-menu {
-				background:#fff;
-				border:1px solid @red;
-				margin-top:4px;
-				min-width:101px;
-				.border-radius(0px);
-				a {
-					color:#0c668d;
-					font-size:16px;
-					font-weight:bold;
-					padding:3px 9px;
-					&:hover {
-						background:transparent;
-						color:@red;
+	li .mc_li {
+		text-decoration: none !important;
+	}
+	.navbar .nav > li.mc_li > a {
+		text-shadow: none;
+		padding: 10px 25px 10px;
+	}
+	.navbar .nav > li.mc_li > a:hover,.navbar .nav > li.mc_li > a.mc_a_active {
+		background-color: #222222;
+		color: #fff;
+		text-decoration: none!important;
+	}
+	.navbar .nav > li.mc_li {
+		font-size: 21px;
+	}
+	&.admin-bar .navbar-fixed-top {
+		top:29px;
+	}
+	header {
+		margin-top:0;
+		margin-bottom:40px;
+		color:#fff;
+		h2 {
+		  font-size:33px;
+		  line-height:45px;
+		  margin-bottom:10px;
+		}
+		h3 {
+		  font-weight:200;
+		  font-size:28px;
+		  line-height:100%;
+		}
+	}
+	&.admin-bar header { 
+		margin-top:40px; 
+	}
+
+	.black-bar {
+	  	background-color: #002641;
+		padding: 5px 0 !important;
+		margin-top: 40px;
+	  .nav {
+	    margin:0px;
+	  }
+	  .nav-inline {
+	    margin:6px 0;
+	    li {
+	      display: block;
+	      float:left;
+	      margin-right:30px;
+	      font-size:18px;
+	      font-weight:bold;
+	      text-transform: uppercase;
+	      a {
+	        color:#fff;
+	      }
+	    }
+	  }
+	  p {
+	    color: @grayLight;
+	    font-size: 18px;
+	    margin-top:6px;
+	    margin-bottom:0px;
+	  }
+	  a {
+	    font-size: 18px;
+	    margin:0;
+	    &:hover {
+	      background-color:transparent !important;
+	      text-decoration:underline !important
+	    }
+	  }
+	  .navbar-inner {
+	    #gradient > .vertical(@navbarBlueBackgroundHighlight, @navbarBlueBackground);
+	    border-color: @navbarBlueBorder;
+	    .border-radius(0px);
+	    border:none;
+	  }
+	  .brand {
+	    text-shadow:0 0 0 transparent;
+	    color:@red !important;
+	    &:hover { text-decoration:none !important; }
+	  }
+	  .nav-collapse {
+	    background: transparent;
+	    .nav > li > a, .dropdown-menu a {
+	      text-shadow:0 0 0 transparent;
+	      color:#fff !important;
+	      &:hover { text-decoration:none !important; }
+	    }
+	  }
+	  .btn-navbar {
+	    .buttonBackground(darken(@navbarBlueBackgroundHighlight, 5%), darken(@navbarBlueBackground, 5%));
+	  }
+	}
+	.navbar.black-bar { 
+		background:transparent; 
+		padding:0; 
+	}
+	#menu-maker-camp-nav {
+		display: table;
+		margin: 5px 5px 5px 0;
+		#menu-item-315883 {
+			.dropdown;
+			&:hover {
+				.sub-menu {
+					.border-radius(0px);
+					box-shadow: 0px;
+					left: -20px;
+					background-color: #002641;
+					display: block;
+					> li > a {
+						color:#fff;
 					}
 				}
 			}
 		}
-		.search-make {
-			float:right;
-			margin:0;
-			input[type="text"] {
-				width:165px;
-				border: none;
-				padding:5px 0 4px 8px;
-				color:#777;
-				.box-shadow(0 0 0 transparent);
-				// &:focus { .box-shadow(0 0 0 transparent); }
-			}
-			input[type="image"] { margin:4px 8px 5px; }
-			&.open {
-				border:@the-border solid @red;
-				border-top:none;
-				.border-bottom-right-radius(5px);
-				.border-bottom-left-radius(5px);
-				input[type="text"] { 
-					padding:3px 0 3px 8px;
-					margin-bottom:0;
-				}
-			}
+		.sub-menu {
+			.dropdown-menu;
 		}
 	}
-}
-.makershed-banner {
-	background:#de231a;
-}
-
-// Wrapper containing the secondary navigation
-.secondary-header {
-	background:@secondary-color;
-	.box-shadow( inset 0 10px 18px -10px #a4a4a4 );
-}
-
-// Global Navigation styles
-.site-navigation {
-	li { .pull-left; }
-	li.dropdown:hover {
-		> ul.dropdown-menu {
-			display:block; // Allows us to use hover on the dropdowns rather than click.
-		}
-	}
-	a, .dropdown-menu a {
-		color:@blue;
-		background:none; 
-		&:hover {
-			color:@blue !important;
-			text-decoration:underline !important;
-			background:none !important;
-		}
-	}
-	.open > a {
-		color:@blue !important;
-		text-decoration:underline !important;
-		background:none !important;
-	}
-	.sub-menu, .dropdown-menu {
-		display:none; // Add this so our subnav doesn't display before the Bootstrap classes are added.
-		border-top:none;
-		.border-radius(2px);
-	}
-}
-
-// Main Navigation styles
-.primary-navigation {
-	font-size:20px !important;
-	font-weight:bold;
-	position:relative;
-	top:92px;
-	ul {
-		> li { 
-			margin-right: 18px;
-			font-size:17px;
-			> a {
-				padding-bottom:3px;
-			}
-		}	
-	}
-	.dropdown-menu {
-		margin-top:0px;
-		font-size:17px !important;
-	}
-}
-
-// Secondary Navigation
-.secondary-navigation {
-	font-size:16px;
-	border-bottom:1px solid lighter(@secondary-color);
-	a { padding:9px; }
-	.first > a { padding-left:0;}
-	.dropdown-menu {
-		background:@secondary-color;
-		margin-top:-1px;
-		border-color:lighter(@secondary-color);
-		li { width:100%; }
-	}
-}
-
-// Popdown Menu
-.make-popdown {
-	position:relative;
-	border-bottom:2px solid #bbb;
-	.box-shadow(0 5px 5px -5px #bbb);
-	.wrapper-container {
-		background:#fff;
-		padding:5px 0;
-		.container { 
-			display:none;
-
-			// Style over rides from HIW pages
-			padding:0;
-			background:transparent;
-		}
-		&.popdown-open {
-			padding:18px 0;
-		}
-	}
-	.side-text {
-		font-size:18px;
-		font-family:@font;
-		color:#252525;
-		a {
-			font-weight:bold;
-			color:#005d8f;
-			font-size:21px;
-			display:block;
-		}
-	}
-	.menu-button {
-		position:absolute;
-		left:50%;
-		bottom:-39px;
-		padding:0;
-		.popdown-btn {
-			cursor:pointer;
-			position:relative;
-			left:-50%;
-			background:url('../img/make-logo-popdown.png') 0px 0px no-repeat;
-			width:423px;
-			height:41px;
-			display:block;
-			&.open { background-position:0px -42px; }
-		}
-	}
-	.border-right { 
-		border-right:2px solid #d7d7d7;
-		min-height:102px;
-	}
-	.menu-bottom {
-		font-weight:bold;
-		padding:9px 0;
-		color:#252525;
-		p, ul {
-			display:inline-block;
-			font-size:18px !important;
-		}
-	}
-	ul.nav {
-		font-family:@font;
-		font-size:14px;
-		margin:0;
-		.clearfix;
-		li { 
-			.pull-left;
-			margin-right:19px;
-			&.last { margin-right:0 !important; }
-		}
-		&.first {
-			margin:0;
-			font-size:21px;
-			li { float:none; }
-			a {
-				display:block;
-				font-weight:bold;
-				line-height:1.62em;
-			}
-		}
-		&.second {
-			font-size:20px;
-			li { float:none; }
-			a { line-height:1.2em; }
-		}
-		&.last {
-			position:relative;
-			top:6px;
-			li {
-				margin:0 5px 0 0;
-				padding:0 5px 0 0;
-				border-right:2px solid #d7d7d7;
-				&.last {
-					margin:0;
-					padding:0;
-					border:none;
-				}
-			}
-		}
-		a:hover {
-			background:transparent;
-		}
-	}
-}
-
-// For now, only run our media queries on the Maker Camp pages as it trys to run on non-responsive pages...
-@media (max-width: 1200px) {
-	body.makercamp .make-popdown {
-		.menu-bottom {
-			p, ul { font-size:17px !important; }
-		}
-	}
-}
-
-@media (max-width: 980px) {
-	body.makercamp .make-popdown {
-		.side-text {
-			font-size:16px;
-			a { font-size:17px; }
-		}
-		.menu-bottom {
-			p, ul { font-size:13px !important; }
-		}
-		ul.nav {
-			&.first {
-				font-size:15px;
-				a { line-height:2.3em; }
-			}
-			&.second {
-				font-size:15px;
-				a { line-height:1.6em; }
-			}
-		}
-	}
-}
-
-@media (max-width: 767px) {
-	body.makercamp .make-popdown {
-		text-align:center;
-		.border-right {
-			border:none;
-			border-bottom:2px solid #b7b7b7;
-			margin:0 0 10px 0;
-			padding:0 0 10px 0;
-		}
-	}
-}
-
-@media (max-width: 540px) {
-	body.makercamp .make-popdown {
-		.menu-bottom {
-			p {
-				margin:0;
-				padding:0;
-			}
-		}
-	}
-}

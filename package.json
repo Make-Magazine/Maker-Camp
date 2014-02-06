@@ -1,6 +1,6 @@
 {
-  "name": "Makeblog",
-  "description": "WordPress Theme for Makezine.com. Package.json is for Grunt JS",
+  "name": "Maker-Camp",
+  "description": "WordPress Theme for Makercamp.com Package.json is for Grunt JS",
   "verison": "2.0",
   "devDependencies": {
     "grunt": "~0.4.2",
