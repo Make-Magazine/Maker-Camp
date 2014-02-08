@@ -7256,10 +7256,13 @@ body.makercamp h3,
 body.makercamp h4,
 body.makercamp h5,
 body.makercamp h6 {
-  margin: 10px 0 !important;
+  margin: 10px 0;
 }
 body.makercamp h3 {
   line-height: 40px;
+}
+body.makercamp p {
+  font-size: 16px;
 }
 body.makercamp iframe {
   max-width: 100%;

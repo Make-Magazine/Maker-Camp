@@ -48,7 +48,7 @@
 				</div>
 			</div>	
 
-			<div class="black-bar hidden-phone">
+<!-- 			<div class="black-bar hidden-phone">
 				<div class="container">
 					<?php
 						// all Navigational items are controlled in Appearance > Menus : Maker Camp Nav
@@ -59,9 +59,9 @@
 						) );
 					?>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="navbar black-bar visible-phone">
+<!-- 			<div class="navbar black-bar visible-phone">
 				<div class="navbar-inner">
 					<div class="container">
 						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -82,6 +82,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</header>
 
