@@ -1,26 +1,22 @@
 <?php 
 
+// Load any VIP requirements
 require_once( WP_CONTENT_DIR . '/themes/vip/plugins/vip-init.php' );
-include_once dirname( __FILE__ ) . '/includes/theme_stuff.php';
 
-// 31. Maker Camp
-include_once dirname( __FILE__ ) . '/includes/maker-camp.php';
+// Load our generic theme functions
+include_once( 'includes/theme_stuff.php' );
 
+// Load the Sessions post type
+include_once( 'post-types/session.php' );
 
-// 37. Maker Camp Map
-include_once dirname( __FILE__ ) . '/includes/google-maps.php';
+// Load the Makers post type
+include_once( 'post-types/maker.php' );
 
+// Load our taxnomies
+include_once( 'taxonomies/camp.php' );
 
-/**
- * Get a volume cover image
- */
-function make_get_cover_image( $number = 37 ) {
-	$url = esc_url( 'http://cdn.makezine.com/make/covers/MAKE_V' . absint( $number ) . '_high.jpg' );
-	return $url;
-}
+// Load Maker Camp functions
+include_once( 'includes/maker-camp.php' );
 
-function make_get_cap_option( $option_name ) {
-	return cheezcap_get_option( $option_name );
-}
-
-?>
+// Load Maker Camp Map
+include_once( 'includes/google-maps.php' );

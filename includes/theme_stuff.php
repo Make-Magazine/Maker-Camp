@@ -21,62 +21,63 @@
 function make_action_after_setup_theme() {
 
 	add_theme_support('post-thumbnails' );
-	add_image_size( 'comment-thumb', 70, 70, true );				// Used in the most commented area of the sidebar.
-	add_image_size( 'attachment-thumb', 75, 75, true ); 			// Maker Faire Sidebar
-	add_image_size( 'shed-thumb', 90, 999, false); 					// Used in Maker Shed homepage widget
-	add_image_size( 'ftms-thumb', 300, 999, false); 				// Used in the From the Maker Shed widget on homepage
-	add_image_size( 'left-rail-home-thumb', 269, 120, true );		// Small blog posts on left rail
-	add_image_size( 'house-ad', 279, 170, true );					// Top right corner of all pages
-	add_image_size( 'small-home-feature-boxes', 285, 144, true );	// Feature boxes on home page.
-	add_image_size( 'new-thumb', 140, 140, true ); 					// Used on Super Pages
-	add_image_size( 'side-thumb', 280, 95, true );					// Used on Super Pages
-	add_image_size( 'archive-thumb', 200, 200, true );				// Used on archives pages
-	add_image_size( 'faire-thumb', 130, 130, true );				// Used on Maker Faire homepage
-	add_image_size( 'volume-thumb', 144, 144, true );				// Used on volume page
-	add_image_size( 'category-thumb', 298, 146, true );				// Used on Category archive pages when in a .span4
-	add_image_size( 'category-thumb-small', 218, 146, true );		// Used on Category archive pages when in a .span3
-	add_image_size( 'related-thumb', 98, 55, true );				// Used on related blocks.
-	add_image_size( 'featured-thumb', 105, 105, true );				// Used on related blocks.
-	add_image_size( 'p1', 301, 400, true );							// Used as the top left featured image on home page.
-	add_image_size( 'p2', 290, 180, true );							// Used as the top right featured images on home page.
-	add_image_size( 'maker-week-home', 620, 400, true );			// Used on Maker Week take over page.
-	add_image_size( 'maker-week-thumb', 145, 110, true );			// Used on Maker Week take over page sidebar.
-	add_image_size( 'search-thumb', 110, 85, true );  				// Used on the Search page
-	add_image_size( 'slideshow-thumb', 620, 400 );  				// Used on the Huff-Po style slideshow
-	add_image_size( 'slideshow-small-thumb', 60, 60, true );  		// Used on the Huff-Po style thumbs
-	add_image_size( 'takeover-featured', 303, 288, true );			// Used on the Takeover design in the Theme Customizer
-	add_image_size( 'takeover-thumb', 283, 144, true );				// Used on the Takeover design in the Theme Customizer
+	// Add Image Sizes here http://codex.wordpress.org/Function_Reference/add_image_size
 
-	/**
-	  * Depracated image sizes.
-	 */
-	// add_image_size( 'super-thumb', 290, 170, true );
-	// add_image_size( 'search-thumb', 100, 100, true );
-	// add_image_size( 'big-thumb', 300, 300, true ); //300 pixels wide (and unlimited height)
-	// add_image_size( 'dotw', 300, 209, true );
-	// add_image_size( 'small-thumb', 50, 50, true );
-	// add_image_size( 'home-biggest', 380, 264, true );
 
 	// Content Width
 	if ( ! isset( $content_width ) )
-		$content_width = 620;
-	// Post Formats
-	add_theme_support( 'post-formats', array( 'gallery', 'aside', 'video' ) );
+		$content_width = 1170; // Max width of the main content
+
 	// Custom Backgrounds
 	add_theme_support( 'custom-background' );
-	//Infinite Scroll!
-	add_theme_support( 'infinite-scroll', array(
-		'container' => 'content',
-	) );
-	add_theme_support( 'automatic-feed-links' );
 
-	if ( array('volume', 'project' ) == get_post_type() ) {
-		remove_action('the_content', 'contextly_linker_widget');
-	}
+	add_theme_support( 'automatic-feed-links' );
 
 }
 add_action( 'after_setup_theme', 'make_action_after_setup_theme' );
 
+/**
+ * Enqueue all scripts and stylesheets.
+ * @return void
+ *
+ * @version  1.1
+ */
+function make_load_resources() {
+	// To ensure CSS files are downloaded in parallel, always include CSS before JavaScript.
+	wp_enqueue_style( 'make-css', get_stylesheet_directory_uri() . '/css/style.css' );
+	wp_enqueue_style( 'make-print', get_stylesheet_directory_uri() . '/css/print.css', array(), false, 'print' );
+
+	// Load our common scripts first. These should not require jQuery
+	wp_enqueue_script( 'make-typekit', 'http://use.typekit.com/fzm8sgx.js', array() );
+	wp_enqueue_script( 'make-common', get_stylesheet_directory_uri() . '/js/common.js', array( 'make-typekit' ) );
+
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'make-bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'make-header', get_stylesheet_directory_uri() . '/js/header.js', array( 'jquery' ), false, true );
+	
+	// display our map sort plugin for Maker Camp
+	if ( is_page( 315793 ) ) // TODO: Update page id to match new page created
+		wp_enqueue_script( 'make-sort-table', get_stylesheet_directory_uri() . '/js/jquery.tablesorter.min.js', array( 'jquery' ), false, true );
+}
+add_action( 'wp_enqueue_scripts', 'make_load_resources' );
+
+
+/**
+ * Enqueue all scripts and stylesheets for the admin area
+ * @return void
+ *
+ * @version 0.1
+ */
+function make_load_admin_resources() {
+	$screen = get_current_screen();
+	
+	// Load our selection script only for Sessions
+	if ( $screen->id === 'session' ) {
+		wp_enqueue_style( 'make-chosen-styles', esc_url( get_stylesheet_directory_uri() . '/css/chosen.min.css' ) );
+		wp_enqueue_script( 'make-chosen-js', esc_url( get_stylesheet_directory_uri() . '/js/libs/chosen.jquery.min.js' ), array( 'jquery' ), '1.1.0', true );
+	}
+}
+add_action( 'admin_enqueue_scripts', 'make_load_admin_resources' );
 
 /**
  * Provides a way to truncate titles
@@ -93,66 +94,6 @@ function make_get_short_title( $length ) {
 
 
 /**
- * A fancy schmancy method to stick a big video in the post area.
- *
- * The goal was to copy what BoingBoing was doing, editors never really got excited about it. Now, deprecated.
- * 
- * @deprecated 	Since January 2013.
- * @param 		$content
- * @return 		string $content with video.
- */
-function make_insert_video($content) {
-	global $wp_query;
-			$postid = $wp_query->post->ID;
-			$big_video = get_post_custom_values('Big_Video');
-				if (isset($big_video[0])) {
-					$content = make_youtube_embed('580','325').$content;
-					return $content;
-					}
-				else {
-					return $content;
-					}
-			$big_gallery = get_post_custom_values('Big_Gallery');
-				if (isset($big_video[0])) {
-					$content = $content.'<div class"gallery"><a href="'.the_permalink().'">Click here</a> to view the full gallery.';
-					return $content;
-					}
-				else {
-					return $content;
-				}
-				
-}
-add_filter('the_excerpt_rss', 'make_insert_video');
-add_filter('the_content_rss', 'make_insert_video');
-//add_filter('the_content_feed', 'make_insert_video');
-
-
-/**
- * Method for cleaning content. 
- *
- * This is some old code that Stefan wrote back in the day.
- * 
- * @deprecated 	Since January 2013.
- * @param 		string $text Text to be cleaned.
- * @return 		string Cleaned text
- */
-function make_richClean($text) {
-	$text = str_replace(
-		array("\xe2\x80\x98", "\xe2\x80\x99", "\xe2\x80\x9c", "\xe2\x80\x9d", "\xe2\x80\x93", "\xe2\x80\x94", "\xe2\x80\xa6"),
-		array("'", "'", '"', '"', '-', '--', '...'),
-	$text);
-
-	// Next, replace their Windows-1252 equivalents.
-	$text = str_replace(
-		array(chr(145), chr(146), chr(147), chr(148), chr(150), chr(151), chr(133)),
-		array("'", "'", '"', '"', '-', '--', '...'),
-	$text);
-	
-	return($text);
-}
-
-add_action('widgets_init', 'make_register_sidebar');
-/**
  * Register the WordPress sidebar to site.
  * 
  */
@@ -160,342 +101,31 @@ function make_register_sidebar() {
 	if( function_exists('register_sidebar')) {
 		register_sidebar( 
 			array(
-				'id'=>'sidebar_top',
-				'name'=>__('Sidebar Top'),
-				'description'=>__('This widget area is at the top of the sidebar, above everything else.' ),
-				'before_widget'=>'<div class="widget">',
-				'after_widget'=>'</div>',
-				'before_title'=>'<h3 class="widget-title">',
-				'after_title'=>'</h3>'
+				'id' => 'sidebar_top',
+				'name' => __( 'Sidebar Top', 'makercamp' ),
+				'description' => __( 'This widget area is at the top of the sidebar, above everything else.', 'makercamp' ),
+				'before_widget' => '<div class="widget">',
+				'after_widget' => '</div>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
 			)
 		);
 		register_sidebar( 
 			array(
-				'id'=>'sidebar_bottom',
-				'name'=>__('Sidebar Bottom'),
-				'description'=>__('This widget area is at the bottom of the sidebar, below everything else.' ),
-				'before_widget'=>'<div class="widget">',
-				'after_widget'=>'</div>',
-				'before_title'=>'<h3 class="widget-title">',
-				'after_title'=>'</h3>'
-			)
-		);
-		register_sidebar( 
-			array(
-				'id'=>'sidebar_weekend_projects',
-				'name'=>__('Weekend Projects Sidebar'),
-				'description'=>__('This widget area is only on the Weekend Projects page.' ),
-				'before_widget'=>'<div class="widget">',
-				'after_widget'=>'</div>',
-				'before_title'=>'<h3 class="widget-title">',
-				'after_title'=>'</h3>'
+				'id' => 'sidebar_bottom',
+				'name' => __( 'Sidebar Bottom', 'makercamp' ),
+				'description' => __( 'This widget area is at the bottom of the sidebar, below everything else.', 'makercamp' ),
+				'before_widget' => '<div class="widget">',
+				'after_widget' => '</div>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
 			)
 		);
 	}
 }
-
-// This bit is added so that we can get a fresher read on the stuff. Notably the Maker Faire feed for live events.
-add_filter( 'wp_feed_cache_transient_lifetime', create_function( '$a', 'return 900;' ) );
+add_action( 'widgets_init', 'make_register_sidebar' );
 
 
-/**
- * Enqueue all scripts and stylesheets.
- * @return void
- *
- * @version  1.1
- */
-function make_load_resources() {
-	// To ensure CSS files are downloaded in parallel, always include CSS before JavaScript.
-	wp_enqueue_style( 'make-css', get_stylesheet_directory_uri() . '/css/style.css' );
-	wp_enqueue_style( 'make-print', get_stylesheet_directory_uri() . '/css/print.css', array(), false, 'print' );
-
-	// Load our takeover default styles when it is enabled
-	if ( get_theme_mod( 'make_enable_takeover' ) === 'on' )
-		wp_enqueue_style( 'make-takeover', get_stylesheet_directory_uri() . '/css/takeover.css' );
-
-	if ( get_theme_mod( 'make_enable_canvas' ) === 'on' )
-		wp_enqueue_style( 'make-takeover', get_stylesheet_directory_uri() . '/css/takeover.css' );
-
-	if ( get_theme_mod( 'make_enable_banner' ) === 'on' )
-		wp_enqueue_style( 'make-takeover', get_stylesheet_directory_uri() . '/css/takeover.css' );
-
-
-	// Load our common scripts first. These should not require jQuery
-	wp_enqueue_script( 'make-typekit', 'http://use.typekit.com/fzm8sgx.js', array() );
-	wp_enqueue_script( 'make-common', get_stylesheet_directory_uri() . '/js/common.js', array( 'make-typekit' ) );
-
-	// Load optimizely A/B testing script
-	wp_enqueue_script( 'make-optimizely', '//cdn.optimizely.com/js/299391107.js', array( 'jquery' ) );
-
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'make-bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), false, true );
-	wp_enqueue_script( 'make-projects', get_stylesheet_directory_uri() . '/js/projects.js', array( 'jquery' ), false, true );
-	wp_enqueue_script( 'make-header', get_stylesheet_directory_uri() . '/js/header.js', array( 'jquery' ), false, true );
-	wp_enqueue_script( 'make-oembed', get_stylesheet_directory_uri() . '/js/jquery.oembed.js', array( 'jquery' ) );
-	
-	// display our map sort plugin for Maker Camp
-	if ( is_page( 315793 ) )
-		wp_enqueue_script( 'make-sort-table', get_stylesheet_directory_uri() . '/js/jquery.tablesorter.min.js', array( 'jquery' ), false, true );
-}
-add_action( 'wp_enqueue_scripts', 'make_load_resources' );
-
-
-/**
- * Adds scripts and styles to particular pages in the admin areas.
- * @return void
- */
-function make_enqueue_resources_admin() {
-	$screen = get_current_screen();
-
-	// Run this code when we are in the magazine dashboard
-	if ( $screen->id == 'volume_page_manager' ) {
-		wp_enqueue_style( 'make-dashboard-css', get_stylesheet_directory_uri() . '/includes/magazine-dashboard/css/dashboard.css' );
-
-		wp_enqueue_script( 'make-sort-table', get_stylesheet_directory_uri() . '/js/jquery.tablesorter.min.js', array( 'jquery' ) );
-		wp_enqueue_script( 'make-dashboard', get_stylesheet_directory_uri() . '/includes/magazine-dashboard/js/dashboard-scripts.js', array( 'make-sort-table' ) );
-	}
-
-	// Run this code when we are in the magazine edit screen
-	if ( $screen->id == 'magazine' ) {
-		wp_enqueue_script( 'make-hide-publish-btn', get_stylesheet_directory_uri() . '/js/jquery.hide-publish-btn.js', array( 'jquery' ), '1.0', true );
-	}
-
-}
-add_action( 'admin_enqueue_scripts', 'make_enqueue_resources_admin' );
-
-
-/**
- * Catch a description for the OG protocol
- * 
- * @deprecated 	Since January 2013.
- * @param 		string $post->post_content to be trimmed, stripped, and shortened.
- * @return 		string Cleansed text.
- */
-function make_catch_that_desc() {
-	global $post;
-	$meta = trim( strip_tags( strip_shortcodes( $post->post_content )));
-	$meta = wp_trim_words( $meta,  25,  '…' );
-	return($meta);
-}
-
-/**
- * List all Makers that are associated with the post.
- * 
- * @deprecated 	Since January 2013.
- * @return 		string List of Makers
- */
-function make_makers() {
-	
-	$terms = get_the_terms(get_the_ID(), 'maker');
-	$count = count($terms);
-		if($terms > 0) {
-			
-			echo '<hr>';
-			echo '<h4>Makers in this post:</h4>';
-			the_terms( get_the_ID(), 'maker');
-			$location = get_the_terms(get_the_ID(), 'maker');
-			$count = count($location);
-			if($location > 0) {
-				echo ' &#150; ';
-				the_terms( get_the_ID(), 'location');
-			}
-		}
-}
-
-/**
- * List all Makers that are associated with the post.
- * 
- * Grabs the feed of featured products, randomizes it, and then spits out the products at the bottom of blog posts and archive pages.
- * @return 	string HTML for featured products.
- */
-function make_featured_products() {
-
-	$url = 'http://makershed.com/net/webservice.aspx?api_name=generic\featured_products';
-	$xml = wpcom_vip_file_get_contents( $url, 3, 60*60,  array( 'obey_cache_control_header' => false ) );
-
-	if ( ! $xml )
-		return;
-
-	$simpleXmlElem = simplexml_load_string( $xml );
-	if ( ! $simpleXmlElem )
-		return;
-
-	$products = $simpleXmlElem->Product;
-	$products_count = count($products);
-	if ($products_count > 8) {
-		$input = range(1,$products_count);
-		$arr = array_rand($input, 4);
-	} else {
-		$input = range(1,8);
-		$arr = array_rand($input, 4);
-	}
-
-
-?>
-<div class="clearfix"></div>
-<div class="features well">
-
-<h3>In the <a href="http://www.makershed.com/?Click=107309">Maker Shed</a></h3>
-
-<?php if (isset($products[$arr[0]])) { ?>
-
-	<div class="twenty-five">
-
-	<a href="http://www.makershed.com/ProductDetails.asp?&Click=107309&ProductCode=<?php echo $products[$arr[0]]->ProductCode; ?>">
-		<?php 
-			if ( function_exists( 'wpcom_vip_get_resized_remote_image_url' ) ) {
-				echo '<img src="' . wpcom_vip_get_resized_remote_image_url( $products[$arr[0]]->PhotoURL, 115, 115 ) . '" alt="'. $products[$arr[0]]->ProductName.'" />';
-			} else {
-				echo '<img src="'.$products[$arr[0]]->PhotoURL.'" alt="'. $products[$arr[0]]->ProductName.'" class="small-thumb"/>';
-			}
-		?>
-	</a>
-	
-	<div class="clear"></div>
-	
-	<div class="blurb">
-	
-		<h4><a href="http://www.makershed.com/ProductDetails.asp?&Click=107309&ProductCode=<?php echo $products[$arr[0]]->ProductCode; ?>"><?php echo $products[$arr[0]]->ProductName; ?></a></h4>
-	
-	</div>
-	
-	</div>
-
-<?php } ?>
-
-<?php if (isset($products[$arr[1]])) { ?>
-
-<div class="twenty-five">
-
-	<a href="http://www.makershed.com/ProductDetails.asp?&Click=107309&ProductCode=<?php echo $products[$arr[1]]->ProductCode; ?>">
-		<?php 
-			if ( function_exists( 'wpcom_vip_get_resized_remote_image_url' ) ) {
-				echo '<img src="' . wpcom_vip_get_resized_remote_image_url( $products[$arr[1]]->PhotoURL, 115, 115 ) . '" alt="'. $products[$arr[1]]->ProductName.'" />';
-			} else {
-				echo '<img src="'.$products[$arr[1]]->PhotoURL.'" alt="'. $products[$arr[1]]->ProductName.'" class="small-thumb"/>';
-			}
-		?>
-	</a>
-	
-<div class="clear"></div>
-
-<div class="blurb">
-
-	<h4><a href="http://www.makershed.com/ProductDetails.asp?&Click=107309&ProductCode=<?php echo $products[$arr[1]]->ProductCode; ?>"><?php echo $products[$arr[1]]->ProductName; ?></a></h4>
-
-</div>
-
-</div>
-
-<?php } ?>
-
-<?php if (isset($products[$arr[2]])) { ?>
-
-	<div class="twenty-five">
-	
-	<a href="http://www.makershed.com/ProductDetails.asp?&Click=107309&ProductCode=<?php echo $products[$arr[2]]->ProductCode; ?>">
-		<?php 
-			if ( function_exists( 'wpcom_vip_get_resized_remote_image_url' ) ) {
-				echo '<img src="' . wpcom_vip_get_resized_remote_image_url( $products[$arr[2]]->PhotoURL, 115, 115) . '" alt="'. $products[$arr[2]]->ProductName.'" />';
-			} else {
-				echo '<img src="'.$products[$arr[2]]->PhotoURL.'" alt="'. $products[$arr[2]]->ProductName.'" class="small-thumb"/>';
-			}
-		?>
-	</a>
-	
-	<div class="clear"></div>
-	
-	<div class="blurb">
-	
-		<h4><a href="http://www.makershed.com/ProductDetails.asp?&Click=107309&ProductCode=<?php echo $products[$arr[2]]->ProductCode; ?>"><?php echo $products[$arr[2]]->ProductName; ?></a></h4>
-		
-	</div>
-	
-	</div>
-	
-<?php } ?>
-
-<?php if (isset($products[$arr[3]])) { ?>
-
-<div class="twenty-five">
-
-	<a href="http://www.makershed.com/ProductDetails.asp?&Click=107309&ProductCode=<?php echo $products[$arr[3]]->ProductCode; ?>">
-		<?php 
-			if ( function_exists( 'wpcom_vip_get_resized_remote_image_url' ) ) {
-				echo '<img src="' . wpcom_vip_get_resized_remote_image_url( $products[$arr[3]]->PhotoURL, 115, 115 ) . '" alt="'. $products[$arr[2]]->ProductName.'" />';
-			} else {
-				echo '<img src="'.$products[$arr[3]]->PhotoURL.'" alt="'. $products[$arr[3]]->ProductName.'" class="small-thumb"/>';
-			}
-		?>
-	</a>
-	
-<div class="clear"></div>
-
-<div class="blurb">
-
-	<h4><a href="http://www.makershed.com/ProductDetails.asp?&Click=107309&ProductCode=<?php echo $products[$arr[3]]->ProductCode; ?>"><?php echo $products[$arr[3]]->ProductName; ?></a></h4>
-	
-</div>
-
-</div>
-
-<?php } ?>
-
-<div class="clear"></div>
-
-</div>
-
-<div class="clear"></div>
-
-<?php }
-
-
-
-/**
- * Send iTunes requests to a specific feed
- */
-function itunes_feed() {
-	if( is_feed() && is_category('make_podcast')) {
-		include(TEMPLATEPATH . '/feed-rss2-itunes.php' );
-		exit;
-	}
-}
-
-add_action('template_redirect', 'itunes_feed');
-
-add_action('pre_get_posts', 'make_mf_remove_tag_from_home' );
-
-/**
- * Take Maker Faire posts that don't have MF tag, and remove from the main query.
- * @param $query
- */
-function make_mf_remove_tag_from_home( $query ) {
-
-	// only impact the main WordPress query and if on homepage or feed
-	if( $query->is_main_query() && ( $query->is_home() || $query->is_feed() ) ) {
-		$query->set( 'tag__not_in', array( 5183, 22815, 9947 ) );
-	}
-}
-
-/**
- * Truncate the excerpt to 50 charecters.
- */
-function make_custom_excerpt_length( $length ) {
-	return 50;
-}
-add_filter( 'excerpt_length', 'make_custom_excerpt_length', 999 );
-
-add_action( 'infinite_scroll_render', 'make_infinite_scroll_render' );
-
-/**
- * Function to enable unlimited scroll.
- * @deprecated Since January 2013
- */
-function make_infinite_scroll_render() {
-	while ( have_posts() ) : the_post();
-		get_template_part( 'content' );
-	endwhile;
-}
 /**
  * Get the first category name of a post.
  * This take the category name, strips out content (spaces, &, and) and then returns.
@@ -524,6 +154,8 @@ function make_get_category_name() {
 	}
 	return $output;
 }
+
+
 /**
  * Get the first category name of a post.
  * This take the category name, strips out content (spaces, &, and) and then returns.
@@ -545,39 +177,6 @@ function make_get_category_name_strip_slash() {
 	}
 }
 
-/**
- * Add different content types to the main queries.
- * This will bring posts, craft, projects, video into the main query. Allows for better archive pages.
- * @return string Main category name.
- */
-function make_add_custom_types( $query ) {
-	if ( ! is_admin() && $query->is_main_query() && ( $query->is_tag() || $query->is_author() || $query->is_tax() || $query->is_home() ) && empty( $query->query_vars['suppress_filters'] ) ) {
-
-		// don't load craft posts on the home.php
-		if ( is_home() ) {
-			$query->set( 'post_type', array( 'post', 'projects', 'video', 'review', 'magazine' ) );
-		} else {
-			$query->set( 'post_type', array( 'post', 'craft', 'projects', 'video', 'review', 'magazine' ) );
-		}
-		
-		return $query;
-	}
-}
-add_filter( 'pre_get_posts', 'make_add_custom_types' );
-
-/**
- * Change the default look to be by added date for admin pages.
- */
-function make_set_default_sort( $query ) {
-	if ( is_admin() && $query->is_main_query() && empty( $query->query_vars['suppress_filters'] ) ) {
-		$query->set( 'orderby', 'date' );
-		$query->set( 'order', 'DESC' );
-		return $query;
-	}
-}
-add_filter( 'pre_get_posts', 'make_set_default_sort' );
-
-add_filter( 'byline_auto_filter_author', '__return_true' );
 
 /**
  * Tests if any of a post's assigned categories are descendants of target categories
@@ -686,23 +285,8 @@ function make_qualtrics_script() {
 	<!--END QUALTRICS POPUP-->
 	<?php endif;
 }
-
 add_action( 'wp_footer', 'make_qualtrics_script' );
 
-/**
- * Adds the popover javascript for review posts.
- */
-function make_add_popover() {
-	if ('review' == get_post_type()) { ?>
-			<script type="text/javascript">
-				jQuery(document).ready(function(){
-					jQuery(".define").popover();
-				});
-			</script>
-	<?php }
-}
-
-add_action('wp_footer', 'make_add_popover' );
 
 /**
  * Removes the thumbnail class from the homepages of Craft and make.
@@ -782,103 +366,6 @@ function add_magazine_article_counts() {
 
 add_action('right_now_content_table_end', 'add_craft_article_counts');
 
-/**
- * Counts the craft numbers for the Dashboard.
- */
-function add_craft_article_counts() {
-		if (!post_type_exists('craft')) {
-			 return;
-		}
-
-		$num_posts = wp_count_posts( 'craft' );
-		$num = number_format_i18n( $num_posts->publish );
-		$text = _n( 'Craft Post', 'Craft Posts', intval($num_posts->publish) );
-		if ( current_user_can( 'edit_posts' ) ) {
-			$url = admin_url( 'edit.php?post_type=craft' );
-			$num = '<a href="'.$url.'">'.$num.'</a>';
-			$text = '<a href="'.$url.'">'.$text.'</a>';
-		}
-		echo '<td class="first b b-craft">' . $num . '</td>';
-		echo '<td class="t craft">' . $text . '</td>';
-
-		echo '</tr>';
-
-		if ($num_posts->pending > 0) {
-			$num = number_format_i18n( $num_posts->pending );
-			$text = _n( 'Craft Posts Pending', 'Craft Posts Pending', intval($num_posts->pending) );
-			if ( current_user_can( 'edit_posts' ) ) {
-				$url = admin_url( 'edit.php?post_status=pending&post_type=craft' );
-				$num = '<a href="'.$url.'">'.$num.'</a>';
-				$text = '<a href="'.$url.'">'.$text.'</a>';
-			}
-			echo '<td class="first b b-craft">' . $num . '</td>';
-			echo '<td class="t craft">' . $text . '</td>';
-
-			echo '</tr>';
-		}
-}
-
-add_action('right_now_content_table_end', 'add_page_2_article_counts');
-
-/**
- * Counts the Page: 2 numbers for the Dashboard.
- */
-function add_page_2_article_counts() {
-		if (!post_type_exists('page_2')) {
-			 return;
-		}
-
-		$num_posts = wp_count_posts( 'page_2' );
-		$num = number_format_i18n( $num_posts->publish );
-		$text = _n( 'Page:2 Post', 'Page: 2 Posts', intval($num_posts->publish) );
-		if ( current_user_can( 'edit_posts' ) ) {
-			$url = admin_url( 'edit.php?post_type=page_2' );
-			$num = '<a href="'.$url.'">'.$num.'</a>';
-			$text = '<a href="'.$url.'">'.$text.'</a>';
-		}
-		echo '<td class="first b b-page_2">' . $num . '</td>';
-		echo '<td class="t page_2">' . $text . '</td>';
-
-		echo '</tr>';
-
-		if ($num_posts->pending > 0) {
-			$num = number_format_i18n( $num_posts->pending );
-			$text = _n( 'Page: 2 Pending', 'Page: 2 Posts Pending', intval($num_posts->pending) );
-			if ( current_user_can( 'edit_posts' ) ) {
-				$url = admin_url( 'edit.php?post_status=pending&post_type=page_2' );
-				$num = '<a href="'.$url.'">'.$num.'</a>';
-				$text = '<a href="'.$url.'">'.$text.'</a>';	
-			}
-			echo '<td class="first b b-page_2">' . $num . '</td>';
-			echo '<td class="t b-page_2">' . $text . '</td>';
-
-			echo '</tr>';
-		}
-}
-
-/**
- * Creates a dropdown of child categories.
- * @deprecated Since January 2013.
- */
-function make_cat_change() {
-
-	if (is_category()) { ?>
-
-		<script type="text/javascript">
-			var dropdown = document.getElementById("cat");
-			function onCatChange() {
-				if ( dropdown.options[dropdown.selectedIndex].value > 0 ) {
-					location.href = "<?php echo get_option('home'); ?>/?cat="+dropdown.options[dropdown.selectedIndex].value;
-				}
-			}
-			dropdown.onchange = onCatChange;
-		</script>
-
-<?php } 
-
-}
-
-//add_action('wp_footer', 'make_cat_change');
 
 /**
  * Takes popular tags, and renames them.
@@ -947,28 +434,6 @@ function make_get_better_tag_title( $title = null ) {
 
 }
 
-/**
- * For projects or reviews, filter the title to say New {post_type}: title
- */
-function make_projects_title_change( $title ) {
-	global $post;
-	switch ( get_post_type() ) {
-		case 'projects':
-			$title = 'New Project: ' . $title;
-			break;
-		
-		case 'review':
-			$title = 'New Review: ' . $title;
-			break;
-
-		default:
-			$title;
-			break;
-	}
-	return $title;
-}
-
-add_filter( 'the_title_rss', 'make_projects_title_change' );
 
 /**
  * Adds the post thumbnail to the RSS feed.
@@ -986,44 +451,6 @@ add_filter('the_excerpt_rss', 'make_rss_post_thumbnail');
 add_filter('the_content_feed', 'make_rss_post_thumbnail');
 
 
-//add_filter( 'the_content', 'make_add_sharing_to_content_top' ); 
-
-/**
- * Adds the WordPress.com sharing bar to the top of posts.
- */
-function make_add_sharing_to_content_top( $content ) {
-
-	if ( ('post' == get_post_type()) && function_exists( 'sharing_display') )
-		$content = sharing_display() . $content;
-		return $content; 
-}
-
-/**
- * Add category nicenames in body and post class
- * @deprecated Since January 2013
- */
-function make_category_id_class($classes) {
-	foreach((get_the_category( get_the_ID() )) as $category)
-		$classes[] = $category->category_nicename;
-	return $classes;
-}
-//add_filter('post_class', 'make_category_id_class');
-//add_filter('body_class', 'make_category_id_class');
-
-/**
- * Adds a View All link to the slideshow.
- */
-function make_vapp_the_link( $link_text = 'View All', $class = 'vapp' ) {
-	$url = vapp_get_url( get_the_ID() );
-
-	if ( $url ) {
-		$link = '<a ' . ( $class ? 'class="' . esc_attr( $class ) . '"' : '' ) . ' href="' . esc_url( $url ) . '">' . esc_html( $link_text ) . '</a>';
-
-		return $link;
-	}
-}
-
-add_action( 'admin_head', 'make_cpt_icons' );
 /**
  * Adds icons for the custom post types that are in the admin.
  */
