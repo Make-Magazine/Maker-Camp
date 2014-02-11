@@ -8,7 +8,7 @@
  * 
  */
 ?>
-			<section id="footer" class="white-bg new-footer">
+			<footer class="white-bg new-footer">
 				<div class="container">
 					<div class="row">
 						<div class="span12 logo">	
@@ -122,7 +122,7 @@
 					<?php echo make_copyright_footer(); ?>
 				<!-- END container -->
 				</div>
-			</section>	
+			</footer>	
 			
 		</div> <!-- /container -->
 
