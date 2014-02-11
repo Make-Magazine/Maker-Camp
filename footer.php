@@ -10,7 +10,7 @@
 ?>
 			<footer class="white-bg new-footer">
 				<div class="container">
-					<div class="row">
+					<div class="row-fluid hidden-phone">
 						<div class="span12 logo">	
 							<img class="footer_logo" src="<?php bloginfo('stylesheet_directory'); ?>/img/make-logo.png" alt="MAKE">	
 							<a href="http://make-digital.com/" target="_blank"><div class="sprite sprite-digital-book-foot"></div></a>
@@ -22,7 +22,7 @@
 						<div class="clear"></div>
 					<!-- END row -->
 					</div>
-					<div class="row">
+					<div class="row-fluid">
 						<div class="span3 trending">
 							<h5>Maker Camp Resources</h5>
 								<ul>
@@ -69,7 +69,7 @@
 						</div>
 						<div class="span3 about-us hidden-phone">
 							<h5>About <a href="http://makermedia.com" target="_blank">Maker Media</a></h5>
-							<div class="row">
+							<div class="row-fluid">
 								<div class="span">
 								<div class="about-column-01">
 									<ul>
@@ -110,7 +110,7 @@
 						<div class="span3 subscribe hidden-phone">
 							<div class="sprite sprite-arrow-footer"></div>
 							<a href="https://readerservices.makezine.com/mk/subscribe.aspx?PC=MK&amp;PK=M**NEWB" target="_blank">
-								<img src="<?php echo wpcom_vip_get_resized_remote_image_url( make_get_cover_image(), '128', '181' ); ?>" alt="MAKE Magazine Drones" width="128" height="181" id="mag-cover" class="pull-right">
+								<img src="http://vip.dev/wp-content/uploads/sites/5/2014/02/MAKE_V37_high.jpg" alt="MAKE Magazine Drones" width="128" height="181" id="mag-cover" class="pull-right">
 							</a>
 							<h5>Subscribe<br> to MAKE!</h5>
 							<p>Get the print and digital versions when you subscribe</p>

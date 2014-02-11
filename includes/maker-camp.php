@@ -226,3 +226,126 @@
 		}
 	}
 	add_shortcode( 'maker-camp-project-materials', 'make_mc_project_schedule_materials' );
+
+/**
+ * Maker Camp Register Summer Program Google Form
+ */
+function make_makercamp_register_summer_program_gf() {
+	$output = '<script type="text/javascript">var submitted=false;</script>';
+	$output = '<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location="' . home_url() . '/maker-camp/thank-you/";}"></iframe>
+ <form action="https://docs.google.com/spreadsheet/formResponse?formkey=dGJINmxpaVdpWEk2c0pBY1JuNTY5RlE6MQ" method="post" target="_blank" onsubmit="submitted=true;">
+    <br>
+    <div class="errorbox-good">
+       <div class="ss-item ss-item-required ss-text">
+          <div class="ss-form-entry">
+             <label class="ss-q-title" for="entry_0">Program Name</label> <input type="text" name="entry.0.single" value="" class="ss-q-short" id="entry_0">
+          </div>
+       </div>
+    </div>
+    <br>
+    <div class="errorbox-good">
+       <div class="ss-item ss-item-required ss-text">
+          <div class="ss-form-entry">
+             <label class="ss-q-title" for="entry_10">Organization Name</label> <input type="text" name="entry.10.single" value="" class="ss-q-short" id="entry_10">
+          </div>
+       </div>
+    </div>
+    <br>
+    <div class="errorbox-good">
+       <div class="ss-item ss-item-required ss-text">
+          <div class="ss-form-entry">
+             <label class="ss-q-title" for="entry_11">Program Description (25 words or less)</label>
+             <textarea type="text" name="entry.11.single" value="" class="ss-q-short" id="entry_11" rows="4"></textarea>
+             <div style="clear:both;"></div>
+          </div>
+       </div>
+    </div>
+    <br> 
+    <div class="errorbox-good">
+       <div class="ss-item ss-item-required ss-text">
+          <div class="ss-form-entry">
+             <label class="ss-q-title" for="entry_1">Program Google+ Link<span class="ss-required-asterisk"> (optional)</span></label> <input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1">
+          </div>
+       </div>
+    </div>
+    <br>
+    <div class="errorbox-good">
+       <div class="ss-item ss-item-required ss-text">
+          <div class="ss-form-entry">
+             <label class="ss-q-title" for="entry_5">Contact Name</label> <input type="text" name="entry.5.single" value="" class="ss-q-short" id="entry_5">
+          </div>
+       </div>
+    </div>
+    <br>
+    <div class="errorbox-good">
+       <div class="ss-item ss-item-required ss-text">
+          <div class="ss-form-entry">
+             <label class="ss-q-title" for="entry_7">Email Address</label> <input type="text" name="entry.7.single" value="" class="ss-q-short" id="entry_7">
+          </div>
+       </div>
+    </div>
+    <br>
+    <div class="errorbox-good">
+       <div class="ss-item ss-item-required ss-text">
+          <div class="ss-form-entry">
+             <label class="ss-q-title" for="entry_2">City <span class="ss-required-asterisk"></span></label><input type="text" name="entry.2.single" value="" class="ss-q-short" id="entry_2">
+          </div>
+       </div>
+    </div>
+    <br>
+    <div class="errorbox-good">
+       <div class="ss-item ss-item-required ss-text">
+          <div class="ss-form-entry">
+             <label class="ss-q-title" for="entry_3">State <span class="ss-required-asterisk"></span></label> <input type="text" name="entry.3.single" value="" class="ss-q-short" id="entry_3">
+          </div>
+       </div>
+    </div>
+    <br>
+    <div class="errorbox-good">
+       <div class="ss-item ss-item-required ss-text">
+          <div class="ss-form-entry">
+             <label class="ss-q-title" for="entry_4">Zipcode <span class="ss-required-asterisk"></span></label> <input type="text" name="entry.4.single" value="" class="ss-q-short" id="entry_4">
+          </div>
+       </div>
+    </div>
+    <br>
+    <div class="errorbox-good">
+       <div class="ss-item ss-text">
+          <div class="ss-form-entry">
+             <label class="ss-q-title" for="entry_6">Phone <span class="ss-required-asterisk">(optional)</span></label> <input type="text" name="entry.6.single" value="" class="ss-q-short" id="entry_6">
+          </div>
+       </div>
+    </div>
+    <br>
+    <input type="hidden" name="pageNumber" value="0"> <input type="hidden" name="backupCache" value="">
+    <div class="ss-item ss-navigate">
+       <div class="ss-form-entry">
+          <input class="button" type="submit" name="Submit" value="Register Your Program">
+       </div>
+    </div>
+</form>
+     <script type="text/javascript">
+        (function() {
+        var divs = document.getElementById(\'ss-form\').getElementsByTagName(\'div\');
+        var numDivs = divs.length;
+        for (var j = 0; j < numDivs; j++) {
+        	if (divs[j].className == \'errorbox-bad\') {
+        	divs[j].lastChild.firstChild.lastChild.focus();
+        	return;
+        }
+        }
+        for (var i = 0; i < numDivs; i++) {
+        var div = divs[i];
+        if (div.className == \'ss-form-entry\' &&
+        div.firstChild &&
+        div.firstChild.className == \'ss-q-title\') {
+        div.lastChild.focus();
+        return;
+        }
+        }
+        })();
+     </script>';
+
+     return $output;
+}
+add_shortcode('makercamp_register_summer_program_form', 'make_makercamp_register_summer_program_gf' );

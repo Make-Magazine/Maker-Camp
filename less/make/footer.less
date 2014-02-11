@@ -1,78 +1,31 @@
-	footer {
-        a {
-            font-size: 16px;
-        }
-		&.white-bg {
-			margin:0;
-		}
-		h3 {
-			display:inline-block;
-		}
-		.g-plus {
-			margin-top:10px;
-		}
-		.nav-list {
-			margin-bottom:20px;
-			list-style:none;
-			li { float:left; margin-right:49px; 
-				&.last { margin-right:0; }
-			}
+footer {
+    padding:80px;
+    a {
+        font-size: 16px;
+    }
+    .white-bg {
+		margin:0;
+	}
+	h3 {
+		display:inline-block;
+	}
+	.g-plus {
+		margin-top:10px;
+	}
+	.nav-list {
+		margin-bottom:20px;
+		list-style:none;
+		li { 
+            float:left; margin-right:49px; 
+	   	    &.last { margin-right:0; 
+            }
 		}
 	}
+    .white-bg {
+        padding: 0px;
+    }
+}
 
-	.new-footer {
-		.trending, .newsletter, .about-us, .subscribe {
-    		padding-top:0px;
-		}
-		.subscribe {
-			p {
-				line-height: 24px;
-				width: 130px;
-				margin-bottom: 11px;
-			}
-			h5 {
-				color:#F60B29;
-				margin-top:-15px !important;
-			}
-			hr {
-				border: none;
-				background-color: #F60B29;
-				color: #F60B29;
-				height: 7px;
-				margin-right:5px;
-			}
-			#mag-cover {
-				margin-top: -45px;
-			}
-			.sprite-arrow-footer {
-				margin: -20px 0 10px -10px !important;
-			}
-		}
-		a, .new-footer a:visited {
-		    color: #005D8F !important;
-		    }
-		p {
-			color:#333;
-			font-weight: bold;
-			padding-right: 3px;
-			}
-		h5 {
-			font-size:16px;
-			font-weight:bold;
-			text-transform:none;
-			color:#333;
-			margin-bottom: 0 !important;
-		}
-		.about-column-01{
-		width: 90px;
-		float: left;
-		}
-		.about-column-02{
-		width: 130px;
-		float: left;
-		margin-left: 0;	
-		}  
-	}
 .new-footer {
     background-color:transparent;
     width:100%;
@@ -89,6 +42,57 @@
     label.checkbox {
         font-weight:bold;
     }
+        .trending, .newsletter, .about-us, .subscribe {
+            padding-top:0px;
+        }
+        .subscribe {
+            p {
+                line-height: 24px;
+                width: 130px;
+                margin-bottom: 11px;
+            }
+            h5 {
+                color:#F60B29;
+                margin-top:-15px !important;
+            }
+            hr {
+                border: none;
+                background-color: #F60B29;
+                color: #F60B29;
+                height: 7px;
+                margin-right:5px;
+            }
+            #mag-cover {
+                margin-top: -45px;
+            }
+            .sprite-arrow-footer {
+                margin: -20px 0 10px -10px !important;
+            }
+        }
+        a, .new-footer a:visited {
+            color: #005D8F !important;
+            }
+        p {
+            color:#333;
+            font-weight: bold;
+            padding-right: 3px;
+            }
+        h5 {
+            font-size:16px;
+            font-weight:bold;
+            text-transform:none;
+            color:#333;
+            margin-bottom: 0 !important;
+        }
+        .about-column-01{
+        width: 90px;
+        float: left;
+        }
+        .about-column-02{
+        width: 130px;
+        float: left;
+        margin-left: 0; 
+        }  
     .about-column-01 {
         width: 90px;
         float:left;
@@ -149,6 +153,9 @@
         font-family: "proxima-nova", sans-serif;
         font-size: 16px;
         font-weight: bold;
+        a {
+            font-size:20px;
+        }
     }
     .clearfix {
         clear:both;
@@ -185,11 +192,9 @@
             width: 128px;
             float: right;
             border: 1px solid #ccc;
-            margin-top: -20px;
         }
     }
     .container {
-        width: 940px;
         margin: 0 auto;
         text-align: left;
         ul {
