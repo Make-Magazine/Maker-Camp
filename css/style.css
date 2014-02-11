@@ -7980,6 +7980,8 @@ footer .white-bg {
 .new-footer .email-area #appendedInputButton {
   border-radius: 0;
   height: 16px;
+  width: 90%;
+  margin-right: 5px;
 }
 .new-footer .email-area controls {
   width: 130px;
