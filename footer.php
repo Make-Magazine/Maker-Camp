@@ -8,9 +8,9 @@
  * 
  */
 ?>
-			<section id="footer" class="white-bg new-footer">
+			<footer class="white-bg new-footer">
 				<div class="container">
-					<div class="row">
+					<div class="row-fluid hidden-phone">
 						<div class="span12 logo">	
 							<img class="footer_logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/make-logo.png' ); ?>" alt="MAKE">	
 							<a href="http://make-digital.com/" target="_blank"><div class="sprite sprite-digital-book-foot"></div></a>
@@ -22,7 +22,7 @@
 						<div class="clear"></div>
 					<!-- END row -->
 					</div>
-					<div class="row">
+					<div class="row-fluid">
 						<div class="span3 trending">
 							<h5>Maker Camp Resources</h5>
 								<ul>
@@ -69,7 +69,7 @@
 						</div>
 						<div class="span3 about-us hidden-phone">
 							<h5>About <a href="http://makermedia.com" target="_blank">Maker Media</a></h5>
-							<div class="row">
+							<div class="row-fluid">
 								<div class="span">
 								<div class="about-column-01">
 									<ul>
@@ -122,7 +122,7 @@
 					<?php echo make_copyright_footer(); ?>
 				<!-- END container -->
 				</div>
-			</section>	
+			</footer>	
 			
 		</div> <!-- /container -->
 
