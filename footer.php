@@ -12,7 +12,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="span12 logo">	
-							<img class="footer_logo" src="<?php bloginfo('stylesheet_directory'); ?>/img/make-logo.png" alt="MAKE">	
+							<img class="footer_logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/make-logo.png' ); ?>" alt="MAKE">	
 							<a href="http://make-digital.com/" target="_blank"><div class="sprite sprite-digital-book-foot"></div></a>
 							<h5><a href="http://make-digital.com/" target="_blank">Read Digital Edition</a></h5>
 							<a href="http://www.makershed.com/" target="_blank"><div class="sprite sprite-makershed_footer1"></div></a> 
@@ -73,7 +73,7 @@
 								<div class="span">
 								<div class="about-column-01">
 									<ul>
-										<li><a href="<?php echo esc_url( home_url( '/how-to-get-help/' ) ); ?>">Help</a></li>
+										<li><a href="http://makezine.com/how-to-get-help/">Help</a></li>
 										<li><a href="http://makermedia.com/contact-us/" target="_blank">Contact</a></li>
 										<li><a href="https://www.pubservice.com/MK/subscribe.aspx?PC=MK&amp;PK=M3AMZF">Subscribe</a></li>
 										<li><a href="http://makermedia.com/work-with-us/advertising/" target="_blank">Advertise</a></li> 
@@ -83,9 +83,9 @@
 								<div class="about-column-02">
 									<ul>
 										<li><a href="http://makermedia.com" target="_blank">About Us</a></li>
-										<li><a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">FAQ</a></li>
-										<li><a href="<?php echo esc_url( home_url( '/forums/' ) ); ?>">Forums</a></li>
-										<li><a href="<?php echo esc_url( home_url( '/contribute/' ) ); ?>">Contribute to MAKE</a></li>
+										<li><a href="http://makezine.com/faq/" target="_blank">FAQ</a></li>
+										<li><a href="http://makezine.com/forums/" target="_blank">Forums</a></li>
+										<li><a href="http://makezine.com/contribute/" target="_blank">Contribute to MAKE</a></li>
 									</ul>
 								<!-- END about-column-02 -->
 								</div>
@@ -110,7 +110,7 @@
 						<div class="span3 subscribe hidden-phone">
 							<div class="sprite sprite-arrow-footer"></div>
 							<a href="https://readerservices.makezine.com/mk/subscribe.aspx?PC=MK&amp;PK=M**NEWB" target="_blank">
-								<img src="<?php echo wpcom_vip_get_resized_remote_image_url( make_get_cover_image(), '128', '181' ); ?>" alt="MAKE Magazine Drones" width="128" height="181" id="mag-cover" class="pull-right">
+								<img src="http://i1.wp.com/cdn.makezine.com/make/covers/MAKE_V37_high.jpg?resize=128%2C181" alt="MAKE Magazine Drones" width="128" height="181" id="mag-cover" class="pull-right">
 							</a>
 							<h5>Subscribe<br> to MAKE!</h5>
 							<p>Get the print and digital versions when you subscribe</p>

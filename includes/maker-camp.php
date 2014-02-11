@@ -7,32 +7,6 @@
 	 * @author     Cole Geissinger <cgeissinger@makermedia.com>
 	 * 
 	 */
-	
-	/**
-	 * Adds a menu field to the menus section of the admin area for Maker Camp.
-	 * @return void
-	 *
-	 * @version  1.0
-	 */
-	function make_mc_register_menu() {
-		register_nav_menu( 'mc-header-menu', __( 'Maker Camp Nav' ) );
-	}
-	add_action( 'init', 'make_mc_register_menu' );
-
-
-	/**
-	 * Load our javascript and other resources
-	 * @return void
-	 *
-	 * @version  1.0
-	 */
-	function make_mc_load_resources() {
-		if ( is_page_template( 'page-makercamp.php' || is_page_template( 'page-makercamp-map.php' ) ) ) {
-			wp_enqueue_script( 'bootstrap' );
-			wp_enqueue_script( 'maker-camp-js', get_stylesheet_directory_uri() . '/js/maker-camp.js', array('jquery'), '1.0', true );
-		}
-	}
-	add_action( 'wp_enqueue_scripts', 'make_mc_load_resources' );
 
 	
 	/****** Shortcodes *****/
