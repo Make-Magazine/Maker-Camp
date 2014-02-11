@@ -232,60 +232,7 @@ function make_quantcast_tag() { ?>
 		</noscript>
 		<!-- End Quantcast tag -->
 <?php }
-
 add_action('wp_footer', 'make_quantcast_tag');
-
-
-/**
- * Add the Qualtrics popup to the Footer
- */
-function make_qualtrics_script() {
-	return;
-	if ( make_get_cap_option( 'qualtrics_script' ) ) : ?>
-	<!--BEGIN QUALTRICS POPUP-->
-	<script type="text/javascript">
-		var q_viewrate = <?php echo esc_js( intval( make_get_cap_option( 'qualtrics_script_percent' ) ) ); ?>;
-		var url = 'http://s.qualtrics.com/ControlPanel/Graphic.php?IM=IM_ef9i42Jt6yJs8OV&V=1378824622';
-		if ( Math.random() < q_viewrate / 100 ){
-			var q_popup_f = function(){ 
-				var q_script = document.createElement("script");
-				var q_popup_g = function(){
-					new QualtricsEmbeddedPopup( {
-						id: "SV_1Rex7PkiBgaaK3z",
-						imagePath: "https://qdistribution.qualtrics.com/WRQualtricsShared/Graphics/",
-						surveyBase: "http://surveys.makermedia.com/WRQualtricsSurveyEngine/",
-						delay: <?php echo esc_js( intval( make_get_cap_option( 'qualtrics_script_delay' ) ) ); ?>,
-						preventDisplay:0,
-						animate:true,
-						width:400,
-						height:300,
-						surveyPopupWidth:900,
-						surveyPopupHeight:600,
-						startPos:"BR",
-						popupText:"<div style='margin-bottom:20px;'><image src=" + url + "></div>Would you please help us improve our website by answering 3 questions?",
-						linkText:"Click Here"
-					});
-				};
-				q_script.onreadystatechange= function () {
-					if (this.readyState == "loaded") 
-						q_popup_g();
-				};
-				q_script.onload = q_popup_g;
-				q_script.src="https://qdistribution.qualtrics.com/WRQualtricsShared/JavaScript/Distribution/popup.js";
-				document.getElementsByTagName("head")[0].appendChild(q_script);
-			};
-			if (window.addEventListener){
-				window.addEventListener("load",q_popup_f,false);
-			} else if (window.attachEvent) {
-				r=window.attachEvent("onload",q_popup_f);
-			};
-		};
-	</script>
-	<noscript><p><a target="_blank" href="http://surveys.makermedia.com/WRQualtricsSurveyEngine/?SID=SV_1Rex7PkiBgaaK3z">Click Here</a><p></noscript>
-	<!--END QUALTRICS POPUP-->
-	<?php endif;
-}
-add_action( 'wp_footer', 'make_qualtrics_script' );
 
 
 /**

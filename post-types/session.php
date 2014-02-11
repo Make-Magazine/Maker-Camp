@@ -11,7 +11,7 @@ function make_session_init() {
 		'public'            => true,
 		'show_in_nav_menus' => true,
 		'show_ui'           => true,
-		'supports'          => array( 'title', 'editor' ),
+		'supports'          => array( 'title', 'editor', 'thumbnail' ),
 		'has_archive'       => true,
 		'query_var'         => true,
 		'rewrite'           => true,
