@@ -68,6 +68,7 @@ add_filter( 'post_updated_messages', 'make_session_updated_messages' );
  */
 function make_session_add_meta_boxes() {
 	add_meta_box( 'make-sessions-materials-instructions', 'Materials and Instructions', 'make_sessions_materials_instructions', 'session', 'advanced', 'high' );
+	add_meta_box( 'make-sessions-link', 'Session Link', 'make_sessions_link', 'session', 'side', 'core' );
 }
 add_action( 'add_meta_boxes', 'make_session_add_meta_boxes' );
 
@@ -95,6 +96,17 @@ function make_sessions_materials_instructions( $post ) {
 }
 
 
+function make_sessions_link( $post ) {
+
+	// Get the data
+	$session_link = unserialize( get_post_meta( absint( $post->ID ), 'session-link', true ) ); ?>
+	<label for="btn-title"><strong>Button Title</strong></label>
+	<input type="text" name="session-link['title']" id="btn-title" value="<?php echo ( ! empty( $session_link['title'] ) ) ? esc_attr( $session_link['title'] ) : ''; ?>" style="display:block;width:100%;" placeholder="View Video">
+	<label for="btn-link" style="margin-top:10px;"><strong>Link URL</strong></label>
+	<input type="text" name="session-link['url']" id="btn-link" value="<?php echo ( ! empty( $session_link['url'] ) ) ? esc_url( $session_link['url'] ) : ''; ?>" style="display:block;width:100%;">
+	<?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
+}
+
 /**
  * Saves all meta boxes for sessions
  * @param  Integer $post_id The post ID
@@ -104,8 +116,13 @@ function make_sessions_save_meta_boxes( $post_id ) {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
 	if ( ! isset( $_POST['session-nonce'] ) || ! wp_verify_nonce( $_POST['session-nonce'], 'session-meta-box-save' ) ) return;
 	if ( ! current_user_can( 'edit_post', absint( $post_id ) ) ) return;
-
+	
 	// Save the Materials and Instructions
-	update_post_meta( absint( $post_id ), 'materials-instructions', wp_kses_post( $_POST['session-mat-instruct'] ) );
+	if ( isset( $_POST['session-mat-instruct'] ) )
+		update_post_meta( absint( $post_id ), 'materials-instructions', wp_kses_post( $_POST['session-mat-instruct'] ) );
+
+	// Save the Session link
+	if ( isset( $_POST['session-link'] ) )
+		update_post_meta( absint( $post_id ), 'session-link-btn', serialize( $_POST['session-link'] ) );
 }
 add_action( 'save_post', 'make_sessions_save_meta_boxes' );
