@@ -7352,73 +7352,100 @@ body.makercamp .join a {
 }
 body.makercamp .white-bg {
   background-color: #fff;
-  color: black;
 }
-body.makercamp .white-bg h4 {
+body.makercamp .beige-bg {
+  background-color: #f1f3f4;
+  border-top: 1px solid #d1d7db;
+  border-bottom: 1px solid #d1d7db;
+}
+body.makercamp .white-bg,
+body.makercamp .beige-bg {
+  color: black;
+  padding: 40px 0;
+}
+body.makercamp .white-bg h4,
+body.makercamp .beige-bg h4 {
   margin-top: 10px;
   font-size: 24px;
   line-height: 30px;
 }
 body.makercamp .white-bg h4 a:link,
-body.makercamp .white-bg h4 a:visited {
+body.makercamp .beige-bg h4 a:link,
+body.makercamp .white-bg h4 a:visited,
+body.makercamp .beige-bg h4 a:visited {
   color: #005d8f;
 }
-body.makercamp .white-bg h5 {
+body.makercamp .white-bg h5,
+body.makercamp .beige-bg h5 {
   font-size: 20px;
   text-transform: uppercase;
   color: #6e6e6e;
   font-weight: normal;
 }
 body.makercamp .white-bg h5 a,
-body.makercamp .white-bg h5 a:visited {
+body.makercamp .beige-bg h5 a,
+body.makercamp .white-bg h5 a:visited,
+body.makercamp .beige-bg h5 a:visited {
   color: #005d8f !important;
   text-decoration: none;
 }
-body.makercamp .white-bg h6 {
+body.makercamp .white-bg h6,
+body.makercamp .beige-bg h6 {
   font-size: 18px;
 }
 body.makercamp .white-bg h6 a,
-body.makercamp .white-bg h6 a:visited {
+body.makercamp .beige-bg h6 a,
+body.makercamp .white-bg h6 a:visited,
+body.makercamp .beige-bg h6 a:visited {
   color: #005d8f !important;
   text-decoration: none;
 }
-body.makercamp .white-bg h6:hover {
+body.makercamp .white-bg h6:hover,
+body.makercamp .beige-bg h6:hover {
   text-decoration: underline;
 }
 body.makercamp .white-bg p a,
-body.makercamp .white-bg p a:visited {
+body.makercamp .beige-bg p a,
+body.makercamp .white-bg p a:visited,
+body.makercamp .beige-bg p a:visited {
   color: #005d8f !important;
   text-decoration: none;
 }
-body.makercamp .white-bg .logo h5 {
+body.makercamp .white-bg .logo h5,
+body.makercamp .beige-bg .logo h5 {
   padding-top: 25px !important;
 }
-body.makercamp .white-bg .featured {
+body.makercamp .white-bg .featured,
+body.makercamp .beige-bg .featured {
   padding: 30px 0 0;
   margin-left: 6px;
   float: left;
   width: 15.8%;
   height: auto !important;
 }
-body.makercamp .white-bg .featured h4 {
+body.makercamp .white-bg .featured h4,
+body.makercamp .beige-bg .featured h4 {
   color: #555555;
   margin: 10px;
   font-size: 16px;
   /* height:40px; */
   height: 54px;
 }
-body.makercamp .white-bg a.small-button {
+body.makercamp .white-bg a.small-button,
+body.makercamp .beige-bg a.small-button {
   font-size: 16px !important;
   font-weight: 600 !important;
   line-height: 12px !important;
   padding: 12px 15px 8px !important;
   margin-right: 10px;
 }
-body.makercamp .white-bg .weekly-projects h5 {
+body.makercamp .white-bg .weekly-projects h5,
+body.makercamp .beige-bg .weekly-projects h5 {
   text-transform: capitalize;
   font-size: 19px;
 }
-body.makercamp .white-bg .weekly-projects h6 {
+body.makercamp .white-bg .weekly-projects h6,
+body.makercamp .beige-bg .weekly-projects h6 {
   color: #005d8f;
   a: link, a:visited:color:#005d8f;
 }
@@ -7604,18 +7631,10 @@ header h3 {
 .admin-bar header {
   margin-top: 40px;
 }
-.black-bar {
-  background-color: #002641;
-  padding: 5px 0 !important;
-  margin-top: 40px;
-}
-.black-bar .nav {
-  margin: 0px;
-}
-.black-bar .nav-inline {
+.nav-inline {
   margin: 6px 0;
 }
-.black-bar .nav-inline li {
+.nav-inline li {
   display: block;
   float: left;
   margin-right: 30px;
@@ -7623,24 +7642,24 @@ header h3 {
   font-weight: bold;
   text-transform: uppercase;
 }
-.black-bar .nav-inline li a {
+.nav-inline li a {
   color: #fff;
 }
-.black-bar p {
+p {
   color: #999999;
   font-size: 18px;
   margin-top: 6px;
   margin-bottom: 0px;
 }
-.black-bar a {
+a {
   font-size: 18px;
   margin: 0;
 }
-.black-bar a:hover {
+a:hover {
   background-color: transparent !important;
   text-decoration: underline !important;
 }
-.black-bar .navbar-inner {
+.navbar-inner {
   background-color: #253b58;
   background-image: -moz-linear-gradient(top, #2e435e, #172e50);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2e435e), to(#172e50));
@@ -7655,26 +7674,26 @@ header h3 {
   border-radius: 0px;
   border: none;
 }
-.black-bar .brand {
+.brand {
   text-shadow: 0 0 0 transparent;
   color: #ed1c24 !important;
 }
-.black-bar .brand:hover {
+.brand:hover {
   text-decoration: none !important;
 }
-.black-bar .nav-collapse {
+.nav-collapse {
   background: transparent;
 }
-.black-bar .nav-collapse .nav > li > a,
-.black-bar .nav-collapse .dropdown-menu a {
+.nav-collapse .nav > li > a,
+.nav-collapse .dropdown-menu a {
   text-shadow: 0 0 0 transparent;
   color: #fff !important;
 }
-.black-bar .nav-collapse .nav > li > a:hover,
-.black-bar .nav-collapse .dropdown-menu a:hover {
+.nav-collapse .nav > li > a:hover,
+.nav-collapse .dropdown-menu a:hover {
   text-decoration: none !important;
 }
-.black-bar .btn-navbar {
+.btn-navbar {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #1d2f46;
@@ -7691,23 +7710,19 @@ header h3 {
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-.black-bar .btn-navbar:hover,
-.black-bar .btn-navbar:focus,
-.black-bar .btn-navbar:active,
-.black-bar .btn-navbar.active,
-.black-bar .btn-navbar.disabled,
-.black-bar .btn-navbar[disabled] {
+.btn-navbar:hover,
+.btn-navbar:focus,
+.btn-navbar:active,
+.btn-navbar.active,
+.btn-navbar.disabled,
+.btn-navbar[disabled] {
   color: #ffffff;
   background-color: #11233c;
   *background-color: #0c1728;
 }
-.black-bar .btn-navbar:active,
-.black-bar .btn-navbar.active {
+.btn-navbar:active,
+.btn-navbar.active {
   background-color: #060c15 \9;
-}
-.navbar.black-bar {
-  background: transparent;
-  padding: 0;
 }
 #menu-maker-camp-nav {
   display: table;
