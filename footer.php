@@ -67,7 +67,7 @@
 							</form>
 						<!-- END span newsletter -->
 						</div>
-						<div class="span3 about-us hidden-phone">
+						<div class="span3 about-us">
 							<h5>About <a href="http://makermedia.com" target="_blank">Maker Media</a></h5>
 							<div class="row-fluid">
 								<div class="span">
