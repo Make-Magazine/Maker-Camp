@@ -3700,8 +3700,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
-  color: #777777;
-  text-shadow: 0 1px 0 #ffffff;
+  color: #FFFFFF;
 }
 .navbar .brand:hover,
 .navbar .brand:focus {
@@ -6290,7 +6289,7 @@ a.badge:focus {
   .navbar .brand {
     padding-left: 10px;
     padding-right: 10px;
-    margin: 0 0 0 -5px;
+    margin: 0;
   }
   .nav-collapse {
     clear: both;
@@ -7897,7 +7896,6 @@ body#shop {
 .new-footer .newsletter,
 .new-footer .about-us,
 .new-footer .subscribe {
-  width: 220px;
   float: left;
   border-top: 1px solid #ccc;
   text-align: left;
@@ -8402,38 +8400,36 @@ a.button {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 5px 0 0 #a0410d;
-  -moz-box-shadow: 0 5px 0 0 #a0410d;
-  box-shadow: 0 5px 0 0 #a0410d;
   border-bottom: none;
 }
 .button:hover,
 a.button:hover {
   color: #fff !important;
-  text-decoration: none !important;
+  background-color: #c9181f;
 }
 .button.blue,
 a.button.blue {
   background-color: #8ed5f6;
   border: none;
-  padding: 10px;
   color: #033978 !important;
-  font-size: 24px ;
+  font-size: 24px;
   line-height: 32px;
-  font-weight: 600;
-  -webkit-box-shadow: 0 5px 0 0 #4d97c5;
-  -moz-box-shadow: 0 5px 0 0 #4d97c5;
-  box-shadow: 0 5px 0 0 #4d97c5;
+  font-weight: normal;
 }
 .button.blue:hover,
 a.button.blue:hover {
   color: #033978 !important;
   background-color: #73c1e6 !important;
 }
+.button.blue.small,
+a.button.blue.small {
+  font-weight: normal;
+  font-size: 1.4em;
+  padding: 5px 20px;
+}
 .button.green,
 a.button.green {
   background-color: #51B926;
-  border-bottom: 3px solid #316B17;
   padding: 10px;
   color: #ffffff;
 }
@@ -8538,6 +8534,10 @@ body.makercamp .waist h3 span {
 }
 body.makercamp .waist h3.last {
   margin-bottom: 0 !important;
+}
+body.makercamp .waist .span4 h3 {
+  margin: 10px 0 0px 0 !important;
+  font-size: 1.7em;
 }
 body.makercamp .waist .blue {
   background-color: #032042;
@@ -8727,18 +8727,6 @@ body.makercamp .feature-box h5 {
   margin-top: 0 !important;
   font-weight: normal;
 }
-body.makercamp .feature-box .button.blue {
-  width: 80%;
-  font-size: 20px ;
-  line-height: 1.2em;
-  font-weight: 600;
-}
-body.makercamp .feature-box .button.blue a:link,
-body.makercamp .feature-box .button.blue a:visited {
-  color: #033978;
-  width: 100%;
-  margin: 0 auto;
-}
 body.makercamp .feature-box img.register {
   margin: 70px 0;
 }
@@ -8803,42 +8791,35 @@ body.makercamp .ss-form input,
 body.makercamp .ss-form textarea {
   width: 70%;
 }
-footer {
-  padding: 80px;
-}
-footer a {
-  font-size: 16px;
-}
-footer .white-bg {
-  margin: 0;
-}
-footer h3 {
-  display: inline-block;
-}
-footer .g-plus {
-  margin-top: 10px;
-}
-footer .nav-list {
-  margin-bottom: 20px;
-  list-style: none;
-}
-footer .nav-list li {
-  float: left;
-  margin-right: 49px;
-}
-footer .nav-list li.last {
-  margin-right: 0;
-}
-footer .white-bg {
-  padding: 0px;
+.white-bg {
+  padding: 20px 0 !important;
 }
 .new-footer {
   background-color: transparent;
-  padding-top: 10px;
   width: 100%;
   text-align: center;
   border-top: 3px solid #DBDBDB;
   background-image: url('../img/header_bg.jpg');
+}
+.new-footer a {
+  font-size: 16px;
+}
+.new-footer h3 {
+  display: inline-block;
+}
+.new-footer .g-plus {
+  margin-top: 10px;
+}
+.new-footer .nav-list {
+  margin-bottom: 20px;
+  list-style: none;
+}
+.new-footer .nav-list li {
+  float: left;
+  margin-right: 49px;
+}
+.new-footer .nav-list li.last {
+  margin-right: 0;
 }
 .new-footer label {
   display: block;
@@ -8861,7 +8842,7 @@ footer .white-bg {
 }
 .new-footer .subscribe h5 {
   color: #F60B29;
-  margin-top: -15px !important;
+  margin-top: -15px;
 }
 .new-footer .subscribe hr {
   border: none;
@@ -8994,7 +8975,6 @@ footer .white-bg {
   color: #000;
 }
 .new-footer .subscribe img#mag-cover {
-  width: 128px;
   float: right;
   border: 1px solid #ccc;
 }
@@ -9022,6 +9002,47 @@ footer .white-bg {
   width: 85px;
   margin-top: 0px;
 }
+@media (min-width: 1200px) {
+  body.makercamp .new-footer .container,
+  body.makercamp.admin-bar .new-footer .container {
+    width: 1170px !important;
+  }
+  body.makercamp .new-footer .main,
+  body.makercamp.admin-bar .new-footer .main {
+    width: 1000px !important;
+  }
+  body.makercamp .new-footer .trending,
+  body.makercamp.admin-bar .new-footer .trending,
+  body.makercamp .new-footer .newsletter,
+  body.makercamp.admin-bar .new-footer .newsletter,
+  body.makercamp .new-footer .about-us,
+  body.makercamp.admin-bar .new-footer .about-us,
+  body.makercamp .new-footer .subscribe,
+  body.makercamp.admin-bar .new-footer .subscribe {
+    width: 270px !important;
+  }
+}
+@media (min-width: 979px) and (max-width: 1200px) {
+  body.makercamp #mag-cover,
+  body.makercamp.admin-bar #mag-cover {
+    width: 110px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .new-footer .span3 {
+    width: 31% !important;
+  }
+  .subscribe #mag-cover {
+    margin: 0 !important;
+    width: 110px !important;
+  }
+  .subscribe h5 {
+    margin-top: 0 !important;
+  }
+  .navbar .container {
+    padding: 0 20px;
+  }
+}
 @media (max-width: 767px) {
   body {
     padding-left: 0px !important;
@@ -9031,5 +9052,8 @@ footer .white-bg {
   body .beige-bg,
   body .container {
     padding: 20px 20px;
+  }
+  body .navbar .container {
+    padding: 0 20px;
   }
 }

@@ -8,36 +8,34 @@
  */
 get_header(); ?>
 		
-<div class="container top-header">
+<div class="container top">
 	<div class="row-fluid">
-		<div class="span12 pagination-centered"><img src="http://vip.dev/wp-content/uploads/sites/5/2014/02/makercamp_whtlarge_logo.png" /></div>
+		<div class="span12 pagination-centered"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/makercamp_whtlarge_logo.png' ); ?>" /></div>
 </div>
 <div class="row-fluid">
 		<div class="span12 mc-description pagination-centered">
-			<h3 style="font-weight:normal;color:#acd3fc;text-align: center"><em>Cool Projects, Epic Field Trips, &amp; Awesome Makers. A Free Virtual Camp for Teensâ€¦ now year-round!</em></h3>
+			<h3 style="font-weight:normal;color:#acd3fc;text-align: center"><em>Cool Projects, Epic Field Trips, &amp; Awesome Makers. A Free Virtual Camp for Teens... now year-round!</em></h3>
 		</div>
 	</div>
 </div>
 <section class="section waist">
-	<div class="container" style="padding-top: 20px">
+	<div class="container">
 		<div class="row-fluid">
 			<div class="span6">
-				<h3>
-					<span class="cap orange">Highlights from past Maker Camps</span>
-				</h3>
-				<div class="blue">[youtube http://youtu.be/Lcd0Pv2eCgk]</div>
+				<h3 class="cap orange">Highlights from past Maker Camps</h3>
+				<iframe width="570" height="374" src="//www.youtube.com/embed/Lcd0Pv2eCgk" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<div class="span6">
 				<h3 class="cap orange">Welcome to Maker Camp!</h3>
-				<p class="lead" style="font-size:1.7em;line-height:1.6em;font-weight:normal;color:#acd3fc">
-					Maker Camp is a place for teens to participate anywhere and anytime. Weâ€™ll introduce you to projects, makers, and the exciting world of the maker movement. During Maker Camp weâ€™ll post a new project along with the materials youâ€™ll need to join in. Best of all Maker Camp on G+ is free for everyone.
+				<p class="lead" style="font-size:1.7em;line-height:1.6em;font-weight:normal;">
+					Maker Camp is a place for teens to participate anywhere and anytime. We'll introduce you to projects, makers, and the exciting world of the maker movement. During Maker Camp we'll post a new project along with the materials you'll need to join in. Best of all Maker Camp on G+ is free for everyone.
 				</p>
 				<a class="button" style="font-size: 20px" href="https://plus.google.com/communities/107377046073638428310">Maker Camp Community</a>
 			</div>
 		</div>
-		<div class="row-fluid" style="margin-top: 20px">
+		<div class="row-fluid" style="margin-top: 40px">
 				<div class="span4">
-					<div class="pagination-centered"><img alt="Where is Maker Camp?" src="http://vip.dev/wp-content/uploads/sites/5/2014/02/Where_is_maker_camp_350.jpg" class="img-circle" height="300" width="300" /></div>
+					<div class="pagination-centered"><img alt="Where is Maker Camp?" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/Where_is_maker_camp_350.jpg' ); ?>" class="img-circle" height="300" width="300" /></div>
 					<h3 class="muted text-center">
 						Where is Maker Camp?
 					</h3>
@@ -45,7 +43,7 @@ get_header(); ?>
 					</p>
 				</div>
 				<div class="span4">
-					<div class="pagination-centered"><img alt="Who is Maker Camp for?" src="http://vip.dev/wp-content/uploads/sites/5/2014/02/Who_is_maker_camp_for_350.jpg" class="img-circle" height="300" width="300" /></div>
+					<div class="pagination-centered"><img alt="Who is Maker Camp for?" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/Who_is_maker_camp_for_350.jpg' ); ?>" class="img-circle" height="300" width="300" /></div>
 					<h3 class="muted text-center">
 						Who is it for?
 					</h3>
@@ -53,7 +51,7 @@ get_header(); ?>
                                         <p>Teachers and community leaders can also include Maker Camp in their programs using projects from MAKE and Google+. You can also create a â€œMakerspaceâ€ in which teens can build projects together and upload photos and videos to the Maker Camp Community page on Google+.</p>
 				</div>
 				<div class="span4">
-					<div class="pagination-centered"><img alt="Why you will love Maker Camp" src="http://vip.dev/wp-content/uploads/sites/5/2014/02/Why_you_will_love_maker_camp_350.jpg" class="img-circle" height="300" width="300" /></div>
+					<div class="pagination-centered"><img alt="Why you will love Maker Camp" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/Why_you_will_love_maker_camp_350.jpg' ); ?>" class="img-circle" height="300" width="300" /></div>
 					<h3 class="muted text-center">
 						Why you'll love it
 					</h3>
@@ -63,7 +61,7 @@ get_header(); ?>
 			</div>
 		<div class="row-fluid">
 			<div class="pull-right">
-				<img alt="Google Make" src="http://makezineblog.files.wordpress.com/2013/07/google_make.png" />
+				<img alt="Google Make" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/google_make.png' ); ?>" />
 			</div>
 		</div>
 	</div>
@@ -78,7 +76,7 @@ get_header(); ?>
 					</div>
 					<div class="span3">
 						<h4 style="line-height:1.4">
-							<a class="pull-right" style="color:#005d8f !important" href="http://makezine.com/maker-camp/schedule/">View More Projects</a>
+							<a class="pull-right" style="color:#005d8f !important" href="http://vip.dev/maker-camp/?page_id=6">View More Projects</a>
 						</h4>
 					</div>
 				</div>
@@ -155,13 +153,13 @@ get_header(); ?>
 				<h2>More about Maker Camp</h2>
 				<div class="row-fluid">
 					<div class="span6">
-						<div class=""><img alt="Get involved in Maker Camp from home and on Google+" src="http://vip.dev/wp-content/uploads/sites/5/2014/02/Maker_camp_from_home.jpg" class="img-polaroid pull-left img-responsive" /></div>
+						<div class=""><img alt="Get involved in Maker Camp from home and on Google+" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/Maker_camp_from_home.jpg' ); ?>" class="img-polaroid pull-left img-responsive" /></div>
 					</div>
 					<div class="span6">
 						<h3 class="hidden-phone">How to Get Involved</h3>
                                                 <h3 class="visible-phone" style="clear:both">How to Get Involved</h3>
 						<p class="lead">There are a few ways to get involved in the Maker Camp community. Find a campsite near you, join us online with our live feed field trips and G+ hangouts, or become an affiliate and get your own campsite or Maker Club started in your community.</p>
-						<a class="btn" href="/?page_id=8">Get Involved</a>
+						<a class="button blue small" href="/?page_id=8">Get Involved</a>
 					</div>
 				</div>
 			</div>
@@ -177,10 +175,10 @@ get_header(); ?>
 					<div class="span6">
 						<h3>Maker Camp Projects</h3>
 						<p class="lead">View our archive of all past Maker Camp projects. Look back at the 60+ fun DIY projects campers built on their own or with friends, and make your own! Also check this seasons schedule for live G+ hangouts of new projects.</p>
-						<a class="btn" href="/?page_id=6">View Projects</a>
+						<a class="button blue small" href="/?page_id=6">View Projects</a>
 					</div>
 					<div class="span6">
-						<div class=""><img alt="Maker Camp Projects for kids" src="http://vip.dev/wp-content/uploads/sites/5/2014/02/Maker_camp_rocket_project.jpg" class="img-polaroid pull-right img-responsive" /></div>
+						<div class=""><img alt="Maker Camp Projects for kids" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/Maker_camp_rocket_project.jpg' ); ?>" class="img-polaroid pull-right img-responsive" /></div>
 					</div>
 				</div>
 			</div>
@@ -194,13 +192,13 @@ get_header(); ?>
 			<div class="span12">
 				<div class="row-fluid">
 					<div class="span6">
-						<div class=""><img alt="Get involved with Maker Camp online or in person" src="http://vip.dev/wp-content/uploads/sites/5/2014/02/Maker_camp_on_google_plus.jpg" class="img-polaroid pull-left img-responsive" /></div>
+						<div class=""><img alt="Get involved with Maker Camp online or in person" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/Maker_camp_on_google_plus.jpg' ); ?>" class="img-polaroid pull-left img-responsive" /></div>
 					</div>
 					<div class="span6">
 						<h3 class="hidden-phone">More About Maker Camp</h3>
                                                 <h3 class="visible-phone" style="clear:both">More About Maker Camp</h3>
 						<p class="lead">Meet and share with us in our online community. Go to the Maker Camp community on Google+ to see what other campers are making, and share your own projects there too! Relive our epic field trips to amazing places and our daily Google+ Hangouts, where we met fascinating Makers and shared tips and tricks on the projects. </p>
-						<a class="btn" href="https://plus.google.com/communities/107377046073638428310" target="_blank">Join our G+ Community!</a>
+						<a class="button blue small" href="https://plus.google.com/communities/107377046073638428310" target="_blank">Join our G+ Community!</a>
 					</div>
 				</div>
 			</div>
@@ -217,7 +215,7 @@ get_header(); ?>
 				<div class="windows feature-box">
 					<div class="features-box-content">
 
-						<img alt="Radioshack logo" src="http://makezineblog.files.wordpress.com/2013/07/radioshack_logo.png?w=215" />
+						<img alt="Radioshack logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/radioshack_logo.png?w=215' ); ?>" />
 						<h4>
 							Go to your
 local RadioShack
@@ -225,7 +223,7 @@ for all your
 Maker Camp needs!
 						</h4>
 					</div>
-					<a class="button blue" href="http://www.radioshack.com/storeLocator3/index.jsp?clickid=rsk_header_storeLocator">Find a Store</a>
+					<a class="button blue small" href="http://www.radioshack.com/storeLocator3/index.jsp?clickid=rsk_header_storeLocator">Find a Store</a>
 
 				</div>
 			</div>
@@ -234,10 +232,10 @@ Maker Camp needs!
 					<div class="features-box-content">
 						<h5>Engage teens with fun events! Include Maker Camp in your Summer Program
 						</h5>
-						<img alt="Robot trees" src="http://makezineblog.files.wordpress.com/2013/06/robot-trees.png" />
+						<img alt="Robot trees" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/robot-trees.png' ); ?>" />
 
 					</div>
-					<a class="button blue" href="http://makezine.com/maker-camp/summer-camp-program/">Register Program</a>
+					<a class="button blue small" href="http://makezine.com/maker-camp/summer-camp-program/">Register Program</a>
 
 				</div>
 			</div>
@@ -250,11 +248,11 @@ Maker Camp needs!
 							for only $19.95 â€“ a 67% savings off the regular newsstand price!
 						</p>
 						<a href="https://readerservices.makezine.com/mk/subscribe.aspx?PC=MK&amp;PK=M**NEWB">
-							<img alt="Make Magazine volume 35 Cover" src="http://makezineblog.files.wordpress.com/2013/09/make_v35_high.jpg?w=123" />
+							<img alt="Make Magazine volume 35 Cover" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/MAKE_V37_high.jpg' ); ?>" />
 						</a>
 
 					</div>
-					<a class="button blue" href="https://readerservices.makezine.com/mk/subscribe.aspx?PC=MK&amp;PK=S39CAMP">Subscribe</a>
+					<a class="button blue small" href="https://readerservices.makezine.com/mk/subscribe.aspx?PC=MK&amp;PK=S39CAMP">Subscribe</a>
 
 				</div>
 			</div>
@@ -263,11 +261,11 @@ Maker Camp needs!
 					<div class="features-box-content">
 						<h4>MAKER SHED Deal of the Week!</h4>
 						<a href="http://www.makershed.com/">
-							<img alt="Maker shed deal" src="http://makezineblog.files.wordpress.com/2013/07/maker-shead-deal-07-08-131.png" />
+							<img alt="Maker shed deal" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/maker-shead-deal-07-08-131.png' ); ?>" />
 						</a>
 
 					</div>
-					<a class="button blue" href="http://www.makershed.com/">Go Shopping</a>
+					<a class="button blue small" href="http://www.makershed.com/">Go Shopping</a>
 
 				</div>
 			</div>
