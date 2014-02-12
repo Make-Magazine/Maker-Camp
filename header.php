@@ -27,26 +27,10 @@
 		
 		<?php wp_head( 'makercamp' ); ?>
 
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/responsive.css">
-
 	</head>
 	<body <?php body_class( 'makercamp' ); ?>>
 		<header>
-
-<!-- 			<div class="black-bar hidden-phone">
-				<div class="container">
-					<?php
-						// all Navigational items are controlled in Appearance > Menus : Maker Camp Nav
-						wp_nav_menu( array(
-							'theme_location' => 'mc-header-menu',
-							'container' => '',
-							'menu_class' => 'nav nav-inline',
-						) );
-					?>
-				</div>
-			</div> -->
-
-<!-- 			<div class="navbar black-bar visible-phone">
+			<div class="navbar main-nav navbar-fixed-top">
 				<div class="navbar-inner">
 					<div class="container">
 						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -54,19 +38,20 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</a>
-						<a class="brand" href="<?php echo home_url( '/maker-camp' ); ?>">Menu</a>
+						<a href="<?php echo esc_url( home_url() ); ?>" class="brand visible-phone visible-tablet">Maker Camp</a>
 						<div class="nav-collapse in collapse">
 							<?php
-								// all Navigational items are controlled in Appearance > Menus : Maker Camp Nav
+								// All Navigational items are controlled in Appearance > Menus : Maker Camp Nav
 								wp_nav_menu( array(
 									'theme_location' => 'mc-header-menu',
 									'container' => '',
-									'menu_class' => 'nav nav-inline',
+									'menu_class' => 'nav primary-nav nav-inline',
+									'walker' => new Bootstrap_Walker_Nav_Menu(),
 								) );
 							?>
 						</div>
 					</div>
 				</div>
-			</div> -->
+			</div>
 		</header>
 
