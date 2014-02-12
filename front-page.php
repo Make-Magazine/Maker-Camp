@@ -8,13 +8,6 @@
  */
 get_header(); ?>
 		
-	<div class="single">
-		<div class="container">
-			<div class="row">
-				<div class="span8">
-
-					
-	
 <div class="container top-header">
 	<div class="row-fluid">
 		<div class="span12 pagination-centered"><img src="http://vip.dev/wp-content/uploads/sites/5/2014/02/makercamp_whtlarge_logo.png" /></div>
@@ -281,10 +274,6 @@ Maker Camp needs!
 		</div>
 	</div>
 </section>
-					
-				</div>
-			</div>
-		</div>
-	</div>
+
 
 <?php get_footer(); ?>
