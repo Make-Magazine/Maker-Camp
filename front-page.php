@@ -39,7 +39,7 @@ get_header(); ?>
 					<h3 class="muted text-center">
 						Where is Maker Camp?
 					</h3>
-					<p>Maker Camp is a online community here and on Google+ where campers are making and sharing projects. Yes, you will need a computer, phone, or tablet with an Internet connection to attend Maker Camp because itâ€™s an online camp thatâ€™s totally interactive. If you want to attend the Field Trips on Fridays, youâ€™ll need a webcam to participate in the Hangouts on Air which are broadcast live and recorded. You can also just view the live streaming on your laptop which is a great experience, too, because the field trips are at epic places!
+					<p>Maker Camp is a online community here and on Google+ where campers are making and sharing projects. Yes, you will need a computer, phone, or tablet with an Internet connection to attend Maker Camp because it's an online camp that's totally interactive. If you want to attend the Field Trips on Fridays, you'll need a webcam to participate in the Hangouts on Air which are broadcast live and recorded. You can also just view the live streaming on your laptop which is a great experience, too, because the field trips are at epic places!
 					</p>
 				</div>
 				<div class="span4">
@@ -47,15 +47,15 @@ get_header(); ?>
 					<h3 class="muted text-center">
 						Who is it for?
 					</h3>
-					<p>Maker Camp is aimed at teens 13+, because there is an age restriction to create a Google+ profile and attend hangouts. If youâ€™re under 13, you can attend Maker Camp on Google+ with your parent, using his or her Google+ profile.</p>
-                                        <p>Teachers and community leaders can also include Maker Camp in their programs using projects from MAKE and Google+. You can also create a â€œMakerspaceâ€ in which teens can build projects together and upload photos and videos to the Maker Camp Community page on Google+.</p>
+					<p>Maker Camp is aimed at teens 13+, because there is an age restriction to create a Google+ profile and attend hangouts. If you're under 13, you can attend Maker Camp on Google+ with your parent, using his or her Google+ profile.</p>
+                                        <p>Teachers and community leaders can also include Maker Camp in their programs using projects from MAKE and Google+. You can also create a &quot;Makerspace&quot; in which teens can build projects together and upload photos and videos to the Maker Camp Community page on Google+.</p>
 				</div>
 				<div class="span4">
 					<div class="pagination-centered"><img alt="Why you will love Maker Camp" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/Why_you_will_love_maker_camp_350.jpg' ); ?>" class="img-circle" height="300" width="300" /></div>
 					<h3 class="muted text-center">
 						Why you'll love it
 					</h3>
-					<p>Maker Camp was designed to accommodate broad maker interests, so thereâ€™s something that appeals to everyone. We have diverse daily activities across a spectrum of science, technology, tinker, crafting, and weekly virtual field trips to amazing places. So you can come and go as your interests dictate. You can attend every day of camp over the 30 days and make all 30 projects! (We have special Maker badges to commemorate the most prolific makers!)
+					<p>Maker Camp was designed to accommodate broad maker interests, so there's something that appeals to everyone. We have diverse daily activities across a spectrum of science, technology, tinker, crafting, and weekly virtual field trips to amazing places. So you can come and go as your interests dictate. You can attend every day of camp over the 30 days and make all 30 projects! (We have special Maker badges to commemorate the most prolific makers!)
 					</p>
 				</div>
 			</div>
@@ -245,7 +245,7 @@ Maker Camp needs!
 						<p>
 							Special Maker Camp Offer! Get a one-year subscription to
 							<span style="color:red">MAKE</span>
-							for only $19.95 â€“ a 67% savings off the regular newsstand price!
+							for only $19.95 - a 67% savings off the regular newsstand price!
 						</p>
 						<a href="https://readerservices.makezine.com/mk/subscribe.aspx?PC=MK&amp;PK=M**NEWB">
 							<img alt="Make Magazine volume 35 Cover" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/MAKE_V37_high.jpg' ); ?>" />
