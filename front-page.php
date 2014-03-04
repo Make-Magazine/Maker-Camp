@@ -21,8 +21,7 @@ get_header(); ?>
 <section class="section waist">
 	<div class="container">
 		<div class="row-fluid">
-			<div class="span6">
-				<h3 class="cap orange">Highlights from past Maker Camps</h3>
+			<div class="span6 ytube_intro">
 				<iframe width="570" height="374" src="//www.youtube.com/embed/Lcd0Pv2eCgk" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<div class="span6">

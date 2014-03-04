@@ -8791,6 +8791,9 @@ body.makercamp .ss-form input,
 body.makercamp .ss-form textarea {
   width: 70%;
 }
+body.makercamp .ytube_intro {
+  margin-top: 10px;
+}
 .white-bg {
   padding: 20px 0 !important;
 }

@@ -5,7 +5,6 @@
  *
  * @package    makeblog
  * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
- * @author     Cole Geissinger <cgeissinger@makermedia.com>
  * 
  */
 ?>
@@ -27,8 +26,8 @@
 					<?php the_content(); ?>
 				</div>
 				<div class="row">
-					<div class="span6">
-						<iframe src="http://mapsengine.google.com/map/u/0/embed?mid=z6jknjwOuQEA.kwp_h1l1fm4s" width="99.5%" height="464"></iframe>
+					<div class="span12">
+						<iframe src="https://mapsengine.google.com/map/u/0/edit?mid=z6jknjwOuQEA.kwp_h1l1fm4s" width="99.5%" height="464"></iframe>
 						<table class="table table-striped map-list">
 							<thead class="map-list-header">
 								<tr>
