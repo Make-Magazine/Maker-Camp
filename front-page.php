@@ -149,7 +149,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span12">
-				<h2>More about Maker Camp</h2>
+				<h2>Join In With Maker Camp From Anywhere</h2>
 				<div class="row-fluid">
 					<div class="span6">
 						<div class=""><img alt="Get involved in Maker Camp from home and on Google+" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/Maker_camp_from_home.jpg' ); ?>" class="img-polaroid pull-left img-responsive" /></div>

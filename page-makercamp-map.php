@@ -27,7 +27,7 @@
 				</div>
 				<div class="row">
 					<div class="span12">
-						<iframe src="https://mapsengine.google.com/map/u/0/edit?mid=z6jknjwOuQEA.kwp_h1l1fm4s" width="99.5%" height="464"></iframe>
+						<iframe src="http://mapsengine.google.com/map/u/0/embed?mid=z6jknjwOuQEA.kwp_h1l1fm4s" width="99.5%" height="464"></iframe>
 						<table class="table table-striped map-list">
 							<thead class="map-list-header">
 								<tr>
