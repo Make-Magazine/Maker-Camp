@@ -10,7 +10,7 @@ function make_schedule_init() {
 		'hierarchical'      => false,
 		'public'            => true,
 		'show_in_nav_menus' => false,
-		'show_ui'           => true,
+		'show_ui'           => false,
 		'supports'          => array( 'title' ),
 		'has_archive'       => false,
 		'query_var'         => true,
