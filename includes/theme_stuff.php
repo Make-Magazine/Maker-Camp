@@ -76,6 +76,12 @@ function make_load_admin_resources() {
 	if ( $screen->id === 'session' ) {
 		wp_enqueue_style( 'make-chosen-styles', esc_url( get_stylesheet_directory_uri() . '/css/chosen.min.css' ) );
 		wp_enqueue_script( 'make-chosen-js', esc_url( get_stylesheet_directory_uri() . '/js/libs/chosen.jquery.min.js' ), array( 'jquery' ), '1.1.0', true );
+
+		// Schedule JS
+		wp_enqueue_script( 'make-schedule-js', esc_url( get_stylesheet_directory_uri() . '/js/schedules.js' ), array( 'jquery' ), '1.0', true );
+		wp_localize_script( 'make-schedule-js', 'make_schedule', array(
+			'schedule_nonce' => wp_create_nonce( 'new-week-nonce' ),
+		) );
 	}
 }
 add_action( 'admin_enqueue_scripts', 'make_load_admin_resources' );

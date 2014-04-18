@@ -6,7 +6,7 @@ function maker_init() {
 		'public'            => true,
 		'show_in_nav_menus' => true,
 		'show_ui'           => true,
-		'supports'          => array( 'title', 'editor' ),
+		'supports'          => array( 'title', 'editor', 'thumbnail' ),
 		'has_archive'       => true,
 		'query_var'         => true,
 		'rewrite'           => true,
@@ -63,7 +63,7 @@ add_filter( 'post_updated_messages', 'maker_updated_messages' );
  */
 function make_maker_add_meta_boxes() {
 	add_meta_box( 'make-maker-add-maker', 'Assign A Maker', 'make_maker_add_maker', 'session', 'side', 'core' );
-	add_meta_box( 'make-maker-google-link', 'Google+ URL', 'make_maker_google_link', 'maker', 'side', 'core' );
+	add_meta_box( 'make-maker-hyperlink', 'URL', 'make_maker_hyperlink', 'maker', 'side', 'core' );
 }
 add_action( 'add_meta_boxes', 'make_maker_add_meta_boxes' );
 
@@ -96,11 +96,11 @@ function make_maker_add_maker( $post ) {
  * @param  integer $post The post object of the current post being edited
  * @return html
  */
-function make_maker_google_link( $post ) {
+function make_maker_hyperlink( $post ) {
 	// Get the set Google URL
-	$google_url = get_post_meta( $post->ID, 'maker-google-url', true ); ?>
-	<label for="google-url" class="screen-reader-text">Google+ URL</label>
-	<input type="text" name="maker-google-url" id="google-url" value="<?php echo ( ! empty( $google_url ) ) ? esc_url( $google_url ) : ''; ?>" style="width:100%;">
+	$hyperlink = get_post_meta( $post->ID, 'maker-hyperlink', true ); ?>
+	<label for="maker-hyperlink" class="screen-reader-text">Hyperlink</label>
+	<input type="text" name="maker-hyperlink" id="maker-hyperlink" value="<?php echo ( ! empty( $hyperlink ) ) ? esc_url( $hyperlink ) : ''; ?>" style="width:100%;">
 	<?php wp_nonce_field( 'maker-meta-box-save', 'maker-nonce' );
 }
 
@@ -116,8 +116,8 @@ function make_maker_save_meta_boxes( $post_id ) {
 	if ( ! current_user_can( 'edit_post', absint( $post_id ) ) ) return;
 
 	// Save the Google+ URL
-	if ( isset( $_POST['maker-google-url'] ) )
-		update_post_meta( absint( $post_id ), 'maker-google-url', esc_url( $_POST['maker-google-url'] ) );
+	if ( isset( $_POST['maker-hyperlink'] ) )
+		update_post_meta( absint( $post_id ), 'maker-hyperlink', esc_url( $_POST['maker-hyperlink'] ) );
 
 	// Save the Makers set to the session
 	if ( isset( $_POST['makers'] ) )
@@ -130,13 +130,15 @@ add_action( 'save_post', 'make_maker_save_meta_boxes' );
  * Fetches and returns the list of makers
  * @return Object
  */
-function make_maker_get_list() {
-	$query = array(
+function make_maker_get_list( $custom_query = array() ) {
+	$default_query = array(
 		'post_type' => 'maker',
 		'post_status' => 'any',
 		'order' => 'ASC',
 		'orderby' => 'name',
 	);
+	$query = wp_parse_args( $custom_query, $default_query );
+	
 	$makers = new WP_Query( $query );
 
 	return $makers->posts;
