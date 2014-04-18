@@ -72,6 +72,5 @@ function make_update_schedule( $post_id, $schedule, $nonce ) {
 		}
 	}
 
-	wp_send_json( array( $schedule_id ) );
+	return $schedule_id;
 }
-add_action( 'wp_ajax_make_add_schedule', 'make_update_schedule' );

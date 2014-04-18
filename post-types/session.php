@@ -146,9 +146,11 @@ function make_add_schedules_mb( $post ) { ?>
 		<tr>
 			<td valign="top"><label for="assign-week"><strong>Assign To A Week</strong></label></td>
 			<td>
-				<?php make_dropdown_weeks( $post->ID ); ?> <span id="add-week-wrapper"><button id="add-new-week" class="button">+ New Week</button></span>
+				<?php make_dropdown_weeks( $post->ID ); ?>
 				<hr>
-				<button id="save-schedule" class="button button-primary" style="display:inline-block">Save Schedule</button>
+				<div id="add-week-wrapper">
+					<button id="add-new-week" class="button" style="display:block;">+ New Week</button>
+				</div>
 			</td>
 		</tr>
 	</table>

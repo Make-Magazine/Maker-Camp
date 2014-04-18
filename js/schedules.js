@@ -3,7 +3,7 @@ jQuery( document ).ready( function( $ ) {
 	$( '#add-new-week' ).click( function( e ) {
 		e.preventDefault();
 
-		$( this ).replaceWith( '<br /><input type="text" id="week-name" placeholder="Enter the week name" /> <input type="submit" value="+ New Week" id="submit-week" class="button" />');
+		$( this ).replaceWith( '<input type="text" id="week-name" placeholder="Enter the week name" /> <input type="submit" value="+ New Week" id="submit-week" class="button button-primary" />');
 	});
 
 	// Process the new week and saves it to the week taxonomy
@@ -26,8 +26,8 @@ jQuery( document ).ready( function( $ ) {
 			url: ajaxurl,
 			data: {
 				'action' : 'make_add_week', // Calls our wp_ajax_nopriv_make_ajax_login or wp_ajax_make_ajax_login actions
-				'term_name' : new_week,
-				'nonce' : make_schedule.schedule_nonce
+				'term_name'   : new_week,
+				'nonce'  : make_schedule.schedule_nonce
 			},
 			success: function( results ) {
 				// Check that everything went well
@@ -48,40 +48,5 @@ jQuery( document ).ready( function( $ ) {
 				console.log( errorThrown );
 			}
 		});
-	});
-
-	// Save the schedule
-	$( '#save-schedule' ).click( function( e ) {
-		e.preventDefault();
-
-		// Let's save the data
-		// $.ajax({
-		// 	type: 'POST',
-		// 	dataType: 'json',
-		// 	url: ajaxurl,
-		// 	data: {
-		// 		'action' : 'make_add_schedule', // Calls our wp_ajax_nopriv_make_ajax_login or wp_ajax_make_ajax_login actions
-		// 		'term_name' : new_week,
-		// 		'nonce' : make_schedule.schedule_nonce
-		// 	},
-		// 	success: function( results ) {
-		// 		// Check that everything went well
-		// 		if ( results.success ) {
-		// 			$( '#add-week-wrapper' ).find( '#message' ).remove();
-		// 			$( '#assign-week' ).append( '<option value="' + results.term.id + '">' + results.term.name + '</option>' ).val( results.term.id );
-		// 			$( '#add-week-wrapper' ).replaceWith( '<div id="message" class="updated"><p>' + results.message + '</p></div>' ).delay( 5000 ).slideUp();
-		// 		} else {
-		// 			$( '#add-week-wrapper' ).find( '#message' ).remove();
-		// 			$( '#submit-week, #week-name' ).removeAttr( 'disabled' );
-		// 			$( '#saving-week-term' ).remove();
-		// 			$( '#add-week-wrapper' ).append( '<div id="message" class="error"><p>' + results.message + '</p></div>' );
-		// 		}
-		// 	},
-		// 	error: function( jqXHR, textStatus, errorThrown ) {
-		// 		console.log( 'ERROR' );
-		// 		console.log( textStatus );
-		// 		console.log( errorThrown );
-		// 	}
-		// });
 	});
 });
