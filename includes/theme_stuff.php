@@ -1,7 +1,7 @@
 <?php
 /**
  * General makeblog theme functions
- * 
+ *
  * @package    makeblog
  * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
  *
@@ -54,7 +54,7 @@ function make_load_resources() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'make-bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'make-header', get_stylesheet_directory_uri() . '/js/header.js', array( 'jquery' ), false, true );
-	
+
 	// display our map sort plugin for Maker Camp
 	if ( is_page( 315793 ) ) // TODO: Update page id to match new page created
 		wp_enqueue_script( 'make-sort-table', get_stylesheet_directory_uri() . '/js/jquery.tablesorter.min.js', array( 'jquery' ), false, true );
@@ -70,7 +70,7 @@ add_action( 'wp_enqueue_scripts', 'make_load_resources' );
  */
 function make_load_admin_resources() {
 	$screen = get_current_screen();
-	
+
 	// Load our selection script only for Sessions
 	if ( $screen->id === 'session' ) {
 		wp_enqueue_style( 'make-chosen-styles', esc_url( get_stylesheet_directory_uri() . '/css/chosen.min.css' ) );
@@ -95,11 +95,11 @@ function make_get_short_title( $length ) {
 
 /**
  * Register the WordPress sidebar to site.
- * 
+ *
  */
 function make_register_sidebar() {
 	if( function_exists('register_sidebar')) {
-		register_sidebar( 
+		register_sidebar(
 			array(
 				'id' => 'sidebar_top',
 				'name' => __( 'Sidebar Top', 'makercamp' ),
@@ -110,7 +110,7 @@ function make_register_sidebar() {
 				'after_title' => '</h3>'
 			)
 		);
-		register_sidebar( 
+		register_sidebar(
 			array(
 				'id' => 'sidebar_bottom',
 				'name' => __( 'Sidebar Bottom', 'makercamp' ),
@@ -144,7 +144,7 @@ function make_get_category_name() {
 		$cat = get_queried_object();
 	}
 	if (is_single() || is_category()) {
-		$output = '/';	
+		$output = '/';
 	} else {
 		$output = null;
 	}
@@ -247,7 +247,7 @@ function make_qualtrics_script() {
 		var q_viewrate = <?php echo esc_js( intval( make_get_cap_option( 'qualtrics_script_percent' ) ) ); ?>;
 		var url = 'http://s.qualtrics.com/ControlPanel/Graphic.php?IM=IM_ef9i42Jt6yJs8OV&V=1378824622';
 		if ( Math.random() < q_viewrate / 100 ){
-			var q_popup_f = function(){ 
+			var q_popup_f = function(){
 				var q_script = document.createElement("script");
 				var q_popup_g = function(){
 					new QualtricsEmbeddedPopup( {
@@ -267,7 +267,7 @@ function make_qualtrics_script() {
 					});
 				};
 				q_script.onreadystatechange= function () {
-					if (this.readyState == "loaded") 
+					if (this.readyState == "loaded")
 						q_popup_g();
 				};
 				q_script.onload = q_popup_g;
@@ -372,25 +372,25 @@ add_action('right_now_content_table_end', 'add_craft_article_counts');
  */
 function make_get_better_tag_title( $title = null ) {
 	if ( $title == null ) {
-		$title = single_cat_title('', false);	
+		$title = single_cat_title('', false);
 	}
 	$machine = array(
-		'robotskills', 
-		'castmat', 
-		'advancedmaterials', 
-		'reusedmat', 
-		'plywoodmat', 
-		'naturalmaterials', 
-		'naturalmaterial', 
-		'metalmat', 
-		'ceramicsmat', 
-		'concretematerial', 
-		'circuitskills', 
-		'electronskills', 
-		'foodskills', 
-		'hobbyskills', 
-		'machineskills', 
-		'MechanicSkills', 
+		'robotskills',
+		'castmat',
+		'advancedmaterials',
+		'reusedmat',
+		'plywoodmat',
+		'naturalmaterials',
+		'naturalmaterial',
+		'metalmat',
+		'ceramicsmat',
+		'concretematerial',
+		'circuitskills',
+		'electronskills',
+		'foodskills',
+		'hobbyskills',
+		'machineskills',
+		'MechanicSkills',
 		'metalskills',
 		'Photo Skills',
 		'plasticskills',
@@ -402,22 +402,22 @@ function make_get_better_tag_title( $title = null ) {
 		'greatcreate'
 		);
 	$human   = array(
-		'Robot Skill Builder', 
-		'Casting Materials', 
-		'Advanced Mataerials', 
-		'Reused Materials', 
-		'Plywood', 
-		'Natural Materials', 
-		'Natural Materials', 
-		'Metal', 
-		'Ceramics', 
-		'Concrete', 
+		'Robot Skill Builder',
+		'Casting Materials',
+		'Advanced Mataerials',
+		'Reused Materials',
+		'Plywood',
+		'Natural Materials',
+		'Natural Materials',
+		'Metal',
+		'Ceramics',
+		'Concrete',
 		'Circuit Skill Builder',
-		'Electronics Skill Builder', 
+		'Electronics Skill Builder',
 		'Food Skill Builder',
-		'Hobby Skill Builder', 
-		'Machining Skill Builder', 
-		'Mechanic Skill Builder', 
+		'Hobby Skill Builder',
+		'Machining Skill Builder',
+		'Mechanic Skill Builder',
 		'Metal Skill Builder',
 		'Photo Skill Builder',
 		'Plastic Skill Builder',
@@ -623,11 +623,11 @@ function make_daily_themes() {
 			$output .= '<strong>Family Friday:</strong> ';
 		$output .= get_the_title( $post->ID );
 		$output .= '</a></li>';
-		
+
 	}
 	$output .= '</ul>';
 	return $output;
-	
+
 	wp_reset_query();
 }
 
@@ -668,7 +668,7 @@ function make_post_type_better_name( $name ) {
 		return 'reviews';
 	} elseif ( $name == 'craft' ) {
 		return 'craft';
-	} 
+	}
 }
 
 add_action( 'init', 'make_allow_data_atts' );
@@ -676,7 +676,7 @@ function make_allow_data_atts() {
 	global $allowedposttags;
 
 	$tags = array( 'div,a,li' );
-	$new_attributes = array( 
+	$new_attributes = array(
 		'data-toggle'	=> true,
 		'data-dismiss'	=> true,
 		'data-slide'	=> true,
@@ -688,17 +688,17 @@ function make_allow_data_atts() {
 	}
 }
 
-add_filter('tiny_mce_before_init', 'make_filter_tiny_mce_before_init'); 
-function make_filter_tiny_mce_before_init( $options ) { 
+add_filter('tiny_mce_before_init', 'make_filter_tiny_mce_before_init');
+function make_filter_tiny_mce_before_init( $options ) {
 
-	if ( ! isset( $options['extended_valid_elements'] ) ) 
-		$options['extended_valid_elements'] = ''; 
+	if ( ! isset( $options['extended_valid_elements'] ) )
+		$options['extended_valid_elements'] = '';
 
 	$options['extended_valid_elements'] .= ',a[data*|class|id|style|href]';
 	$options['extended_valid_elements'] .= ',li[data*|class|id|style]';
 	$options['extended_valid_elements'] .= ',div[data*|class|id|style]';
 
-	return $options; 
+	return $options;
 }
 
 add_filter( 'wpcom_sitemap_post_types', 'make_sitemap_add_gallery_post_type' );
@@ -736,32 +736,32 @@ add_action( 'init', 'make_register_menu' );
 add_filter( 'wp_kses_allowed_html', 'mf_allow_data_atts', 10, 2 );
 function mf_allow_data_atts( $allowedposttags, $context ) {
 	$tags = array( 'div', 'a', 'li' );
-	$new_attributes = array( 
+	$new_attributes = array(
 		'data-toggle' 	=> true,
 		'data-dismiss' 	=> true,
 		'data-interval'	=> true,
 		);
- 
+
 	foreach ( $tags as $tag ) {
 		if ( isset( $allowedposttags[ $tag ] ) && is_array( $allowedposttags[ $tag ] ) )
 			$allowedposttags[ $tag ] = array_merge( $allowedposttags[ $tag ], $new_attributes );
 	}
-	
+
 	return $allowedposttags;
 }
 
 
-add_filter('tiny_mce_before_init', 'mf_filter_tiny_mce_before_init'); 
-function mf_filter_tiny_mce_before_init( $options ) { 
+add_filter('tiny_mce_before_init', 'mf_filter_tiny_mce_before_init');
+function mf_filter_tiny_mce_before_init( $options ) {
 
-	if ( ! isset( $options['extended_valid_elements'] ) ) 
-		$options['extended_valid_elements'] = ''; 
+	if ( ! isset( $options['extended_valid_elements'] ) )
+		$options['extended_valid_elements'] = '';
 
 	$options['extended_valid_elements'] .= ',a[data*|class|id|style|href]';
 	$options['extended_valid_elements'] .= ',li[data*|class|id|style]';
 	$options['extended_valid_elements'] .= ',div[data*|class|id|style]';
 
-	return $options; 
+	return $options;
 }
 
 
@@ -788,10 +788,10 @@ function make_get_author( $post_id, $prefix = 'By' ) {
 	echo '<li>';
 	echo esc_attr( $prefix ) . ' ';
 
-	if( function_exists( 'coauthors_posts_links' ) ) {	
-		coauthors_posts_links(); 
-	} else { 
-		the_author_posts_link(); 
+	if( function_exists( 'coauthors_posts_links' ) ) {
+		coauthors_posts_links();
+	} else {
+		the_author_posts_link();
 	}
 
 	echo '</li>';
@@ -813,7 +813,7 @@ function make_add_post_types_to_feed( $query_var ) {
 		$query_var['post_type'] = array( 'post', 'projects', 'review', 'video', 'magazine' );
 
 	return $query_var;
-	
+
 }
 add_filter( 'request', 'make_add_post_types_to_feed' );
 
@@ -841,17 +841,17 @@ function make_popdown_menu() { ?>
 					<div class="span2 border-right">
 						<?php wp_nav_menu( array(
 							'theme_location'  => 'popdown-menu-top',
-							'container'       => false, 
+							'container'       => false,
 							'menu_class'      => 'first nav ga-nav',
-							'depth'           => 1 
+							'depth'           => 1
 						) ); ?>
 					</div>
 					<div class="span4">
 						<?php wp_nav_menu( array(
 							'theme_location'  => 'popdown-menu-middle',
-							'container'       => false, 
+							'container'       => false,
 							'menu_class'      => 'second nav ga-nav',
-							'depth'           => 1 
+							'depth'           => 1
 						) ); ?>
 					</div>
 				</div>
@@ -860,9 +860,9 @@ function make_popdown_menu() { ?>
 						<p>What's Hot on Makezine.com:</p>
 						<?php wp_nav_menu( array(
 							'theme_location'  => 'popdown-menu-last',
-							'container'       => false, 
+							'container'       => false,
 							'menu_class'      => 'last nav ga-nav',
-							'depth'           => 1 
+							'depth'           => 1
 						) ); ?>
 					</div>
 				</div>
@@ -897,7 +897,7 @@ function make_remove_metaboxes_for_authors() {
 		remove_meta_box( 'edit-flow-editorial-comments', 'review', 'normal' );
 		remove_meta_box( 'edit-flow-editorial-comments', 'craft', 'normal' );
 		remove_meta_box( 'edit-flow-editorial-comments', 'video', 'normal' );
-		
+
 		// Remove Edit Flow Notifications
 		remove_meta_box( 'edit-flow-notifications', 'post', 'advanced' );
 		remove_meta_box( 'edit-flow-notifications', 'projects', 'advanced' );
@@ -987,7 +987,7 @@ function make_remove_admin_areas_for_authors() {
 add_action( 'admin_menu', 'make_remove_admin_areas_for_authors' );
 
 /**
- * Function to generate the title tags for page heads.	
+ * Function to generate the title tags for page heads.
  */
 function make_generate_title_tag() {
 	$output = '';
@@ -1004,7 +1004,7 @@ function make_generate_title_tag() {
 }
 
 /**
- * Generate a description for the meta description tag. 
+ * Generate a description for the meta description tag.
  *
  * On the home page, use the bloginfo() description, if a single page, use 20 words of the post content. At some point, need to use the excerpt if it exists, then default to the post content. At the end, run it through esc_attr().
  */
@@ -1050,4 +1050,12 @@ function make_copyright_footer() { ?>
 			<p><?php if ( function_exists('vip_powered_wpcom') ) { echo vip_powered_wpcom(4); } ?></p>
 		</div>
 	</div>
-<?php } 
+<?php }
+
+/**
+ * Get a volume cover image
+ */
+function make_get_cover_image( $number = 39 ) {
+	$url = esc_url( 'http://cdn.makezine.com/make/covers/MAKE_V' . absint( $number ) . '_high.jpg' );
+	return $url;
+}
