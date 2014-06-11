@@ -1,30 +1,15 @@
-.white-bg {
-    padding:20px 0 !important;
-}
 .new-footer {
     background-color:transparent;
     width:100%;
-    width: 100%;
+    padding-top:10px;
     text-align:center;
+    color:#333;
     border-top: 3px solid #DBDBDB;
     background-image: url('../img/header_bg.jpg');
-    a {
-        font-size: 16px;
-    }
-    h3 {
-        display:inline-block;
-    }
-    .g-plus {
-        margin-top:10px;
-    }
-    .nav-list {
-        margin-bottom:20px;
-        list-style:none;
-        li { 
-            float:left; margin-right:49px; 
-            &.last { margin-right:0; 
-            }
-        }
+    p {
+        font-size: 14px !important;
+        line-height: 19px !important;
+        margin-bottom: 5px;
     }
     label {
         display: block;
@@ -34,85 +19,25 @@
     label.checkbox {
         font-weight:bold;
     }
-        .trending, .newsletter, .about-us, .subscribe {
-            padding-top:0px;
-        }
-        .subscribe {
-            p {
-                line-height: 24px;
-                width: 130px;
-                margin-bottom: 11px;
-            }
-            h5 {
-                color:#F60B29;
-                margin-top:-15px;
-            }
-            hr {
-                border: none;
-                background-color: #F60B29;
-                color: #F60B29;
-                height: 7px;
-                margin-right:5px;
-            }
-            #mag-cover {
-                margin-top: -45px;
-            }
-            .sprite-arrow-footer {
-                margin: -20px 0 10px -10px !important;
-            }
-        }
-        a, .new-footer a:visited {
-            color: #005D8F !important;
-            }
-        p {
-            color:#333;
-            font-weight: bold;
-            padding-right: 3px;
-            }
-        h5 {
-            font-size:16px;
-            font-weight:bold;
-            text-transform:none;
-            color:#333;
-            margin-bottom: 0 !important;
-        }
-        .about-column-01{
-        width: 90px;
-        float: left;
-        }
-        .about-column-02{
-        width: 130px;
-        float: left;
-        margin-left: 0; 
-        }  
-    .about-column-01 {
-        width: 90px;
+    .about-us {
+        width: 86px;
         float:left;
         margin-left:0;
         ul {
-        	margin-top:6px;
-        	li {
-        		line-height: 20px;
-        	}
-        }
-    }
-    .about-column-02 {
-        float:left;
-        width:130px;
-        margin-left:0;
-        ul {
-        	margin-top:5px;
-        	li {
-        		line-height: 20px;
-        	}
+            margin-top:0px;
+            li {
+                line-height: 20px;
+                a {
+                    margin-left: -2px;
+                }
+            }
         }
     }
     .email-area {
         #appendedInputButton {
             border-radius: 0;
             height:16px;
-            width: 90%;
-            margin-right: 5px;
+            width:auto;
         }
         controls {
             width:130px;
@@ -125,9 +50,10 @@
             color:#fff;
             font-weight:400;
             font-size:18px;
+            line-height:26px;
             border-radius: 0;
             background-image: none;
-            height:26px;
+            height:30px;
             padding-top:2px;
             border: 1px solid #ccc;
             box-shadow: none;
@@ -135,7 +61,7 @@
     }
     ul {
         li {
-        	font-size:14px !important;
+            font-size:14px !important;
             display: list-item;
         }
     }
@@ -143,13 +69,10 @@
         margin-bottom:8px;
     }
     h5 {
-        margin-bottom:0;
+        margin-bottom:0px !important;
         font-family: "proxima-nova", sans-serif;
         font-size: 16px;
         font-weight: bold;
-        a {
-            font-size:20px;
-        }
     }
     .clearfix {
         clear:both;
@@ -161,7 +84,7 @@
         margin-bottom:5px;
         h5 {
             float:left;
-            padding-top:35px;
+            padding-top:25px;
         }
         img {
             float:left;
@@ -183,36 +106,60 @@
     }
     .subscribe {
         img#mag-cover {
+            width: 128px;
             float: right;
             border: 1px solid #ccc;
+            margin-top: -35px;
         }
     }
     .container {
+        width: 940px;
         margin: 0 auto;
         text-align: left;
         ul {
             margin-left:15px;
         }
-        .row {
-            .subscribe {
-                h5 {
-                    color: #F60B29;
-                    margin-top:-8px;
-                }
-                p {
-                    font-weight: bold;
-                    margin-top:3px;
-                    padding-right:3px;
-                }
-                hr {
-                    border: none;
-                    background-color: #F60B29;
-                    color: #F60B29;
-                    height: 7px;
-                    width:85px;
-                    margin-top: 0px;
-                }
+        .subscribe {
+            h5 {
+                color: #F60B29;
+                margin-top:-8px;
+            }
+            p {
+                font-weight: bold;
+                margin-top:3px;
+                padding-right:3px;
+            }
+            hr {
+                border: none;
+                background-color: #F60B29;
+                color: #F60B29;
+                height: 7px;
+                width:85px;
+                margin-top: 0px;
             }
         }
     }
+}
+.new-footer .controls &>.radio:first-child, .controls &>.checkbox:first-child {
+    padding-top: 0;
+}
+
+.new-footer input[type="radio"], .new-footer input[type="checkbox"] {
+    margin: 0;
+}
+.new-footer .trending, .new-footer .newsletter, .new-footer .about-us, .new-footer .subscribe {
+    width:220px;
+    float:left;
+    border-top:1px solid #ccc;
+    text-align:left;
+    padding-top:10px;
+}
+.footer_copyright {
+    padding-bottom:20px;
+p {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    font-weight: normal !important;
+    margin-bottom: 0px !important;
+}
 }

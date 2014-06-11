@@ -8794,35 +8794,19 @@ body.makercamp .ss-form textarea {
 body.makercamp .ytube_intro {
   margin-top: 10px;
 }
-.white-bg {
-  padding: 20px 0 !important;
-}
 .new-footer {
   background-color: transparent;
   width: 100%;
+  padding-top: 10px;
   text-align: center;
+  color: #333;
   border-top: 3px solid #DBDBDB;
   background-image: url('../img/header_bg.jpg');
 }
-.new-footer a {
-  font-size: 16px;
-}
-.new-footer h3 {
-  display: inline-block;
-}
-.new-footer .g-plus {
-  margin-top: 10px;
-}
-.new-footer .nav-list {
-  margin-bottom: 20px;
-  list-style: none;
-}
-.new-footer .nav-list li {
-  float: left;
-  margin-right: 49px;
-}
-.new-footer .nav-list li.last {
-  margin-right: 0;
+.new-footer p {
+  font-size: 14px !important;
+  line-height: 19px !important;
+  margin-bottom: 5px;
 }
 .new-footer label {
   display: block;
@@ -8832,86 +8816,24 @@ body.makercamp .ytube_intro {
 .new-footer label.checkbox {
   font-weight: bold;
 }
-.new-footer .trending,
-.new-footer .newsletter,
-.new-footer .about-us,
-.new-footer .subscribe {
-  padding-top: 0px;
-}
-.new-footer .subscribe p {
-  line-height: 24px;
-  width: 130px;
-  margin-bottom: 11px;
-}
-.new-footer .subscribe h5 {
-  color: #F60B29;
-  margin-top: -15px;
-}
-.new-footer .subscribe hr {
-  border: none;
-  background-color: #F60B29;
-  color: #F60B29;
-  height: 7px;
-  margin-right: 5px;
-}
-.new-footer .subscribe #mag-cover {
-  margin-top: -45px;
-}
-.new-footer .subscribe .sprite-arrow-footer {
-  margin: -20px 0 10px -10px !important;
-}
-.new-footer a,
-.new-footer .new-footer a:visited {
-  color: #005D8F !important;
-}
-.new-footer p {
-  color: #333;
-  font-weight: bold;
-  padding-right: 3px;
-}
-.new-footer h5 {
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: none;
-  color: #333;
-  margin-bottom: 0 !important;
-}
-.new-footer .about-column-01 {
-  width: 90px;
-  float: left;
-}
-.new-footer .about-column-02 {
-  width: 130px;
+.new-footer .about-us {
+  width: 86px;
   float: left;
   margin-left: 0;
 }
-.new-footer .about-column-01 {
-  width: 90px;
-  float: left;
-  margin-left: 0;
+.new-footer .about-us ul {
+  margin-top: 0px;
 }
-.new-footer .about-column-01 ul {
-  margin-top: 6px;
-}
-.new-footer .about-column-01 ul li {
+.new-footer .about-us ul li {
   line-height: 20px;
 }
-.new-footer .about-column-02 {
-  float: left;
-  width: 130px;
-  margin-left: 0;
-}
-.new-footer .about-column-02 ul {
-  margin-top: 5px;
-}
-.new-footer .about-column-02 ul li {
-  line-height: 20px;
+.new-footer .about-us ul li a {
+  margin-left: -2px;
 }
 .new-footer .email-area #appendedInputButton {
   border-radius: 0;
   height: 16px;
-  width: 90%;
-  margin-right: 5px;
+  width: auto;
 }
 .new-footer .email-area controls {
   width: 130px;
@@ -8924,9 +8846,10 @@ body.makercamp .ytube_intro {
   color: #fff;
   font-weight: 400;
   font-size: 18px;
+  line-height: 26px;
   border-radius: 0;
   background-image: none;
-  height: 26px;
+  height: 30px;
   padding-top: 2px;
   border: 1px solid #ccc;
   box-shadow: none;
@@ -8939,13 +8862,10 @@ body.makercamp .ytube_intro {
   margin-bottom: 8px;
 }
 .new-footer h5 {
-  margin-bottom: 0;
+  margin-bottom: 0px !important;
   font-family: "proxima-nova", sans-serif;
   font-size: 16px;
   font-weight: bold;
-}
-.new-footer h5 a {
-  font-size: 20px;
 }
 .new-footer .clearfix {
   clear: both;
@@ -8958,7 +8878,7 @@ body.makercamp .ytube_intro {
 }
 .new-footer .logo h5 {
   float: left;
-  padding-top: 35px;
+  padding-top: 25px;
 }
 .new-footer .logo img {
   float: left;
@@ -8978,32 +8898,62 @@ body.makercamp .ytube_intro {
   color: #000;
 }
 .new-footer .subscribe img#mag-cover {
+  width: 128px;
   float: right;
   border: 1px solid #ccc;
+  margin-top: -35px;
 }
 .new-footer .container {
+  width: 940px;
   margin: 0 auto;
   text-align: left;
 }
 .new-footer .container ul {
   margin-left: 15px;
 }
-.new-footer .container .row .subscribe h5 {
+.new-footer .container .subscribe h5 {
   color: #F60B29;
   margin-top: -8px;
 }
-.new-footer .container .row .subscribe p {
+.new-footer .container .subscribe p {
   font-weight: bold;
   margin-top: 3px;
   padding-right: 3px;
 }
-.new-footer .container .row .subscribe hr {
+.new-footer .container .subscribe hr {
   border: none;
   background-color: #F60B29;
   color: #F60B29;
   height: 7px;
   width: 85px;
   margin-top: 0px;
+}
+.new-footer .controls  > .radio:first-child,
+.controls  > .checkbox:first-child {
+  padding-top: 0;
+}
+.new-footer input[type="radio"],
+.new-footer input[type="checkbox"] {
+  margin: 0;
+}
+.new-footer .trending,
+.new-footer .newsletter,
+.new-footer .about-us,
+.new-footer .subscribe {
+  width: 220px;
+  float: left;
+  border-top: 1px solid #ccc;
+  text-align: left;
+  padding-top: 10px;
+}
+.footer_copyright {
+  padding-bottom: 20px;
+}
+.footer_copyright p {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  font-weight: normal !important;
+  margin-bottom: 0px !important;
 }
 @media (min-width: 1200px) {
   body.makercamp .new-footer .container,
