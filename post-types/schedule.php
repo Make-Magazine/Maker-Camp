@@ -47,7 +47,7 @@ add_action( 'init', 'make_schedule_init' );
 function make_update_schedule( $post_id, $schedule, $nonce ) {
 	if ( ! empty( $nonce ) && ! wp_verify_nonce( $nonce, 'session-meta-box-save' ) )
 		return;
-	
+
 	// Check if this session has already been scheduled.
 	$schedule_id = get_post_meta( absint( $post_id ), 'session-schedule-id', true );
 	if ( empty( $schedule_id ) ) {
