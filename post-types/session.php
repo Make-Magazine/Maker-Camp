@@ -11,7 +11,7 @@ function make_session_init() {
 		'public'            => true,
 		'show_in_nav_menus' => true,
 		'show_ui'           => true,
-		'supports'          => array( 'title', 'editor' ),
+		'supports'          => array( 'title', 'editor', 'thumbnail' ),
 		'has_archive'       => true,
 		'query_var'         => true,
 		'rewrite'           => true,
@@ -68,6 +68,9 @@ add_filter( 'post_updated_messages', 'make_session_updated_messages' );
  */
 function make_session_add_meta_boxes() {
 	add_meta_box( 'make-sessions-materials-instructions', 'Materials and Instructions', 'make_sessions_materials_instructions', 'session', 'advanced', 'high' );
+	add_meta_box( 'make-schedule', 'Schedule Session', 'make_add_schedules_mb', 'session', 'advanced', 'high' );
+	add_meta_box( 'make-sessions-link', 'Session Link', 'make_sessions_link', 'session', 'side', 'core' );
+	add_meta_box( 'make-sessions-advanced-project', 'Advanced Project', 'make_sessions_advanced_project', 'session', 'side', 'default' );
 }
 add_action( 'add_meta_boxes', 'make_session_add_meta_boxes' );
 
@@ -96,6 +99,66 @@ function make_sessions_materials_instructions( $post ) {
 
 
 /**
+ * Displays the meta box for adding the session URL
+ * @param  object $post The post object of the current post being edited
+ * @return html
+ */
+function make_sessions_link( $post ) {
+
+	// Get the data
+	$session_link = unserialize( get_post_meta( absint( $post->ID ), 'session-link', true ) ); ?>
+	<label for="btn-title"><strong>Button Title</strong></label>
+	<input type="text" name="session-link[title]" id="btn-title" value="<?php echo ( ! empty( $session_link['title'] ) ) ? sanitize_text_field( $session_link['title'] ) : ''; ?>" style="display:block;width:100%;" placeholder="View Video">
+	<label for="btn-link" style="margin-top:10px;"><strong>Link URL</strong></label>
+	<input type="text" name="session-link[url]" id="btn-link" value="<?php echo ( ! empty( $session_link['url'] ) ) ? esc_url( $session_link['url'] ) : ''; ?>" style="display:block;width:100%;">
+	<?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
+}
+
+
+/**
+ * Displays the meta box for adding the advanced project urls
+ * @param  object $post The post object of the current post being edited
+ * @return html
+ */
+function make_sessions_advanced_project( $post ) {
+
+	// Get the data
+	$adv_project = unserialize( get_post_meta( absint( $post->ID ), 'session-adv-project', true ) ); ?>
+	<label for="adv-title"><strong>Project Title</strong></label>
+	<input type="text" name="adv-project[title]" id="adv-title" value="<?php echo ( ! empty( $adv_project['title'] ) ) ? sanitize_text_field( $adv_project['title'] ) : ''; ?>" style="display:block;width:100%;">
+	<label for="adv-link" style="margin-top:10px;"><strong>Project URL</strong></label>
+	<input type="text" name="adv-project[url]" id="adv-link" value="<?php echo ( ! empty( $adv_project['url'] ) ) ? esc_url( $adv_project['url'] ) : ''; ?>" style="display:block;width:100%;">
+	<?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
+}
+
+
+/**
+ * Displays the meta box for scheduling a session and adding or creating a Week
+ * @param  object $post The post object of the current post being edited
+ * @return html
+ */
+function make_add_schedules_mb( $post ) { ?>
+	<table>
+		<tr>
+			<td width="20%"><label for="schdeule-date"><strong>Date</strong></label></td>
+			<td width="80%"><input type="date" name="schedule[date]" id="schedule-date"></td>
+		</tr>
+		<tr>
+			<td valign="top"><label for="assign-week"><strong>Assign To A Week</strong></label></td>
+			<td>
+				<?php make_dropdown_weeks( $post->ID ); ?>
+				<hr>
+				<div id="add-week-wrapper">
+					<button id="add-new-week" class="button" style="display:block;">+ New Week</button>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' ); ?>
+<?php }
+
+
+/**
  * Saves all meta boxes for sessions
  * @param  Integer $post_id The post ID
  * @return void
@@ -106,6 +169,44 @@ function make_sessions_save_meta_boxes( $post_id ) {
 	if ( ! current_user_can( 'edit_post', absint( $post_id ) ) ) return;
 
 	// Save the Materials and Instructions
-	update_post_meta( absint( $post_id ), 'materials-instructions', wp_kses_post( $_POST['session-mat-instruct'] ) );
+	if ( isset( $_POST['session-mat-instruct'] ) )
+		update_post_meta( absint( $post_id ), 'materials-instructions', wp_kses_post( $_POST['session-mat-instruct'] ) );
+
+	// Save the Session link
+	if ( isset( $_POST['session-link'] ) )
+		update_post_meta( absint( $post_id ), 'session-link-btn', serialize( $_POST['session-link'] ) );
+
+	// Save the Session Advanced Project
+	if ( isset( $_POST['adv-project'] ) )
+		update_post_meta( absint( $post_id ), 'session-adv-project', serialize( $_POST['adv-project'] ) );
+
+	// Save the schedule date and week
+	// if ( isset( $_POST['schedule'] ) ) {
+	// 	$schedule_obj = array(
+	// 		'date' => esc_attr( $_POST['schedule']['date'] ),
+	// 		'week' => esc_attr( $_POST['schedule']['week'] ),
+	// 		'title' => sanitize_text_field( $_POST['post_title'] )
+	// 	);
+	// 	make_update_schedule( $post_id, $schedule_obj, $_POST['session-nonce'] );
+	// }
 }
 add_action( 'save_post', 'make_sessions_save_meta_boxes' );
+
+
+
+function make_get_sessions( $args = array() ) {
+	$defaults = array(
+		'post_type' => 'session',
+		'posts_per_page' => 20,
+	);
+	$query = wp_parse_args( $args, $defaults );
+
+	$query = new WP_Query( $query );
+
+	return $query->posts;
+}
+
+
+function make_list_schedule( $type = 'full' ) {
+	return make_get_sessions();
+}
