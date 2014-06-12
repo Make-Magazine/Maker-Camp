@@ -4,13 +4,13 @@
  *
  * @package    maker-camp
  * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
- * 
+ *
  */
 get_header(); ?>
-		
+
 <div class="container top">
 	<div class="row-fluid">
-		<div class="span12 pagination-centered"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/makercamp_whtlarge_logo.png' ); ?>" /></div>
+		<div class="span12 pagination-centered"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp_new_logo.png' ); ?>" /></div>
 </div>
 <div class="row-fluid">
 		<div class="span12 mc-description pagination-centered">
@@ -60,7 +60,7 @@ get_header(); ?>
 			</div>
 		<div class="row-fluid">
 			<div class="pull-right">
-				<img alt="Google Make" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/makercamp/google_make.png' ); ?>" />
+				<img alt="Google Make" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/google-make-2014.png' ); ?>" />
 			</div>
 		</div>
 	</div>
@@ -88,7 +88,7 @@ get_header(); ?>
 							<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">Casting Your Imagination</a>
 						</h6>
 						<p>Description about this project goes here with a couple sentences about what the project is and what it does.</p>
-						<a class="btn btn-small">View this Project</a>
+						<a class="button blue small">View Project</a>
 					</div>
 					<div class="span2">
 						<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">
@@ -98,7 +98,7 @@ get_header(); ?>
 							<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">Casting Your Imagination</a>
 						</h6>
 						<p>Description about this project goes here with a couple sentences about what the project is and what it does.</p>
-						<a class="btn btn-small">View this Project</a>
+						<a class="button blue small">View Project</a>
 					</div>
 					<div class="span2">
 						<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">
@@ -108,7 +108,7 @@ get_header(); ?>
 							<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">Casting Your Imagination</a>
 						</h6>
 						<p>Description about this project goes here with a couple sentences about what the project is and what it does.</p>
-						<a class="btn btn-small">View this Project</a>
+						<a class="button blue small">View Project</a>
 					</div>
 					<div class="span2">
 						<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">
@@ -118,7 +118,7 @@ get_header(); ?>
 							<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">Casting Your Imagination</a>
 						</h6>
 						<p>Description about this project goes here with a couple sentences about what the project is and what it does.</p>
-						<a class="btn btn-small">View this Project</a>
+						<a class="button blue small">View Project</a>
 					</div>
 					<div class="span2">
 						<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">
@@ -128,7 +128,7 @@ get_header(); ?>
 							<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">Casting Your Imagination</a>
 						</h6>
 						<p>Description about this project goes here with a couple sentences about what the project is and what it does.</p>
-						<a class="btn btn-small">View this Project</a>
+						<a class="button blue small">View Project</a>
 					</div>
 					<div class="span2 last">
 						<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">
@@ -138,7 +138,7 @@ get_header(); ?>
 							<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">Casting Your Imagination</a>
 						</h6>
 						<p>Description about this project goes here with a couple sentences about what the project is and what it does.</p>
-						<a class="btn btn-small">View this Project</a>
+						<a class="button blue small">View Project</a>
 					</div>
 				</div>
 			</div>

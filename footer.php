@@ -5,18 +5,18 @@
  * @package    makeblog
  * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
  * @author     Cole Geissinger <cgeissinger@makermedia.com>
- * 
+ *
  */
 ?>
-			<footer class="white-bg new-footer">
+			<footer class="new-footer">
 				<div class="container">
 					<div class="row-fluid hidden-phone">
-						<div class="span12 logo">	
-							<img class="footer_logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/make-logo.png' ); ?>" alt="MAKE">	
+						<div class="span12 logo">
+							<img class="footer_logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/make-logo.png' ); ?>" alt="MAKE">
 							<a href="http://make-digital.com/" target="_blank"><div class="sprite sprite-digital-book-foot"></div></a>
 							<h5><a href="http://make-digital.com/" target="_blank">Read Digital Edition</a></h5>
-							<a href="http://www.makershed.com/" target="_blank"><div class="sprite sprite-makershed_footer1"></div></a> 
-							<h5><a href="http://www.makershed.com/" target="_blank">Shop Maker Shed</a></h5>					
+							<a href="http://www.makershed.com/" target="_blank"><div class="sprite sprite-makershed_footer1"></div></a>
+							<h5><a href="http://www.makershed.com/" target="_blank">Shop Maker Shed</a></h5>
 						<!-- END span12 -->
 						</div>
 						<div class="clear"></div>
@@ -36,7 +36,7 @@
 						<!-- END trending -->
 						</div>
 						<div class="span3 newsletter visible-desktop">
-							<h5>Get our Newsletters</h5>  
+							<h5>Get our Newsletters</h5>
 							<form action="http://makermedia.createsend.com/t/r/s/jrsydu/" method="post" id="subForm">
 								<fieldset>
 									<div class="control-group">
@@ -50,10 +50,10 @@
 											</label>
 											<label for="MakerShed-MasterList">
 												<input type="checkbox" name="cm-ol-tyvyh" id="MakerShed-MasterList"> Maker Shed
-											</label> 
+											</label>
 											<label for="MarketWireNewsletter">
 												<input type="checkbox" name="cm-ol-jrsydu" id="MAKEMarketWirenewsletter"> Maker Pro Newsletter
-											</label> 
+											</label>
 										<!-- END controls -->
 										</div>
 									<!-- control-group -->
@@ -70,47 +70,48 @@
 						<div class="span3 about-us">
 							<h5>About <a href="http://makermedia.com" target="_blank">Maker Media</a></h5>
 							<div class="row-fluid">
-								<div class="span">
-								<div class="about-column-01">
+								<div class="span6">
 									<ul>
 										<li><a href="http://makezine.com/how-to-get-help/">Help</a></li>
 										<li><a href="http://makermedia.com/contact-us/" target="_blank">Contact</a></li>
 										<li><a href="https://www.pubservice.com/MK/subscribe.aspx?PC=MK&amp;PK=M3AMZF">Subscribe</a></li>
-										<li><a href="http://makermedia.com/work-with-us/advertising/" target="_blank">Advertise</a></li> 
+										<li><a href="http://makermedia.com/work-with-us/advertising/" target="_blank">Advertise</a></li>
 										<li><a href="http://makermedia.com/privacy/" target="_blank">Privacy</a></li>
 									</ul>
-								<!-- END span about-column-01 --></div>
-								<div class="about-column-02">
+								</div>
+								<div class="span6">
 									<ul>
 										<li><a href="http://makermedia.com" target="_blank">About Us</a></li>
 										<li><a href="http://makezine.com/faq/" target="_blank">FAQ</a></li>
 										<li><a href="http://makezine.com/forums/" target="_blank">Forums</a></li>
 										<li><a href="http://makezine.com/contribute/" target="_blank">Contribute to MAKE</a></li>
 									</ul>
-								<!-- END about-column-02 -->
 								</div>
 								<!-- END span -->
-								</div>
-							<!-- END row -->
 							</div>
-							<div class="clearfix"></div>
-							<div class="soc_icons">
-								<a class="sprite sprite-twitter"  href="http://twitter.com/make" title="Twitter" target="_blank"></a>
-								<a class="sprite sprite-youtube" href="http://youtube.com/make" title="Youtube" target="_blank"></a>
-								<a class="sprite sprite-pinterest" href="http://pinterest.com/makemagazine/" title="Pinterest" target="_blank"></a>
-								<a class="sprite sprite-flickr" href="http://www.flickr.com/groups/make/" title="Flickr" target="_blank"></a>
-								<a class="sprite sprite-facebook" href="http://facebook.com/makemagazine" title="Facebook" target="_blank"></a>
-								<a class="sprite sprite-stumbleupon" href="http://www.stumbleupon.com/to/stumble/stumblethru:makezine.com?utm_source=Makezine&amp;utm_medium=StumbleThru&amp;utm_campaign=StumbleThruButton" title="Stumbleupon" target="_blank"></a>
-								<a class="sprite sprite-instagram" href="http://www.instagram.com/makemagazine" title="Instagram" target="_blank"></a>
-								<a class="sprite sprite-google-plus" href="https://google.com/+MAKE/" rel="publisher" title="Google+" target="_blank"></a>
-							<!-- END socialArea -->
-							</div> 
+							<!-- END row -->
+							<div class="row-fluid">
+								<div class="span12">
+									<div class="clearfix"></div>
+									<div class="soc_icons">
+										<a class="sprite sprite-twitter"  href="http://twitter.com/make" title="Twitter" target="_blank"></a>
+										<a class="sprite sprite-youtube" href="http://youtube.com/make" title="Youtube" target="_blank"></a>
+										<a class="sprite sprite-pinterest" href="http://pinterest.com/makemagazine/" title="Pinterest" target="_blank"></a>
+										<a class="sprite sprite-flickr" href="http://www.flickr.com/groups/make/" title="Flickr" target="_blank"></a>
+										<a class="sprite sprite-facebook" href="http://facebook.com/makemagazine" title="Facebook" target="_blank"></a>
+										<a class="sprite sprite-stumbleupon" href="http://www.stumbleupon.com/to/stumble/stumblethru:makezine.com?utm_source=Makezine&amp;utm_medium=StumbleThru&amp;utm_campaign=StumbleThruButton" title="Stumbleupon" target="_blank"></a>
+										<a class="sprite sprite-instagram" href="http://www.instagram.com/makemagazine" title="Instagram" target="_blank"></a>
+										<a class="sprite sprite-google-plus" href="https://google.com/+MAKE/" rel="publisher" title="Google+" target="_blank"></a>
+									<!-- END socialArea -->
+									</div>
+								</div>
+							</div>
 						<!-- END span3 about-us -->
 						</div>
 						<div class="span3 subscribe hidden-phone">
 							<div class="sprite sprite-arrow-footer visible-desktop"></div>
 							<a href="https://readerservices.makezine.com/mk/subscribe.aspx?PC=MK&amp;PK=M**NEWB" target="_blank">
-								<img src="http://i1.wp.com/cdn.makezine.com/make/covers/MAKE_V37_high.jpg?resize=128%2C181" alt="MAKE Magazine Drones" id="mag-cover" class="pull-right img-responsive">
+								<img src="<?php echo wpcom_vip_get_resized_remote_image_url( make_get_cover_image(), '128', '181' ); ?>" alt="MAKE Magazine Robotics" width="128" height="181" id="mag-cover" class="pull-right">
 							</a>
 							<h5>Subscribe<br> to MAKE!</h5>
 							<p>Get the print and digital versions when you subscribe</p>
@@ -122,8 +123,8 @@
 					<?php echo make_copyright_footer(); ?>
 				<!-- END container -->
 				</div>
-			</footer>	
-			
+			</footer>
+
 		</div> <!-- /container -->
 
 		<!-- Place this tag after the last badge tag. -->
@@ -134,7 +135,7 @@
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 			})();
 		</script>
-		
+
 		<?php wp_footer(); ?>
 	</body>
 </html>

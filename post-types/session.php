@@ -181,14 +181,14 @@ function make_sessions_save_meta_boxes( $post_id ) {
 		update_post_meta( absint( $post_id ), 'session-adv-project', serialize( $_POST['adv-project'] ) );
 
 	// Save the schedule date and week
-	if ( isset( $_POST['schedule'] ) ) {
-		$schedule_obj = array(
-			'date' => esc_attr( $_POST['schedule']['date'] ),
-			'week' => esc_attr( $_POST['schedule']['week'] ),
-			'title' => sanitize_text_field( $_POST['post_title'] )
-		);
-		make_update_schedule( $post_id, $schedule_obj, $_POST['session-nonce'] );
-	}
+	// if ( isset( $_POST['schedule'] ) ) {
+	// 	$schedule_obj = array(
+	// 		'date' => esc_attr( $_POST['schedule']['date'] ),
+	// 		'week' => esc_attr( $_POST['schedule']['week'] ),
+	// 		'title' => sanitize_text_field( $_POST['post_title'] )
+	// 	);
+	// 	make_update_schedule( $post_id, $schedule_obj, $_POST['session-nonce'] );
+	// }
 }
 add_action( 'save_post', 'make_sessions_save_meta_boxes' );
 

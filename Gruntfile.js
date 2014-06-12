@@ -11,9 +11,7 @@ module.exports = function( grunt ) {
 			development: {
 				files: {
 					'css/style.css': 'less/style.less',
-					'css/print.css': 'less/make/print.less',
-					'css/takeover.css': 'less/make/takeover.less'
-				}
+					'css/print.css': 'less/make/print.less'				}
 			}
 		},
 		watch: {
@@ -30,7 +28,7 @@ module.exports = function( grunt ) {
 			}
 		}
 	});
-	
+
 	// Simplify the repetivite work of listing each plugin in grunt.loadNomTasks(), just get the list from package.json and load them...
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
