@@ -8741,6 +8741,83 @@ body.makercamp .features-box-content h4 {
 body.makercamp .lower-gradation {
   padding: 20px 0;
 }
+body.makercamp .schedule-content {
+  background: #fff;
+  margin-top: 65px;
+  color: #5c5b5b;
+  border-top: 1px solid #8ca9c8;
+}
+body.makercamp .schedule-content .tab-content {
+  position: relative;
+  overflow: visible;
+}
+body.makercamp .schedule-content #schedule {
+  margin-top: -39px;
+  border: none;
+}
+body.makercamp .schedule-content #schedule a {
+  background: #8ed5f6;
+  color: #033978;
+  font-weight: bold;
+  font-size: 1.142857143em;
+}
+body.makercamp .schedule-content #schedule a:hover,
+body.makercamp .schedule-content #schedule a:active {
+  border-color: #acd3fc;
+  background: #8ed5f6;
+  color: #033978;
+}
+body.makercamp .schedule-content #schedule .active a {
+  border-color: #acd3fc;
+  border-bottom-color: #fff;
+  background: #fff;
+  color: #000;
+  padding-bottom: 9px;
+}
+body.makercamp .schedule-content .maker a {
+  color: #005d8f;
+}
+body.makercamp .schedule-content .maker .project-title {
+  font-size: 1.285714286em;
+  line-height: 1em;
+  color: #005d8f;
+}
+body.makercamp .schedule-content .maker .date,
+body.makercamp .schedule-content .maker .mentor {
+  font-size: 1.142857143em;
+  line-height: 1em;
+  font-weight: normal;
+  color: #252525;
+  margin: 5px 0 !important;
+  display: inline-block;
+}
+body.makercamp .faq-content {
+  margin-bottom: 20px;
+}
+body.makercamp .faq-content ul {
+  margin-bottom: 25px !important;
+}
+body.makercamp .ss-form form {
+  background: #fff;
+  padding: 15px 10px 10px 20px;
+  color: #6e6e6e;
+  margin: 20px 20px 0 0;
+}
+body.makercamp .ss-form label.ss-q-title {
+  font-weight: bold;
+}
+body.makercamp .ss-form input,
+body.makercamp .ss-form textarea {
+  width: 95%;
+}
+body.makercamp .ss-form-entry input.button {
+  margin-top: -5px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  border: 0;
+}
 body.makercamp .map-wrapper li {
   margin: 15px 15px 25px 0 !important;
   font-size: 18px;

@@ -1,7 +1,7 @@
 body.makercamp {
 	// apply a natural box layout model to all elements. sadly this breaks everything when it should fix...
 	//* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-	
+
 	background:url(http://makezineblog.files.wordpress.com/2013/05/star-bg-long.jpg) 0 20px repeat;
 	text-rendering: optimizeLegibility;
 	padding-bottom: 0 !important;
@@ -20,7 +20,7 @@ body.makercamp {
 	p {
 		font-size: 16px;
 	}
-	iframe { 
+	iframe {
 		max-width:100%;
 	}
 	.main-content {
@@ -28,11 +28,11 @@ body.makercamp {
 		a:hover, a:active { color:#acd3fc; text-decoration:underline !important; }
 	}
 
-	.search-query { 
-		width:110px !important; 
+	.search-query {
+		width:110px !important;
 	}
 
-	.mc-description { 
+	.mc-description {
 		font-size:48px;
 		line-height:48px;
 		h2 { font-size:48px;
@@ -42,7 +42,7 @@ body.makercamp {
 			font-size:25px;
 			line-height:32px;
 			position:relative;
-			top:10px; 
+			top:10px;
 		}
 	}
 
@@ -52,7 +52,7 @@ body.makercamp {
 	  background-position:bottom center;
 	  padding-bottom:30px;
 	  margin-top:40px;
-	  border:none;	  	
+	  border:none;
 	  	.cap {
 			color:#acd3fc;
 			font-weight:bold;
@@ -68,9 +68,9 @@ body.makercamp {
 		h3 {
 			margin: 5px 0 20px 0 !important;
 			font-size:19px;
-			line-height:1.3em;			
+			line-height:1.3em;
 			color: #acd3fc;
-			font-weight: normal;			
+			font-weight: normal;
 				span{font-size:16px;}
 			&.last {
 				margin-bottom:0 !important;
@@ -78,7 +78,7 @@ body.makercamp {
 		}
 		.span4 h3 {
 			margin: 10px 0 0px 0 !important;
-			font-size:1.7em;			
+			font-size:1.7em;
 		}
 		.blue {
 			background-color: #032042;
@@ -88,7 +88,7 @@ body.makercamp {
 				padding-bottom:12px;
 			}
 		}
-		.button { 
+		.button {
 			border-radius:5px;
 			font-weight:400;
 			width:87%;
@@ -131,7 +131,7 @@ body.makercamp {
 				text-decoration: none;
 			}
 		}
-		h6 { 
+		h6 {
 			font-size:18px;
 			a, a:visited {
 				color: #005d8f !important;
@@ -139,7 +139,7 @@ body.makercamp {
 			}
 			&:hover { text-decoration:underline; }
 		}
-		p { 
+		p {
 			a, a:visited {
 				color: #005d8f !important;
 				text-decoration: none;
@@ -147,7 +147,7 @@ body.makercamp {
 		}
 		.logo {
 			h5{padding-top: 25px !important;}
-			}	
+			}
 		.featured {
 			padding:30px 0 0;
 			margin-left:6px;
@@ -168,7 +168,7 @@ body.makercamp {
 		    font-weight: 600 !important;
 		    line-height: 12px !important;
 		    padding:12px 15px 8px !important;
-		    margin-right:10px;	
+		    margin-right:10px;
 		}
 		.weekly-projects {
 			h5 {
@@ -267,6 +267,82 @@ body.makercamp {
 		padding:20px 0;
 	}
 
+	// Schedule Page
+	.schedule-content {
+		background:#fff;
+		margin-top:65px;
+		color:#5c5b5b;
+		border-top:1px solid #8ca9c8;
+		.tab-content {
+			position:relative;
+			overflow:visible;
+		}
+		#schedule {
+			margin-top:-39px;
+			border:none;
+			a {
+				background:#8ed5f6;
+				color:#033978;
+				font-weight:bold;
+				font-size:1.142857143em;
+				&:hover, &:active {
+					border-color:#acd3fc;
+					background:#8ed5f6;
+					color:#033978;
+				}
+			}
+			.active a {
+				border-color:#acd3fc;
+				border-bottom-color:#fff;
+				background:#fff;
+				color:#000;
+				padding-bottom:9px;
+			}
+		}
+		.maker {
+			a { color:#005d8f; }
+			.project-title {
+				font-size:1.285714286em;
+				line-height:1em;
+				color:#005d8f;
+			}
+			.date, .mentor {
+				font-size:1.142857143em;
+				line-height:1em;
+				font-weight:normal;
+				color:#252525;
+				margin:5px 0 !important;
+				display:inline-block;
+			}
+		}
+	}
+
+	// FAQs
+	.faq-content {
+		margin-bottom:20px;
+		ul { margin-bottom:25px !important; }
+	}
+
+	// Register Summer Program
+	.ss-form {
+		form {
+			background:#fff;
+			padding:15px 10px 10px 20px;
+			color:#6e6e6e;
+			margin:20px 20px 0 0;
+		}
+		label.ss-q-title { font-weight:bold; }
+		input, textarea { width:95%; }
+	}
+	.ss-form-entry input.button {
+		margin-top:-5px;
+		width:100%;
+		text-align:center;
+		padding:10px;
+		font-size:25px;
+		border:0;
+	}
+
 	// Map
 	.map-wrapper {
 		li {
@@ -287,7 +363,7 @@ body.makercamp {
 		color:#333;
 		margin-top:20px;
 		border:1px solid #333;
-		th { 
+		th {
 			color:#fff;
 			border-bottom:1px solid #333;
 			cursor:pointer;
@@ -304,8 +380,8 @@ body.makercamp {
 	.red { color:#c7171d; }
 	.blue { color:#acd3fc; }
 	ul.stars {
-		list-style-image: url(../img/makercamp/stars.png); 
-		li { 
+		list-style-image: url(../img/makercamp/stars.png);
+		li {
 			margin: 15px 15px 5px 0;
 			font-size: 16px !important;
 			}
