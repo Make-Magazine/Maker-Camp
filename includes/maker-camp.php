@@ -323,11 +323,3 @@ function make_makercamp_register_summer_program_gf() {
      return $output;
 }
 add_shortcode('makercamp_register_summer_program_form', 'make_makercamp_register_summer_program_gf' );
-
-/**
- * Get a volume cover image
- */
-function make_get_cover_image( $number = 39 ) {
-    $url = esc_url( 'http://cdn.makezine.com/make/covers/MAKE_V' . absint( $number ) . '_high.jpg' );
-    return $url;
-}
