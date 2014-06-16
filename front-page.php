@@ -7,7 +7,7 @@
  *
  */
 get_header(); ?>
-<div class="makercamp-new ">
+<div class="home blog makercamp makercamp-new ">
 <div class="container-fluid">
 	<span class="visible-desktop skyships"></span>
 	<div class="main-header">
