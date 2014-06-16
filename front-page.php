@@ -44,7 +44,7 @@ get_header(); ?>
 					<h1>Welcome to Maker Camp!</h1>
 					<p>Join young inventors and artists from around the world on <strong>Google+</strong> to make awesome projects, go on epic virtual "field trips," and meet the world's coolest makers. Maker Camp inspires <strong>kids 13-18</strong> to embrace their inner maker, get their hands dirty, fix some things, break some things, and have a lot of fun doing it.</p>
 					<div class="ytube_intro">
-						[youtube http://youtu.be/Lcd0Pv2eCgk]
+						<iframe width="100%" height="100%" src="http://www.youtube.com/embed/Lcd0Pv2eCgk" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 				<div class="span4 text-center visible-desktop">
