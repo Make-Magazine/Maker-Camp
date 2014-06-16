@@ -6437,7 +6437,7 @@ a.badge:focus {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2e435e', endColorstr='#ff172e50', GradientType=0);
 }
 .main-nav .primary-nav > .menu-item {
-  font-size: 21px;
+  font-size: 18px;
 }
 .main-nav .primary-nav > .menu-item > a {
   text-shadow: none;
