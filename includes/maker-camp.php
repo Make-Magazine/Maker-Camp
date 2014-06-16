@@ -323,3 +323,132 @@ function make_makercamp_register_summer_program_gf() {
      return $output;
 }
 add_shortcode('makercamp_register_summer_program_form', 'make_makercamp_register_summer_program_gf' );
+
+
+/**
+ * * Adds a campaign monitor form to the post content
+ * @param  Array  $atts    The array of attributes passed through the shortcode
+ * @param  String $content The string of content wrapped inside the shortcode
+ * @param  Shortcode attributes:
+ *         url           Insert the full URL as per the Campaign Monitor source code (IE http://newsletter.makezine.com/t/r/s/jkdduth/)
+ *         class         Insert any classes you wish to enter. Separate each class with spaces. EG button btn-primary
+ *         id            Insert any ID you want to use. By default this is set to 'subForm'.
+ *         title         Want to display a title? Enter one then! :)
+ *         name_id       This field will allow you to customize the ID field in the name and label tags for the name fields. Defaults to 'name'
+ *         email_id      This field will allow you to customize the ID field in the name and label tags for the email fields.
+ *         name_class    Sometime we want to add classes to the input fields. Use this attribute
+ *         email_class   As with the name_class above, apply custom classes to the email input field.
+ *         name          You can customize the default "Name" text in label with this.
+ *         email         You can customize the default "Email" text in label with this.
+ *         submit_class  Add a custom class to the submit button
+ *         submit        Change the default text of the submit button
+ *
+ *         EG of all fields in use [make-compagin-monitor url="http://newsletter.makezine.com/t/r/s/jkdduth/" class="my-form-class" id="my-form-id" title="My CM Title" name_id="name" email_id="jkdduth-jkdduth" name_class="input-class" email_class="input-class" name="Your Name" email="Your Email" submit_class="btn btn-primary" submit="Submit Your Application"]
+ * @return String
+ */
+function make_campaign_monitor_form( $atts, $content = null ) {
+    extract( shortcode_atts( array(
+        'url'          => '',
+        'class'        => '',
+        'id'           => 'subForm',
+        'title'        => '',
+        'name_id'      => 'name',
+        'email_id'     => '',
+        'name_class'   => '',
+        'email_class'  => '',
+        'name'         => 'Name',
+        'email'        => 'Email',
+        'submit_class' => '',
+        'submit'       => 'Subscribe',
+    ), $atts ) );
+
+    if ( ! empty( $class ) ) {
+        $output .= '<form action="' . esc_url( $url ) . '" method="post" id="' . esc_attr( $id ) . '" class="' . esc_attr( $class ) . '">';
+    } else {
+        $output .= '<form action="' . esc_url( $url ) . '" method="post" id="' . esc_attr( $id ) . '">';
+    }
+        $output .=  '<fieldset>';
+
+            // Add a title to the CM form
+            if ( ! empty( $title ) )
+                $output .= '<legend>' . esc_attr( $title ) . '</legend>';
+
+            // Start our Name label and input fields
+            $output .= '<div class="clearfix">
+                <label for="' . esc_attr( $name_id ) . '">' . esc_attr( $name ) . ':</label>
+                <div class="input">
+                    <input type="text" name="cm-' . esc_attr( $name_id ) . '" id="' . esc_attr( $name_id ) . '"';
+
+                    // Add a class to the name field if needed
+                    if ( ! empty( $name_class ) )
+                        $output .= ' ' . esc_attr( $name_class );
+
+                    $output .= ' />';
+                $output .= '</div>
+            </div>';
+
+            // Start our Email label and input fields
+            $output .= '<div class="clearfix">
+                <label for="' . esc_attr( $email_id ) . '">' . esc_attr( $email ) . ':</label>
+                <div class="input">
+                    <input type="text" name="cm-' . esc_attr( $email_id ) . '" id="' . esc_attr( $email_id ) . '"';
+
+                    // Add a class to the email field if needed
+                    if ( ! empty( $email_class ) )
+                        $output .= ' ' . esc_attr( $email_class );
+
+                    $output .= ' />';
+                $output .= '</div>
+            </div>
+        </fieldset>
+        <div class="actions">
+            <input type="submit" value="' . esc_attr( $submit ) . '" ';
+
+                // Add a class to the submit field if needed
+                if ( ! empty( $submit_class ) )
+                    $output .= 'class="' . esc_attr( $submit_class ) . '" ';
+
+            $output .= '/>
+        </div>
+    </form>';
+
+    return $output;
+}
+add_shortcode( 'make-compagin-monitor', 'make_campaign_monitor_form' );
+
+function maker_camp_list( $atts, $content = null ) {
+    return '
+        <form class="form-stacked" action="http://makermedia.createsend.com/t/r/s/jdilcj/" method="post" id="subForm">
+            <fieldset>
+                <legend>Join Make: Training Camp Mailing List</legend>
+                <div class="clearfix">
+                    <label for="name">Name:</label>
+                    <div class="input">
+                        <input class="xlarge" id="name" name="cm-name" size="30" type="text">
+                    </div>
+                </div>
+                <!-- /clearfix -->
+                <div class="clearfix">
+                    <label for="jdilcj-jdilcj">Email:</label>
+                    <div class="input">
+                        <input class="xlarge" id="jrsydu-jrsydu" name="cm-jdilcj-jdilcj" size="30" type="text">
+                    </div>
+                </div>
+                <!-- /clearfix -->
+            </fieldset>
+            <div class="actions">
+                <button type="submit" class="btn btn-primary">Join</button>
+            </div>
+        </form>';
+}
+add_shortcode( 'maker-camp', 'maker_camp_list' );
+
+function youtube_playlist( $atts, $content = null ) {
+    extract( shortcode_atts( array(
+        'width' => '370',
+        'height' => '208',
+    ), $atts ) );
+
+    return '<iframe width="' . esc_html($width) . '" height="' . esc_html( $height ) . '" src="'. esc_url( 'http://www.youtube.com/embed/videoseries?list=' . $content . '&amp;hl=en_US' ) .'" frameborder="0" allowfullscreen></iframe>';
+}
+add_shortcode( 'youtube_playlist', 'youtube_playlist' );

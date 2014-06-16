@@ -88,32 +88,36 @@
 								<h6 style="color:#005d8f !important">
 									<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">Casting Your Imagination</a>
 								</h6>
+								<p>Making copies of objects like trinkets or figurines is easier than you think. In this project, I’ll show you how to make replicas of something fun — a robot — using a simple moldmaking technique. </p>
 								<p>Project: <a style="color:#005d8f !important;" href="http://makezine.com/projects/custom-robot-keychains-with-easy-moldmaking/">Robot keychain</a> &amp; <a style="color:#005d8f !important;" href="http://makezine.com/projects/unihorn-bike-helmet-with-littlebits/">Unihorn Bike Helmet</a></p>
 							</div>
 							<div class="span3">
 								<a href="https://plus.google.com/109780686446922422512/posts/XyyTQnotsxZ">
-								<img alt="Playing with Plastic" src="http://i0.wp.com/makezineblog.files.wordpress.com/2013/08/keychain1.jpg?resize=270%2C174" />
+								<img alt="Playing with Plastic" src="http://i2.wp.com/makezineblog.files.wordpress.com/2013/08/maker-camp-week-06-tkftwvfrragrxigs.jpg?resize=270%2C174" />
 								</a>
 								<h6 style="color:#005d8f !important">
 									<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">Playing with Plastic  &amp; Another Slice of Raspberry Pi</a>
 								</h6>
-								<p> Project: <a style="color:#005d8f !important;" href="http://makezine.com/projects/how-to-make-your-own-plastic-vacuum-former/">Peanut Butter Jar Vacuum Former</a></p>
+								<p>Plastic vacuum formers are an important part of the prototyping process. If you need a nice plastic robot body or custom case for a project you are doing, get your tools.</p>
+								<p>Project: <a style="color:#005d8f !important;" href="http://makezine.com/projects/how-to-make-your-own-plastic-vacuum-former/">Peanut Butter Jar Vacuum Former</a></p>
 							</div>
 							<div class="span3">
 								<a href="https://plus.google.com/u/0/109780686446922422512/posts/BbxwHANTcap">
-								<img alt="Cyborg Yourself " src="http://i0.wp.com/makezineblog.files.wordpress.com/2013/08/keychain1.jpg?resize=270%2C174" />
+								<img alt="Cyborg Yourself " src="http://i1.wp.com/makezineblog.files.wordpress.com/2013/08/maker-camp-week-06-cyborg-with-light1.jpg?resize=270%2C174" />
 								</a>
 								<h6 style="color:#005d8f !important">
 									<a href="https://plus.google.com/u/0/109780686446922422512/posts/CcBkj3jq5c8">Cyborg Yourself </a>
 								</h6>
-								<p> Project: <a style="color:#005d8f !important;" href="http://makezine.com/projects/cyborg-makeup-effect/">Cyborg Makeup</a></p>
+								<p>If you’ve ever wanted to fulfill your dream of becoming a cyborg, now is your chance. In this tutorial we’ll teach you how to create a prosthetic piece that you can attach to your face for an interesting and fun look.</p>
+								<p>Project: <a style="color:#005d8f !important;" href="http://makezine.com/projects/cyborg-makeup-effect/">Cyborg Makeup</a></p>
 							</div>
 							<div class="span3 last">
 								<a href="https://plus.google.com/+MAKE/posts/SVCwD2JiQ6A">
-								<img alt="South African Young Makers" src="http://i0.wp.com/makezineblog.files.wordpress.com/2013/08/keychain1.jpg?resize=270%2C174" />
+								<img alt="South African Young Makers" src="http://i0.wp.com/makezineblog.files.wordpress.com/2013/06/robot.jpg?resize=270%2C174" />
 								</a>
 								<h6 style="color:#005d8f !important;"><a href="https://plus.google.com/+MAKE/posts/SVCwD2JiQ6A">South African Young Makers</a> &amp; <a href="https://plus.google.com/109780686446922422512/posts/cYeTznXvHW4">Props and Weathering Effects</a></h6>
-								<p>                  Project: <a style="color:#005d8f !important;" href="http://makezine.com/projects/simple-paint-weathering-in-3-easy-steps/">Weathering Effects</a></p>
+								<p>Weathering plastic or wood to make it look like aged metal is an effect you can achieve in less steps than most people expect. The basic weathering can be done with only two paints.</p>
+								<p>Project: <a style="color:#005d8f !important;" href="http://makezine.com/projects/simple-paint-weathering-in-3-easy-steps/">Weathering Effects</a></p>
 							</div>
 						</div>
 					</div>
