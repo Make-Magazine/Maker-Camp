@@ -47,6 +47,7 @@ add_action( 'after_setup_theme', 'make_action_after_setup_theme' );
 function make_load_resources() {
 	// To ensure CSS files are downloaded in parallel, always include CSS before JavaScript.
 	wp_enqueue_style( 'make-css', get_stylesheet_directory_uri() . '/css/style.css' );
+	wp_enqueue_style( 'make-css', get_stylesheet_directory_uri() . '/css/redesign.css' );
 	wp_enqueue_style( 'make-print', get_stylesheet_directory_uri() . '/css/print.css', array(), false, 'print' );
 
 	// Load our common scripts first. These should not require jQuery
