@@ -5,12 +5,12 @@
  *
  * @package    makeblog
  * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
- * 
+ *
  */
 ?>
 
-<?php get_header( 'makercamp' ); ?>
-	<?php 
+<?php get_header( ); ?>
+	<?php
 		$get_addresses = get_post_meta( get_the_ID(), 'makercamp-maps-data', false );
 		$addresses = json_decode( str_replace( '&quot;', '"', $get_addresses[0] ), true );
 	?>
@@ -37,7 +37,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php 
+								<?php
 									if ( ! empty( $addresses ) && is_array( $addresses ) ) :
 										foreach ( $addresses as $address ) : ?>
 											<tr>
