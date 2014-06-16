@@ -8373,8 +8373,8 @@ textarea.narrow,
   width: 620px;
   height: 174px;
 }
-.mc-logo {
-  margin-top: 40px;
+.top-header {
+  margin-top: 80px;
 }
 .button,
 a.button {
