@@ -7,7 +7,7 @@
  *
  */
 get_header(); ?>
-
+<div class="makercamp-new ">
 <div class="container-fluid">
 	<span class="visible-desktop skyships"></span>
 	<div class="main-header">
@@ -15,7 +15,9 @@ get_header(); ?>
 				<div class="row-fluid">
 					<div class="hidden-desktop text-center">
 						<div class="span12">
-							<img src="img/logo.png" />
+							<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>"
+ />
+
 							<div class="tagline">
 								<h1>A <strong>FREE</strong>
 								summer camp for building, tinkering and exploring. Online and in your neighborhood!</h1>
@@ -24,7 +26,7 @@ get_header(); ?>
 					</div>
 					<div class="visible-desktop">
 						<div class="span6">
-							<img src="img/logo.png" />
+							<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>"
 						</div>
 						<div class="span6" style="">
 							<div class="tagline">
@@ -47,9 +49,15 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="span4 text-center visible-desktop">
-					<img src="img/sidepic-kids.png" style="margin-bottom:8px;" /><br>
+
+
+
+					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/sidepic-kids.png' ); ?>" style="margin-bottom:8px;" /><br>
 					<span style="font-size:14px;color:#666;">Make awesome projects!</span>
-					<img src="img/sidepic.png" style="margin-bottom:8px;margin-top:30px;" /><br>
+
+
+
+					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/sidepic.png' ); ?>"  style="margin-bottom:8px;margin-top:30px;" /><br>
 					<span style="font-size:14px;color:#666;">Meet the world's best makers!</span>
 				</div>
 			</div>
@@ -125,6 +133,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
+</div>
 
 
 <?php get_footer(); ?>
