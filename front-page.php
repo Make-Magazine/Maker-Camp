@@ -15,8 +15,7 @@ get_header(); ?>
 				<div class="row-fluid">
 					<div class="hidden-desktop text-center">
 						<div class="span12">
-							<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>"
- />
+							<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>" />
 
 							<div class="tagline">
 								<h1>A <strong>FREE</strong>
@@ -26,7 +25,7 @@ get_header(); ?>
 					</div>
 					<div class="visible-desktop">
 						<div class="span6">
-							<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>"
+							<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>" />
 						</div>
 						<div class="span6" style="">
 							<div class="tagline">
@@ -37,7 +36,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-	</div>
+		</div>
 	<section class="white-bg intro">
 		<div class="container">
 			<div class="row-fluid visible-desktop">
@@ -133,6 +132,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
+</div>
 </div>
 
 
