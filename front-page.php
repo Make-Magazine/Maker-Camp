@@ -17,6 +17,7 @@
 						<div class="span12">
 							<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>" />
 							<div class="tagline">
+								<h1><strong>July 7th-August 15th</strong></h1>
 								<h1>A <strong>FREE</strong>
 									summer camp for building, tinkering and exploring. Online and in your neighborhood!
 								</h1>
