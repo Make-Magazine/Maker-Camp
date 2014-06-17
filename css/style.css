@@ -9237,13 +9237,13 @@ body.makercamp .ytube_intro {
 }
 .makercamp-new .main-header .visible-desktop .tagline h1 {
   font-size: 2.2em;
-  line-height: 1.5em;
-  margin-top: 1.5em;
+  line-height: 1.4em;
+  margin-top: 0em;
   font-weight: normal;
 }
 .makercamp-new .main-header .hidden-desktop .tagline h1 {
   font-size: 1.9em;
-  line-height: 1.5em;
+  line-height: 1.4em;
   margin-top: 0.8em;
   font-weight: normal;
 }
@@ -9264,6 +9264,9 @@ body.makercamp .ytube_intro {
   background-repeat: no-repeat;
   background-position: top center;
   height: 60px;
+}
+.sponsors-home {
+  margin-top: 35px;
 }
 .makercamp-new > .container-fluid {
   padding: 0;

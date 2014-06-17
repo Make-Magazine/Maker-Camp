@@ -17,10 +17,10 @@
 						<div class="span12">
 							<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>" />
 							<div class="tagline">
-								<h1><strong>July 7th-August 15th</strong></h1>
 								<h1>A <strong>FREE</strong>
 									summer camp for building, tinkering and exploring. Online and in your neighborhood!
 								</h1>
+								<h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
 							</div>
 							<div class="sponsors-home" style="margin-top:75px;">
 								<div class="span5"></div>
@@ -38,8 +38,11 @@
 								<h1>A <strong>FREE</strong>
 									summer camp for building, tinkering and exploring. Online and in your neighborhood!
 								</h1>
+								<h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
+
+
 							</div>
-							<div class="sponsors-home" style="margin-top:75px;">
+							<div class="sponsors-home">
 								<div class="span5"></div>
 								<div class="span4" style="margin-top:20px;"><a href="#"><img src="https://makezineblog.files.wordpress.com/2014/06/autodesk_logo.png?w=350" /></a></div>
 								<div class="span3"><a href="#"><img src="https://makezineblog.files.wordpress.com/2014/06/primary-radioshack-logo.png?w=150;" /></a></div>
