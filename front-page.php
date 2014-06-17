@@ -57,7 +57,7 @@
 				<div class="row-fluid visible-desktop">
 					<div class="span8">
 						<h1>Welcome to Maker Camp!</h1>
-						<p style="margin-bottom:10px;">Join young inventors and artists from around the world on <strong>Google+</strong> to make awesome projects, go on epic virtual "field trips," and meet the world's coolest makers. Maker Camp inspires <strong>kids ages 13-18 *</strong> to embrace their inner maker, get their hands dirty, fix some things, break some things, and have a lot of fun doing it.</p>
+						<p style="margin-bottom:10px;">Join young inventors and artists from around the world on <strong>Google+</strong> to make awesome projects, go on epic virtual "field trips," and meet the world's coolest makers. Maker Camp inspires <strong>kids ages 13-18*</strong> to embrace their inner maker, get their hands dirty, fix some things, break some things, and have a lot of fun doing it.</p>
 
 					            <ul style="font-size:22px;">
 					               <li style="font-size:22px;">Week 1: Makers in Motion</li>
@@ -82,7 +82,7 @@
 				<div class="row-fluid hidden-desktop">
 					<div class="span12">
 						<h1>Welcome to Maker Camp!</h1>
-						<p class="tagline">Join young inventors and artists from around the world on <strong>Google+</strong> to make awesome projects, go on epic virtual "field trips," and meet the world's coolest makers. Maker Camp inspires <strong>kids ages 13-18</strong> to embrace their inner maker, get their hands dirty, fix some things, break some things, and have a lot of fun doing it.</p>
+						<p class="tagline">Join young inventors and artists from around the world on <strong>Google+</strong> to make awesome projects, go on epic virtual "field trips," and meet the world's coolest makers. Maker Camp inspires <strong>kids ages 13-18*</strong> to embrace their inner maker, get their hands dirty, fix some things, break some things, and have a lot of fun doing it.</p>
 					            <ul style="font-size:22px;">
 					               <li style="font-size:22px;">Week 1: Makers in Motion</li>
 					               <li style="font-size:22px;">Week 2: Art and Design</li>
