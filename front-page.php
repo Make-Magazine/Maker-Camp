@@ -86,7 +86,7 @@
 							</div>
 							<div class="span3">
 								<h4 style="line-height:1.4">
-									<a class="pull-right" style="color:#005d8f !important" href="http://staging.makercamp.com/?page_id=9">View More Projects</a>
+									<a class="pull-right" style="color:#005d8f !important" href="http://makercamp.com/2013-2/schedule/">View More Projects</a>
 								</h4>
 							</div>
 						</div>
