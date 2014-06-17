@@ -57,7 +57,8 @@
 				<div class="row-fluid visible-desktop">
 					<div class="span8">
 						<h1>Welcome to Maker Camp!</h1>
-						<p>Join young inventors and artists from around the world on <strong>Google+</strong> to make awesome projects, go on epic virtual "field trips," and meet the world's coolest makers. Maker Camp inspires <strong>kids 13-18</strong> to embrace their inner maker, get their hands dirty, fix some things, break some things, and have a lot of fun doing it.</p>
+						<p>Join young inventors and artists from around the world on <strong>Google+</strong> to make awesome projects, go on epic virtual "field trips," and meet the world's coolest makers. Maker Camp inspires <strong>kids 13-18 *</strong> to embrace their inner maker, get their hands dirty, fix some things, break some things, and have a lot of fun doing it.</p>
+						<p class="small" style="font-size:14px;color:#666;">* Kids younger than 13 can participate in Maker Camp when using an adult’s Google+ account.</p>
 						<div class="ytube_intro">
 							<iframe width="100%" height="100%" src="http://www.youtube.com/embed/Lcd0Pv2eCgk" frameborder="0" allowfullscreen></iframe>
 						</div>
