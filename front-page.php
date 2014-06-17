@@ -23,8 +23,8 @@
 							</div>
 							<div class="sponsors-home" style="margin-top:75px;">
 								<div class="span5"></div>
-								<div class="span4" style="margin-top:20px;"><a href="#"><img src="https://makezineblog.files.wordpress.com/2014/06/autodesk_logo.png?w=350" /></a></div>
-								<div class="span3"><a href="#"><img src="https://makezineblog.files.wordpress.com/2014/06/primary-radioshack-logo.png?w=150;" /></a></div>
+								<div class="span4" style="margin-top:20px;"><a href="http://www.autodesk.com/"><img src="https://makezineblog.files.wordpress.com/2014/06/autodesk_logo.png?w=350" alt="Autodesk Sponsor" /></a></div>
+								<div class="span3"><a href="http://www.radioshack.com/"><img src="https://makezineblog.files.wordpress.com/2014/06/primary-radioshack-logo.png?w=150;" alte="Radio Shack Sponsor" /></a></div>
 							</div>
 						</div>
 					</div>
