@@ -22,10 +22,11 @@
 								</h1>
 								<h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
 							</div>
-							<div class="sponsors-home" style="margin-top:75px;">
-								<div class="span5"></div>
-								<div class="span4" style="margin-top:20px;"><a href="http://www.autodesk.com/"><img src="https://makezineblog.files.wordpress.com/2014/06/autodesk_logo.png?w=350" alt="Autodesk Sponsor" /></a></div>
-								<div class="span3"><a href="http://www.radioshack.com/"><img src="https://makezineblog.files.wordpress.com/2014/06/primary-radioshack-logo.png?w=150;" alte="Radio Shack Sponsor" /></a></div>
+							<div class="sponsors-home" style="margin-top:15px;">
+								<div class="span3" style="text-align:center;margin-top:15px"><p style="color:#fff;font-size:18px;">Powered by</p></div>
+								<div class="span3"><a href="http://google.com"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/google-logo.png' ); ?>" alt="Google Logo" width="300px"></a></div>
+								<div class="span3" style="margin-top:20px;"><a href="http://www.autodesk.com/"><img src="https://makezineblog.files.wordpress.com/2014/06/autodesk_logo.png?w=280" alt="Autodesk Sponsor" /></a></div>
+								<div class="span3" style="margin-bottom:15px;margin-top:25px;"><a href="http://www.radioshack.com/"><img src="https://makezineblog.files.wordpress.com/2014/06/primary-radioshack-logo.png?w=300;" alt="Radio Shack Sponsor" /></a></div>
 							</div>
 						</div>
 					</div>
@@ -43,9 +44,12 @@
 
 							</div>
 							<div class="sponsors-home">
-								<div class="span5"></div>
-								<div class="span4" style="margin-top:20px;"><a href="#"><img src="https://makezineblog.files.wordpress.com/2014/06/autodesk_logo.png?w=350" /></a></div>
-								<div class="span3"><a href="#"><img src="https://makezineblog.files.wordpress.com/2014/06/primary-radioshack-logo.png?w=150;" /></a></div>
+								<div class="sponsors-home" style="margin-top:35px;">
+								<div class="span3" style="text-align:right;margin-top:35px"><p style="color:#fff;font-size:18px;">Powered by</p></div>
+								<div class="span3" style="margin-top:18px;"><a href="http://google.com"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/google-logo.png' ); ?>" alt="Google Logo" width="240px"></a></div>
+								<div class="span3" style="margin-top:35px;"><a href="http://www.autodesk.com/"><img src="https://makezineblog.files.wordpress.com/2014/06/autodesk_logo.png?w=250" alt="Autodesk Sponsor" /></a></div>
+								<div class="span3" style="margin-top:20px;"><a href="http://www.radioshack.com/"><img src="https://makezineblog.files.wordpress.com/2014/06/primary-radioshack-logo.png?w=100;" alt="Radio Shack Sponsor" /></a></div>
+							</div>
 							</div>
 						</div>
 					</div>
