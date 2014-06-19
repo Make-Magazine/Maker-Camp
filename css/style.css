@@ -9082,7 +9082,7 @@ body.makercamp .ytube_intro {
 .makercamp-new .ytube_intro {
   position: relative;
   padding-bottom: 56.25%;
-  padding-top: 30px;
+  padding-top: 0px;
   height: 0;
 }
 .makercamp-new .ytube_introiframe,
