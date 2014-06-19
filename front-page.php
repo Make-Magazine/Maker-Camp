@@ -1,7 +1,6 @@
 <?php
-	/**
-	 * Home Page template
-	 *
+	/*
+	  Template Name: Home Page Template
 	 * @package    maker-camp
 	 * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
 	 *
