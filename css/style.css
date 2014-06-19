@@ -6598,20 +6598,6 @@ article ul li {
 .row.volume {
   margin-bottom: 30px;
 }
-.add30 {
-  width: 590px;
-  margin-right: 30px;
-}
-.blog .projects-masthead h2 {
-  margin-bottom: -10px;
-}
-.blog .projects-meta {
-  color: #333;
-  font-weight: normal;
-}
-.blog article {
-  margin: 20px 0 45px;
-}
 .masthead {
   font-family: "proxima-nova", sans-serif;
   padding-top: 20px;
@@ -6621,90 +6607,6 @@ article ul li {
   line-height: 60px;
   letter-spacing: -2px;
   color: #005d8f;
-}
-ul.inline.urban-sensor-nav li {
-  padding: 0;
-}
-ul.inline.urban-sensor-nav li a {
-  padding: 0 5px;
-  color: #8ed5f6;
-}
-ul.inline.urban-sensor-nav li a:hover {
-  background: #E4F4F9;
-  color: #ed1c24 !important;
-}
-.waist {
-  background-image: url('../img/blue_bg1.jpg');
-  border-bottom: 2px solid #DBDBDB;
-}
-.caption {
-  margin-top: -66px;
-  height: 65px;
-  background-color: rgba(255, 255, 255, 0.8);
-  position: relative;
-  margin-right: -1px;
-  margin-left: 1px;
-}
-.page-template-page-kids-php .caption {
-  margin-top: -65px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
-  position: relative;
-}
-.paddme {
-  padding: 10px 0 10px 10px;
-}
-.paddme.small {
-  padding: 10px 10px 10px 0;
-}
-.checkers {
-  background-image: url('../img/header_bg.jpg');
-  margin: 15px 0 0;
-}
-.entry-content .blurb {
-  line-height: 18px;
-}
-.look_like_h4 {
-  font-size: 14px !important;
-  font-weight: bold !important;
-  line-height: 18px !important;
-  height: 120px !important;
-  margin: 5px 0 !important;
-  width: auto !important;
-  display: inline !important;
-  height: 90px !important;
-  color: #005d8f !important;
-  font-family: "proxima-nova", sans-serif !important;
-}
-.look_like_h4_cat {
-  font-family: "proxima-nova", sans-serif !important;
-  color: #022c44 !important;
-  font-weight: normal !important;
-  font-size: 24px !important;
-  margin: 0 0 5px 0;
-  height: 36px;
-  line-height: 18px;
-  cursor: text;
-}
-.look_like_h3_blue {
-  font-family: "proxima-nova", sans-serif;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 900;
-  height: 24px;
-  line-height: 24px;
-  margin-left: 10px;
-  margin-top: 10px;
-  width: 290px;
-}
-.look_like_h3_blue a {
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 900;
-  height: auto;
-  line-height: 24px;
-  text-decoration: none;
-  font-family: "proxima-nova", sans-serif;
 }
 .look_like_h3 {
   font-size: 16px;
@@ -6823,7 +6725,7 @@ div.superpage {
   font-size: 14px;
 }
 article {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 article h4 a:hover {
   text-decoration: none;
@@ -7122,8 +7024,6 @@ footer .pills a {
 .content {
   background-color: white;
   padding: 10px;
-  background-image: url('../img/header_bg.jpg');
-  border: 1px solid #C0C3C3;
 }
 .content h1 {
   border-bottom: 1px solid #074F6D;
@@ -9236,13 +9136,13 @@ body.makercamp .ytube_intro {
   background-color: #05729f;
 }
 .makercamp-new .main-header .visible-desktop .tagline h1 {
-  font-size: 2.1em;
+  font-size: 2.2em;
   line-height: 1.4em;
   margin-top: 0em;
   font-weight: normal;
 }
 .makercamp-new .main-header .hidden-desktop .tagline h1 {
-  font-size: 1.8em;
+  font-size: 1.9em;
   line-height: 1.4em;
   margin-top: 0.8em;
   font-weight: normal;

@@ -442,13 +442,3 @@ function maker_camp_list( $atts, $content = null ) {
         </form>';
 }
 add_shortcode( 'maker-camp', 'maker_camp_list' );
-
-function youtube_playlist( $atts, $content = null ) {
-    extract( shortcode_atts( array(
-        'width' => '370',
-        'height' => '208',
-    ), $atts ) );
-
-    return '<iframe width="' . esc_html($width) . '" height="' . esc_html( $height ) . '" src="'. esc_url( 'http://www.youtube.com/embed/videoseries?list=' . $content . '&amp;hl=en_US' ) .'" frameborder="0" allowfullscreen></iframe>';
-}
-add_shortcode( 'youtube_playlist', 'youtube_playlist' );
