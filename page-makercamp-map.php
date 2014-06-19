@@ -8,7 +8,9 @@
  * @author     Cole Geissinger <cgeissinger@makermedia.com>
  *
  */
-get_header(); ?>
+?>
+
+<?php get_header( 'makercamp' ); ?>
 	<?php
 		$get_addresses = get_post_meta( get_the_ID(), 'makercamp-maps-data', false );
 		$addresses = json_decode( str_replace( '&quot;', '"', $get_addresses[0] ), true );
@@ -18,6 +20,7 @@ get_header(); ?>
 			$( '.map-list' ).tablesorter();
 		});
 	</script>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="makercamp-new ">
 		<div class="main-header">
 			<div class="container">
@@ -53,26 +56,15 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-	<section class="white-bg intro">
+	<section class="white-bg intro map-page">
 		<div class="container ">
 
 			<div class="row-fluid">
 
 				<div class="span12">
 
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-						<article <?php post_class(); ?>>
-
 							<?php the_content(); ?>
 
-						</article>
-
-					<?php endwhile; else: ?>
-
-						<p><?php _e( 'Sorry, no page found.', 'makercamp' ); ?></p>
-
-					<?php endif; ?>
 				</div>
 			</div>
 			<div class="row">
@@ -113,4 +105,6 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
+	<?php endwhile; endif; ?>
+
 <?php get_footer( 'makercamp' ); ?>

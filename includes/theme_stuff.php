@@ -58,7 +58,7 @@ function make_load_resources() {
 	wp_enqueue_script( 'maker-camp-js', get_stylesheet_directory_uri() . '/js/common.js', array('jquery'), '1.0', true );
 
 	// display our map sort plugin for Maker Camp
-	if ( is_page( 315793 ) ) // TODO: Update page id to match new page created
+	if ( is_page( 20 ) ) // TODO: Update page id to match new page created
 		wp_enqueue_script( 'make-sort-table', get_stylesheet_directory_uri() . '/js/libs/jquery.tablesorter.min.js', array( 'jquery' ), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'make_load_resources' );

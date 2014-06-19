@@ -8717,6 +8717,10 @@ body.makercamp .map-title {
   font-family: sans-serif;
   font-weight: normal;
 }
+body.makercamp h1.map-title {
+  color: #fff;
+  padding-top: 15px;
+}
 body.makercamp .map-list {
   background: #fff;
   color: #333;
@@ -8756,7 +8760,7 @@ body.makercamp .ss-form textarea {
   width: 70%;
 }
 body.makercamp .ytube_intro {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .new-footer {
   background-color: transparent;
