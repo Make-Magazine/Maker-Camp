@@ -42,7 +42,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-	<section class="white-bg intro">
+	<section class="white-bg">
 		<div class="container ">
 			<div class="row-fluid">
 				<div class="span12">

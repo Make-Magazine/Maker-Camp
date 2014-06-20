@@ -56,7 +56,7 @@
 				</div>
 			</div>
 		</div>
-	<section class="white-bg intro map-page">
+	<section class="white-bg map-page">
 		<div class="container ">
 
 			<div class="row-fluid">

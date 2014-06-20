@@ -6593,7 +6593,7 @@ body ul li {
   line-height: 140%;
 }
 article ul li {
-  font-size: 18px;
+  font-size: 16px;
 }
 .row.volume {
   margin-bottom: 30px;
@@ -6722,7 +6722,7 @@ div.superpage {
 .entry-content h4 {
   width: 274px;
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 18px;
 }
 article h4 a:hover {
   text-decoration: none;
@@ -6857,7 +6857,7 @@ article h4 a:hover {
 }
 .new-grid .halloween p {
   margin: 5px 10px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
 }
 .grid-box h2 {
@@ -6877,7 +6877,7 @@ article h4 a:hover {
 }
 .grid-box .span3 p {
   margin: 5px 0px 5px 20px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
 }
 .grid-box .span3 h2 {
@@ -6913,7 +6913,7 @@ article h4 a:hover {
   text-decoration: none;
 }
 .boxy p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 18px;
 }
 .boxy h4 {
@@ -7039,7 +7039,7 @@ footer .pills a {
 }
 .meta {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   color: #4b4f50;
   margin-bottom: 0px;
 }
@@ -7236,7 +7236,7 @@ hr {
   color: #045876 !important;
 }
 .bigger {
-  font-size: 14px;
+  font-size: 18px;
   margin: 0px;
 }
 .biggest {
@@ -7595,7 +7595,7 @@ div.tools {
 .the_tags a {
   font-style: italic;
   color: #5b5a54;
-  font-size: 14px;
+  font-size: 18px;
 }
 .post-image {
   margin-bottom: 15px;
@@ -7795,12 +7795,12 @@ body#shop {
   background-image: url('../img/Google_Hangout_WebAd2_on_air.gif');
 }
 .hoa h4 {
-  font-size: 14px;
+  font-size: 18px;
   padding-top: 12px;
 }
 .hoa p {
   margin-bottom: 0px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 130%;
 }
 .overlay {
@@ -8013,6 +8013,7 @@ textarea.narrow,
   margin-left: 0;
 }
 #make_subcription_form #offer-code {
+  font-size: 18px;
   font-size: 14px;
   padding-top: 45px;
   font-weight: bold;
@@ -8125,7 +8126,7 @@ textarea.narrow,
   margin-bottom: 10px;
 }
 .back-issues p {
-  font-size: 14px !important;
+  font-size: 18px !important;
 }
 .googleplus1_button {
   width: auto !important;
@@ -8340,7 +8341,7 @@ body.makercamp {
   padding-top: 0px !important;
   margin: 0;
   font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   color: #fff;
 }
@@ -8351,6 +8352,7 @@ body.makercamp h4,
 body.makercamp h5,
 body.makercamp h6 {
   margin: 10px 0;
+  color: #e1272e;
 }
 body.makercamp h3 {
   line-height: 40px;
@@ -8464,7 +8466,7 @@ body.makercamp .beige-bg {
 body.makercamp .white-bg h4,
 body.makercamp .beige-bg h4 {
   margin-top: 10px;
-  font-size: 24px;
+  font-size: 21px;
   line-height: 30px;
 }
 body.makercamp .white-bg h4 a:link,
@@ -8475,7 +8477,7 @@ body.makercamp .beige-bg h4 a:visited {
 }
 body.makercamp .white-bg h5,
 body.makercamp .beige-bg h5 {
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   color: #6e6e6e;
   font-weight: normal;
@@ -8489,7 +8491,7 @@ body.makercamp .beige-bg h5 a:visited {
 }
 body.makercamp .white-bg h6,
 body.makercamp .beige-bg h6 {
-  font-size: 18px;
+  font-size: 16px;
 }
 body.makercamp .white-bg h6 a,
 body.makercamp .beige-bg h6 a,
@@ -8707,7 +8709,7 @@ body.makercamp .ss-form-entry input.button {
 }
 body.makercamp .map-wrapper li {
   margin: 15px 15px 25px 0 !important;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.3em;
 }
 body.makercamp .map-title {
@@ -8775,6 +8777,14 @@ body.makercamp .ytube_intro {
   font-size: 14px !important;
   line-height: 19px !important;
   margin-bottom: 5px;
+}
+.new-footer h1,
+.new-footer h2,
+.new-footer h3,
+.new-footer h4,
+.new-footer h5,
+.new-footer h6 {
+  color: #333 !important;
 }
 .new-footer label {
   display: block;
@@ -9135,17 +9145,20 @@ body.makercamp .ytube_intro {
 }
 .makercamp-new .main-header .tagline {
   background-color: #05729f;
+  color: #fff;
 }
 .makercamp-new .main-header .visible-desktop .tagline h1 {
   font-size: 2.1em;
   line-height: 1.3em;
   margin-top: 0em;
+  color: #fff;
   font-weight: normal;
 }
 .makercamp-new .main-header .hidden-desktop .tagline h1 {
   font-size: 1.9em;
   line-height: 1.4em;
   margin-top: 0.8em;
+  color: #fff;
   font-weight: normal;
 }
 .makercamp-new .main-header .tagline h1 strong {
