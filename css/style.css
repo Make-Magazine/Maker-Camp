@@ -8338,6 +8338,7 @@ body.makercamp {
   color: #fff;
 }
 body.makercamp h1 {
+  font-size: 36px;
   color: #e1272e;
 }
 body.makercamp h2,
@@ -8455,7 +8456,7 @@ body.makercamp .beige-bg {
 body.makercamp .white-bg,
 body.makercamp .beige-bg {
   color: black;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 body.makercamp .white-bg h4,
 body.makercamp .beige-bg h4 {
@@ -8875,7 +8876,6 @@ body.makercamp .ytube_intro {
   margin-top: -35px;
 }
 .new-footer .container {
-  width: 940px;
   margin: 0 auto;
   text-align: left;
 }
