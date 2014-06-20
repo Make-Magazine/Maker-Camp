@@ -6577,14 +6577,6 @@ body.single-slideshow #wpadminbar {
 body.search .well {
   margin-bottom: 0 !important;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0px 0;
-}
 h3 {
   line-height: 24px;
 }
@@ -8345,14 +8337,16 @@ body.makercamp {
   line-height: 20px;
   color: #fff;
 }
-body.makercamp h1,
+body.makercamp h1 {
+  color: #e1272e;
+}
 body.makercamp h2,
 body.makercamp h3,
 body.makercamp h4,
 body.makercamp h5,
 body.makercamp h6 {
-  margin: 10px 0;
-  color: #e1272e;
+  color: #333;
+  margin: auto;
 }
 body.makercamp h3 {
   line-height: 40px;
@@ -8461,7 +8455,7 @@ body.makercamp .beige-bg {
 body.makercamp .white-bg,
 body.makercamp .beige-bg {
   color: black;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 body.makercamp .white-bg h4,
 body.makercamp .beige-bg h4 {
