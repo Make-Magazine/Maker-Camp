@@ -6,7 +6,7 @@
 	 * Had major issues with integrating a custom map.. Out of time, taking the easy way out with Google Maps Engine Lite.
 	 * For now we'll save the source code, but will not load them until we are ready. Revert back to 73afd0f7503575d7e4ddc2f1754c2572b2770cd5 on GitHub for all the geocode fun @colegeissinger built.
 	 */
-	
+
 
 	/**
 	 * Create the shortcode
@@ -16,7 +16,7 @@
 	 */
 	function make_makercamp_map_shortcode( $atts, $content ) {
 
-		$output = '<iframe src="http://mapsengine.google.com/map/u/0/embed?mid=z6jknjwOuQEA.kwp_h1l1fm4s" width="99.5%" height="464"></iframe>';
+		$output = '<iframe src="http://mapsengine.google.com/map/u/0/embed?mid=zNd3spMv9Udc.k9-WS-6H1Iec" width="99.5%" height="464"></iframe>';
 
 		return $output;
 	}
@@ -60,17 +60,17 @@
 	function make_map_data_save( $post_id ) {
 		// Bail if we're doing an auto save
 		if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
-	 
+
 		// if our nonce isn't there, or we can't verify it, bail
 		if( !isset( $_POST['makercamp-nonce'] ) || !wp_verify_nonce( $_POST['makercamp-nonce'], basename( __FILE__ ) ) ) return;
-	 
+
 		// if our current user can't edit this post, bail
-		if( !current_user_can( 'edit_post', $post_id ) ) return; 
+		if( !current_user_can( 'edit_post', $post_id ) ) return;
 
 		// Make sure your data is set before trying to save it
 		if( isset( $_POST['makercamp-maps-data'] ) )
 	  		update_post_meta( $post_id, 'makercamp-maps-data', sanitize_text_field( $_POST['makercamp-maps-data'] ) );
-	   
+
 	}
 	add_action( 'save_post', 'make_map_data_save' );
-	
+
