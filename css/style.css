@@ -8661,6 +8661,11 @@ body.makercamp .schedule-content #schedule .active a {
 body.makercamp .schedule-content .maker a {
   color: #005d8f;
 }
+body.makercamp .schedule-content .maker h5 {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
 body.makercamp .schedule-content .maker .project-title {
   font-size: 1.285714286em;
   line-height: 1em;
@@ -8674,6 +8679,10 @@ body.makercamp .schedule-content .maker .mentor {
   color: #252525;
   margin: 5px 0 !important;
   display: inline-block;
+}
+body.makercamp .schedule-content .maker.row,
+body.makercamp .schedule-content .tab-navigation.row {
+  margin-left: 0px;
 }
 body.makercamp .faq-content {
   margin-bottom: 20px;
