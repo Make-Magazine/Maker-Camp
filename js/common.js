@@ -37,3 +37,21 @@ jQuery( document ).ready( function( $ ) {
         }
     });
 });
+
+jQuery(document).ready(function($) {
+    $('.collapse').collapse();
+
+    // Load our Bootstrap Tab JS on the 2012 & 2013 schedule pages
+    if ( $('.schedule-content').length >= 1 ) {
+
+        // Run the Bootstrap tab functions
+        $('#schedule li.active a').tab('show');
+        $('#schedule a').click(function(e) {
+            e.preventDefault();
+
+            $(this).tab('show');
+        });
+
+    }
+});
+
