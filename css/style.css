@@ -8385,6 +8385,19 @@ body.makercamp .mc-description h4 {
   position: relative;
   top: 10px;
 }
+body.makercamp .cta {
+  text-align: center;
+}
+body.makercamp .cta a.button {
+  margin: 74px auto 0 auto;
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 36px;
+  padding: 20px 10px;
+  width: 250px;
+  background-color: #e01b23;
+  border-radius: 0;
+}
 body.makercamp .waist {
   background-image: url(http://makezineblog.files.wordpress.com/2013/05/hills.png);
   background-repeat: no-repeat;
