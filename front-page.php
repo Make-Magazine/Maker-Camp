@@ -21,6 +21,10 @@
 									</h1>
 									<h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
 								</div>
+								<div class="cta">
+									<a class="button big block" href="http://makercamp.com/sign-up-for-camp/">Sign Up Today!</a>
+
+								</div>
 							</div>
 						</div>
 						<div class="visible-desktop">

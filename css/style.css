@@ -8398,6 +8398,9 @@ body.makercamp .cta a.button {
   background-color: #e01b23;
   border-radius: 0;
 }
+body.makercamp .cta a.button:hover {
+  background-color: #c9181f !important;
+}
 body.makercamp .waist {
   background-image: url(http://makezineblog.files.wordpress.com/2013/05/hills.png);
   background-repeat: no-repeat;
