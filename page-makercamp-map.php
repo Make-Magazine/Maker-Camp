@@ -27,7 +27,7 @@
 				<div class="row-fluid" >
 					<div class="hidden-desktop text-center">
 						<div class="span12">
-							<img  style="margin:30px auto" src="https://makezineblog.files.wordpress.com/2014/06/maker-camp-logo-2014-e1402943555658.png?w=564" />
+							<img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
 							<div class="tagline" style="margin-top:25px;">
 								<h1>A <strong>FREE</strong>
 									summer camp for building, tinkering and exploring. Online and in your neighborhood!
@@ -40,7 +40,7 @@
 					</div>
 					<div class="visible-desktop">
 						<div class="span6">
-							<img style="margin:30px auto" src="https://makezineblog.files.wordpress.com/2014/06/maker-camp-logo-2014-e1402943555658.png?w=564" />
+							<img style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
 						</div>
 						<div class="span6" style="">
 							<div class="tagline" style="margin-top:25px;">
