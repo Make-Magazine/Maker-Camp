@@ -4,6 +4,7 @@
  *
  * @package    maker-camp
  * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
+ * @author     Maker Media Web Team: Jake Spurlock, Bill Olson, Cole Geissinger and David Beauchamp <webmaster@makermedia.com>
  *
  */
 get_header(); ?>
@@ -13,7 +14,7 @@ get_header(); ?>
 				<div class="row-fluid" >
 					<div class="hidden-desktop text-center">
 						<div class="span12">
-							<img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014/gif' ); ?>" />
+							<img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
 							<div class="tagline" style="margin-top:25px;">
 								<h1>A <strong>FREE</strong>
 									summer camp for building, tinkering and exploring. Online and in your neighborhood!

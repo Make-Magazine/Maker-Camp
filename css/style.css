@@ -8701,6 +8701,9 @@ body.makercamp .schedule-content .maker.row,
 body.makercamp .schedule-content .tab-navigation.row {
   margin-left: 0px;
 }
+body.makercamp .make-sign-up {
+  min-height: 620px;
+}
 body.makercamp .faq-content {
   margin-bottom: 20px;
 }
@@ -8727,6 +8730,9 @@ body.makercamp .ss-form-entry input.button {
   padding: 10px;
   font-size: 25px;
   border: 0;
+}
+body.makercamp .page-404 .white-bg {
+  min-height: 620px;
 }
 body.makercamp .map-wrapper li {
   margin: 15px 15px 25px 0 !important;
@@ -9082,6 +9088,17 @@ body.makercamp .ytube_intro {
     padding: 0 20px;
   }
 }
+.makercamp-new {
+  background: url(../img/sky.png) 0 20px repeat;
+  text-rendering: optimizeLegibility;
+  padding-bottom: 0 !important;
+  padding-top: 0px !important;
+  margin: 0;
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
 .makercamp-new .schedule .grey-bg {
   background-color: #f1f3f4;
   padding: 20px 0;
@@ -9089,6 +9106,21 @@ body.makercamp .ytube_intro {
 .makercamp-new .schedule .white-bg {
   background-color: #fff;
   padding: 20px 0;
+}
+.makercamp-new .schedule h2 {
+  color: #05729f;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.makercamp-new .schedule p {
+  color: #111111;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 0;
+}
+.makercamp-new .schedule .thumbnail {
+  margin: 0 auto;
+  width: 90%;
 }
 .makercamp-new .main-nav .navbar-inner {
   border-color: #111111;
@@ -9102,22 +9134,57 @@ body.makercamp .ytube_intro {
   font-size: 18px;
   text-transform: uppercase;
 }
-.makercamp-new {
-  background: url(../img/sky.png) 0 20px repeat;
-  text-rendering: optimizeLegibility;
-  padding-bottom: 0 !important;
-  padding-top: 0px !important;
-  margin: 0;
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  color: #fff;
-}
 .makercamp-new .ytube_intro {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 0px;
   height: 0;
+}
+.makercamp-new .intro p {
+  color: #111111;
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 0;
+}
+.makercamp-new .main-header {
+  margin-top: 40px;
+  background-image: url(../img/hill.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-bottom: 30px;
+  margin-top: 0;
+  padding-top: 0;
+  border: none;
+}
+.makercamp-new .main-header .tagline {
+  background-color: #05729f;
+  color: #fff;
+}
+.makercamp-new .main-header .tagline h1 strong {
+  color: #fbde76;
+}
+.makercamp-new .main-header .visible-desktop .tagline h1 {
+  font-size: 2.1em;
+  line-height: 1.3em;
+  margin-top: 0em;
+  color: #fff;
+  font-weight: normal;
+}
+.makercamp-new .main-header .hidden-desktop .tagline h1 {
+  font-size: 1.9em;
+  line-height: 1.4em;
+  margin-top: 0.8em;
+  color: #fff;
+  font-weight: normal;
+}
+.makercamp-new .skyships {
+  background-image: url(../img/skyitems.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 60px;
+}
+.makercamp-new > .container-fluid {
+  padding: 0;
 }
 .makercamp-new .ytube_introiframe,
 .makercamp-new .ytube_introobject,
@@ -9139,71 +9206,8 @@ body.makercamp .ytube_intro {
   border-bottom: 1px solid #bbb;
   padding-bottom: 13px;
 }
-.makercamp-new .schedule h2 {
-  color: #05729f;
-  font-size: 22px;
-  margin-bottom: 5px;
-}
-.makercamp-new .intro p {
-  color: #111111;
-  font-size: 22px;
-  line-height: 33px;
-  margin-bottom: 0;
-}
-.makercamp-new .schedule p {
-  color: #111111;
-  font-size: 16px;
-  line-height: 22px;
-  margin-bottom: 0;
-}
-.makercamp-new .schedule .thumbnail {
-  margin: 0 auto;
-  width: 90%;
-}
-.makercamp-new .main-header {
-  margin-top: 40px;
-}
-.makercamp-new .main-header .tagline {
-  background-color: #05729f;
-  color: #fff;
-}
-.makercamp-new .main-header .visible-desktop .tagline h1 {
-  font-size: 2.1em;
-  line-height: 1.3em;
-  margin-top: 0em;
-  color: #fff;
-  font-weight: normal;
-}
-.makercamp-new .main-header .hidden-desktop .tagline h1 {
-  font-size: 1.9em;
-  line-height: 1.4em;
-  margin-top: 0.8em;
-  color: #fff;
-  font-weight: normal;
-}
-.makercamp-new .main-header .tagline h1 strong {
-  color: #fbde76;
-}
-.makercamp-new .main-header {
-  background-image: url(../img/hill.png);
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  padding-bottom: 30px;
-  margin-top: 0;
-  padding-top: 0;
-  border: none;
-}
-.makercamp-new .skyships {
-  background-image: url(../img/skyitems.png);
-  background-repeat: no-repeat;
-  background-position: top center;
-  height: 60px;
-}
 .sponsors-home {
   margin-top: 35px;
-}
-.makercamp-new > .container-fluid {
-  padding: 0;
 }
 @media (max-width: 767px) {
   .makercamp-new .navbar-fixed-top,
