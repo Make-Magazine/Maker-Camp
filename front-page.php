@@ -42,7 +42,7 @@
 
 								<div class="cta">
 									<div class="span12"><a class="sign-btn " href="http://makercamp.com/sign-up-for-camp/">Sign Up Today!</a>
-									<a class="host-btn" href="http://vip.dev/newcamp/affiliate-program/affiliate-sign-up/">Host a Camp</a></div>
+									<a class="host-btn" href="http://makercamp.com/affiliate-program/">Host a Camp</a></div>
 								</div>
 							</div>
 						</div>
@@ -72,7 +72,3 @@
 	</div><!--Container-->
 
 <?php get_footer(); ?>
-
-
-
-
