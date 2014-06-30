@@ -16,7 +16,7 @@
 		<title><?php wp_title(); ?></title>
 		<meta name="google-site-verification" content="tjgq9UGR8WCMZI_40j_B5wda_oVYqKyFtQW547LzMgQ" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 		<!-- Le styles -->
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 
