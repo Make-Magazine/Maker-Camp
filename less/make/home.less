@@ -1,20 +1,40 @@
-.makercamp-new {
+body.home {
     background: url(../img/sky.png) 0 20px repeat;
     text-rendering: optimizeLegibility;
     padding-bottom: 0 !important;
     padding-top: 0px !important;
     margin: 0;
     font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
     line-height: 20px;
     color: #fff;
+    .white-bg {
+padding-bottom:0px;
+
+    }
+    .white-bg.intro {
+              background-color:#b8edfc !important;
+              .welcome-area {
+                                      padding-top:20px;
+                                      background-image: url(../img/rocket-02.png);
+                                      background-position: 316px top;
+                                      background-repeat: no-repeat;
+                                    }
+
+      }
+          .white-bg.home-ground {
+              background-color:#b8edfc !important;
+              background-image: url(../img/home-hills-07.png);
+              background-repeat: no-repeat;
+              background-position:center bottom;
+              min-height:494px;
+              border-bottom: 20px solid #4cb679;
+              padding-top:40 !important;
+              .sponsors {margin-bottom:15px;
+              }
+      }
     .schedule {
         .grey-bg {
             background-color:#f1f3f4;
-            padding:20px 0;
-        }
-        .white-bg {
-            background-color:#fff;
             padding:20px 0;
         }
         h2 {
@@ -33,77 +53,33 @@
             width:90%;
         }
     }
-    .main-nav {
-        .navbar-inner {
-            border-color: #111111;
-            border: none;
-            -webkit-border-radius: 0px;
-            -moz-border-radius: 0px;
-            border-radius: 0px;
-            background: #111111;
-        }
-        .primary-nav {
-            & > .menu-item {
-                font-size: 18px;
-                text-transform:uppercase;
-            }
-        }
-    }
     .ytube_intro {
         position: relative;
         padding-bottom: 56.25%;
         padding-top: 0px;
         height: 0;
     }
+                ul {
+                    margin-left:0px;
+                    padding-left:0px;
+                    color:#267047;
+                    font-size:22px;
+                     list-style-type: none;
+                            li {
+                              color:#267047;
+                              font-size:22px;
+              }
+            }
     .intro {
         p {
-            color:#111111;
+            color:#333;
             font-size:22px;
             line-height:33px;
             margin-bottom:0;
         }
     }
-    .main-header {
-        margin-top:40px;
-        background-image: url(../img/hill.png);
-        background-repeat: no-repeat;
-        background-position: bottom center;
-        padding-bottom: 30px;
-        margin-top:0;
-        padding-top:0;
-        border: none;
-        .tagline {
-            background-color:#05729f;
-            color:#fff;
-            h1 {
-                strong {
-                    color:#fbde76;
-                }
-            }
-        }
-        .visible-desktop {
-            .tagline {
-                h1 {
-                    font-size:2.1em;
-                    line-height:1.3em;
-                    margin-top:0em;
-                    color:#fff;
-                    font-weight:normal;
-                }
-            }
-        }
-        .hidden-desktop {
-            .tagline {
-                h1 {
-                    font-size:1.9em;
-                    line-height:1.4em;
-                    margin-top:0.8em;
-                    color:#fff;
-                    font-weight:normal;
-                }
-            }
-        }
-    }
+    .tagline {margin-top:0px !important;}
+
     .skyships {
         background-image: url(../img/skyitems.png);
         background-repeat: no-repeat;
@@ -155,3 +131,37 @@
     }
 }
 
+.makercamp-new {
+  .container-fluid {padding:0px !important;}
+
+}
+
+.shed-promo {
+  margin: 15px auto;
+}
+
+.cta {
+  margin-top:25px;
+  text-align:right;
+  padding-right:65px;
+  a.sign-btn {
+                  background-color: #e1272e;
+                  color: #fff;
+                  margin-right:35px;
+                  padding: 10px 15px;
+                            :hover {
+                                        background-color:  #eee;
+                                        color:#333;
+                                        }
+                }
+  a.host-btn {
+                  background-color: #eee;
+                  color: #333;
+                  padding: 10px 15px;
+                                    :hover {
+                                                  color:#eee;
+                                                  background-color: #e1272e;
+
+                                                  }
+                  }
+}

@@ -7,7 +7,7 @@
 	 *
 	 */
 	get_header(); ?>
-	<div class="home blog makercamp makercamp-new ">
+	<div class="makercamp makercamp-new ">
 		<div class="container-fluid">
 			<span class="visible-desktop skyships"></span>
 			<div class="main-header">
@@ -32,16 +32,17 @@
 							<div class="span6">
 								<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>" />
 							</div>
-							<div class="span6" style="">
+							<div class="span6">
 								<div class="tagline">
 									<h1>A <strong>FREE</strong>
 										summer camp from Google and Make for building, tinkering and exploring. Online and in your neighborhood!
 									</h1>
 									<h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
 								</div>
-								<div class="cta">
-									<a class="button big block" href="http://makercamp.com/sign-up-for-camp/">Sign Up Today!</a>
 
+								<div class="cta">
+									<div class="span12"><a class="sign-btn " href="http://makercamp.com/sign-up-for-camp/">Sign Up Today!</a>
+									<a class="host-btn" href="http://vip.dev/newcamp/affiliate-program/affiliate-sign-up/">Host a Camp</a></div>
 								</div>
 							</div>
 						</div>

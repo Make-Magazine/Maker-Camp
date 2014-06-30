@@ -6421,93 +6421,50 @@ a.badge:focus {
     overflow: visible !important;
   }
 }
-.main-nav .navbar-inner {
-  border-color: #275392;
-  border: none;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  background-color: #253b58;
-  background-image: -moz-linear-gradient(top, #2e435e, #172e50);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2e435e), to(#172e50));
-  background-image: -webkit-linear-gradient(top, #2e435e, #172e50);
-  background-image: -o-linear-gradient(top, #2e435e, #172e50);
-  background-image: linear-gradient(to bottom, #2e435e, #172e50);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2e435e', endColorstr='#ff172e50', GradientType=0);
-}
-.main-nav .primary-nav > .menu-item {
-  font-size: 18px;
-}
-.main-nav .primary-nav > .menu-item > a {
-  text-shadow: none;
-  padding: 10px 25px 10px;
-  color: #fff;
-}
-.main-nav .primary-nav > .menu-item > a:hover {
-  background-color: #222;
-  color: #fff;
-  text-decoration: none!important;
-}
-.main-nav .primary-nav > .menu-item.active > a {
-  background-color: #222;
-  color: #fff;
-  text-decoration: none!important;
-}
-.main-nav .primary-nav .menu-item {
-  text-decoration: none !important;
-}
-.main-nav .nav-collapse {
-  background: transparent;
-}
-.main-nav .btn-navbar {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #1d2f46;
-  background-image: -moz-linear-gradient(top, #26374d, #11233c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#26374d), to(#11233c));
-  background-image: -webkit-linear-gradient(top, #26374d, #11233c);
-  background-image: -o-linear-gradient(top, #26374d, #11233c);
-  background-image: linear-gradient(to bottom, #26374d, #11233c);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff26374d', endColorstr='#ff11233c', GradientType=0);
-  border-color: #11233c #11233c #000001;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #11233c;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
-.main-nav .btn-navbar:hover,
-.main-nav .btn-navbar:focus,
-.main-nav .btn-navbar:active,
-.main-nav .btn-navbar.active,
-.main-nav .btn-navbar.disabled,
-.main-nav .btn-navbar[disabled] {
-  color: #ffffff;
-  background-color: #11233c;
-  *background-color: #0c1728;
-}
-.main-nav .btn-navbar:active,
-.main-nav .btn-navbar.active {
-  background-color: #060c15 \9;
-}
-.admin-bar .navbar-fixed-top {
-  top: 29px;
-}
 header {
   margin-top: 0;
   margin-bottom: 40px;
   color: #fff;
 }
-header h2 {
-  font-size: 33px;
-  line-height: 45px;
-  margin-bottom: 10px;
+.main-header {
+  color: #fff;
+  background-image: url(../img/hill.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-bottom: 30px;
+  margin-top: 0;
+  padding-top: 0;
+  border: none;
 }
-header h3 {
-  font-weight: 200;
-  font-size: 28px;
-  line-height: 100%;
+.main-header h2,
+.main-header h3,
+.main-header h4,
+.main-header h5,
+.main-header h6 {
+  color: #333;
+  margin: auto;
+}
+.main-header .tagline {
+  margin-top: 25px;
+  background-color: #05729f;
+  color: #fff;
+}
+.main-header .tagline h1 strong {
+  color: #fbde76;
+}
+.main-header .visible-desktop .tagline h1 {
+  font-size: 1.8em;
+  line-height: 1.4em;
+  margin-top: 0em;
+  color: #fff;
+  font-weight: normal;
+}
+.main-header .hidden-desktop .tagline h1 {
+  font-size: 1.8em;
+  line-height: 1.4em;
+  margin-top: 0.8em;
+  color: #fff;
+  font-weight: normal;
 }
 .custom-feed.simple {
   border: 1px solid #dadada;
@@ -9088,102 +9045,92 @@ body.makercamp .ytube_intro {
     padding: 0 20px;
   }
 }
-.makercamp-new {
+body.home {
   background: url(../img/sky.png) 0 20px repeat;
   text-rendering: optimizeLegibility;
   padding-bottom: 0 !important;
   padding-top: 0px !important;
   margin: 0;
   font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
   line-height: 20px;
   color: #fff;
 }
-.makercamp-new .schedule .grey-bg {
+body.home .white-bg {
+  padding-bottom: 0px;
+}
+body.home .white-bg.intro {
+  background-color: #b8edfc !important;
+}
+body.home .white-bg.intro .welcome-area {
+  padding-top: 20px;
+  background-image: url(../img/rocket-02.png);
+  background-position: 316px top;
+  background-repeat: no-repeat;
+}
+body.home .white-bg.home-ground {
+  background-color: #b8edfc !important;
+  background-image: url(../img/home-hills-07.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 494px;
+  border-bottom: 20px solid #4cb679;
+  padding-top: 40 !important;
+}
+body.home .white-bg.home-ground .sponsors {
+  margin-bottom: 15px;
+}
+body.home .schedule .grey-bg {
   background-color: #f1f3f4;
   padding: 20px 0;
 }
-.makercamp-new .schedule .white-bg {
-  background-color: #fff;
-  padding: 20px 0;
-}
-.makercamp-new .schedule h2 {
+body.home .schedule h2 {
   color: #05729f;
   font-size: 22px;
   margin-bottom: 5px;
 }
-.makercamp-new .schedule p {
+body.home .schedule p {
   color: #111111;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 0;
 }
-.makercamp-new .schedule .thumbnail {
+body.home .schedule .thumbnail {
   margin: 0 auto;
   width: 90%;
 }
-.makercamp-new .main-nav .navbar-inner {
-  border-color: #111111;
-  border: none;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  background: #111111;
-}
-.makercamp-new .main-nav .primary-nav > .menu-item {
-  font-size: 18px;
-  text-transform: uppercase;
-}
-.makercamp-new .ytube_intro {
+body.home .ytube_intro {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 0px;
   height: 0;
 }
-.makercamp-new .intro p {
-  color: #111111;
+body.home ul {
+  margin-left: 0px;
+  padding-left: 0px;
+  color: #267047;
+  font-size: 22px;
+  list-style-type: none;
+}
+body.home ul li {
+  color: #267047;
+  font-size: 22px;
+}
+body.home .intro p {
+  color: #333;
   font-size: 22px;
   line-height: 33px;
   margin-bottom: 0;
 }
-.makercamp-new .main-header {
-  margin-top: 40px;
-  background-image: url(../img/hill.png);
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  padding-bottom: 30px;
-  margin-top: 0;
-  padding-top: 0;
-  border: none;
+body.home .tagline {
+  margin-top: 0px !important;
 }
-.makercamp-new .main-header .tagline {
-  background-color: #05729f;
-  color: #fff;
-}
-.makercamp-new .main-header .tagline h1 strong {
-  color: #fbde76;
-}
-.makercamp-new .main-header .visible-desktop .tagline h1 {
-  font-size: 2.1em;
-  line-height: 1.3em;
-  margin-top: 0em;
-  color: #fff;
-  font-weight: normal;
-}
-.makercamp-new .main-header .hidden-desktop .tagline h1 {
-  font-size: 1.9em;
-  line-height: 1.4em;
-  margin-top: 0.8em;
-  color: #fff;
-  font-weight: normal;
-}
-.makercamp-new .skyships {
+body.home .skyships {
   background-image: url(../img/skyitems.png);
   background-repeat: no-repeat;
   background-position: top center;
   height: 60px;
 }
-.makercamp-new > .container-fluid {
+body.home > .container-fluid {
   padding: 0;
 }
 .makercamp-new .ytube_introiframe,
@@ -9226,4 +9173,107 @@ body.makercamp .ytube_intro {
     margin-top: 0.8em;
     font-weight: normal;
   }
+}
+.makercamp-new .container-fluid {
+  padding: 0px !important;
+}
+.shed-promo {
+  margin: 15px auto;
+}
+.cta {
+  margin-top: 25px;
+  text-align: right;
+  padding-right: 65px;
+}
+.cta a.sign-btn {
+  background-color: #e1272e;
+  color: #fff;
+  margin-right: 35px;
+  padding: 10px 15px;
+}
+.cta a.sign-btn :hover {
+  background-color: #eee;
+  color: #333;
+}
+.cta a.host-btn {
+  background-color: #eee;
+  color: #333;
+  padding: 10px 15px;
+}
+.cta a.host-btn :hover {
+  color: #eee;
+  background-color: #e1272e;
+}
+.main-nav .navbar-inner {
+  border-color: #275392;
+  border: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background-color: #253b58;
+  background-image: -moz-linear-gradient(top, #2e435e, #172e50);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2e435e), to(#172e50));
+  background-image: -webkit-linear-gradient(top, #2e435e, #172e50);
+  background-image: -o-linear-gradient(top, #2e435e, #172e50);
+  background-image: linear-gradient(to bottom, #2e435e, #172e50);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2e435e', endColorstr='#ff172e50', GradientType=0);
+}
+.main-nav .primary-nav > .menu-item {
+  font-size: 18px;
+}
+.main-nav .primary-nav > .menu-item > a {
+  text-shadow: none;
+  padding: 10px 25px 10px;
+  color: #fff;
+}
+.main-nav .primary-nav > .menu-item > a:hover {
+  background-color: #222;
+  color: #fff;
+  text-decoration: none!important;
+}
+.main-nav .primary-nav > .menu-item.active > a {
+  background-color: #222;
+  color: #fff;
+  text-decoration: none!important;
+}
+.main-nav .primary-nav .menu-item {
+  text-decoration: none !important;
+}
+.main-nav .nav-collapse {
+  background: transparent;
+}
+.main-nav .btn-navbar {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #1d2f46;
+  background-image: -moz-linear-gradient(top, #26374d, #11233c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#26374d), to(#11233c));
+  background-image: -webkit-linear-gradient(top, #26374d, #11233c);
+  background-image: -o-linear-gradient(top, #26374d, #11233c);
+  background-image: linear-gradient(to bottom, #26374d, #11233c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff26374d', endColorstr='#ff11233c', GradientType=0);
+  border-color: #11233c #11233c #000001;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #11233c;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.main-nav .btn-navbar:hover,
+.main-nav .btn-navbar:focus,
+.main-nav .btn-navbar:active,
+.main-nav .btn-navbar.active,
+.main-nav .btn-navbar.disabled,
+.main-nav .btn-navbar[disabled] {
+  color: #ffffff;
+  background-color: #11233c;
+  *background-color: #0c1728;
+}
+.main-nav .btn-navbar:active,
+.main-nav .btn-navbar.active {
+  background-color: #060c15 \9;
+}
+.admin-bar .navbar-fixed-top {
+  top: 29px;
 }

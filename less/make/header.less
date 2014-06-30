@@ -1,55 +1,53 @@
-.main-nav {
-	.navbar-inner {
-		border-color: @navbarBlueBorder;
-		border:none;
-		.border-radius(0px);
-		#gradient > .vertical(@navbarBlueBackgroundHighlight, @navbarBlueBackground);
-	}
-	.primary-nav {
-		> .menu-item {
-			font-size: 18px;
-			> a {
-				text-shadow: none;
-				padding: 10px 25px 10px;
-				color:#fff;
-				&:hover {
-					background-color: #222;
-					color: #fff;
-					text-decoration: none!important;
-				}
-			}
-			&.active > a {
-				background-color: #222;
-				color: #fff;
-				text-decoration: none!important;
-			}
-		}
-		.menu-item {
-			text-decoration: none !important;
-		}
-	}
-	.nav-collapse {
-		background: transparent;
-	}
-	.btn-navbar {
-		.buttonBackground(darken(@navbarBlueBackgroundHighlight, 5%), darken(@navbarBlueBackground, 5%));
-	}
-}
-&.admin-bar .navbar-fixed-top {
-	top:29px;
-}
 header {
 	margin-top:0;
 	margin-bottom:40px;
 	color:#fff;
-	h2 {
-	  font-size:33px;
-	  line-height:45px;
-	  margin-bottom:10px;
-	}
-	h3 {
-	  font-weight:200;
-	  font-size:28px;
-	  line-height:100%;
-	}
 }
+
+    .main-header {
+	color:#fff;
+	background-image: url(../img/hill.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	padding-bottom: 30px;
+	margin-top:0;
+	padding-top:0;
+	border: none;
+
+	h2, h3, h4, h5, h6 {
+		color:#333;
+		margin:auto;
+	}
+        .tagline {
+        	margin-top:25px;
+            background-color:#05729f;
+            color:#fff;
+            h1 {
+                strong {
+                    color:#fbde76;
+                }
+            }
+        }
+        .visible-desktop {
+            .tagline {
+                h1 {
+                    font-size:1.8em;
+                    line-height:1.4em;
+                    margin-top:0em;
+                    color:#fff;
+                    font-weight:normal;
+                }
+            }
+        }
+        .hidden-desktop {
+            .tagline {
+                h1 {
+                    font-size:1.8em;
+                    line-height:1.4em;
+                    margin-top:0.8em;
+                    color:#fff;
+                    font-weight:normal;
+                }
+            }
+        }
+    }
