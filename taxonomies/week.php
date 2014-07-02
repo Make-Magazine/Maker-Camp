@@ -60,10 +60,8 @@ function make_get_week( $field = '' ) {
 function make_dropdown_weeks( $post_id ) {
   $weeks = make_get_week();
   $selected = get_the_terms( absint( $post_id ), 'week', true );
-  // var_dump( $selected );
-  $output = '<select name="schedule[week]" id="assign-week">';
+  $output = '<select name="schedule[week]" id="schedule-week">';
     $output .= '<option value="">-- Select A Week --</option>';
-
     foreach ( $weeks as $week ) {
       $output .= '<option value="' . absint( $week->term_id ) . '"' . selected( $selected, $week->term_id ) . '>' . esc_html( $week->name ) . '</option>';
     }
@@ -78,6 +76,7 @@ function make_dropdown_weeks( $post_id ) {
  * Allows us to use our custom schedule meta box in session to create new week taxonomy terms
  * @return JSON
  */
+
 function make_ajax_add_new_week() {
   // Security check
   if ( ! wp_verify_nonce( $_POST['nonce'], 'new-week-nonce' ) )

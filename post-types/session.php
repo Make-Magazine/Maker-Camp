@@ -140,8 +140,9 @@ function make_sessions_advanced_project( $post ) {
 function make_add_schedules_mb( $post ) { ?>
   <table>
     <tr>
-      <td width="20%"><label for="schdeule-date"><strong>Date</strong></label></td>
-      <td width="80%"><input type="date" name="schedule[date]" id="schedule-date"></td>
+      <td width="20%"><label for="schedule-date"><strong>Date</strong></label></td>
+
+      <td width="80%"><input type="date" name="schedule[date]" id="schedule-date" value="<?=unserialize(get_post_meta($post->ID, 'schedule-date', true)); ?>"></td>
     </tr>
     <tr>
       <td valign="top"><label for="assign-week"><strong>Assign To A Week</strong></label></td>
@@ -179,6 +180,14 @@ function make_sessions_save_meta_boxes( $post_id ) {
   // Save the Session Advanced Project
   if ( isset( $_POST['adv-project'] ) )
     update_post_meta( absint( $post_id ), 'session-adv-project', serialize( $_POST['adv-project'] ) );
+  if ( isset( $_POST['schedule']['date'] ) ) {
+    update_post_meta ( absint( $post_id ), 'schedule-date', serialize( $_POST['schedule']['date']));
+  }
+
+  if ( isset( $_POST['schedule']['week'] ) )
+    update_post_meta ( absint( $post_id ), 'schedule-week', serialize( $_POST['schedule']['week']));
+
+
 
   // Save the schedule date and week
   // if ( isset( $_POST['schedule'] ) ) {
@@ -191,8 +200,6 @@ function make_sessions_save_meta_boxes( $post_id ) {
   // }
 }
 add_action( 'save_post', 'make_sessions_save_meta_boxes' );
-
-
 
 function make_get_sessions( $args = array() ) {
   $defaults = array(
