@@ -100,7 +100,8 @@
                   // Here is where the fun happens for the sessions
                   ?>
                     <div style="margin-top: 30px; margin-bottom: 30px; overflow: auto;">
-                      <div class="span3 pull-left" style="margin-right: 30px; margin-left: 0px"><img src="<?=wp_get_attachment_image_src( get_post_thumbnail_id( $p->ID ), 'single-post-thumbnail' )[0]; ?>"></div>
+                      <? $image = wp_get_attachment_image_src( get_post_thumbnail_id( $p->ID ), 'single-post-thumbnail' ); ?>
+                      <div class="span3 pull-left" style="margin-right: 30px; margin-left: 0px"><img src="<?=$image[0]; ?>"></div>
                       <div class="session-container" style="overflow: hidden">
                         <h5 class="title"><?=$p->post_title?></h5>
                         <!--div class="makers">Maker's isn't set-up yet.</div-->
