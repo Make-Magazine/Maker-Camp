@@ -54,64 +54,78 @@
 
           <? $terms = get_terms('week', ['hierarchical'  => false]); ?>
           <ul class="nav nav-tabs" role="tablist">
+          <? $i=0;?>
           <? foreach($terms as $term): ?>
-            <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-            <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-            <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
-            <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+            <? if($i==0) { ?>
+            <li class="active"><a href="#<?=$term->slug;?>" role="tab" data-toggle="tab"><?=$term->name;?></a></li>
+            <? $i++; } else { ?>
+            <li><a href="#<?=$term->slug;?>" role="tab" data-toggle="tab"><?=$term->name;?></a></li>
+            <? } ?>
           <? endforeach; ?>
           </ul>
 
+          <div class="tab-content">
+          <? $i = 0; ?>
           <? foreach($terms as $term): ?>
-            <div class="week-container" style="margin-bottom: 40px; overflow: auto;">
-              <div class="week-image span3 pull-left" style="margin: 0px 30px 0px 0px;"><img src="http://placehold.it/350x350"></div>
-              <div class="week-info">
-                <h3><?=$term->name?></h3>
-                <p class="week-description">
-                  <?=$term->description?>
-                </p>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-            <? // Grab all the terms for this week and year ?>
-            <? $args = array('post_type' => 'session', 'post_status' => 'publish', 'week' => $term->name, 'camp' => 'Maker Camp '.$year); ?>
-            <?
-            $posts = get_posts($args);
-            $ordered_posts = [];
-            foreach($posts as $my_post) {
-              $key = unserialize(get_post_meta($my_post->ID, 'schedule-date', true));
-              $ordered_posts[$key][] = $my_post;
-            }
-            // Sorting this on server -- should be done in SQL but meta-data. :(
-            array_multisort($ordered_posts);
-            foreach($ordered_posts as $key => $val) {
-            ?> <h4 style="background-color: #999; padding: 10px; color: #FFF;"><?=date('l', strtotime( $key ));?></h4> <?
-              foreach($val as $p) {
-              // Here is where the fun happens for the sessions
-              ?>
-                <div style="margin-top: 30px; margin-bottom: 30px; overflow: auto;">
-                  <div class="span3 pull-left" style="margin-right: 30px; margin-left: 0px"><img src="http://placehold.it/350x350"></div>
-                  <div class="session-container" style="overflow: hidden">
-                    <h5 class="title"><?=$p->post_title?></h5>
-                    <div class="makers">Maker's isn't set-up yet.</div>
-                    <p class="session-description" style="margin: 20px 0px 20px 0px;">
-                      <?=$p->post_content;?>
+            <? if($i == 0) { ?>
+              <div class="tab-pane active" id="<?=$term->slug;?>">
+            <? $i++; } else { ?>
+              <div class="tab-pane" id="<?=$term->slug;?>">
+            <? } ?>
+                <div class="week-container" style="margin-bottom: 40px; overflow: auto;">
+                  <div class="week-image span3 pull-left" style="margin: 0px 30px 0px 0px;"><img src="http://placehold.it/350x350"></div>
+                  <div class="week-info">
+                    <h3><?=$term->name?></h3>
+                    <p class="week-description">
+                      <?=$term->description?>
                     </p>
-                    <? if(unserialize(get_post_meta($p->ID, 'session-link-btn-url', true)) != '') { ?>
-                    <a class="btn btn-alert" href="<?=unserialize(get_post_meta($p->ID, 'session-link-btn-url', true));?>"><?=unserialize(get_post_meta($p->ID, 'session-link-btn-title', true));?></a>
-                    <? } ?>
-                    <div class="advanced-project" style="margin-top: 20px;>
-                      <span class="advanced-project-title">Advanced project:</span> <a style="color: red;" href="">hi</a>
-                    </div>
                   </div>
                 </div>
                 <div class="clearfix"></div>
-
-              <?
-              }
-            }
-            ?>
+                <? // Grab all the terms for this week and year ?>
+                <? $args = array('post_type' => 'session', 'post_status' => 'publish', 'week' => $term->name, 'camp' => 'Maker Camp '.$year); ?>
+                <?
+                $posts = get_posts($args);
+                $ordered_posts = [];
+                foreach($posts as $my_post) {
+                  $key = unserialize(get_post_meta($my_post->ID, 'schedule-date', true));
+                  $ordered_posts[$key][] = $my_post;
+                }
+                // Sorting this on server -- should be done in SQL but meta-data. :(
+                array_multisort($ordered_posts, SORT_DESC);
+                foreach($ordered_posts as $key => $val) {
+                   // WEEKDAY heading
+                ?> <h4 style="background-color: #999; padding: 10px; color: #FFF;">Day <?=date('w', strtotime($key));?>: <?=date('l', strtotime( $key ));?></h4> <?
+                  foreach($val as $p) {
+                  // Here is where the fun happens for the sessions
+                  ?>
+                    <div style="margin-top: 30px; margin-bottom: 30px; overflow: auto;">
+                      <div class="span3 pull-left" style="margin-right: 30px; margin-left: 0px"><img src="<?=wp_get_attachment_image_src( get_post_thumbnail_id( $p->ID ), 'single-post-thumbnail' )[0]; ?>"></div>
+                      <div class="session-container" style="overflow: hidden">
+                        <h5 class="title"><?=$p->post_title?></h5>
+                        <!--div class="makers">Maker's isn't set-up yet.</div-->
+                        <p class="session-description" style="margin: 20px 0px 20px 0px;">
+                          <?=$p->post_content;?>
+                        </p>
+                        <? if(unserialize(get_post_meta($p->ID, 'session-link-btn-url', true)) != '') { ?>
+                        <a class="btn btn-alert" href="<?=unserialize(get_post_meta($p->ID, 'session-link-btn-url', true));?>"><?=unserialize(get_post_meta($p->ID, 'session-link-btn-title', true));?></a>
+                        <? } ?>
+                        <div class="advanced-project" style="margin-top: 20px;">
+                          <span class="advanced-project-title">Advanced project:</span>
+                          <a style="color: red;" href="<?=unserialize(get_post_meta($p->ID, 'session-adv-project', true))['url'];?>">
+                            <?=unserialize(get_post_meta($p->ID, 'session-adv-project', true))['title']?>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  <?
+                  }
+                }
+                ?>
+              </div><!-- /tab-pane -->
           <? endforeach; ?>
+          </div><!-- /tab-content -->
         </div>
       </div>
     </div>
