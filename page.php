@@ -9,62 +9,62 @@
  */
 get_header(); ?>
 <div class="makercamp-new ">
-		<div class="main-header">
-			<div class="container">
-				<div class="row-fluid" >
-					<div class="hidden-desktop text-center">
-						<div class="span12">
-							<img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
-							<div class="tagline">
-								<h1>A <strong>FREE</strong>
-									summer camp for building, tinkering and exploring. Online and in your neighborhood!
-								</h1>
-																<h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
+    <div class="main-header">
+      <div class="container">
+        <div class="row-fluid" >
+          <div class="hidden-desktop text-center">
+            <div class="span12">
+              <img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
+              <div class="tagline">
+                <h1>A <strong>FREE</strong>
+                  summer camp for building, tinkering and exploring. Online and in your neighborhood!
+                </h1>
+                                <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
 
-							</div>
+              </div>
 
-						</div>
-					</div>
-					<div class="visible-desktop">
-						<div class="span6">
-							<img style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
-						</div>
-						<div class="span6" style="">
-							<div class="tagline">
-								<h1>A <strong>FREE</strong>
-									summer camp for building, tinkering and exploring. Online and in your neighborhood!
-								</h1>
-																<h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
+            </div>
+          </div>
+          <div class="visible-desktop">
+            <div class="span6">
+              <img style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
+            </div>
+            <div class="span6" style="">
+              <div class="tagline">
+                <h1>A <strong>FREE</strong>
+                  summer camp for building, tinkering and exploring. Online and in your neighborhood!
+                </h1>
+                                <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
 
-							</div>
+              </div>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	<section class="white-bg">
-		<div class="container ">
-			<div class="row-fluid">
-				<div class="span12">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <section class="white-bg">
+    <div class="container ">
+      <div class="row-fluid">
+        <div class="span12">
 
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-						<article <?php post_class(); ?>>
+            <article <?php post_class(); ?>>
 
-							<?php the_content(); ?>
+              <?php the_content(); ?>
 
-						</article>
+            </article>
 
-					<?php endwhile; else: ?>
+          <?php endwhile; else: ?>
 
-						<p><?php _e( 'Sorry, no page found.', 'makercamp' ); ?></p>
+            <p><?php _e( 'Sorry, no page found.', 'makercamp' ); ?></p>
 
-					<?php endif; ?>
+          <?php endif; ?>
 
-				</div>
-			</div>
-		</div>
-	</section>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 <?php get_footer(); ?>
