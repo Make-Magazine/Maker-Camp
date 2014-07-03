@@ -113,7 +113,8 @@
                         <? } ?>
                         <div class="advanced-project" style="margin-top: 20px;">
                           <span class="advanced-project-title">Advanced project:</span>
-                          <a style="color: red;" href="<?=unserialize(get_post_meta($p->ID, 'session-adv-project', true))['url'];?>">
+                          <? $sap = unserialize(get_post_meta($p->ID, 'session-adv-project', true)); ?>
+                          <a style="color: red;" href="<?=$sap['url'];?>">
                             <?=unserialize(get_post_meta($p->ID, 'session-adv-project', true))['title']?>
                           </a>
                         </div>
