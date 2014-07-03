@@ -115,7 +115,8 @@
                           <span class="advanced-project-title">Advanced project:</span>
                           <? $sap = unserialize(get_post_meta($p->ID, 'session-adv-project', true)); ?>
                           <a style="color: red;" href="<?=$sap['url'];?>">
-                            <?=unserialize(get_post_meta($p->ID, 'session-adv-project', true))['title']?>
+                            <? $sap_title = unserialize(get_post_meta($p->ID, 'session-adv-project', true)); ?>
+                            <?=$sap_titel['title']?>
                           </a>
                         </div>
                       </div>
