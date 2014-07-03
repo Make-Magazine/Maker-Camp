@@ -59,15 +59,18 @@ function make_get_week( $field = '' ) {
  */
 function make_dropdown_weeks( $post_id ) {
   $weeks = make_get_week();
-  $selected = get_the_terms( absint( $post_id ), 'week', true );
-  $output = '<select name="schedule[week]" id="schedule-week">';
+
+  $selected = get_post_meta($post_id, 'schedule-week', true);
+
+  $output = "\n" . '<select name="schedule[week]" id="schedule-week">';
     $output .= '<option value="">-- Select A Week --</option>';
     foreach ( $weeks as $week ) {
-      $output .= '<option value="' . absint( $week->term_id ) . '"' . selected( $selected, $week->term_id ) . '>' . esc_html( $week->name ) . '</option>';
+      $output .= '<option value="' . absint( $week->term_id ) . '"';
+      $output .= selected( $selected, $week->term_id, false );
+      $output .= '>' . esc_html( $week->name ) . "</option>\n";
     }
 
   $output .= '</select>';
-
   echo $output;
 }
 
