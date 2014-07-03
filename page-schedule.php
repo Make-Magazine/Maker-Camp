@@ -52,7 +52,7 @@
           <? $year = get_post($post->post_parent)->post_title; ?>
           <h2 style="margin-bottom: 30px; color: red;">Maker Camp Season <?=$year;?></h2>
 
-          <? $terms = get_terms('week', ['hierarchical'  => false]); ?>
+          <? $terms = get_terms('week', array('hierarchical'  => false)); ?>
           <ul class="nav nav-tabs" role="tablist">
           <? $i=0;?>
           <? foreach($terms as $term): ?>
@@ -86,7 +86,7 @@
                 <? $args = array('post_type' => 'session', 'post_status' => 'publish', 'week' => $term->name, 'camp' => 'Maker Camp '.$year); ?>
                 <?
                 $posts = get_posts($args);
-                $ordered_posts = [];
+                $ordered_posts = array();
                 foreach($posts as $my_post) {
                   $key = unserialize(get_post_meta($my_post->ID, 'schedule-date', true));
                   $ordered_posts[$key][] = $my_post;
