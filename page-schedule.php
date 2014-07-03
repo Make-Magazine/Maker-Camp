@@ -108,7 +108,7 @@
                           <?=$p->post_content;?>
                         </p>
                         <? if(unserialize(get_post_meta($p->ID, 'session-link-btn-url', true)) != '') { ?>
-                        <a class="btn btn-alert" href="<?=unserialize(get_post_meta($p->ID, 'session-link-btn-url', true));?>"><?=unserialize(get_post_meta($p->ID, 'session-link-btn-title', true));?></a>
+                        <a class="btn btn-danger" href="<?=unserialize(get_post_meta($p->ID, 'session-link-btn-url', true));?>"><?=unserialize(get_post_meta($p->ID, 'session-link-btn-title', true));?></a>
                         <? } ?>
                         <div class="advanced-project" style="margin-top: 20px;">
                           <span class="advanced-project-title">Advanced project:</span>
