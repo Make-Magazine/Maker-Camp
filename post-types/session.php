@@ -106,11 +106,13 @@ function make_sessions_materials_instructions( $post ) {
 function make_sessions_link( $post ) {
 
   // Get the data
-  $session_link = unserialize( get_post_meta( absint( $post->ID ), 'session-link', true ) ); ?>
+  $session_link_title = unserialize( get_post_meta( absint( $post->ID ), 'session-link-btn-title', true ) );
+  $session_link_url = unserialize( get_post_meta( absint( $post->ID ), 'session-link-btn-url', true ) );
+ ?>
   <label for="btn-title"><strong>Button Title</strong></label>
-  <input type="text" name="session-link[title]" id="btn-title" value="<?php echo ( ! empty( $session_link['title'] ) ) ? sanitize_text_field( $session_link['title'] ) : ''; ?>" style="display:block;width:100%;" placeholder="View Video">
+  <input type="text" name="session-link[title]" id="btn-title" value="<?php echo ( ! empty( $session_link_title ) ) ? sanitize_text_field( $session_link_title ) : ''; ?>" style="display:block;width:100%;" placeholder="View Video">
   <label for="btn-link" style="margin-top:10px;"><strong>Link URL</strong></label>
-  <input type="text" name="session-link[url]" id="btn-link" value="<?php echo ( ! empty( $session_link['url'] ) ) ? esc_url( $session_link['url'] ) : ''; ?>" style="display:block;width:100%;">
+  <input type="text" name="session-link[url]" id="btn-link" value="<?php echo ( ! empty( $session_link_url ) ) ? esc_url( $session_link_url ) : ''; ?>" style="display:block;width:100%;">
   <?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
 }
 
@@ -124,10 +126,15 @@ function make_sessions_advanced_project( $post ) {
 
   // Get the data
   $adv_project = unserialize( get_post_meta( absint( $post->ID ), 'session-adv-project', true ) ); ?>
+
   <label for="adv-title"><strong>Project Title</strong></label>
-  <input type="text" name="adv-project[title]" id="adv-title" value="<?php echo ( ! empty( $adv_project['title'] ) ) ? sanitize_text_field( $adv_project['title'] ) : ''; ?>" style="display:block;width:100%;">
+
+  <input type="text" name="adv-project[title]" id="adv-title-WHY-IS-THIS-HIDDEN" value="<?php echo ( ! empty( $adv_project['title'] ) ) ? sanitize_text_field( $adv_project['title'] ) : ''; ?>" style="display:block;width:100%;">
+
   <label for="adv-link" style="margin-top:10px;"><strong>Project URL</strong></label>
+
   <input type="text" name="adv-project[url]" id="adv-link" value="<?php echo ( ! empty( $adv_project['url'] ) ) ? esc_url( $adv_project['url'] ) : ''; ?>" style="display:block;width:100%;">
+
   <?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
 }
 
@@ -174,18 +181,25 @@ function make_sessions_save_meta_boxes( $post_id ) {
     update_post_meta( absint( $post_id ), 'materials-instructions', wp_kses_post( $_POST['session-mat-instruct'] ) );
 
   // Save the Session link
-  if ( isset( $_POST['session-link'] ) )
-    update_post_meta( absint( $post_id ), 'session-link-btn', serialize( $_POST['session-link'] ) );
+  if ( isset( $_POST['session-link']['title'] ) )
+    update_post_meta( absint( $post_id ), 'session-link-btn-title', serialize( $_POST['session-link']['title'] ) );
+
+  if ( isset( $_POST['session-link']['url'] ) )
+    update_post_meta( absint( $post_id ), 'session-link-btn-url', serialize( $_POST['session-link']['url'] ) );
+
+
 
   // Save the Session Advanced Project
   if ( isset( $_POST['adv-project'] ) )
     update_post_meta( absint( $post_id ), 'session-adv-project', serialize( $_POST['adv-project'] ) );
+
   if ( isset( $_POST['schedule']['date'] ) ) {
     update_post_meta ( absint( $post_id ), 'schedule-date', serialize( $_POST['schedule']['date']));
   }
 
-  if ( isset( $_POST['schedule']['week'] ) )
-    update_post_meta ( absint( $post_id ), 'schedule-week', serialize( $_POST['schedule']['week']));
+  if ( isset( $_POST['schedule']['week'] ) ) {
+    update_post_meta ( absint( $post_id ), 'schedule-week', $_POST['schedule']['week']);
+  }
 
 
 
