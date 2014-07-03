@@ -8,7 +8,6 @@ include_once( 'includes/theme_stuff.php' );
 
 // Load the Sessions post type
 include_once( 'post-types/session.php' );
-include_once( 'post-types/test.php' );
 
 // Load the Schedule post type
 include_once( 'post-types/schedule.php' );
