@@ -187,8 +187,6 @@ function make_sessions_save_meta_boxes( $post_id ) {
   if ( isset( $_POST['session-link']['url'] ) )
     update_post_meta( absint( $post_id ), 'session-link-btn-url', serialize( $_POST['session-link']['url'] ) );
 
-
-
   // Save the Session Advanced Project
   if ( isset( $_POST['adv-project'] ) )
     update_post_meta( absint( $post_id ), 'session-adv-project', serialize( $_POST['adv-project'] ) );
@@ -199,7 +197,11 @@ function make_sessions_save_meta_boxes( $post_id ) {
 
   if ( isset( $_POST['schedule']['week'] ) ) {
     update_post_meta ( absint( $post_id ), 'schedule-week', $_POST['schedule']['week']);
+    $term = get_term($_POST['schedule']['week'], 'week');
+    #error_log(print_r($term, true));
+    wp_set_object_terms( absint( $post_id), $term->term_id, 'week');
   }
+
 
 
 

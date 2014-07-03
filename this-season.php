@@ -8,7 +8,6 @@
  *
  */
 get_header(); ?>
-
 <div class="container top">
 	<div class="row-fluid">
 
