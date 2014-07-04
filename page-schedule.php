@@ -70,8 +70,11 @@
             <? $i++; } else { ?>
               <div class="tab-pane" id="<?=$term->slug;?>">
             <? } ?>
-                <div class="week-container" style="margin-bottom: 40px; overflow: auto;">
-                  <div class="week-image span3 pull-left" style="margin: 0px 30px 0px 0px;"><img src="http://placehold.it/350x350"></div>
+                <div class="week-container" style="padding-bottom: 10px; margin-bottom: 40px; overflow: auto;">
+                  <?php $image_src = s8_get_taxonomy_image_src($term, 'medium'); ?>
+                  <? if($image_src != null): ?>
+                    <div class="week-image span3 pull-left" style="margin: 0px 30px 0px 0px;"><img src="<?=$image_src['src'];?>"></div>
+                  <? endif; ?>
                   <div class="week-info">
                     <h3><?=$term->name?></h3>
                     <p class="week-description">
@@ -89,7 +92,7 @@
                   $key = unserialize(get_post_meta($my_post->ID, 'schedule-date', true));
                   $ordered_posts[date('w', strtotime($key))][] = $my_post;
                 }
-                error_log(print_r($ordered_posts, true));
+                #error_log(print_r($ordered_posts, true));
                 ksort($ordered_posts);
                 // Sorting this on server -- should be done in SQL but meta-data. :(
                 #array_multisort($ordered_posts, SORT_DESC);
@@ -114,12 +117,13 @@
                         <a class="btn btn-danger" href="<?=unserialize(get_post_meta($p->ID, 'session-link-btn-url', true));?>"><?=unserialize(get_post_meta($p->ID, 'session-link-btn-title', true));?></a>
                         <? } ?>
                         <div class="advanced-project" style="margin-top: 20px;">
+                        <? $sap = unserialize(get_post_meta($p->ID, 'session-adv-project', true)); ?>
+                        <? if($sap['url'] != ''): ?>
                           <span class="advanced-project-title">Advanced project:</span>
-                          <? $sap = unserialize(get_post_meta($p->ID, 'session-adv-project', true)); ?>
                           <a style="color: red;" href="<?=$sap['url'];?>">
-                            <? $sap_title = unserialize(get_post_meta($p->ID, 'session-adv-project', true)); ?>
-                            <?=$sap_titel['title']?>
+                            <?=$sap['title']?>
                           </a>
+                        <? endif; ?>
                         </div>
                       </div>
                     </div>
