@@ -36,10 +36,8 @@
                 <h1>A <strong>FREE</strong>
                   summer camp for building, tinkering and exploring. Online and in your neighborhood!
                 </h1>
-                                <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
-
+                <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
               </div>
-
             </div>
           </div>
         </div>
@@ -51,17 +49,17 @@
         <div class="span12">
           <? $year = get_post($post->post_parent)->post_title; ?>
           <h2 style="margin-bottom: 30px; color: red;">Maker Camp Season <?=$year;?></h2>
+          <? $terms = get_terms('week', array('hierarchical'  => false, 'hide_empty' => 0)); ?>
 
-          <? $terms = get_terms('week', array('hierarchical'  => false)); ?>
           <ul class="nav nav-tabs" role="tablist">
-          <? $i=0;?>
-          <? foreach($terms as $term): ?>
-            <? if($i==0) { ?>
-            <li class="active"><a href="#<?=$term->slug;?>" role="tab" data-toggle="tab"><?=$term->name;?></a></li>
-            <? $i++; } else { ?>
-            <li><a href="#<?=$term->slug;?>" role="tab" data-toggle="tab"><?=$term->name;?></a></li>
-            <? } ?>
-          <? endforeach; ?>
+            <? $i=0;?>
+            <? foreach($terms as $term): ?>
+              <? if($i==0) { ?>
+              <li class="active"><a href="#<?=$term->slug;?>" role="tab" data-toggle="tab"><?=$term->name;?></a></li>
+              <? $i++; } else { ?>
+              <li><a href="#<?=$term->slug;?>" role="tab" data-toggle="tab"><?=$term->name;?></a></li>
+              <? } ?>
+            <? endforeach; ?>
           </ul>
 
           <div class="tab-content">
@@ -89,13 +87,17 @@
                 $ordered_posts = array();
                 foreach($posts as $my_post) {
                   $key = unserialize(get_post_meta($my_post->ID, 'schedule-date', true));
-                  $ordered_posts[$key][] = $my_post;
+                  $ordered_posts[date('w', strtotime($key))][] = $my_post;
                 }
+                error_log(print_r($ordered_posts, true));
+                ksort($ordered_posts);
                 // Sorting this on server -- should be done in SQL but meta-data. :(
-                array_multisort($ordered_posts, SORT_DESC);
+                #array_multisort($ordered_posts, SORT_DESC);
+                $dow = array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
                 foreach($ordered_posts as $key => $val) {
                    // WEEKDAY heading
-                ?> <h4 style="background-color: #999; padding: 10px; color: #FFF;">Day <?=date('w', strtotime($key));?>: <?=date('l', strtotime( $key ));?></h4> <?
+                ?> <!--h4 style="background-color: #999; padding: 10px; color: #FFF;">Day <?=date('w', strtotime($key));?>: <?=date('l', strtotime( $key ));?></h4--> <?
+                ?> <h4 style="background-color: #999; padding: 10px; color: #FFF;">Day <?=$key;?>: <?=$dow[$key];?></h4> <?
                   foreach($val as $p) {
                   // Here is where the fun happens for the sessions
                   ?>
