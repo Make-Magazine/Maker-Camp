@@ -11,38 +11,36 @@
 ?>
 <?php get_header('makercamp'); ?>
 <div class="makercamp-new ">
-    <div class="main-header">
-      <div class="container">
-        <div class="row-fluid" >
-          <div class="hidden-desktop text-center">
-            <div class="span12">
-              <img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
-              <div class="tagline">
-                <h1>A <strong>FREE</strong>
-                  summer camp for building, tinkering and exploring. Online and in your neighborhood!
-                </h1>
-                                <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
-
-              </div>
-
+  <div class="main-header">
+    <div class="container">
+      <div class="row-fluid" >
+        <div class="hidden-desktop text-center">
+          <div class="span12">
+            <img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
+            <div class="tagline">
+              <h1>A <strong>FREE</strong>
+                summer camp for building, tinkering and exploring. Online and in your neighborhood!
+              </h1>
+              <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
             </div>
           </div>
-          <div class="visible-desktop">
-            <div class="span6">
-              <img style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
-            </div>
-            <div class="span6" style="">
-              <div class="tagline">
-                <h1>A <strong>FREE</strong>
-                  summer camp for building, tinkering and exploring. Online and in your neighborhood!
-                </h1>
-                <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
-              </div>
+        </div>
+        <div class="visible-desktop">
+          <div class="span6">
+            <img style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
+          </div>
+          <div class="span6" style="">
+            <div class="tagline">
+              <h1>A <strong>FREE</strong>
+                summer camp for building, tinkering and exploring. Online and in your neighborhood!
+              </h1>
+              <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   <section class="white-bg">
     <div class="container ">
       <div class="row-fluid">
@@ -109,7 +107,27 @@
                       <div class="span3 pull-left" style="margin-right: 30px; margin-left: 0px"><img src="<?=$image[0]; ?>"></div>
                       <div class="session-container" style="overflow: hidden">
                         <h5 class="title"><?=$p->post_title?></h5>
-                        <!--div class="makers">Maker's isn't set-up yet.</div-->
+                        <?
+                          $post_makers = unserialize(get_post_meta(absint($p->ID), 'session-makers', true));
+
+                          $my_makers = array();
+                          $post_makers_list = make_maker_get_list();
+                          if(count($post_makers_list) > 0 && is_array($post_makers)) {
+                            foreach($post_makers_list as $pml) {
+                              if(in_array($pml->ID, $post_makers)) {
+                                $my_makers[] = $pml->post_title;
+                              }
+                            }
+                          }
+                        ?>
+                        <div class="makers">
+                        <? if(count($my_makers) > 0) { ?>
+                          MAKERS:
+                          <? foreach($my_makers as $post_maker): ?>
+                            <?=$post_maker; ?>
+                          <? endforeach; ?>
+                        <? } ?>
+                        </div>
                         <p class="session-description" style="margin: 20px 0px 20px 0px;">
                           <?=$p->post_content;?>
                         </p>
