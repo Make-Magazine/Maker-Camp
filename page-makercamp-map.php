@@ -77,8 +77,6 @@
 								<th style="width:140px;">City</th>
 								<th style="width:258px;">Organization</th>
 								<th style="width:81px;">Accepting</th>
-								<th style="width:81px;">Pre-Register</th>
-								<th style="width:25px;">&nbsp;</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -91,12 +89,7 @@
 											<td><?php echo esc_attr( $address['Work City'] ); ?></td>
 											<td><a href="<?php echo esc_url( $address['Website'] ); ?>"><?php echo esc_attr( $address['Company'] ); ?></a></td>
 											<td><?php echo esc_attr( $address['Accepting'] ); ?></td>
-											<td><?php echo esc_attr( $address['Register'] ); ?></td>
-											<td>
-												<?php if ( isset( $addressss['Google Link'] ) ) : ?>
-														<a href="http://<?php echo esc_url( $address['Google Link'] ); ?>"><img src="http://makezineblog.files.wordpress.com/2013/06/google-plus.png"></a>
-												<?php endif; ?>
-											</td>
+
 										</tr>
 									<?php endforeach;
 								endif;
