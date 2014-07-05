@@ -29,3 +29,6 @@ include_once( 'includes/google-maps.php' );
 
 // Bootstrap Walker
 include_once( 'includes/bootstrap_walker.php' );
+
+// Shortcodes
+include_once( 'includes/home.php' );

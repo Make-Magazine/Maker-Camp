@@ -123,9 +123,7 @@
                         <div class="makers">
                         <? if(count($my_makers) > 0) { ?>
                           MAKERS:
-                          <? foreach($my_makers as $post_maker): ?>
-                            <?=$post_maker; ?>
-                          <? endforeach; ?>
+                          <?=join(", ", $my_makers);?>
                         <? } ?>
                         </div>
                         <p class="session-description" style="margin: 20px 0px 20px 0px;">

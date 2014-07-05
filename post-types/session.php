@@ -74,7 +74,6 @@ function make_session_add_meta_boxes() {
 }
 add_action( 'add_meta_boxes', 'make_session_add_meta_boxes' );
 
-
 /**
  * Creates the content inside the meta box
  * @param  object $post The post object of the current post being edited
