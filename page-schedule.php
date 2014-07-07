@@ -41,9 +41,9 @@
       </div>
     </div>
   </div>
-  <section class="white-bg">
+  <section class="schedule-content white-bg schedule-content">
     <div class="container ">
-      <div class="row-fluid">
+      <div class="row-fluid tab-navigation">
         <div class="span12">
           <? $year = get_post($post->post_parent)->post_title; ?>
           <h2 style="margin-bottom: 30px; color: red;">Maker Camp Season <?=$year;?></h2>
