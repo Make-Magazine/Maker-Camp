@@ -3,8 +3,8 @@
 		.new-footer {
 			.container { width:1170px !important; }
 			.main { width:1000px !important; }
-			.trending, .newsletter, .about-us, .subscribe { 
-				width:270px !important; 
+			.trending, .newsletter, .about-us, .subscribe {
+				width:270px !important;
 			}
 		}
 	}
@@ -38,17 +38,80 @@
 	.navbar .container {
 		padding: 0 20px;
 	}
+	body.home  {
+		.white-bg.home-ground  {
+
+				background-image: none !important;
+
+		}
+		.white-bg.intro {
+			.welcome-area {
+				background-image: none !important;
+			}
+		}
+		 .sponsors-area {
+		              margin-top:15px;
+		               .sponsor {
+		               	width:300px;
+		               }
+		               .shed-promo {
+		                margin-top:15px;
+		           }
+	               }
+	}
 }
 
 @media (max-width: 767px) {
 	body {
 		padding-left: 0px !important;
 		padding-right: 0px !important;
-		.white-bg, .beige-bg, .container { 
+		.white-bg, .beige-bg, .container {
 			padding: 20px 20px;
 		}
 		.navbar .container {
 		padding: 0 20px;
+		}
 	}
+	body.home  {
+		.white-bg.intro {
+			.welcome-area {
+				background-image: none !important;
+			}
+		}
+		.white-bg.home-ground {
+				background-image: none !important;
+		}
+		 .sponsors-area {
+		              margin-top:15px;
+		               .sponsor img{
+		               	width:300px;
+		               }
+		               .shed-promo {
+		                margin-top:15px;
+		           }
+	               }
 	}
+}
+
+// Imported form home.less
+
+@media (max-width: 767px) {
+    .makercamp-new .navbar-fixed-top,
+    .makercamp-new .navbar-fixed-bottom,
+    .makercamp-new .navbar-static-top {
+        margin-right:0;
+    }
+    .makercamp-new .main-header .container {
+        padding-top:0;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .makercamp-new .main-header .visible-desktop .tagline h1 {
+        font-size:1.9em;
+        line-height:1.5em;
+        margin-top:0.8em;
+        font-weight:normal;
+    }
 }
