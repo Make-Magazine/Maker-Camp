@@ -144,12 +144,12 @@
                           <a class="btn btn-danger" href="<?=unserialize(get_post_meta($p->ID, 'session-link-btn-url', true));?>"><?=unserialize(get_post_meta($p->ID, 'session-link-btn-title', true));?></a>
                         <? } ?>
                         <? $daily = unserialize(get_post_meta($p->ID, 'session-daily-project', true)); ?>
-                        <? if($daily != '') { ?>
+                        <? if(is_array($daily) && $daily['url'] != '') { ?>
                           <a class="btn" href="<?=$daily['url'];?>">Daily Project</a>
                         <? }; ?>
                         <div class="advanced-project" style="margin-top: 20px;">
                         <? $sap = unserialize(get_post_meta($p->ID, 'session-adv-project', true)); ?>
-                        <? if($sap['url'] != ''): ?>
+                        <? if(is_array($sap) && $sap['url'] != ''): ?>
                           <span class="advanced-project-title">Advanced project:</span>
                           <a style="color: red;" href="<?=$sap['url'];?>">
                             <?=$sap['title']?>
