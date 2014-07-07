@@ -7206,14 +7206,6 @@ hr {
   display: inline;
   margin-right: 4px;
 }
-.sub-nav {
-  display: none;
-}
-.sub-nav.active {
-  display: block;
-  border: 0px;
-  background-color: transparent;
-}
 h4,
 h5,
 h6 {
@@ -8824,9 +8816,14 @@ body.makercamp .ytube_intro {
   border: 1px solid #ccc;
   box-shadow: none;
 }
+.new-footer ul {
+  list-style-type: disc !important;
+  color: #000 !important;
+}
 .new-footer ul li {
   font-size: 14px !important;
   display: list-item;
+  color: #000 !important;
 }
 .new-footer .control-group {
   margin-bottom: 8px;
@@ -9039,6 +9036,21 @@ body.makercamp .ytube_intro {
   .navbar .container {
     padding: 0 20px;
   }
+  body.home .white-bg.home-ground {
+    background-image: none !important;
+  }
+  body.home .white-bg.intro .welcome-area {
+    background-image: none !important;
+  }
+  body.home .sponsors-area {
+    margin-top: 15px;
+  }
+  body.home .sponsors-area .sponsor {
+    width: 300px;
+  }
+  body.home .sponsors-area .shed-promo {
+    margin-top: 15px;
+  }
 }
 @media (max-width: 767px) {
   body {
@@ -9053,6 +9065,39 @@ body.makercamp .ytube_intro {
   body .navbar .container {
     padding: 0 20px;
   }
+  body.home .white-bg.intro .welcome-area {
+    background-image: none !important;
+  }
+  body.home .white-bg.home-ground {
+    background-image: none !important;
+  }
+  body.home .sponsors-area {
+    margin-top: 15px;
+  }
+  body.home .sponsors-area .sponsor img {
+    width: 300px;
+  }
+  body.home .sponsors-area .shed-promo {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .makercamp-new .navbar-fixed-top,
+  .makercamp-new .navbar-fixed-bottom,
+  .makercamp-new .navbar-static-top {
+    margin-right: 0;
+  }
+  .makercamp-new .main-header .container {
+    padding-top: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .makercamp-new .main-header .visible-desktop .tagline h1 {
+    font-size: 1.9em;
+    line-height: 1.5em;
+    margin-top: 0.8em;
+    font-weight: normal;
+  }
 }
 body.home {
   background: url(../img/sky.png) 0 20px repeat;
@@ -9066,6 +9111,9 @@ body.home {
 }
 body.home .white-bg {
   padding-bottom: 0px;
+}
+body.home .white-bg ul li {
+  margin-bottom: 5px;
 }
 body.home .white-bg.intro {
   background-color: #b8edfc !important;
@@ -9085,8 +9133,17 @@ body.home .white-bg.home-ground {
   border-bottom: 20px solid #4cb679;
   padding-top: 40 !important;
 }
-body.home .white-bg.home-ground .sponsors {
-  margin-bottom: 15px;
+body.home .white-bg.home-ground .sponsors-area {
+  margin-top: 76px;
+}
+body.home .white-bg.home-ground .sponsors-area .shed-promo {
+  margin-top: 69px;
+}
+body.home .white-bg.home-ground .sponsors-area h1 {
+  font-size: 32px;
+  text-decoration: none;
+  border: none;
+  color: #a8deed;
 }
 body.home .schedule .grey-bg {
   background-color: #f1f3f4;
@@ -9162,27 +9219,6 @@ body.home > .container-fluid {
   border-bottom: 1px solid #bbb;
   padding-bottom: 13px;
 }
-.sponsors-home {
-  margin-top: 35px;
-}
-@media (max-width: 767px) {
-  .makercamp-new .navbar-fixed-top,
-  .makercamp-new .navbar-fixed-bottom,
-  .makercamp-new .navbar-static-top {
-    margin-right: 0;
-  }
-  .makercamp-new .main-header .container {
-    padding-top: 0;
-  }
-}
-@media (max-width: 1200px) {
-  .makercamp-new .main-header .visible-desktop .tagline h1 {
-    font-size: 1.9em;
-    line-height: 1.5em;
-    margin-top: 0.8em;
-    font-weight: normal;
-  }
-}
 .makercamp-new .container-fluid {
   padding: 0px !important;
 }
@@ -9190,9 +9226,8 @@ body.home > .container-fluid {
   margin: 15px auto;
 }
 .cta {
-  margin-top: 25px;
+  margin: 25px auto;
   text-align: right;
-  padding-right: 65px;
 }
 .cta a.sign-btn {
   background-color: #e1272e;

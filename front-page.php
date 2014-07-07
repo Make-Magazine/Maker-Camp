@@ -24,6 +24,7 @@
 								</div>
 								<div class="cta">
 									<a class="button big block" href="http://makercamp.com/sign-up-for-camp/">Sign Up Today!</a>
+									<a class="button big block host-btn" href="http://makercamp.com/affiliate-program/">Host a Camp</a>
 
 								</div>
 							</div>
@@ -41,8 +42,10 @@
 								</div>
 
 								<div class="cta">
-									<div class="span12"><a class="sign-btn " href="http://makercamp.com/sign-up-for-camp/">Sign Up Today!</a>
-									<a class="host-btn" href="http://makercamp.com/affiliate-program/">Host a Camp</a></div>
+									<div class="span12">
+										<a class="sign-btn " href="http://makercamp.com/sign-up-for-camp/">Sign Up Today!</a>
+										<a class="host-btn" href="http://makercamp.com/affiliate-program/">Host a Camp</a>
+									</div>
 								</div>
 							</div>
 						</div>
