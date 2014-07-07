@@ -8601,7 +8601,6 @@ body.makercamp .lower-gradation {
 }
 body.makercamp .schedule-content {
   background: #fff;
-  margin-top: 65px;
   color: #5c5b5b;
   border-top: 1px solid #8ca9c8;
 }
@@ -9089,6 +9088,10 @@ body.makercamp .ytube_intro {
   }
   body.home .sponsors-area .shed-promo {
     margin-top: 15px;
+  }
+  .schedule-content .nav-tabs > li,
+  body.makercamp.admin-bar .schedule-content .nav-tabs > li {
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
