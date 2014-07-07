@@ -8609,6 +8609,17 @@ body.makercamp .schedule-content .tab-content {
   position: relative;
   overflow: visible;
 }
+body.makercamp .schedule-content .tab-content .tab-pane .session-container h5.title {
+  color: #267047;
+  font-weight: bold;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-container .makers {
+  font-weight: bold;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-container .advanced-project .advanced-project-title {
+  color: #267047;
+  font-weight: bold;
+}
 body.makercamp .schedule-content #schedule {
   border: none;
 }
