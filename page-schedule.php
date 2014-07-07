@@ -41,15 +41,15 @@
       </div>
     </div>
   </div>
-  <section class="white-bg">
+  <section class="white-bg schedule-content ">
     <div class="container ">
-      <div class="row-fluid">
+      <div class="row-fluid tab-navigation">
         <div class="span12">
           <? $year = get_post($post->post_parent)->post_title; ?>
           <h2 style="margin-bottom: 30px; color: red;">Maker Camp Season <?=$year;?></h2>
           <? $terms = get_terms('week', array('hierarchical'  => false, 'hide_empty' => 0)); ?>
 
-          <ul class="nav nav-tabs" role="tablist">
+          <ul class="nav nav-tabs" id="schedule" role="tablist">
             <? $i=0;?>
             <? foreach($terms as $term): ?>
               <? if($i==0) { ?>
