@@ -49,7 +49,7 @@
           <h2 style="margin-bottom: 30px; color: red;">Maker Camp Season <?=$year;?></h2>
           <? $terms = get_terms('week', array('hierarchical'  => false, 'hide_empty' => 0)); ?>
 
-          <ul class="nav nav-tabs" role="tablist">
+          <ul class="nav nav-tabs" id="schedule" role="tablist">
             <? $i=0;?>
             <? foreach($terms as $term): ?>
               <? if($i==0) { ?>
