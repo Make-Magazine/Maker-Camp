@@ -442,3 +442,20 @@ function maker_camp_list( $atts, $content = null ) {
         </form>';
 }
 add_shortcode( 'maker-camp', 'maker_camp_list' );
+
+/**
+* Open Graph Image for Home page
+ */
+
+function fb_home_image( $tags ) {
+    if ( is_home() || is_front_page() ) {
+        // Remove the default blank image added by Jetpack
+        unset( $tags['og:image'] );
+
+        $fb_home_img = 'http://makercamp.com/wp-content/uploads/2014/07/maker-camp-01.png';
+        $tags['og:image'] = esc_url( $fb_home_img );
+    }
+    return $tags;
+}
+add_filter( 'jetpack_open_graph_tags', 'fb_home_image' );
+

@@ -274,7 +274,7 @@ function fb_home_image( $tags ) {
         // Remove the default blank image added by Jetpack
         unset( $tags['og:image'] );
 
-        $fb_home_img = 'YOUR_IMAGE_URL';
+        $fb_home_img = 'http://makercamp.com/wp-content/uploads/2014/07/maker-camp-01.png';
         $tags['og:image'] = esc_url( $fb_home_img );
     }
     return $tags;
