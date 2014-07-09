@@ -41,11 +41,7 @@
       </div>
     </div>
   </div>
-
-  <section class="schedule-content white-bg schedule-content">
-
   <section class="white-bg schedule-content ">
-
     <div class="container ">
       <div class="row-fluid tab-navigation">
         <div class="span12">
@@ -149,15 +145,13 @@
                         <? } ?>
 
 
-
-                        <div class="daily-project advanced-project" style="margin-top: 20px;">
+  <div class="daily-project advanced-project" style="margin-top: 20px;">
                         <? $sap = unserialize(get_post_meta($p->ID, 'session-daily-project', true)); ?>
                         <? if(is_array($daily) && $daily['url'] != ''): ?>
                           <span class="advanced-project-title">Daily project:</span>
                           <a style="color: red;" href="<?=$daily['url'];?>">
                             <?=$sap['title']?>
                           </a>
-                        <? endif; ?>
                         </div>
 
 
