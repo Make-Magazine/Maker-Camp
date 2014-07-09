@@ -77,15 +77,21 @@ function home_carousel_function($atts) {
 
   // sort posts by date
   ksort($ordered);
+  $menu_items = wp_get_nav_menu_items('maker-camp-nav');
+  $schedule_url = $menu_items[1]->url;
+
   foreach($ordered as $s) {
-    error_log(print_r(wp_get_post_terms($s->ID, 'camp'), true));
+    $week = wp_get_post_terms($s->ID, 'week');
+    $week_slug = $week[0]->slug;
     #foreach($o as $s) {
-      $rs .= '<li style="float: left; width: 200px; font-size: 11pt; padding: 10px; color: #000;">';
+      $rs .= '<li style="float: left; width: 200px; font-size: 13pt; padding: 10px; color: #000;">';
       $rs .= '<div class="session-image" style="margin-bottom: 10px;">';
       $image = wp_get_attachment_image_src( get_post_thumbnail_id( $s->ID ), 'single-post-thumbnail' );
+      $rs .= '<a href="'.$schedule_url.'#'.$week_slug.'">';
       $rs .= '<img width="200px" src="'.$image[0].'">';
+      $rs .= '</a>';
       $rs .= '</div>';
-      $rs .= '<div class="session-title"><a href="/'.$year.'-2/schedule">'.$s->post_title.'</a></div>';
+      $rs .= '<div class="session-title"><a href="'.$schedule_url.'#'.$week_slug.'">'.$s->post_title.'</a></div>';
       #$rs .= '<div class="session-content">';
       #$rs .= $s->post_content;
       #$rs .= '</div>';
