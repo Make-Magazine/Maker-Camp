@@ -264,3 +264,19 @@ function make_get_cover_image( $number = 39 ) {
 	$url = esc_url( 'http://cdn.makezine.com/make/covers/MAKE_V' . absint( $number ) . '_high.jpg' );
 	return $url;
 }
+
+/**
+* Open Graph functionality for Home page
+ */
+
+function fb_home_image( $tags ) {
+    if ( is_home() || is_front_page() ) {
+        // Remove the default blank image added by Jetpack
+        unset( $tags['og:image'] );
+
+        $fb_home_img = 'YOUR_IMAGE_URL';
+        $tags['og:image'] = esc_url( $fb_home_img );
+    }
+    return $tags;
+}
+add_filter( 'jetpack_open_graph_tags', 'fb_home_image' );
