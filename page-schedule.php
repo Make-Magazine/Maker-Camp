@@ -41,11 +41,11 @@
       </div>
     </div>
   </div>
-<<<<<<< HEAD
+
   <section class="schedule-content white-bg schedule-content">
-=======
+
   <section class="white-bg schedule-content ">
->>>>>>> schedule
+
     <div class="container ">
       <div class="row-fluid tab-navigation">
         <div class="span12">
