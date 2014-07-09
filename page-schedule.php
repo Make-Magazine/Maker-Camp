@@ -145,12 +145,12 @@
                         <? } ?>
 
 
-  <div class="daily-project advanced-project" style="margin-top: 20px;">
+                        <div class="daily-project advanced-project" style="margin-top: 20px;">
                         <? $sap = unserialize(get_post_meta($p->ID, 'session-daily-project', true)); ?>
                         <? if(is_array($daily) && $daily['url'] != ''): ?>
                           <span class="advanced-project-title">Daily project:</span>
                           <a style="color: red;" href="<?=$daily['url'];?>">
-                            <?=$sap['title']?>
+                            <?=$daily['title']?>
                           </a>
                         </div>
 
