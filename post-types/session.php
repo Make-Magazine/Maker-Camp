@@ -71,6 +71,7 @@ function make_session_add_meta_boxes() {
   add_meta_box( 'make-schedule', 'Schedule Session', 'make_add_schedules_mb', 'session', 'advanced', 'high' );
   add_meta_box( 'make-sessions-link', 'Session Link', 'make_sessions_link', 'session', 'side', 'core' );
   add_meta_box( 'make-sessions-advanced-project', 'Advanced Project', 'make_sessions_advanced_project', 'session', 'side', 'default' );
+  add_meta_box( 'make-sessions-daily-project', 'Daily Project', 'make_sessions_daily_project', 'session', 'side', 'default' );
 }
 add_action( 'add_meta_boxes', 'make_session_add_meta_boxes' );
 
@@ -115,6 +116,24 @@ function make_sessions_link( $post ) {
   <?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
 }
 
+/**
+ * Displays the meta box for adding the daily project url
+ * @param  object $post The post object of the current post being edited
+ * @return html
+ */
+
+function make_sessions_daily_project($post) {
+  // Get the data
+  $daily_project = unserialize( get_post_meta( absint( $post->ID ), 'session-daily-project', true ) ); ?>
+  <label for="daily-title"><strong>Project Title</strong></label>
+  <input type="text" name="daily-project[title]" id="daily-title-WHY-IS-THIS-HIDDEN" value="<?php echo ( ! empty( $daily_project['title'] ) ) ? sanitize_text_field( $daily_project['title'] ) : ''; ?>" style="display:block;width:100%;">
+  <label for="daily-link" style="margin-top:10px;"><strong>Project URL</strong></label>
+  <input type="text" name="daily-project[url]" id="daily-link" value="<?php echo ( ! empty( $daily_project['url'] ) ) ? esc_url( $daily_project['url'] ) : ''; ?>" style="display:block;width:100%;">
+
+  <?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
+
+}
+
 
 /**
  * Displays the meta box for adding the advanced project urls
@@ -125,15 +144,10 @@ function make_sessions_advanced_project( $post ) {
 
   // Get the data
   $adv_project = unserialize( get_post_meta( absint( $post->ID ), 'session-adv-project', true ) ); ?>
-
   <label for="adv-title"><strong>Project Title</strong></label>
-
   <input type="text" name="adv-project[title]" id="adv-title-WHY-IS-THIS-HIDDEN" value="<?php echo ( ! empty( $adv_project['title'] ) ) ? sanitize_text_field( $adv_project['title'] ) : ''; ?>" style="display:block;width:100%;">
-
   <label for="adv-link" style="margin-top:10px;"><strong>Project URL</strong></label>
-
   <input type="text" name="adv-project[url]" id="adv-link" value="<?php echo ( ! empty( $adv_project['url'] ) ) ? esc_url( $adv_project['url'] ) : ''; ?>" style="display:block;width:100%;">
-
   <?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
 }
 
@@ -189,6 +203,9 @@ function make_sessions_save_meta_boxes( $post_id ) {
   // Save the Session Advanced Project
   if ( isset( $_POST['adv-project'] ) )
     update_post_meta( absint( $post_id ), 'session-adv-project', serialize( $_POST['adv-project'] ) );
+
+  if ( isset( $_POST['daily-project'] ) )
+    update_post_meta( absint( $post_id ), 'session-daily-project', serialize( $_POST['daily-project'] ) );
 
   if ( isset( $_POST['schedule']['date'] ) ) {
     update_post_meta ( absint( $post_id ), 'schedule-date', serialize( $_POST['schedule']['date']));

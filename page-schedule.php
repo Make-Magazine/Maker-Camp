@@ -41,7 +41,11 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
   <section class="schedule-content white-bg schedule-content">
+=======
+  <section class="white-bg schedule-content ">
+>>>>>>> schedule
     <div class="container ">
       <div class="row-fluid tab-navigation">
         <div class="span12">
@@ -73,10 +77,21 @@
                   <? if($image_src != null): ?>
                     <div class="week-image span3 pull-left" style="margin: 0px 30px 0px 0px;"><img src="<?=$image_src['src'];?>"></div>
                   <? endif; ?>
-                  <div class="week-info">
+                  <div class="week-info" style="overflow: hidden">
                     <h3><?=$term->name?></h3>
                     <p class="week-description">
                       <?=$term->description?>
+                    </p>
+                    <p>
+                      <h4>Jump to a day:</h4>
+                      <br>
+                      <ul style="padding: 0px 0px 10px 0px; margin: 0px;">
+                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-1">Day One</a></li>
+                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-2">Day Two</a></li>
+                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-3">Day Three</a></li>
+                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-4">Day Four</a></li>
+                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-5">Day Five</a></li>
+                      </ul>
                     </p>
                   </div>
                 </div>
@@ -98,7 +113,7 @@
                 foreach($ordered_posts as $key => $val) {
                    // WEEKDAY heading
                 ?> <!--h4 style="background-color: #999; padding: 10px; color: #FFF;">Day <?=date('w', strtotime($key));?>: <?=date('l', strtotime( $key ));?></h4--> <?
-                ?> <h4 style="background-color: #999; padding: 10px; color: #FFF;">Day <?=$key;?>: <?=$dow[$key];?></h4> <?
+                ?> <h4 style="background-color: #999; padding: 10px; color: #FFF;" id="day-<?=$key;?>">Day <?=$key;?>: <?=$dow[$key];?></h4> <?
                   foreach($val as $p) {
                   // Here is where the fun happens for the sessions
                   ?>
@@ -130,11 +145,25 @@
                           <?=$p->post_content;?>
                         </p>
                         <? if(unserialize(get_post_meta($p->ID, 'session-link-btn-url', true)) != '') { ?>
-                        <a class="btn btn-danger" href="<?=unserialize(get_post_meta($p->ID, 'session-link-btn-url', true));?>"><?=unserialize(get_post_meta($p->ID, 'session-link-btn-title', true));?></a>
+                          <a class="btn btn-danger" href="<?=unserialize(get_post_meta($p->ID, 'session-link-btn-url', true));?>"><?=unserialize(get_post_meta($p->ID, 'session-link-btn-title', true));?></a>
                         <? } ?>
+
+
+
+                        <div class="daily-project advanced-project" style="margin-top: 20px;">
+                        <? $sap = unserialize(get_post_meta($p->ID, 'session-daily-project', true)); ?>
+                        <? if(is_array($daily) && $daily['url'] != ''): ?>
+                          <span class="advanced-project-title">Daily project:</span>
+                          <a style="color: red;" href="<?=$daily['url'];?>">
+                            <?=$sap['title']?>
+                          </a>
+                        <? endif; ?>
+                        </div>
+
+
                         <div class="advanced-project" style="margin-top: 20px;">
                         <? $sap = unserialize(get_post_meta($p->ID, 'session-adv-project', true)); ?>
-                        <? if($sap['url'] != ''): ?>
+                        <? if(is_array($sap) && $sap['url'] != ''): ?>
                           <span class="advanced-project-title">Advanced project:</span>
                           <a style="color: red;" href="<?=$sap['url'];?>">
                             <?=$sap['title']?>
