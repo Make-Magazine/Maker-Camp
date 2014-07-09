@@ -8306,8 +8306,9 @@ body.makercamp p {
   line-height: 1.8em;
 }
 body.makercamp .small {
-  font-size: 14px;
-  color: #666;
+  font-size: 14px !important;
+  color: #666 !important;
+  line-height: 16px !important;
 }
 body.makercamp iframe {
   max-width: 100%;
@@ -9073,10 +9074,10 @@ body.home .white-bg.home-ground .sponsors-area {
   margin-top: 76px;
 }
 body.home .white-bg.home-ground .sponsors-area .shed-promo {
-  margin-top: 69px;
+  margin-top: 56px;
 }
 body.home .white-bg.home-ground .sponsors-area h1 {
-  font-size: 32px;
+  font-size: 28px;
   text-decoration: none;
   border: none;
   color: #a8deed;
@@ -9121,7 +9122,7 @@ body.home .intro p {
   color: #333;
   font-size: 22px;
   line-height: 33px;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 body.home .tagline {
   margin-top: 0px !important;
