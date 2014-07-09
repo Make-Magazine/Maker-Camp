@@ -1460,8 +1460,8 @@ select:focus:invalid:focus {
 }
 .input-append .active,
 .input-prepend .active {
-  background-color: #a9dba9;
-  border-color: #46a546;
+  background-color: #64cb92;
+  border-color: #267047;
 }
 .input-prepend .add-on,
 .input-prepend .btn {
@@ -8305,6 +8305,10 @@ body.makercamp p {
   font-size: 1em;
   line-height: 1.8em;
 }
+body.makercamp .small {
+  font-size: 14px;
+  color: #666;
+}
 body.makercamp iframe {
   max-width: 100%;
 }
@@ -9013,113 +9017,6 @@ body.makercamp .ytube_intro {
   width: 24px;
   height: 24px;
 }
-@media (min-width: 1200px) {
-  body.makercamp .new-footer .container,
-  body.makercamp.admin-bar .new-footer .container {
-    width: 1170px !important;
-  }
-  body.makercamp .new-footer .main,
-  body.makercamp.admin-bar .new-footer .main {
-    width: 1000px !important;
-  }
-  body.makercamp .new-footer .trending,
-  body.makercamp.admin-bar .new-footer .trending,
-  body.makercamp .new-footer .newsletter,
-  body.makercamp.admin-bar .new-footer .newsletter,
-  body.makercamp .new-footer .about-us,
-  body.makercamp.admin-bar .new-footer .about-us,
-  body.makercamp .new-footer .subscribe,
-  body.makercamp.admin-bar .new-footer .subscribe {
-    width: 270px !important;
-  }
-}
-@media (min-width: 979px) and (max-width: 1200px) {
-  body.makercamp #mag-cover,
-  body.makercamp.admin-bar #mag-cover {
-    width: 110px !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 979px) {
-  .new-footer .span3 {
-    width: 31% !important;
-  }
-  .subscribe #mag-cover {
-    margin: 0 !important;
-    width: 110px !important;
-  }
-  .subscribe h5 {
-    margin-top: 0 !important;
-  }
-  .navbar .container {
-    padding: 0 20px;
-  }
-  body.home .white-bg.home-ground {
-    background-image: none !important;
-  }
-  body.home .white-bg.intro .welcome-area {
-    background-image: none !important;
-  }
-  body.home .sponsors-area {
-    margin-top: 15px;
-  }
-  body.home .sponsors-area .sponsor {
-    width: 300px;
-  }
-  body.home .sponsors-area .shed-promo {
-    margin-top: 15px;
-  }
-}
-@media (max-width: 767px) {
-  body {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-  body .white-bg,
-  body .beige-bg,
-  body .container {
-    padding: 20px 20px;
-  }
-  body .navbar .container {
-    padding: 0 20px;
-  }
-  body.home .white-bg.intro .welcome-area {
-    background-image: none !important;
-  }
-  body.home .white-bg.home-ground {
-    background-image: none !important;
-  }
-  body.home .sponsors-area {
-    margin-top: 15px;
-  }
-  body.home .sponsors-area .sponsor img {
-    width: 300px;
-  }
-  body.home .sponsors-area .shed-promo {
-    margin-top: 15px;
-  }
-  .schedule-content .nav-tabs > li,
-  body.makercamp.admin-bar .schedule-content .nav-tabs > li {
-    width: 100%;
-  }
-}
-@media (max-width: 767px) {
-  .makercamp-new .navbar-fixed-top,
-  .makercamp-new .navbar-fixed-bottom,
-  .makercamp-new .navbar-static-top {
-    margin-right: 0;
-  }
-  .makercamp-new .main-header .container {
-    padding-top: 0;
-  }
-}
-@media (max-width: 1200px) {
-  .makercamp-new .main-header .visible-desktop .tagline h1 {
-    font-size: 1.9em;
-    line-height: 1.5em;
-    margin-top: 0.8em;
-    font-weight: normal;
-  }
-}
 body.home {
   background: url(../img/sky.png) 0 20px repeat;
   text-rendering: optimizeLegibility;
@@ -9135,6 +9032,24 @@ body.home .white-bg {
 }
 body.home .white-bg ul li {
   margin-bottom: 5px;
+}
+body.home .white-bg ul.schedule-list {
+  color: #267047;
+  font-weight: bold;
+}
+body.home .white-bg ul.schedule-list li {
+  color: #267047;
+}
+body.home .white-bg ul.schedule-list li a:link,
+body.home .white-bg ul.schedule-list li a:visited {
+  color: #267047;
+}
+body.home .white-bg .visible-desktop .ytube_intro {
+  margin-bottom: 50px;
+  margin-top: 17px;
+}
+body.home .white-bg .green {
+  color: #267047;
 }
 body.home .white-bg.intro {
   background-color: #b8edfc !important;
@@ -9272,9 +9187,9 @@ body.home > .container-fluid {
 .main-nav .navbar-inner {
   border-color: #275392;
   border: none;
+  border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
-  border-radius: 0px;
   background-color: #253b58;
   background-image: -moz-linear-gradient(top, #2e435e, #172e50);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2e435e), to(#172e50));
@@ -9322,8 +9237,38 @@ body.home > .container-fluid {
   border-color: #11233c #11233c #000001;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #11233c;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.main-nav .btn-navbar .btn-navbar {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #1d2f46;
+  background-image: -moz-linear-gradient(top, #26374d, #11233c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#26374d), to(#11233c));
+  background-image: -webkit-linear-gradient(top, #26374d, #11233c);
+  background-image: -o-linear-gradient(top, #26374d, #11233c);
+  background-image: linear-gradient(to bottom, #26374d, #11233c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff26374d', endColorstr='#ff11233c', GradientType=0);
+  border-color: #11233c #11233c #000001;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #11233c;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.main-nav .btn-navbar .btn-navbar:hover,
+.main-nav .btn-navbar .btn-navbar:focus,
+.main-nav .btn-navbar .btn-navbar:active,
+.main-nav .btn-navbar .btn-navbar.active,
+.main-nav .btn-navbar .btn-navbar.disabled,
+.main-nav .btn-navbar .btn-navbar[disabled] {
+  color: #ffffff;
+  background-color: #11233c;
+  *background-color: #0c1728;
+}
+.main-nav .btn-navbar .btn-navbar:active,
+.main-nav .btn-navbar .btn-navbar.active {
+  background-color: #060c15 \9;
 }
 .main-nav .btn-navbar:hover,
 .main-nav .btn-navbar:focus,
@@ -9341,4 +9286,136 @@ body.home > .container-fluid {
 }
 .admin-bar .navbar-fixed-top {
   top: 29px;
+}
+@media (min-width: 1200px) {
+  body.makercamp .sponsor:first-child,
+  body.makercamp.admin-bar .sponsor:first-child {
+    margin-top: 30px;
+  }
+  body.makercamp .new-footer .container,
+  body.makercamp.admin-bar .new-footer .container {
+    width: 1170px !important;
+  }
+  body.makercamp .new-footer .main,
+  body.makercamp.admin-bar .new-footer .main {
+    width: 1000px !important;
+  }
+  body.makercamp .new-footer .trending,
+  body.makercamp.admin-bar .new-footer .trending,
+  body.makercamp .new-footer .newsletter,
+  body.makercamp.admin-bar .new-footer .newsletter,
+  body.makercamp .new-footer .about-us,
+  body.makercamp.admin-bar .new-footer .about-us,
+  body.makercamp .new-footer .subscribe,
+  body.makercamp.admin-bar .new-footer .subscribe {
+    width: 270px !important;
+  }
+}
+@media (min-width: 979px) and (max-width: 1200px) {
+  body.makercamp #mag-cover,
+  body.makercamp.admin-bar #mag-cover {
+    width: 110px !important;
+  }
+  .main-nav .primary-nav > .menu-item > a {
+    padding: 10px;
+  }
+  body.home .main-header .tagline h1 {
+    font-size: 1.4em;
+    line-height: 1.4em;
+  }
+  body.home .white-bg.home-ground .sponsors-area {
+    margin-top: 0px;
+  }
+  body.home .white-bg.home-ground .sponsors-area h1 {
+    color: #e1272e;
+    font-size: 28px;
+  }
+  body.home .white-bg.home-ground .sponsors-area .sponsor {
+    margin-top: 30px;
+    width: 300px;
+  }
+  body.home .white-bg.home-ground .sponsors-area .shed-promo {
+    margin-top: 15px;
+  }
+  body.home .white-bg.intro .welcome-area {
+    background-image: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .new-footer .span3 {
+    width: 31% !important;
+  }
+  .subscribe #mag-cover {
+    margin: 0 !important;
+    width: 110px !important;
+  }
+  .subscribe h5 {
+    margin-top: 0 !important;
+  }
+  .navbar .container {
+    padding: 0 20px;
+  }
+  body.home .white-bg.home-ground {
+    background-image: none !important;
+  }
+  body.home .white-bg.home-ground .sponsors-area {
+    margin-top: 15px;
+  }
+  body.home .white-bg.home-ground .sponsors-area h1 {
+    font-size: 28px;
+    color: #267047;
+  }
+  body.home .white-bg.home-ground .sponsors-area .sponsor {
+    width: 300px;
+  }
+  body.home .white-bg.home-ground .sponsors-area .shed-promo {
+    margin-top: 15px;
+  }
+  body.home .white-bg.intro .welcome-area {
+    background-image: none !important;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  body .schedule-content .nav-tabs > li,
+  body body.makercamp.admin-bar .schedule-content .nav-tabs > li {
+    width: 100%;
+  }
+  body .white-bg,
+  body .beige-bg,
+  body .container {
+    padding: 20px 20px;
+  }
+  body .navbar .container {
+    padding: 0 20px;
+  }
+  body.home .white-bg {
+    padding: 0px !important;
+  }
+  body.home .white-bg.intro .welcome-area {
+    padding: 0px !important;
+    background-image: none !important;
+  }
+  body.home .white-bg.home-ground {
+    text-align: center;
+    background-image: none !important;
+  }
+  body.home .sponsors-area {
+    text-align: center;
+    margin-top: 15px !important ;
+  }
+  body.home .sponsors-area h1 {
+    font-size: 32px;
+    color: #267047 !important;
+  }
+  body.home .sponsors-area .sponsor {
+    width: 300px;
+    margin: 20px auto 0px auto;
+  }
+  body.home .sponsors-area .shed-promo {
+    margin-top: 15px;
+  }
 }

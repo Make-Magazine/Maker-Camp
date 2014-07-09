@@ -1,5 +1,7 @@
 @media (min-width: 1200px) {
 	body.makercamp, body.makercamp.admin-bar {
+.sponsor:first-child {margin-top:30px;}
+
 		.new-footer {
 			.container { width:1170px !important; }
 			.main { width:1000px !important; }
@@ -15,6 +17,43 @@
 		#mag-cover {
 			width: 110px !important;
 		}
+	}
+
+	.main-nav .primary-nav > .menu-item > a {
+		padding: 10px;
+	}
+	body.home  {
+		.main-header {
+		.tagline {
+			h1 {
+			font-size:1.4em;
+			line-height: 1.4em;
+			}
+		}
+	}
+		.white-bg.home-ground  {
+			 .sponsors-area {
+		              margin-top:0px;
+		                h1 {
+			              	color:#e1272e;
+			              	font-size:28px;
+		              }
+		               .sponsor {
+		               	margin-top:30px;
+		               	width:300px;
+		               }
+		               .shed-promo {
+		                margin-top:15px;
+		           }
+	               }
+
+		}
+		.white-bg.intro {
+			.welcome-area {
+				background-image: none !important;
+			}
+		}
+
 	}
 }
 
@@ -40,17 +79,13 @@
 	}
 	body.home  {
 		.white-bg.home-ground  {
-
-				background-image: none !important;
-
-		}
-		.white-bg.intro {
-			.welcome-area {
-				background-image: none !important;
-			}
-		}
-		 .sponsors-area {
+			background-image: none !important;
+			 .sponsors-area {
 		              margin-top:15px;
+		              h1 {
+			              	font-size:28px;
+			              	color:#267047;
+		              }
 		               .sponsor {
 		               	width:300px;
 		               }
@@ -58,6 +93,14 @@
 		                margin-top:15px;
 		           }
 	               }
+
+		}
+		.white-bg.intro {
+			.welcome-area {
+				background-image: none !important;
+			}
+		}
+
 	}
 }
 
@@ -65,26 +108,38 @@
 	body {
 		padding-left: 0px !important;
 		padding-right: 0px !important;
+		.schedule-content .nav-tabs > li, body.makercamp.admin-bar .schedule-content .nav-tabs > li { width:100%;}
 		.white-bg, .beige-bg, .container {
 			padding: 20px 20px;
 		}
 		.navbar .container {
-		padding: 0 20px;
+			padding: 0 20px;
 		}
 	}
 	body.home  {
+		.white-bg {
+			padding:0px !important;
+		}
 		.white-bg.intro {
 			.welcome-area {
+				padding:0px !important;
 				background-image: none !important;
 			}
 			}
 		.white-bg.home-ground {
+			text-align:center;
 				background-image: none !important;
 		}
 		 .sponsors-area {
-		              margin-top:15px;
-		               .sponsor img{
+		 	text-align: center;
+		              margin-top:15px !important ;
+		               h1 {
+		               	font-size:32px;
+			              	color:#267047 !important;
+		              }
+		               .sponsor {
 		               	width:300px;
+		               	margin:20px auto 0px auto;
 		               }
 		               .shed-promo {
 		                margin-top:15px;
@@ -92,31 +147,27 @@
 	               }
 	}
 
-	.schedule-content .nav-tabs > li, body.makercamp.admin-bar .schedule-content .nav-tabs > li {
-		width:100%;
-	}
-
 }
 
 // Imported form home.less
 
-@media (max-width: 767px) {
-    .makercamp-new .navbar-fixed-top,
-    .makercamp-new .navbar-fixed-bottom,
-    .makercamp-new .navbar-static-top {
-        margin-right:0;
-    }
-    .makercamp-new .main-header .container {
-        padding-top:0;
-    }
+// @media (max-width: 767px) {
+//     .makercamp-new .navbar-fixed-top,
+//     .makercamp-new .navbar-fixed-bottom,
+//     .makercamp-new .navbar-static-top {
+//         margin-right:0;
+//     }
+//     .makercamp-new .main-header .container {
+//         padding-top:0;
+//     }
 
-}
+// }
 
-@media (max-width: 1200px) {
-    .makercamp-new .main-header .visible-desktop .tagline h1 {
-        font-size:1.9em;
-        line-height:1.5em;
-        margin-top:0.8em;
-        font-weight:normal;
-    }
-}
+// @media (max-width: 1200px) {
+//     .makercamp-new .main-header .visible-desktop .tagline h1 {
+//         font-size:1.9em;
+//         line-height:1.5em;
+//         margin-top:0.8em;
+//         font-weight:normal;
+//     }
+// }
