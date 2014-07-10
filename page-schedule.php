@@ -171,6 +171,12 @@
     </div>
   </section>
 
-<?#$modal;?>
+<?=$modal;?>
+<style>
+  /* Adding this because without it, the modals seem to overlay dom elements when not in use. */
+  .modal {
+    display: none;
+  }
+</style>
 </div>
 <?php get_footer( 'makercamp' ); ?>
