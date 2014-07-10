@@ -120,17 +120,18 @@
                         <h5 class="title"><?=$p->post_title?></h5>
                         <?
                           $post_makers = unserialize(get_post_meta(absint($p->ID), 'session-makers', true));
-
                           $my_makers = array();
                           $post_makers_list = make_maker_get_list();
                           if(count($post_makers_list) > 0 && is_array($post_makers)) {
                             foreach($post_makers_list as $pml) {
                               if(in_array($pml->ID, $post_makers)) {
-                                $my_makers[] = $pml->post_title;
+                                echo(create_maker_modal($pml));
+                                $my_makers[] = '<a href="#" data-toggle="modal" data-target="#'.$pml->post_name.'">'.$pml->post_title.'</a>';
                               }
                             }
                           }
                         ?>
+                        
                         <div class="makers">
                         <? if(count($my_makers) > 0) { ?>
                           MAKERS:
