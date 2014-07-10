@@ -136,6 +136,7 @@ function make_maker_get_list( $custom_query = array() ) {
     'post_status' => 'any',
     'order' => 'ASC',
     'orderby' => 'name',
+    'post_count' => -1
   );
   $query = wp_parse_args( $custom_query, $default_query );
   
