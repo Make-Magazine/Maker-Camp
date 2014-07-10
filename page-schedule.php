@@ -125,13 +125,12 @@
                           if(count($post_makers_list) > 0 && is_array($post_makers)) {
                             foreach($post_makers_list as $pml) {
                               if(in_array($pml->ID, $post_makers)) {
-                                echo(create_maker_modal($pml));
+                                $modal .= create_maker_modal($pml);
                                 $my_makers[] = '<a href="#" data-toggle="modal" data-target="#'.$pml->post_name.'">'.$pml->post_title.'</a>';
                               }
                             }
                           }
                         ?>
-                        
                         <div class="makers">
                         <? if(count($my_makers) > 0) { ?>
                           MAKERS:
@@ -171,6 +170,7 @@
       </div>
     </div>
   </section>
-</div>
 
+<?#$modal;?>
+</div>
 <?php get_footer( 'makercamp' ); ?>
