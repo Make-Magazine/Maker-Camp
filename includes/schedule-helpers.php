@@ -6,9 +6,15 @@ function create_maker_modal($maker) {
   <div class="modal fade" id="'.$maker->post_name.'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header" style="background-color: #21396F;">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><!--span class="sr-only">Close</span--></button>
-          <h4 class="modal-title" id="myModalLabel">About This Maker: '.$maker->post_title.'</h4>
+          <h4 class="modal-title" id="myModalLabel">
+            <div class="modal-subtitle" 
+            style="font-size: 10pt;
+            color: rgb(181, 184, 255);
+            font-weight: 100;">About This Maker</div>
+            <div class="modal-maker-name" style="color: #FFF;">'.$maker->post_title.'</div>
+          </h4>
         </div>
         <div class="modal-body">
   ';
