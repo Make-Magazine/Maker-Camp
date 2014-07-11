@@ -22,7 +22,7 @@ function create_maker_modal($maker) {
   $str .= '<div class="image" style="float: left; margin-right: 10px;">'.$image.'</div>';
   $link = get_post_meta( $maker->ID, 'maker-hyperlink', true );
   $str .= '
-          <div class="bio" style="overflow: hidden; margin-bottom: 20px;">
+          <div class="bio" style="overflow: hidden; margin-bottom: 20px; color: #000;">
             '.$maker->post_content.'
             <div class="bio-link"><a href="'.$link.'" target="_blank">Click here to find out more.</a></div>
           </div>
