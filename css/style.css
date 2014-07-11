@@ -9071,7 +9071,7 @@ body.home .white-bg.home-carousel ul.carousel {
 }
 body.home .white-bg.home-carousel ul.carousel li {
   float: left;
-  width: 215px;
+  width: 210px;
   font-size: 13pt;
   padding: 10px;
   color: #000;
@@ -9084,6 +9084,7 @@ body.home .white-bg.home-carousel ul.carousel li.today {
   padding: 10px;
   margin-left: 10px;
   color: #000;
+  width: 210px;
 }
 body.home .white-bg.home-carousel ul.carousel li.today:first-child {
   margin-left: 0px;
@@ -9093,7 +9094,7 @@ body.home .white-bg.home-carousel ul.carousel .session-image {
   margin-bottom: 10px;
 }
 body.home .white-bg.home-carousel ul.carousel .session-image img {
-  width: 215px;
+  width: 210px;
 }
 body.home .white-bg.intro {
   background-color: #b8edfc !important;
