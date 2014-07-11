@@ -81,12 +81,13 @@
                     <p>
                       <h4>Jump to a day:</h4>
                       <br>
+                      <?$week = $term->slug."-"; ?>
                       <ul style="padding: 0px 0px 10px 0px; margin: 0px;">
-                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-1">Day One</a></li>
-                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-2">Day Two</a></li>
-                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-3">Day Three</a></li>
-                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-4">Day Four</a></li>
-                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-5">Day Five</a></li>
+                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#<?=$week;?>day-1">Day One</a></li>
+                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#<?=$week;?>day-2">Day Two</a></li>
+                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#<?=$week;?>day-3">Day Three</a></li>
+                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#<?=$week;?>day-4">Day Four</a></li>
+                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#<?=$week;?>day-5">Day Five</a></li>
                       </ul>
                     </p>
                   </div>
@@ -109,7 +110,7 @@
                 foreach($ordered_posts as $key => $val) {
                    // WEEKDAY heading
                 ?> <!--h4 style="background-color: #999; padding: 10px; color: #FFF;">Day <?=date('w', strtotime($key));?>: <?=date('l', strtotime( $key ));?></h4--> <?
-                ?> <h4 style="background-color: #999; padding: 10px; color: #FFF;" id="day-<?=$key;?>">Day <?=$key;?>: <?=$dow[$key];?></h4> <?
+                ?> <h4 style="background-color: #999; padding: 10px; color: #FFF;" id="<?=$week;?>day-<?=$key;?>">Day <?=$key;?>: <?=$dow[$key];?></h4> <?
                   foreach($val as $p) {
                   // Here is where the fun happens for the sessions
                   ?>
