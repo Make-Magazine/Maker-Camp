@@ -137,6 +137,7 @@ function make_maker_get_list( $custom_query = array() ) {
     'orderby' => 'name',
     'posts_per_page' => -1
   );
+
   $query = wp_parse_args( $custom_query, $default_query );
   $makers = new WP_Query( $query );
   return $makers->posts;
