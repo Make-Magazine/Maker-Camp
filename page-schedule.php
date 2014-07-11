@@ -93,7 +93,7 @@
                 </div>
                 <div class="clearfix"></div>
                 <? // Grab all the terms for this week and year ?>
-                <? $args = array('post_type' => 'session', 'post_status' => 'publish', 'week' => $term->name, 'camp' => 'Maker Camp '.$year); ?>
+                <? $args = array('posts_per_page'   => -1, 'post_type' => 'session', 'post_status' => 'publish', 'week' => $term->name, 'camp' => 'Maker Camp '.$year); ?>
                 <?
                 $posts = get_posts($args);
                 $ordered_posts = array();
