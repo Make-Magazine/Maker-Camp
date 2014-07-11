@@ -8,7 +8,7 @@ function create_maker_modal($maker) {
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><!--span class="sr-only">Close</span--></button>
-          <h4 class="modal-title" id="myModalLabel">Maker Profile: '.$maker->post_title.'</h4>
+          <h4 class="modal-title" id="myModalLabel">About This Maker: '.$maker->post_title.'</h4>
         </div>
         <div class="modal-body">
   ';
@@ -17,7 +17,7 @@ function create_maker_modal($maker) {
   $link = get_post_meta( $maker->ID, 'maker-hyperlink', true );
   $str .= '
           <div class="bio" style="overflow: hidden; margin-bottom: 20px;">'.$maker->post_content.'</div>
-          <div class="bio-link"><a href="'.$link.'">Click here to find out more.</a></div>
+          <div class="bio-link"><a href="'.$link.'" target="_blank">Click here to find out more.</a></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
