@@ -6,7 +6,7 @@ function home_carousel_function($atts) {
    ), $atts));
 
   $rs = '<div class="container"><div class="row-fluid">';
-  $rs .= '<h2 style="margin-bottom: 20px;">Upcoming Maker Camp Sessions</h2>';
+  $rs .= '<h2 style="margin-bottom: 20px;">This Week at Maker Camp</h2>';
   $rs .= '<ul class="carousel" style="overflow: auto; margin: 0px; padding: 0px;">';
 
   $posts = get_posts(array('post_type' => 'session', 'camp' => 'maker-camp-'.$year, 'posts_per_page' => -1));
@@ -84,7 +84,14 @@ function home_carousel_function($atts) {
     $week = wp_get_post_terms($s->ID, 'week');
     $week_slug = $week[0]->slug;
     #foreach($o as $s) {
-      $rs .= '<li style="float: left; width: 200px; font-size: 13pt; padding: 10px; color: #000;">';
+      $schedule_date = unserialize(get_post_meta($s->ID, 'schedule-date', true));
+      $today = strftime("%Y-%m-%d", $now);
+      if($schedule_date == $today) {
+        $rs .= '<li class="today" style="background-color: rgb(226, 226, 226); float: left; width: 200px; font-size: 13pt; padding: 10px; color: #000;">';
+      } else {
+        $rs .= '<li style="float: left; width: 200px; font-size: 13pt; padding: 10px; color: #000;">';
+      }
+      $rs .= '<h3>'.strftime("%A", strtotime($schedule_date)).'</h3>';
       $rs .= '<div class="session-image" style="margin-bottom: 10px;">';
       $image = wp_get_attachment_image_src( get_post_thumbnail_id( $s->ID ), 'single-post-thumbnail' );
       $rs .= '<a href="'.$schedule_url.'#'.$week_slug.'">';
