@@ -77,7 +77,6 @@ function make_maker_add_maker( $post ) {
 
   // Get the data from the DB
   $set_makers = unserialize( get_post_meta( absint( $post->ID ), 'session-makers', true ) );
-
   // Fetch the list of makers, but don't return those listed in the $set_makers variable
   $list_makers = make_maker_get_list(); ?>
   <label for="makers" class="screen-reader-text">Makers</label>
@@ -136,10 +135,9 @@ function make_maker_get_list( $custom_query = array() ) {
     'post_status' => 'any',
     'order' => 'ASC',
     'orderby' => 'name',
+    'posts_per_page' => -1
   );
   $query = wp_parse_args( $custom_query, $default_query );
-  
   $makers = new WP_Query( $query );
-
   return $makers->posts;
 }
