@@ -5,9 +5,7 @@ function home_carousel_function($atts) {
       'year' => '2014'
    ), $atts));
 
-  $rs = '<div class="container"><div class="row-fluid">';
-  $rs .= '<h2 style="margin-bottom: 20px;">This Week at Maker Camp</h2>';
-  $rs .= '<ul class="carousel" style="overflow: auto; margin: 0px; padding: 0px;">';
+  $rs .= '<ul class="carousel">';
 
   $posts = get_posts(array('post_type' => 'session', 'camp' => 'maker-camp-'.$year, 'posts_per_page' => -1));
   error_log("Post count: " . count($posts));
@@ -87,9 +85,9 @@ function home_carousel_function($atts) {
       $schedule_date = unserialize(get_post_meta($s->ID, 'schedule-date', true));
       $today = strftime("%Y-%m-%d", $now);
       if($schedule_date == $today) {
-        $rs .= '<li class="today" style="background-color: rgb(226, 226, 226); float: left; width: 200px; font-size: 13pt; padding: 10px; color: #000;">';
+        $rs .= '<li class="today">';
       } else {
-        $rs .= '<li style="float: left; width: 200px; font-size: 13pt; padding: 10px; color: #000;">';
+        $rs .= '<li>';
       }
       $rs .= '<h3>'.strftime("%A", strtotime($schedule_date)).'</h3>';
       $rs .= '<div class="session-image" style="margin-bottom: 10px;">';
@@ -107,8 +105,6 @@ function home_carousel_function($atts) {
   #error_log(print_r($rs, true));
 
   $rs .= '</ul>';
-  $rs .= '</div>';
-  $rs .= '</div>';
   return $rs;
 }
 

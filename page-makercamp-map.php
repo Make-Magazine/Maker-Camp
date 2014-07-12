@@ -84,9 +84,9 @@
 								if ( ! empty( $addresses ) && is_array( $addresses ) ) :
 									foreach ( $addresses as $address ) : ?>
 										<tr>
-											<td><?php echo esc_attr( $address['Work Country'] ); ?></td>
-											<td><?php echo esc_attr( $address['Work State'] ); ?></td>
-											<td><?php echo esc_attr( $address['Work City'] ); ?></td>
+											<td><?php echo esc_attr( $address['Country'] ); ?></td>
+											<td><?php echo esc_attr( $address['State'] ); ?></td>
+											<td><?php echo esc_attr( $address['City'] ); ?></td>
 											<td><a href="<?php echo esc_url( $address['Website'] ); ?>"><?php echo esc_attr( $address['Company'] ); ?></a></td>
 											<td><?php echo esc_attr( $address['Accepting'] ); ?></td>
 
