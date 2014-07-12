@@ -14,30 +14,22 @@ get_header(); ?>
         <div class="row-fluid" >
           <div class="hidden-desktop text-center">
             <div class="span12">
-              <img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
+              <img  class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
               <div class="tagline">
-                <h1>A <strong>FREE</strong>
-                  summer camp for building, tinkering and exploring. Online and in your neighborhood!
-                </h1>
-                                <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
-
+                <h1>A <strong>FREE</strong> summer camp for building, tinkering and exploring. Online and in your neighborhood!</h1>
+                 <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
               </div>
-
             </div>
           </div>
           <div class="visible-desktop">
             <div class="span6">
-              <img style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
+              <img class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
             </div>
             <div class="span6" style="">
               <div class="tagline">
-                <h1>A <strong>FREE</strong>
-                  summer camp for building, tinkering and exploring. Online and in your neighborhood!
-                </h1>
-                                <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
-
+                <h1>A <strong>FREE</strong> summer camp for building, tinkering and exploring. Online and in your neighborhood!</h1>
+                <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
               </div>
-
             </div>
           </div>
         </div>

@@ -32,3 +32,6 @@ include_once( 'includes/bootstrap_walker.php' );
 
 // Shortcodes
 include_once( 'includes/home.php' );
+
+// View Helpers
+include_once('includes/schedule-helpers.php');

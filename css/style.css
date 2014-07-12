@@ -6421,50 +6421,65 @@ a.badge:focus {
     overflow: visible !important;
   }
 }
-header {
-  margin-top: 0;
-  margin-bottom: 40px;
-  color: #fff;
+.button,
+a.button {
+  display: inline;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  color: #fff !important;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  background-color: #e01b23;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-bottom: none;
 }
-.main-header {
-  color: #fff;
-  background-image: url(../img/hill.png);
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  padding-bottom: 30px;
-  margin-top: 0;
-  padding-top: 0;
+.button:hover,
+a.button:hover {
+  color: #fff !important;
+  background-color: #c9181f;
+}
+.button.blue,
+a.button.blue {
+  background-color: #8ed5f6;
   border: none;
-}
-.main-header h2,
-.main-header h3,
-.main-header h4,
-.main-header h5,
-.main-header h6 {
-  color: #333;
-  margin: auto;
-}
-.main-header .tagline {
-  margin-top: 25px;
-  background-color: #05729f;
-  color: #fff;
-}
-.main-header .tagline h1 strong {
-  color: #fbde76;
-}
-.main-header .visible-desktop .tagline h1 {
-  font-size: 1.8em;
-  line-height: 1.4em;
-  margin-top: 0em;
-  color: #fff;
+  color: #033978 !important;
+  font-size: 24px;
+  line-height: 32px;
   font-weight: normal;
 }
-.main-header .hidden-desktop .tagline h1 {
-  font-size: 1.8em;
-  line-height: 1.4em;
-  margin-top: 0.8em;
-  color: #fff;
+.button.blue:hover,
+a.button.blue:hover {
+  color: #033978 !important;
+  background-color: #73c1e6 !important;
+}
+.button.blue.small,
+a.button.blue.small {
   font-weight: normal;
+  font-size: 1.4em;
+  padding: 5px 20px;
+}
+.button.green,
+a.button.green {
+  background-color: #51B926;
+  padding: 10px;
+  color: #ffffff;
+}
+.button.block,
+a.button.block {
+  display: block;
+}
+.button.big,
+a.button.big {
+  font-size: 1.7em;
+  padding: 12px 0;
+}
+.button.small-button,
+a.button.small-button {
+  line-height: inherit !important;
 }
 .custom-feed.simple {
   border: 1px solid #dadada;
@@ -6513,6 +6528,1410 @@ header {
 }
 .show-print {
   display: none;
+}
+.new-footer {
+  background-color: transparent;
+  width: 100%;
+  padding-top: 10px;
+  text-align: center;
+  color: #333;
+  border-top: 3px solid #DBDBDB;
+  background-image: url('../img/header_bg.jpg');
+}
+.new-footer p {
+  font-size: 14px !important;
+  line-height: 19px !important;
+  margin-bottom: 5px;
+}
+.new-footer h1,
+.new-footer h2,
+.new-footer h3,
+.new-footer h4,
+.new-footer h5,
+.new-footer h6 {
+  color: #333 !important;
+}
+.new-footer label {
+  display: block;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.new-footer label.checkbox {
+  font-weight: bold;
+}
+.new-footer .about-us {
+  width: 86px;
+  float: left;
+}
+.new-footer .about-us ul {
+  margin-top: 0px;
+}
+.new-footer .about-us ul li {
+  line-height: 20px;
+}
+.new-footer .about-us ul li a {
+  margin-left: -2px;
+}
+.new-footer .email-area #appendedInputButton {
+  border-radius: 0;
+  height: 16px;
+  width: auto;
+}
+.new-footer .email-area controls {
+  width: 130px;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.new-footer .email-area .btn {
+  background-color: #F60B29;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  border-radius: 0;
+  background-image: none;
+  height: 30px;
+  padding-top: 2px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+}
+.new-footer ul {
+  list-style-type: disc !important;
+  color: #000 !important;
+}
+.new-footer ul li {
+  font-size: 14px !important;
+  display: list-item;
+  color: #000 !important;
+}
+.new-footer .control-group {
+  margin-bottom: 8px;
+}
+.new-footer h5 {
+  margin-bottom: 0px !important;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.new-footer .clearfix {
+  clear: both;
+  height: 0;
+  font-size: 1px;
+  line-height: 0px;
+}
+.new-footer .logo {
+  margin-bottom: 5px;
+}
+.new-footer .logo h5 {
+  float: left;
+  padding-top: 25px;
+}
+.new-footer .logo img {
+  float: left;
+  padding-right: 5px;
+}
+.new-footer .terms {
+  margin-top: 0;
+}
+.new-footer .main {
+  width: 940px;
+  margin-top: 5px;
+}
+.new-footer .text {
+  margin-top: 0;
+}
+.new-footer .text a {
+  color: #000;
+}
+.new-footer .subscribe img#mag-cover {
+  width: 128px;
+  float: right;
+  border: 1px solid #ccc;
+  margin-top: -35px;
+}
+.new-footer .container {
+  margin: 0 auto;
+  text-align: left;
+}
+.new-footer .container ul {
+  margin-left: 15px;
+}
+.new-footer .container .subscribe h5 {
+  color: #F60B29;
+  margin-top: -8px;
+}
+.new-footer .container .subscribe p {
+  font-weight: bold;
+  margin-top: 3px;
+  padding-right: 3px;
+}
+.new-footer .container .subscribe hr {
+  border: none;
+  background-color: #F60B29;
+  color: #F60B29;
+  height: 7px;
+  width: 85px;
+  margin-top: 0px;
+}
+.new-footer .controls  > .radio:first-child,
+.controls  > .checkbox:first-child {
+  padding-top: 0;
+}
+.new-footer input[type="radio"],
+.new-footer input[type="checkbox"] {
+  margin: 0;
+}
+.new-footer .trending,
+.new-footer .newsletter,
+.new-footer .about-us,
+.new-footer .subscribe {
+  width: 220px;
+  float: left;
+  border-top: 1px solid #ccc;
+  text-align: left;
+  padding-top: 10px;
+}
+.footer_copyright {
+  padding-bottom: 20px;
+}
+.footer_copyright p {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  font-weight: normal !important;
+  margin-bottom: 0px !important;
+}
+.soc_icons {
+  margin: 0px;
+}
+.soc_icons a {
+  margin: 16px 3px 0 0;
+  width: 24px;
+  height: 24px;
+  display: block;
+  float: left;
+}
+.sprite {
+  background-image: url('../images/makezine_sprites.png');
+}
+.sprite-arrow-footer {
+  background-position: 0 0;
+  width: 95px;
+  height: 46px;
+  margin: -40px 0 5px -16px;
+  border: none !important;
+}
+.sprite-digital-book-foot {
+  background-position: 0 -51px;
+  width: 29px;
+  height: 22px;
+  float: left;
+  padding-right: 5px;
+  margin-top: 29px;
+}
+.sprite-facebook {
+  background-position: 0 -78px;
+  width: 24px;
+  height: 24px;
+}
+.sprite-flickr {
+  background-position: 0 -107px;
+  width: 24px;
+  height: 24px;
+}
+.sprite-google-plus {
+  background-position: 0 -136px;
+  width: 24px;
+  height: 24px;
+}
+.sprite-instagram {
+  background-position: 0 -165px;
+  width: 24px;
+  height: 24px;
+}
+.sprite-makershed_footer1 {
+  background-position: 0 -194px;
+  width: 29px;
+  height: 22px;
+  float: left;
+  margin: 30px 5px 0 13px;
+}
+.sprite-pinterest {
+  background-position: 0 -221px;
+  width: 24px;
+  height: 24px;
+}
+.sprite-stumbleupon {
+  background-position: 0 -274px;
+  width: 24px;
+  height: 24px;
+}
+.sprite-twitter {
+  background-position: 0 -303px;
+  width: 24px;
+  height: 24px;
+}
+.sprite-youtube {
+  background-position: 0 -332px;
+  width: 24px;
+  height: 24px;
+}
+header {
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.main-header {
+  color: #fff;
+  background-image: url(../img/hill.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-bottom: 30px;
+  margin-top: 0;
+  padding-top: 0;
+  border: none;
+}
+.main-header h2,
+.main-header h3,
+.main-header h4,
+.main-header h5,
+.main-header h6 {
+  color: #333;
+  margin: auto;
+}
+.main-header .tagline {
+  margin-top: 25px;
+  background-color: #05729f;
+  color: #fff;
+}
+.main-header .tagline h1 strong {
+  color: #fbde76;
+}
+.main-header .visible-desktop .tagline h1 {
+  font-size: 1.8em;
+  line-height: 1.4em;
+  margin-top: 0em;
+  color: #fff;
+  font-weight: normal;
+}
+.main-header .hidden-desktop .tagline h1 {
+  font-size: 1.8em;
+  line-height: 1.4em;
+  margin-top: 0.8em;
+  color: #fff;
+  font-weight: normal;
+}
+body.home {
+  background: url(../img/sky.png) 0 20px repeat;
+  text-rendering: optimizeLegibility;
+  padding-bottom: 0 !important;
+  padding-top: 0px !important;
+  margin: 0;
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  color: #fff;
+}
+body.home .white-bg {
+  padding-bottom: 0px;
+}
+body.home .white-bg ul li {
+  margin-bottom: 5px;
+}
+body.home .white-bg ul.schedule-list {
+  color: #267047;
+  font-weight: bold;
+}
+body.home .white-bg ul.schedule-list li {
+  color: #267047;
+}
+body.home .white-bg ul.schedule-list li a:link,
+body.home .white-bg ul.schedule-list li a:visited {
+  color: #267047;
+}
+body.home .white-bg .visible-desktop .ytube_intro {
+  margin-bottom: 50px;
+  margin-top: 17px;
+}
+body.home .white-bg .label {
+  vertical-align: middle !important;
+  border-radius: 0px;
+  font-weight: normal;
+  background-color: #e1272e;
+}
+body.home .white-bg .green {
+  color: #267047;
+}
+body.home .white-bg.home-carousel {
+  padding-bottom: 20px;
+}
+body.home .white-bg.home-carousel h2 {
+  margin-bottom: 20px;
+}
+body.home .white-bg.home-carousel ul.carousel {
+  overflow: auto;
+  margin: 0px;
+  padding: 0px;
+}
+body.home .white-bg.home-carousel ul.carousel li {
+  float: left;
+  width: 210px;
+  font-size: 13pt;
+  padding: 10px;
+  color: #000;
+}
+body.home .white-bg.home-carousel ul.carousel li.today {
+  background-color: #e2e2e2;
+  float: left;
+  width: 200px;
+  font-size: 13pt;
+  padding: 10px;
+  margin-left: 10px;
+  color: #000;
+  width: 210px;
+}
+body.home .white-bg.home-carousel ul.carousel li.today:first-child {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+body.home .white-bg.home-carousel ul.carousel .session-image {
+  margin-bottom: 10px;
+}
+body.home .white-bg.home-carousel ul.carousel .session-image img {
+  width: 210px;
+}
+body.home .white-bg.intro {
+  background-color: #b8edfc !important;
+}
+body.home .white-bg.intro .welcome-area {
+  padding-top: 20px;
+  background-image: url(../img/rocket-02.png);
+  background-position: 316px top;
+  background-repeat: no-repeat;
+}
+body.home .white-bg.home-ground {
+  background-color: #b8edfc !important;
+  background-image: url(../img/home-hills-07.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 494px;
+  border-bottom: 20px solid #4cb679;
+  padding-top: 40 !important;
+}
+body.home .white-bg.home-ground .sponsors-area {
+  margin-top: 76px;
+}
+body.home .white-bg.home-ground .sponsors-area .shed-promo {
+  margin-top: 62px;
+}
+body.home .white-bg.home-ground .sponsors-area h1 {
+  font-size: 28px;
+  text-decoration: none;
+  border: none;
+  color: #a8deed;
+}
+body.home .schedule .grey-bg {
+  background-color: #f1f3f4;
+  padding: 20px 0;
+}
+body.home .schedule h2 {
+  color: #05729f;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+body.home .schedule p {
+  color: #111111;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 0;
+}
+body.home .schedule .thumbnail {
+  margin: 0 auto;
+  width: 90%;
+}
+body.home .ytube_intro {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0px;
+  height: 0;
+}
+body.home ul {
+  margin-left: 0px;
+  padding-left: 0px;
+  color: #267047;
+  font-size: 22px;
+  list-style-type: none;
+}
+body.home ul li {
+  color: #267047;
+  font-size: 22px;
+}
+body.home .intro p {
+  color: #333;
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 15px;
+}
+body.home .tagline {
+  margin-top: 0px !important;
+}
+body.home .skyships {
+  background-image: url(../img/skyitems.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 60px;
+}
+body.home > .container-fluid {
+  padding: 0;
+}
+.makercamp-new .ytube_introiframe,
+.makercamp-new .ytube_introobject,
+.makercamp-new .ytube_intro embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.makercamp-new .intro,
+.makercamp-new .schedule {
+  padding: 20px 0 60px;
+}
+.makercamp-new .intro h1,
+.makercamp-new .schedule h1 {
+  color: #e1272e;
+  font-size: 36px;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 13px;
+}
+.makercamp-new .container-fluid {
+  padding: 0px !important;
+}
+.shed-promo {
+  margin: 15px auto;
+}
+.cta {
+  margin: 25px auto;
+  text-align: right;
+}
+.cta a.sign-btn {
+  background-color: #e1272e;
+  color: #fff;
+  margin-right: 35px;
+  padding: 10px 15px;
+}
+.cta a.sign-btn :hover {
+  background-color: #eee;
+  color: #333;
+}
+.cta a.host-btn {
+  background-color: #eee;
+  color: #333;
+  padding: 10px 15px;
+}
+.cta a.host-btn :hover {
+  color: #eee;
+  background-color: #e1272e;
+}
+body.makercamp {
+  background: url(../img/sky.png) 0 20px repeat;
+  text-rendering: optimizeLegibility;
+  padding-bottom: 0 !important;
+  padding-top: 0px !important;
+  margin: 0;
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+body.makercamp h1 {
+  font-size: 36px;
+  color: #e1272e;
+}
+body.makercamp h2,
+body.makercamp h3,
+body.makercamp h4,
+body.makercamp h5,
+body.makercamp h6 {
+  color: #333;
+  margin: auto;
+}
+body.makercamp h3 {
+  line-height: 40px;
+}
+body.makercamp p {
+  font-size: 1em;
+  line-height: 1.8em;
+}
+body.makercamp .small {
+  font-size: 14px !important;
+  color: #666 !important;
+  line-height: 16px !important;
+}
+body.makercamp iframe {
+  max-width: 100%;
+}
+body.makercamp .main-content a,
+body.makercamp .main-content a:visited {
+  color: #acd3fc;
+}
+body.makercamp .main-content a:hover,
+body.makercamp .main-content a:active {
+  color: #acd3fc;
+  text-decoration: underline !important;
+}
+body.makercamp .search-query {
+  width: 110px !important;
+}
+body.makercamp .mc-description {
+  font-size: 48px;
+  line-height: 48px;
+}
+body.makercamp .mc-description h2 {
+  font-size: 48px;
+  line-height: 1em;
+}
+body.makercamp .mc-description h4 {
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 32px;
+  position: relative;
+  top: 10px;
+}
+body.makercamp .cta {
+  text-align: center;
+}
+body.makercamp .cta a.button {
+  margin: 36px auto 0 auto;
+  color: #fff !important;
+  font-weight: bold;
+  padding: 20px 10px;
+  width: 260px;
+  font-size: 36px;
+  line-height: 42px;
+  background-color: #e01b23;
+  border-radius: 0;
+}
+body.makercamp .cta a.button:hover {
+  background-color: #c9181f !important;
+}
+body.makercamp .waist {
+  background-image: url(http://makezineblog.files.wordpress.com/2013/05/hills.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-bottom: 30px;
+  margin-top: 40px;
+  border: none;
+}
+body.makercamp .waist .cap {
+  color: #acd3fc;
+  font-weight: bold;
+  font-size: 32px;
+  margin-top: 0;
+  padding-top: 0;
+  margin-right: 5px;
+  font-family: inherit !important;
+}
+body.makercamp .waist p {
+  margin-top: 30px;
+  line-height: 24px;
+}
+body.makercamp .waist h3 {
+  margin: 5px 0 20px 0 !important;
+  font-size: 19px;
+  line-height: 1.3em;
+  color: #acd3fc;
+  font-weight: normal;
+}
+body.makercamp .waist h3 span {
+  font-size: 16px;
+}
+body.makercamp .waist h3.last {
+  margin-bottom: 0 !important;
+}
+body.makercamp .waist .span4 h3 {
+  margin: 10px 0 0px 0 !important;
+  font-size: 1.7em;
+}
+body.makercamp .waist .blue {
+  background-color: #032042;
+  color: #acd3fc;
+  text-align: center;
+}
+body.makercamp .waist .blue h4 {
+  padding-bottom: 12px;
+}
+body.makercamp .waist .button {
+  border-radius: 5px;
+  font-weight: 400;
+  width: 87%;
+}
+body.makercamp .join {
+  margin: 10px 0;
+}
+body.makercamp .join > .span9 {
+  margin-left: 0;
+}
+body.makercamp .join a {
+  font-size: 22px;
+}
+body.makercamp .white-bg {
+  background-color: #fff;
+}
+body.makercamp .beige-bg {
+  background-color: #f1f3f4;
+  border-top: 1px solid #d1d7db;
+  border-bottom: 1px solid #d1d7db;
+}
+body.makercamp .white-bg,
+body.makercamp .beige-bg {
+  color: black;
+  padding: 40px 0;
+}
+body.makercamp .white-bg h4,
+body.makercamp .beige-bg h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 21px;
+  line-height: 30px;
+}
+body.makercamp .white-bg h4 a:link,
+body.makercamp .beige-bg h4 a:link,
+body.makercamp .white-bg h4 a:visited,
+body.makercamp .beige-bg h4 a:visited {
+  color: #005d8f;
+}
+body.makercamp .white-bg h5,
+body.makercamp .beige-bg h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #6e6e6e;
+  font-weight: normal;
+}
+body.makercamp .white-bg h5 a,
+body.makercamp .beige-bg h5 a,
+body.makercamp .white-bg h5 a:visited,
+body.makercamp .beige-bg h5 a:visited {
+  color: #005d8f !important;
+  text-decoration: none;
+}
+body.makercamp .white-bg h6,
+body.makercamp .beige-bg h6 {
+  font-size: 16px;
+}
+body.makercamp .white-bg h6 a,
+body.makercamp .beige-bg h6 a,
+body.makercamp .white-bg h6 a:visited,
+body.makercamp .beige-bg h6 a:visited {
+  color: #005d8f !important;
+  text-decoration: none;
+}
+body.makercamp .white-bg h6:hover,
+body.makercamp .beige-bg h6:hover {
+  text-decoration: underline;
+}
+body.makercamp .white-bg p a,
+body.makercamp .beige-bg p a,
+body.makercamp .white-bg p a:visited,
+body.makercamp .beige-bg p a:visited {
+  color: #005d8f !important;
+  text-decoration: none;
+}
+body.makercamp .white-bg ul li,
+body.makercamp .beige-bg ul li,
+body.makercamp .white-bg ol li,
+body.makercamp .beige-bg ol li {
+  margin-bottom: 10px;
+}
+body.makercamp .white-bg .logo h5,
+body.makercamp .beige-bg .logo h5 {
+  padding-top: 25px !important;
+}
+body.makercamp .white-bg .featured,
+body.makercamp .beige-bg .featured {
+  padding: 30px 0 0;
+  margin-left: 6px;
+  float: left;
+  width: 15.8%;
+  height: auto !important;
+}
+body.makercamp .white-bg .featured h4,
+body.makercamp .beige-bg .featured h4 {
+  color: #555555;
+  margin: 10px;
+  font-size: 16px;
+  /* height:40px; */
+  height: 54px;
+}
+body.makercamp .white-bg a.small-button,
+body.makercamp .beige-bg a.small-button {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 12px !important;
+  padding: 12px 15px 8px !important;
+  margin-right: 10px;
+}
+body.makercamp .white-bg .weekly-projects h5,
+body.makercamp .beige-bg .weekly-projects h5 {
+  text-transform: capitalize;
+  font-size: 19px;
+}
+body.makercamp .white-bg .weekly-projects h6,
+body.makercamp .beige-bg .weekly-projects h6 {
+  color: #005d8f;
+  a: link, a:visited:color:#005d8f;
+}
+body.makercamp .windows {
+  background-color: #fff;
+  border-top: none;
+  padding: 20px 0;
+  color: #333333;
+  height: 110px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+body.makercamp .windows .span2 {
+  text-align: center;
+}
+body.makercamp .windows .nobg {
+  background-color: none;
+}
+body.makercamp .windows #subForm input[type="text"] {
+  margin: 26px 0;
+  padding: 8px;
+  width: 82%;
+  border: 1px solid #2e7085;
+  font-size: 1.3em;
+}
+body.makercamp .windows #subForm input[type="submit"] {
+  width: 90%;
+}
+body.makercamp .window.yellow {
+  border-top: 6px solid #DBC52D;
+}
+body.makercamp .test {
+  height: 20px;
+}
+body.makercamp .lower-area {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+body.makercamp .lower-area h4 {
+  font-size: 24px;
+  line-height: 32px;
+}
+body.makercamp .feature-box {
+  min-height: 380px;
+  padding-left: auto;
+  padding-right: auto;
+  text-align: center;
+}
+body.makercamp .feature-box p {
+  font-size: 16px;
+  line-height: 21px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+body.makercamp .feature-box h4 {
+  font-size: 1.6em;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+body.makercamp .feature-box h4 span {
+  font-weight: normal;
+}
+body.makercamp .feature-box h5 {
+  font-size: 1.4em;
+  line-height: 28px;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  font-weight: normal;
+}
+body.makercamp .feature-box img.register {
+  margin: 70px 0;
+}
+body.makercamp .features-box-content {
+  min-height: 310px;
+  margin: 0 25px;
+}
+body.makercamp .features-box-content h4 {
+  font-weight: normal;
+  line-height: 34px;
+}
+body.makercamp .lower-gradation {
+  padding: 20px 0;
+}
+body.makercamp .schedule-content {
+  background: #fff;
+  color: #5c5b5b;
+  border-top: 1px solid #8ca9c8;
+}
+body.makercamp .schedule-content .tab-content {
+  position: relative;
+  overflow: visible;
+}
+body.makercamp .schedule-content .tab-content .btn-danger,
+body.makercamp .schedule-content .tab-content .btn {
+  font-size: 16px;
+  padding: 8px 12px;
+}
+body.makercamp .schedule-content .tab-content .week-container .week-info h3 {
+  color: #033978;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-container h5.title {
+  color: #267047;
+  font-weight: bold;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-container .makers {
+  font-weight: bold;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-container .project-item {
+  margin-top: 20px;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-container .project-item .project-item-title {
+  color: #267047;
+  font-weight: bold;
+}
+body.makercamp .schedule-content #schedule {
+  border: none;
+}
+body.makercamp .schedule-content #schedule a {
+  background: #8ed5f6;
+  color: #033978;
+  font-weight: bold;
+  font-size: .9em;
+}
+body.makercamp .schedule-content #schedule a:hover,
+body.makercamp .schedule-content #schedule a:active {
+  border-color: #acd3fc;
+  background: #8ed5f6;
+  color: #033978;
+}
+body.makercamp .schedule-content #schedule .active a {
+  border-color: #acd3fc;
+  border-bottom-color: #fff;
+  background: #fff;
+  color: #000;
+  padding-bottom: 9px;
+}
+body.makercamp .schedule-content .maker a {
+  color: #005d8f;
+}
+body.makercamp .schedule-content .maker h5 {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
+body.makercamp .schedule-content .maker .project-title {
+  font-size: 1.285714286em;
+  line-height: 1em;
+  color: #005d8f;
+}
+body.makercamp .schedule-content .maker .date,
+body.makercamp .schedule-content .maker .mentor {
+  font-size: 1.142857143em;
+  line-height: 1em;
+  font-weight: normal;
+  color: #252525;
+  margin: 5px 0 !important;
+  display: inline-block;
+}
+body.makercamp .schedule-content .maker.row,
+body.makercamp .schedule-content .tab-navigation.row {
+  margin-left: 0px;
+}
+body.makercamp .make-sign-up {
+  min-height: 620px;
+}
+body.makercamp .faq-content {
+  margin-bottom: 20px;
+}
+body.makercamp .faq-content ul {
+  margin-bottom: 25px !important;
+}
+body.makercamp .ss-form form {
+  background: #fff;
+  padding: 15px 10px 10px 20px;
+  color: #6e6e6e;
+  margin: 20px 20px 0 0;
+}
+body.makercamp .ss-form label.ss-q-title {
+  font-weight: bold;
+}
+body.makercamp .ss-form input,
+body.makercamp .ss-form textarea {
+  width: 95%;
+}
+body.makercamp .ss-form-entry input.button {
+  margin-top: -5px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  border: 0;
+}
+body.makercamp .page-404 .white-bg {
+  min-height: 620px;
+}
+body.makercamp .map-wrapper li {
+  margin: 15px 15px 25px 0 !important;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+body.makercamp .map-title {
+  background: #011f43;
+  margin: 0 !important;
+  font-size: 1.637142857em;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+body.makercamp h1.map-title {
+  color: #fff;
+  padding-top: 15px;
+}
+body.makercamp .map-list {
+  background: #fff;
+  color: #333;
+  margin-top: 20px;
+  border: 1px solid #333;
+}
+body.makercamp .map-list th {
+  color: #fff;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+body.makercamp .map-list a {
+  color: #005d8f !important;
+}
+body.makercamp .map-list-header {
+  font-weight: normal;
+  background-color: #011f43 !important;
+}
+body.makercamp .orange {
+  color: #f6ba65 !important;
+}
+body.makercamp .red {
+  color: #c7171d;
+}
+body.makercamp .blue {
+  color: #acd3fc;
+}
+body.makercamp ul.stars {
+  list-style-image: url(../img/makercamp/stars.png);
+}
+body.makercamp ul.stars li {
+  margin: 15px 15px 5px 0;
+  font-size: 1em;
+  line-height: 1.8em;
+}
+body.makercamp .ss-form input,
+body.makercamp .ss-form textarea {
+  width: 70%;
+}
+body.makercamp .ytube_intro {
+  margin-top: 30px;
+}
+.main-nav .navbar-inner {
+  border-color: #275392;
+  border: none;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  background-color: #253b58;
+  background-image: -moz-linear-gradient(top, #2e435e, #172e50);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2e435e), to(#172e50));
+  background-image: -webkit-linear-gradient(top, #2e435e, #172e50);
+  background-image: -o-linear-gradient(top, #2e435e, #172e50);
+  background-image: linear-gradient(to bottom, #2e435e, #172e50);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2e435e', endColorstr='#ff172e50', GradientType=0);
+}
+.main-nav .primary-nav > .menu-item {
+  font-size: 18px;
+}
+.main-nav .primary-nav > .menu-item > a {
+  text-shadow: none;
+  padding: 10px 25px 10px;
+  color: #fff;
+}
+.main-nav .primary-nav > .menu-item > a:hover {
+  background-color: #222;
+  color: #fff;
+  text-decoration: none!important;
+}
+.main-nav .primary-nav > .menu-item.active > a {
+  background-color: #222;
+  color: #fff;
+  text-decoration: none!important;
+}
+.main-nav .primary-nav .menu-item {
+  text-decoration: none !important;
+}
+.main-nav .nav-collapse {
+  background: transparent;
+}
+.main-nav .btn-navbar {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #1d2f46;
+  background-image: -moz-linear-gradient(top, #26374d, #11233c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#26374d), to(#11233c));
+  background-image: -webkit-linear-gradient(top, #26374d, #11233c);
+  background-image: -o-linear-gradient(top, #26374d, #11233c);
+  background-image: linear-gradient(to bottom, #26374d, #11233c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff26374d', endColorstr='#ff11233c', GradientType=0);
+  border-color: #11233c #11233c #000001;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #11233c;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.main-nav .btn-navbar .btn-navbar {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #1d2f46;
+  background-image: -moz-linear-gradient(top, #26374d, #11233c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#26374d), to(#11233c));
+  background-image: -webkit-linear-gradient(top, #26374d, #11233c);
+  background-image: -o-linear-gradient(top, #26374d, #11233c);
+  background-image: linear-gradient(to bottom, #26374d, #11233c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff26374d', endColorstr='#ff11233c', GradientType=0);
+  border-color: #11233c #11233c #000001;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #11233c;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.main-nav .btn-navbar .btn-navbar:hover,
+.main-nav .btn-navbar .btn-navbar:focus,
+.main-nav .btn-navbar .btn-navbar:active,
+.main-nav .btn-navbar .btn-navbar.active,
+.main-nav .btn-navbar .btn-navbar.disabled,
+.main-nav .btn-navbar .btn-navbar[disabled] {
+  color: #ffffff;
+  background-color: #11233c;
+  *background-color: #0c1728;
+}
+.main-nav .btn-navbar .btn-navbar:active,
+.main-nav .btn-navbar .btn-navbar.active {
+  background-color: #060c15 \9;
+}
+.main-nav .btn-navbar:hover,
+.main-nav .btn-navbar:focus,
+.main-nav .btn-navbar:active,
+.main-nav .btn-navbar.active,
+.main-nav .btn-navbar.disabled,
+.main-nav .btn-navbar[disabled] {
+  color: #ffffff;
+  background-color: #11233c;
+  *background-color: #0c1728;
+}
+.main-nav .btn-navbar:active,
+.main-nav .btn-navbar.active {
+  background-color: #060c15 \9;
+}
+.admin-bar .navbar-fixed-top {
+  top: 29px;
+}
+@media (min-width: 1200px) {
+  body.makercamp .sponsor:first-child,
+  body.makercamp.admin-bar .sponsor:first-child {
+    margin-top: 30px;
+  }
+  body.makercamp .new-footer .container,
+  body.makercamp.admin-bar .new-footer .container {
+    width: 1170px !important;
+  }
+  body.makercamp .new-footer .main,
+  body.makercamp.admin-bar .new-footer .main {
+    width: 1000px !important;
+  }
+  body.makercamp .new-footer .trending,
+  body.makercamp.admin-bar .new-footer .trending,
+  body.makercamp .new-footer .newsletter,
+  body.makercamp.admin-bar .new-footer .newsletter,
+  body.makercamp .new-footer .about-us,
+  body.makercamp.admin-bar .new-footer .about-us,
+  body.makercamp .new-footer .subscribe,
+  body.makercamp.admin-bar .new-footer .subscribe {
+    width: 270px !important;
+  }
+}
+@media (min-width: 979px) and (max-width: 1200px) {
+  body.makercamp #mag-cover,
+  body.makercamp.admin-bar #mag-cover {
+    width: 110px !important;
+  }
+  .main-nav .primary-nav > .menu-item > a {
+    padding: 10px;
+  }
+  body.home .main-header .tagline h1 {
+    font-size: 1.4em;
+    line-height: 1.4em;
+  }
+  body.home .white-bg.home-ground .sponsors-area {
+    margin-top: 0px;
+  }
+  body.home .white-bg.home-ground .sponsors-area h1 {
+    color: #e1272e;
+    font-size: 28px;
+  }
+  body.home .white-bg.home-ground .sponsors-area .sponsor {
+    margin-top: 30px;
+    width: 300px;
+  }
+  body.home .white-bg.home-ground .sponsors-area .shed-promo {
+    margin-top: 15px;
+  }
+  body.home .white-bg.intro .welcome-area {
+    background-image: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .new-footer .span3 {
+    width: 31% !important;
+  }
+  .subscribe #mag-cover {
+    margin: 0 !important;
+    width: 110px !important;
+  }
+  .subscribe h5 {
+    margin-top: 0 !important;
+  }
+  .navbar .container {
+    padding: 0 20px;
+  }
+  body.home .white-bg.home-ground {
+    background-image: none !important;
+  }
+  body.home .white-bg.home-ground .sponsors-area {
+    margin-top: 15px;
+  }
+  body.home .white-bg.home-ground .sponsors-area h1 {
+    font-size: 28px;
+    color: #267047;
+  }
+  body.home .white-bg.home-ground .sponsors-area .sponsor {
+    width: 300px;
+  }
+  body.home .white-bg.home-ground .sponsors-area .shed-promo {
+    margin-top: 15px;
+  }
+  body.home .white-bg.intro .welcome-area {
+    background-image: none !important;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  body .schedule-content .nav-tabs > li,
+  body body.makercamp.admin-bar .schedule-content .nav-tabs > li {
+    width: 100%;
+  }
+  body .white-bg,
+  body .beige-bg,
+  body .container {
+    padding: 20px 20px;
+  }
+  body .navbar .container {
+    padding: 0 20px;
+  }
+  body.home .white-bg {
+    padding: 0px !important;
+  }
+  body.home .white-bg.intro .welcome-area {
+    padding: 0px !important;
+    background-image: none !important;
+  }
+  body.home .white-bg.home-ground {
+    text-align: center;
+    background-image: none !important;
+  }
+  body.home .sponsors-area {
+    text-align: center;
+    margin-top: 15px !important ;
+  }
+  body.home .sponsors-area h1 {
+    font-size: 32px;
+    color: #267047 !important;
+  }
+  body.home .sponsors-area .sponsor {
+    width: 300px;
+    margin: 20px auto 0px auto;
+  }
+  body.home .sponsors-area .shed-promo {
+    margin-top: 15px;
+  }
+}
+body.makercamp .schedule-content {
+  background: #fff;
+  color: #5c5b5b;
+  border-top: 1px solid #8ca9c8;
+}
+body.makercamp .schedule-content .tab-navigation h2 {
+  margin-bottom: 30px;
+  color: red;
+}
+body.makercamp .schedule-content .tab-content {
+  position: relative;
+  overflow: visible;
+}
+body.makercamp .schedule-content .tab-content span {
+  display: block;
+}
+body.makercamp .schedule-content .tab-content .black {
+  display: inline;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .week-container {
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  overflow: auto;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .week-container .week-image {
+  margin: 0px 30px 0px 0px;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .week-container .week-info {
+  overflow: hidden;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .week-container .week-info ul {
+  padding: 0px 0px 10px 0px;
+  margin: 0px;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .week-container .week-info ul li {
+  float: left;
+  list-style: none;
+  margin-right: 10px;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .week-container .week-info ul li a:link {
+  color: #1a4e7e;
+  background-color: #8fd5f7;
+  padding: 10px;
+}
+body.makercamp .schedule-content .tab-content .tab-pane h4.schedule-day {
+  background-color: #999;
+  padding: 10px;
+  color: #FFF;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-area {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  overflow: auto;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-area .session-image {
+  margin-right: 30px;
+  margin-left: 0px;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-area .session-container {
+  overflow: hidden;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-area .session-container .session-description {
+  margin: 20px 0px 20px 0px;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-container h5.title {
+  color: #267047;
+  font-weight: bold;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-container .makers {
+  font-weight: bold;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-container .project-item {
+  margin-top: 20px;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-container .project-item .project-item-title {
+  color: #267047;
+  font-weight: bold;
+}
+body.makercamp .schedule-content .tab-content .tab-pane .session-container .project-item .project-item-title a.link {
+  color: #e1272e;
+}
+body.makercamp .schedule-content .tab-content .week-container .week-info h3 {
+  color: #033978;
+}
+body.makercamp .schedule-content #schedule {
+  border: none;
+}
+body.makercamp .schedule-content #schedule a {
+  background: #8ed5f6;
+  color: #033978;
+  font-weight: bold;
+  font-size: .9em;
+}
+body.makercamp .schedule-content #schedule .active a {
+  border-color: #acd3fc;
+  border-bottom-color: #fff;
+  background: #fff;
+  color: #000;
+  padding-bottom: 9px;
+}
+body.makercamp .schedule-content .maker a {
+  color: #005d8f;
+}
+body.makercamp .schedule-content .maker h5 {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
+body.makercamp .schedule-content .maker .project-title {
+  font-size: 1.285714286em;
+  line-height: 1em;
+  color: #005d8f;
+}
+body.makercamp .schedule-content .tab-content .btn-danger,
+body.makercamp .schedule-content .tab-content .btn {
+  font-size: 16px;
+  padding: 8px 12px;
+}
+body.makercamp .schedule-content #schedule a:hover,
+body.makercamp .schedule-content #schedule a:active {
+  border-color: #acd3fc;
+  background: #8ed5f6;
+  color: #033978;
+}
+body.makercamp .schedule-content .maker .date,
+body.makercamp .schedule-content .maker .mentor {
+  font-size: 1.142857143em;
+  line-height: 1em;
+  font-weight: normal;
+  color: #252525;
+  margin: 5px 0 !important;
+  display: inline-block;
+}
+body.makercamp .schedule-content .maker.row,
+body.makercamp .schedule-content .tab-navigation.row {
+  margin-left: 0px;
+}
+body.makercamp .make-sign-up {
+  min-height: 620px;
+}
+body.makercamp .faq-content {
+  margin-bottom: 20px;
+}
+body.makercamp .faq-content ul {
+  margin-bottom: 25px !important;
+}
+body.makercamp .ss-form form {
+  background: #fff;
+  padding: 15px 10px 10px 20px;
+  color: #6e6e6e;
+  margin: 20px 20px 0 0;
+}
+body.makercamp .ss-form label.ss-q-title {
+  font-weight: bold;
+}
+body.makercamp .ss-form input,
+body.makercamp .ss-form textarea {
+  width: 95%;
+}
+body.makercamp .ss-form-entry input.button {
+  margin-top: -5px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  border: 0;
 }
 .gsc-cursor .gsc-cursor-current-page {
   background-color: #005d8f;
@@ -8214,1215 +9633,4 @@ textarea.narrow,
 }
 .top-header {
   margin-top: 80px;
-}
-.button,
-a.button {
-  display: inline;
-  display: inline-block;
-  text-align: center;
-  padding: 10px;
-  color: #fff !important;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  text-decoration: none;
-  background-color: #e01b23;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border-bottom: none;
-}
-.button:hover,
-a.button:hover {
-  color: #fff !important;
-  background-color: #c9181f;
-}
-.button.blue,
-a.button.blue {
-  background-color: #8ed5f6;
-  border: none;
-  color: #033978 !important;
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: normal;
-}
-.button.blue:hover,
-a.button.blue:hover {
-  color: #033978 !important;
-  background-color: #73c1e6 !important;
-}
-.button.blue.small,
-a.button.blue.small {
-  font-weight: normal;
-  font-size: 1.4em;
-  padding: 5px 20px;
-}
-.button.green,
-a.button.green {
-  background-color: #51B926;
-  padding: 10px;
-  color: #ffffff;
-}
-.button.block,
-a.button.block {
-  display: block;
-}
-.button.big,
-a.button.big {
-  font-size: 1.7em;
-  padding: 12px 0;
-}
-.button.small-button,
-a.button.small-button {
-  line-height: inherit !important;
-}
-body.makercamp {
-  background: url(../img/sky.png) 0 20px repeat;
-  text-rendering: optimizeLegibility;
-  padding-bottom: 0 !important;
-  padding-top: 0px !important;
-  margin: 0;
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  color: #fff;
-}
-body.makercamp h1 {
-  font-size: 36px;
-  color: #e1272e;
-}
-body.makercamp h2,
-body.makercamp h3,
-body.makercamp h4,
-body.makercamp h5,
-body.makercamp h6 {
-  color: #333;
-  margin: auto;
-}
-body.makercamp h3 {
-  line-height: 40px;
-}
-body.makercamp p {
-  font-size: 1em;
-  line-height: 1.8em;
-}
-body.makercamp .small {
-  font-size: 14px !important;
-  color: #666 !important;
-  line-height: 16px !important;
-}
-body.makercamp iframe {
-  max-width: 100%;
-}
-body.makercamp .main-content a,
-body.makercamp .main-content a:visited {
-  color: #acd3fc;
-}
-body.makercamp .main-content a:hover,
-body.makercamp .main-content a:active {
-  color: #acd3fc;
-  text-decoration: underline !important;
-}
-body.makercamp .search-query {
-  width: 110px !important;
-}
-body.makercamp .mc-description {
-  font-size: 48px;
-  line-height: 48px;
-}
-body.makercamp .mc-description h2 {
-  font-size: 48px;
-  line-height: 1em;
-}
-body.makercamp .mc-description h4 {
-  font-weight: normal;
-  font-size: 25px;
-  line-height: 32px;
-  position: relative;
-  top: 10px;
-}
-body.makercamp .cta {
-  text-align: center;
-}
-body.makercamp .cta a.button {
-  margin: 36px auto 0 auto;
-  color: #fff !important;
-  font-weight: bold;
-  padding: 20px 10px;
-  width: 260px;
-  font-size: 36px;
-  line-height: 42px;
-  background-color: #e01b23;
-  border-radius: 0;
-}
-body.makercamp .cta a.button:hover {
-  background-color: #c9181f !important;
-}
-body.makercamp .waist {
-  background-image: url(http://makezineblog.files.wordpress.com/2013/05/hills.png);
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  padding-bottom: 30px;
-  margin-top: 40px;
-  border: none;
-}
-body.makercamp .waist .cap {
-  color: #acd3fc;
-  font-weight: bold;
-  font-size: 32px;
-  margin-top: 0;
-  padding-top: 0;
-  margin-right: 5px;
-  font-family: inherit !important;
-}
-body.makercamp .waist p {
-  margin-top: 30px;
-  line-height: 24px;
-}
-body.makercamp .waist h3 {
-  margin: 5px 0 20px 0 !important;
-  font-size: 19px;
-  line-height: 1.3em;
-  color: #acd3fc;
-  font-weight: normal;
-}
-body.makercamp .waist h3 span {
-  font-size: 16px;
-}
-body.makercamp .waist h3.last {
-  margin-bottom: 0 !important;
-}
-body.makercamp .waist .span4 h3 {
-  margin: 10px 0 0px 0 !important;
-  font-size: 1.7em;
-}
-body.makercamp .waist .blue {
-  background-color: #032042;
-  color: #acd3fc;
-  text-align: center;
-}
-body.makercamp .waist .blue h4 {
-  padding-bottom: 12px;
-}
-body.makercamp .waist .button {
-  border-radius: 5px;
-  font-weight: 400;
-  width: 87%;
-}
-body.makercamp .join {
-  margin: 10px 0;
-}
-body.makercamp .join > .span9 {
-  margin-left: 0;
-}
-body.makercamp .join a {
-  font-size: 22px;
-}
-body.makercamp .white-bg {
-  background-color: #fff;
-}
-body.makercamp .beige-bg {
-  background-color: #f1f3f4;
-  border-top: 1px solid #d1d7db;
-  border-bottom: 1px solid #d1d7db;
-}
-body.makercamp .white-bg,
-body.makercamp .beige-bg {
-  color: black;
-  padding: 40px 0;
-}
-body.makercamp .white-bg h4,
-body.makercamp .beige-bg h4 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 21px;
-  line-height: 30px;
-}
-body.makercamp .white-bg h4 a:link,
-body.makercamp .beige-bg h4 a:link,
-body.makercamp .white-bg h4 a:visited,
-body.makercamp .beige-bg h4 a:visited {
-  color: #005d8f;
-}
-body.makercamp .white-bg h5,
-body.makercamp .beige-bg h5 {
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #6e6e6e;
-  font-weight: normal;
-}
-body.makercamp .white-bg h5 a,
-body.makercamp .beige-bg h5 a,
-body.makercamp .white-bg h5 a:visited,
-body.makercamp .beige-bg h5 a:visited {
-  color: #005d8f !important;
-  text-decoration: none;
-}
-body.makercamp .white-bg h6,
-body.makercamp .beige-bg h6 {
-  font-size: 16px;
-}
-body.makercamp .white-bg h6 a,
-body.makercamp .beige-bg h6 a,
-body.makercamp .white-bg h6 a:visited,
-body.makercamp .beige-bg h6 a:visited {
-  color: #005d8f !important;
-  text-decoration: none;
-}
-body.makercamp .white-bg h6:hover,
-body.makercamp .beige-bg h6:hover {
-  text-decoration: underline;
-}
-body.makercamp .white-bg p a,
-body.makercamp .beige-bg p a,
-body.makercamp .white-bg p a:visited,
-body.makercamp .beige-bg p a:visited {
-  color: #005d8f !important;
-  text-decoration: none;
-}
-body.makercamp .white-bg ul li,
-body.makercamp .beige-bg ul li,
-body.makercamp .white-bg ol li,
-body.makercamp .beige-bg ol li {
-  margin-bottom: 10px;
-}
-body.makercamp .white-bg .logo h5,
-body.makercamp .beige-bg .logo h5 {
-  padding-top: 25px !important;
-}
-body.makercamp .white-bg .featured,
-body.makercamp .beige-bg .featured {
-  padding: 30px 0 0;
-  margin-left: 6px;
-  float: left;
-  width: 15.8%;
-  height: auto !important;
-}
-body.makercamp .white-bg .featured h4,
-body.makercamp .beige-bg .featured h4 {
-  color: #555555;
-  margin: 10px;
-  font-size: 16px;
-  /* height:40px; */
-  height: 54px;
-}
-body.makercamp .white-bg a.small-button,
-body.makercamp .beige-bg a.small-button {
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  line-height: 12px !important;
-  padding: 12px 15px 8px !important;
-  margin-right: 10px;
-}
-body.makercamp .white-bg .weekly-projects h5,
-body.makercamp .beige-bg .weekly-projects h5 {
-  text-transform: capitalize;
-  font-size: 19px;
-}
-body.makercamp .white-bg .weekly-projects h6,
-body.makercamp .beige-bg .weekly-projects h6 {
-  color: #005d8f;
-  a: link, a:visited:color:#005d8f;
-}
-body.makercamp .windows {
-  background-color: #fff;
-  border-top: none;
-  padding: 20px 0;
-  color: #333333;
-  height: 110px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-}
-body.makercamp .windows .span2 {
-  text-align: center;
-}
-body.makercamp .windows .nobg {
-  background-color: none;
-}
-body.makercamp .windows #subForm input[type="text"] {
-  margin: 26px 0;
-  padding: 8px;
-  width: 82%;
-  border: 1px solid #2e7085;
-  font-size: 1.3em;
-}
-body.makercamp .windows #subForm input[type="submit"] {
-  width: 90%;
-}
-body.makercamp .window.yellow {
-  border-top: 6px solid #DBC52D;
-}
-body.makercamp .test {
-  height: 20px;
-}
-body.makercamp .lower-area {
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-body.makercamp .lower-area h4 {
-  font-size: 24px;
-  line-height: 32px;
-}
-body.makercamp .feature-box {
-  min-height: 380px;
-  padding-left: auto;
-  padding-right: auto;
-  text-align: center;
-}
-body.makercamp .feature-box p {
-  font-size: 16px;
-  line-height: 21px;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-body.makercamp .feature-box h4 {
-  font-size: 1.6em;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-body.makercamp .feature-box h4 span {
-  font-weight: normal;
-}
-body.makercamp .feature-box h5 {
-  font-size: 1.4em;
-  line-height: 28px;
-  margin-bottom: 0 !important;
-  margin-top: 0 !important;
-  font-weight: normal;
-}
-body.makercamp .feature-box img.register {
-  margin: 70px 0;
-}
-body.makercamp .features-box-content {
-  min-height: 310px;
-  margin: 0 25px;
-}
-body.makercamp .features-box-content h4 {
-  font-weight: normal;
-  line-height: 34px;
-}
-body.makercamp .lower-gradation {
-  padding: 20px 0;
-}
-body.makercamp .schedule-content {
-  background: #fff;
-  color: #5c5b5b;
-  border-top: 1px solid #8ca9c8;
-}
-body.makercamp .schedule-content .tab-content {
-  position: relative;
-  overflow: visible;
-}
-body.makercamp .schedule-content .tab-content .btn-danger,
-body.makercamp .schedule-content .tab-content .btn {
-  font-size: 16px;
-  padding: 8px 12px;
-}
-body.makercamp .schedule-content .tab-content .week-container .week-info h3 {
-  color: #033978;
-}
-body.makercamp .schedule-content .tab-content .tab-pane .session-container h5.title {
-  color: #267047;
-  font-weight: bold;
-}
-body.makercamp .schedule-content .tab-content .tab-pane .session-container .makers {
-  font-weight: bold;
-}
-body.makercamp .schedule-content .tab-content .tab-pane .session-container .advanced-project .advanced-project-title {
-  color: #267047;
-  font-weight: bold;
-}
-body.makercamp .schedule-content #schedule {
-  border: none;
-}
-body.makercamp .schedule-content #schedule a {
-  background: #8ed5f6;
-  color: #033978;
-  font-weight: bold;
-  font-size: .9em;
-}
-body.makercamp .schedule-content #schedule a:hover,
-body.makercamp .schedule-content #schedule a:active {
-  border-color: #acd3fc;
-  background: #8ed5f6;
-  color: #033978;
-}
-body.makercamp .schedule-content #schedule .active a {
-  border-color: #acd3fc;
-  border-bottom-color: #fff;
-  background: #fff;
-  color: #000;
-  padding-bottom: 9px;
-}
-body.makercamp .schedule-content .maker a {
-  color: #005d8f;
-}
-body.makercamp .schedule-content .maker h5 {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: bold;
-}
-body.makercamp .schedule-content .maker .project-title {
-  font-size: 1.285714286em;
-  line-height: 1em;
-  color: #005d8f;
-}
-body.makercamp .schedule-content .maker .date,
-body.makercamp .schedule-content .maker .mentor {
-  font-size: 1.142857143em;
-  line-height: 1em;
-  font-weight: normal;
-  color: #252525;
-  margin: 5px 0 !important;
-  display: inline-block;
-}
-body.makercamp .schedule-content .maker.row,
-body.makercamp .schedule-content .tab-navigation.row {
-  margin-left: 0px;
-}
-body.makercamp .make-sign-up {
-  min-height: 620px;
-}
-body.makercamp .faq-content {
-  margin-bottom: 20px;
-}
-body.makercamp .faq-content ul {
-  margin-bottom: 25px !important;
-}
-body.makercamp .ss-form form {
-  background: #fff;
-  padding: 15px 10px 10px 20px;
-  color: #6e6e6e;
-  margin: 20px 20px 0 0;
-}
-body.makercamp .ss-form label.ss-q-title {
-  font-weight: bold;
-}
-body.makercamp .ss-form input,
-body.makercamp .ss-form textarea {
-  width: 95%;
-}
-body.makercamp .ss-form-entry input.button {
-  margin-top: -5px;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  font-size: 25px;
-  border: 0;
-}
-body.makercamp .page-404 .white-bg {
-  min-height: 620px;
-}
-body.makercamp .map-wrapper li {
-  margin: 15px 15px 25px 0 !important;
-  font-size: 16px;
-  line-height: 1.3em;
-}
-body.makercamp .map-title {
-  background: #011f43;
-  margin: 0 !important;
-  font-size: 1.637142857em;
-  font-family: sans-serif;
-  font-weight: normal;
-}
-body.makercamp h1.map-title {
-  color: #fff;
-  padding-top: 15px;
-}
-body.makercamp .map-list {
-  background: #fff;
-  color: #333;
-  margin-top: 20px;
-  border: 1px solid #333;
-}
-body.makercamp .map-list th {
-  color: #fff;
-  border-bottom: 1px solid #333;
-  cursor: pointer;
-}
-body.makercamp .map-list a {
-  color: #005d8f !important;
-}
-body.makercamp .map-list-header {
-  font-weight: normal;
-  background-color: #011f43 !important;
-}
-body.makercamp .orange {
-  color: #f6ba65 !important;
-}
-body.makercamp .red {
-  color: #c7171d;
-}
-body.makercamp .blue {
-  color: #acd3fc;
-}
-body.makercamp ul.stars {
-  list-style-image: url(../img/makercamp/stars.png);
-}
-body.makercamp ul.stars li {
-  margin: 15px 15px 5px 0;
-  font-size: 1em;
-  line-height: 1.8em;
-}
-body.makercamp .ss-form input,
-body.makercamp .ss-form textarea {
-  width: 70%;
-}
-body.makercamp .ytube_intro {
-  margin-top: 30px;
-}
-.new-footer {
-  background-color: transparent;
-  width: 100%;
-  padding-top: 10px;
-  text-align: center;
-  color: #333;
-  border-top: 3px solid #DBDBDB;
-  background-image: url('../img/header_bg.jpg');
-}
-.new-footer p {
-  font-size: 14px !important;
-  line-height: 19px !important;
-  margin-bottom: 5px;
-}
-.new-footer h1,
-.new-footer h2,
-.new-footer h3,
-.new-footer h4,
-.new-footer h5,
-.new-footer h6 {
-  color: #333 !important;
-}
-.new-footer label {
-  display: block;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-.new-footer label.checkbox {
-  font-weight: bold;
-}
-.new-footer .about-us {
-  width: 86px;
-  float: left;
-}
-.new-footer .about-us ul {
-  margin-top: 0px;
-}
-.new-footer .about-us ul li {
-  line-height: 20px;
-}
-.new-footer .about-us ul li a {
-  margin-left: -2px;
-}
-.new-footer .email-area #appendedInputButton {
-  border-radius: 0;
-  height: 16px;
-  width: auto;
-}
-.new-footer .email-area controls {
-  width: 130px;
-  float: left;
-  margin: 0;
-  padding: 0;
-}
-.new-footer .email-area .btn {
-  background-color: #F60B29;
-  color: #fff;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
-  border-radius: 0;
-  background-image: none;
-  height: 30px;
-  padding-top: 2px;
-  border: 1px solid #ccc;
-  box-shadow: none;
-}
-.new-footer ul {
-  list-style-type: disc !important;
-  color: #000 !important;
-}
-.new-footer ul li {
-  font-size: 14px !important;
-  display: list-item;
-  color: #000 !important;
-}
-.new-footer .control-group {
-  margin-bottom: 8px;
-}
-.new-footer h5 {
-  margin-bottom: 0px !important;
-  font-family: "proxima-nova", sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-}
-.new-footer .clearfix {
-  clear: both;
-  height: 0;
-  font-size: 1px;
-  line-height: 0px;
-}
-.new-footer .logo {
-  margin-bottom: 5px;
-}
-.new-footer .logo h5 {
-  float: left;
-  padding-top: 25px;
-}
-.new-footer .logo img {
-  float: left;
-  padding-right: 5px;
-}
-.new-footer .terms {
-  margin-top: 0;
-}
-.new-footer .main {
-  width: 940px;
-  margin-top: 5px;
-}
-.new-footer .text {
-  margin-top: 0;
-}
-.new-footer .text a {
-  color: #000;
-}
-.new-footer .subscribe img#mag-cover {
-  width: 128px;
-  float: right;
-  border: 1px solid #ccc;
-  margin-top: -35px;
-}
-.new-footer .container {
-  margin: 0 auto;
-  text-align: left;
-}
-.new-footer .container ul {
-  margin-left: 15px;
-}
-.new-footer .container .subscribe h5 {
-  color: #F60B29;
-  margin-top: -8px;
-}
-.new-footer .container .subscribe p {
-  font-weight: bold;
-  margin-top: 3px;
-  padding-right: 3px;
-}
-.new-footer .container .subscribe hr {
-  border: none;
-  background-color: #F60B29;
-  color: #F60B29;
-  height: 7px;
-  width: 85px;
-  margin-top: 0px;
-}
-.new-footer .controls  > .radio:first-child,
-.controls  > .checkbox:first-child {
-  padding-top: 0;
-}
-.new-footer input[type="radio"],
-.new-footer input[type="checkbox"] {
-  margin: 0;
-}
-.new-footer .trending,
-.new-footer .newsletter,
-.new-footer .about-us,
-.new-footer .subscribe {
-  width: 220px;
-  float: left;
-  border-top: 1px solid #ccc;
-  text-align: left;
-  padding-top: 10px;
-}
-.footer_copyright {
-  padding-bottom: 20px;
-}
-.footer_copyright p {
-  font-size: 12px !important;
-  line-height: 16px !important;
-  font-weight: normal !important;
-  margin-bottom: 0px !important;
-}
-.soc_icons {
-  margin: 0px;
-}
-.soc_icons a {
-  margin: 16px 3px 0 0;
-  width: 24px;
-  height: 24px;
-  display: block;
-  float: left;
-}
-.sprite {
-  background-image: url('../images/makezine_sprites.png');
-}
-.sprite-arrow-footer {
-  background-position: 0 0;
-  width: 95px;
-  height: 46px;
-  margin: -40px 0 5px -16px;
-  border: none !important;
-}
-.sprite-digital-book-foot {
-  background-position: 0 -51px;
-  width: 29px;
-  height: 22px;
-  float: left;
-  padding-right: 5px;
-  margin-top: 29px;
-}
-.sprite-facebook {
-  background-position: 0 -78px;
-  width: 24px;
-  height: 24px;
-}
-.sprite-flickr {
-  background-position: 0 -107px;
-  width: 24px;
-  height: 24px;
-}
-.sprite-google-plus {
-  background-position: 0 -136px;
-  width: 24px;
-  height: 24px;
-}
-.sprite-instagram {
-  background-position: 0 -165px;
-  width: 24px;
-  height: 24px;
-}
-.sprite-makershed_footer1 {
-  background-position: 0 -194px;
-  width: 29px;
-  height: 22px;
-  float: left;
-  margin: 30px 5px 0 13px;
-}
-.sprite-pinterest {
-  background-position: 0 -221px;
-  width: 24px;
-  height: 24px;
-}
-.sprite-stumbleupon {
-  background-position: 0 -274px;
-  width: 24px;
-  height: 24px;
-}
-.sprite-twitter {
-  background-position: 0 -303px;
-  width: 24px;
-  height: 24px;
-}
-.sprite-youtube {
-  background-position: 0 -332px;
-  width: 24px;
-  height: 24px;
-}
-body.home {
-  background: url(../img/sky.png) 0 20px repeat;
-  text-rendering: optimizeLegibility;
-  padding-bottom: 0 !important;
-  padding-top: 0px !important;
-  margin: 0;
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 20px;
-  color: #fff;
-}
-body.home .white-bg {
-  padding-bottom: 0px;
-}
-body.home .white-bg ul li {
-  margin-bottom: 5px;
-}
-body.home .white-bg ul.schedule-list {
-  color: #267047;
-  font-weight: bold;
-}
-body.home .white-bg ul.schedule-list li {
-  color: #267047;
-}
-body.home .white-bg ul.schedule-list li a:link,
-body.home .white-bg ul.schedule-list li a:visited {
-  color: #267047;
-}
-body.home .white-bg .visible-desktop .ytube_intro {
-  margin-bottom: 50px;
-  margin-top: 17px;
-}
-body.home .white-bg .label {
-  vertical-align: middle !important;
-  border-radius: 0px;
-  font-weight: normal;
-  background-color: #e1272e;
-}
-body.home .white-bg .green {
-  color: #267047;
-}
-body.home .white-bg.intro {
-  background-color: #b8edfc !important;
-}
-body.home .white-bg.intro .welcome-area {
-  padding-top: 20px;
-  background-image: url(../img/rocket-02.png);
-  background-position: 316px top;
-  background-repeat: no-repeat;
-}
-body.home .white-bg.home-ground {
-  background-color: #b8edfc !important;
-  background-image: url(../img/home-hills-07.png);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  min-height: 494px;
-  border-bottom: 20px solid #4cb679;
-  padding-top: 40 !important;
-}
-body.home .white-bg.home-ground .sponsors-area {
-  margin-top: 76px;
-}
-body.home .white-bg.home-ground .sponsors-area .shed-promo {
-  margin-top: 62px;
-}
-body.home .white-bg.home-ground .sponsors-area h1 {
-  font-size: 28px;
-  text-decoration: none;
-  border: none;
-  color: #a8deed;
-}
-body.home .schedule .grey-bg {
-  background-color: #f1f3f4;
-  padding: 20px 0;
-}
-body.home .schedule h2 {
-  color: #05729f;
-  font-size: 22px;
-  margin-bottom: 5px;
-}
-body.home .schedule p {
-  color: #111111;
-  font-size: 16px;
-  line-height: 22px;
-  margin-bottom: 0;
-}
-body.home .schedule .thumbnail {
-  margin: 0 auto;
-  width: 90%;
-}
-body.home .ytube_intro {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 0px;
-  height: 0;
-}
-body.home ul {
-  margin-left: 0px;
-  padding-left: 0px;
-  color: #267047;
-  font-size: 22px;
-  list-style-type: none;
-}
-body.home ul li {
-  color: #267047;
-  font-size: 22px;
-}
-body.home .intro p {
-  color: #333;
-  font-size: 22px;
-  line-height: 33px;
-  margin-bottom: 15px;
-}
-body.home .tagline {
-  margin-top: 0px !important;
-}
-body.home .skyships {
-  background-image: url(../img/skyitems.png);
-  background-repeat: no-repeat;
-  background-position: top center;
-  height: 60px;
-}
-body.home > .container-fluid {
-  padding: 0;
-}
-.makercamp-new .ytube_introiframe,
-.makercamp-new .ytube_introobject,
-.makercamp-new .ytube_intro embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.makercamp-new .intro,
-.makercamp-new .schedule {
-  padding: 20px 0 60px;
-}
-.makercamp-new .intro h1,
-.makercamp-new .schedule h1 {
-  color: #e1272e;
-  font-size: 36px;
-  border-bottom: 1px solid #bbb;
-  padding-bottom: 13px;
-}
-.makercamp-new .container-fluid {
-  padding: 0px !important;
-}
-.shed-promo {
-  margin: 15px auto;
-}
-.cta {
-  margin: 25px auto;
-  text-align: right;
-}
-.cta a.sign-btn {
-  background-color: #e1272e;
-  color: #fff;
-  margin-right: 35px;
-  padding: 10px 15px;
-}
-.cta a.sign-btn :hover {
-  background-color: #eee;
-  color: #333;
-}
-.cta a.host-btn {
-  background-color: #eee;
-  color: #333;
-  padding: 10px 15px;
-}
-.cta a.host-btn :hover {
-  color: #eee;
-  background-color: #e1272e;
-}
-.main-nav .navbar-inner {
-  border-color: #275392;
-  border: none;
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  background-color: #253b58;
-  background-image: -moz-linear-gradient(top, #2e435e, #172e50);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2e435e), to(#172e50));
-  background-image: -webkit-linear-gradient(top, #2e435e, #172e50);
-  background-image: -o-linear-gradient(top, #2e435e, #172e50);
-  background-image: linear-gradient(to bottom, #2e435e, #172e50);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2e435e', endColorstr='#ff172e50', GradientType=0);
-}
-.main-nav .primary-nav > .menu-item {
-  font-size: 18px;
-}
-.main-nav .primary-nav > .menu-item > a {
-  text-shadow: none;
-  padding: 10px 25px 10px;
-  color: #fff;
-}
-.main-nav .primary-nav > .menu-item > a:hover {
-  background-color: #222;
-  color: #fff;
-  text-decoration: none!important;
-}
-.main-nav .primary-nav > .menu-item.active > a {
-  background-color: #222;
-  color: #fff;
-  text-decoration: none!important;
-}
-.main-nav .primary-nav .menu-item {
-  text-decoration: none !important;
-}
-.main-nav .nav-collapse {
-  background: transparent;
-}
-.main-nav .btn-navbar {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #1d2f46;
-  background-image: -moz-linear-gradient(top, #26374d, #11233c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#26374d), to(#11233c));
-  background-image: -webkit-linear-gradient(top, #26374d, #11233c);
-  background-image: -o-linear-gradient(top, #26374d, #11233c);
-  background-image: linear-gradient(to bottom, #26374d, #11233c);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff26374d', endColorstr='#ff11233c', GradientType=0);
-  border-color: #11233c #11233c #000001;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #11233c;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-}
-.main-nav .btn-navbar .btn-navbar {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #1d2f46;
-  background-image: -moz-linear-gradient(top, #26374d, #11233c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#26374d), to(#11233c));
-  background-image: -webkit-linear-gradient(top, #26374d, #11233c);
-  background-image: -o-linear-gradient(top, #26374d, #11233c);
-  background-image: linear-gradient(to bottom, #26374d, #11233c);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff26374d', endColorstr='#ff11233c', GradientType=0);
-  border-color: #11233c #11233c #000001;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #11233c;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
-.main-nav .btn-navbar .btn-navbar:hover,
-.main-nav .btn-navbar .btn-navbar:focus,
-.main-nav .btn-navbar .btn-navbar:active,
-.main-nav .btn-navbar .btn-navbar.active,
-.main-nav .btn-navbar .btn-navbar.disabled,
-.main-nav .btn-navbar .btn-navbar[disabled] {
-  color: #ffffff;
-  background-color: #11233c;
-  *background-color: #0c1728;
-}
-.main-nav .btn-navbar .btn-navbar:active,
-.main-nav .btn-navbar .btn-navbar.active {
-  background-color: #060c15 \9;
-}
-.main-nav .btn-navbar:hover,
-.main-nav .btn-navbar:focus,
-.main-nav .btn-navbar:active,
-.main-nav .btn-navbar.active,
-.main-nav .btn-navbar.disabled,
-.main-nav .btn-navbar[disabled] {
-  color: #ffffff;
-  background-color: #11233c;
-  *background-color: #0c1728;
-}
-.main-nav .btn-navbar:active,
-.main-nav .btn-navbar.active {
-  background-color: #060c15 \9;
-}
-.admin-bar .navbar-fixed-top {
-  top: 29px;
-}
-@media (min-width: 1200px) {
-  body.makercamp .sponsor:first-child,
-  body.makercamp.admin-bar .sponsor:first-child {
-    margin-top: 30px;
-  }
-  body.makercamp .new-footer .container,
-  body.makercamp.admin-bar .new-footer .container {
-    width: 1170px !important;
-  }
-  body.makercamp .new-footer .main,
-  body.makercamp.admin-bar .new-footer .main {
-    width: 1000px !important;
-  }
-  body.makercamp .new-footer .trending,
-  body.makercamp.admin-bar .new-footer .trending,
-  body.makercamp .new-footer .newsletter,
-  body.makercamp.admin-bar .new-footer .newsletter,
-  body.makercamp .new-footer .about-us,
-  body.makercamp.admin-bar .new-footer .about-us,
-  body.makercamp .new-footer .subscribe,
-  body.makercamp.admin-bar .new-footer .subscribe {
-    width: 270px !important;
-  }
-}
-@media (min-width: 979px) and (max-width: 1200px) {
-  body.makercamp #mag-cover,
-  body.makercamp.admin-bar #mag-cover {
-    width: 110px !important;
-  }
-  .main-nav .primary-nav > .menu-item > a {
-    padding: 10px;
-  }
-  body.home .main-header .tagline h1 {
-    font-size: 1.4em;
-    line-height: 1.4em;
-  }
-  body.home .white-bg.home-ground .sponsors-area {
-    margin-top: 0px;
-  }
-  body.home .white-bg.home-ground .sponsors-area h1 {
-    color: #e1272e;
-    font-size: 28px;
-  }
-  body.home .white-bg.home-ground .sponsors-area .sponsor {
-    margin-top: 30px;
-    width: 300px;
-  }
-  body.home .white-bg.home-ground .sponsors-area .shed-promo {
-    margin-top: 15px;
-  }
-  body.home .white-bg.intro .welcome-area {
-    background-image: none !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 979px) {
-  .new-footer .span3 {
-    width: 31% !important;
-  }
-  .subscribe #mag-cover {
-    margin: 0 !important;
-    width: 110px !important;
-  }
-  .subscribe h5 {
-    margin-top: 0 !important;
-  }
-  .navbar .container {
-    padding: 0 20px;
-  }
-  body.home .white-bg.home-ground {
-    background-image: none !important;
-  }
-  body.home .white-bg.home-ground .sponsors-area {
-    margin-top: 15px;
-  }
-  body.home .white-bg.home-ground .sponsors-area h1 {
-    font-size: 28px;
-    color: #267047;
-  }
-  body.home .white-bg.home-ground .sponsors-area .sponsor {
-    width: 300px;
-  }
-  body.home .white-bg.home-ground .sponsors-area .shed-promo {
-    margin-top: 15px;
-  }
-  body.home .white-bg.intro .welcome-area {
-    background-image: none !important;
-  }
-}
-@media (max-width: 767px) {
-  body {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-  body .schedule-content .nav-tabs > li,
-  body body.makercamp.admin-bar .schedule-content .nav-tabs > li {
-    width: 100%;
-  }
-  body .white-bg,
-  body .beige-bg,
-  body .container {
-    padding: 20px 20px;
-  }
-  body .navbar .container {
-    padding: 0 20px;
-  }
-  body.home .white-bg {
-    padding: 0px !important;
-  }
-  body.home .white-bg.intro .welcome-area {
-    padding: 0px !important;
-    background-image: none !important;
-  }
-  body.home .white-bg.home-ground {
-    text-align: center;
-    background-image: none !important;
-  }
-  body.home .sponsors-area {
-    text-align: center;
-    margin-top: 15px !important ;
-  }
-  body.home .sponsors-area h1 {
-    font-size: 32px;
-    color: #267047 !important;
-  }
-  body.home .sponsors-area .sponsor {
-    width: 300px;
-    margin: 20px auto 0px auto;
-  }
-  body.home .sponsors-area .shed-promo {
-    margin-top: 15px;
-  }
 }

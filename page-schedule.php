@@ -10,30 +10,26 @@
  */
 ?>
 <?php get_header('makercamp'); ?>
-<div class="makercamp-new ">
+<div class="makercamp-new camp">
   <div class="main-header">
     <div class="container">
       <div class="row-fluid" >
         <div class="hidden-desktop text-center">
           <div class="span12">
-            <img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
+            <img  class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
             <div class="tagline">
-              <h1>A <strong>FREE</strong>
-                summer camp for building, tinkering and exploring. Online and in your neighborhood!
-              </h1>
+              <h1>A <strong>FREE</strong> summer camp for building, tinkering and exploring. Online and in your neighborhood!</h1>
               <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
             </div>
           </div>
         </div>
         <div class="visible-desktop">
           <div class="span6">
-            <img style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
+            <img  class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
           </div>
           <div class="span6" style="">
             <div class="tagline">
-              <h1>A <strong>FREE</strong>
-                summer camp for building, tinkering and exploring. Online and in your neighborhood!
-              </h1>
+              <h1>A <strong>FREE</strong> summer camp for building, tinkering and exploring. Online and in your neighborhood!</h1>
               <h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
             </div>
           </div>
@@ -46,7 +42,7 @@
       <div class="row-fluid tab-navigation">
         <div class="span12">
           <? $year = get_post($post->post_parent)->post_title; ?>
-          <h2 style="margin-bottom: 30px; color: red;">Maker Camp Season <?=$year;?></h2>
+          <h2>Maker Camp Season <?=$year;?></h2>
           <? $terms = get_terms('week', array('hierarchical'  => false, 'hide_empty' => 0)); ?>
 
           <ul class="nav nav-tabs" id="schedule" role="tablist">
@@ -68,12 +64,12 @@
             <? $i++; } else { ?>
               <div class="tab-pane" id="<?=$term->slug;?>">
             <? } ?>
-                <div class="week-container" style="padding-bottom: 10px; margin-bottom: 40px; overflow: auto;">
+                <div class="week-container">
                   <?php $image_src = s8_get_taxonomy_image_src($term, 'medium'); ?>
                   <? if($image_src != null): ?>
-                    <div class="week-image span3 pull-left" style="margin: 0px 30px 0px 0px;"><img src="<?=$image_src['src'];?>"></div>
+                    <div class="week-image span3 pull-left"><img src="<?=$image_src['src'];?>"></div>
                   <? endif; ?>
-                  <div class="week-info" style="overflow: hidden">
+                  <div class="week-info">
                     <h3><?=$term->name?></h3>
                     <p class="week-description">
                       <?=$term->description?>
@@ -81,19 +77,20 @@
                     <p>
                       <h4>Jump to a day:</h4>
                       <br>
-                      <ul style="padding: 0px 0px 10px 0px; margin: 0px;">
-                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-1">Day One</a></li>
-                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-2">Day Two</a></li>
-                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-3">Day Three</a></li>
-                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-4">Day Four</a></li>
-                        <li style="float: left; list-style: none; margin-right: 10px;"><a style="color: #1a4e7e; background-color: #8fd5f7; padding: 10px;" href="#day-5">Day Five</a></li>
+                      <?$week = $term->slug."-"; ?>
+                      <ul>
+                        <li><a href="#<?=$week;?>day-1">Day One</a></li>
+                        <li><a href="#<?=$week;?>day-2">Day Two</a></li>
+                        <li><a href="#<?=$week;?>day-3">Day Three</a></li>
+                        <li><a href="#<?=$week;?>day-4">Day Four</a></li>
+                        <li><a href="#<?=$week;?>day-5">Day Five</a></li>
                       </ul>
                     </p>
                   </div>
                 </div>
                 <div class="clearfix"></div>
                 <? // Grab all the terms for this week and year ?>
-                <? $args = array('post_type' => 'session', 'post_status' => 'publish', 'week' => $term->name, 'camp' => 'Maker Camp '.$year); ?>
+                <? $args = array('posts_per_page'   => -1, 'post_type' => 'session', 'post_status' => 'publish', 'week' => $term->name, 'camp' => 'Maker Camp '.$year); ?>
                 <?
                 $posts = get_posts($args);
                 $ordered_posts = array();
@@ -109,24 +106,24 @@
                 foreach($ordered_posts as $key => $val) {
                    // WEEKDAY heading
                 ?> <!--h4 style="background-color: #999; padding: 10px; color: #FFF;">Day <?=date('w', strtotime($key));?>: <?=date('l', strtotime( $key ));?></h4--> <?
-                ?> <h4 style="background-color: #999; padding: 10px; color: #FFF;" id="day-<?=$key;?>">Day <?=$key;?>: <?=$dow[$key];?></h4> <?
+                ?> <h4 class="schedule-day" id="<?=$week;?>day-<?=$key;?>">Day <?=$key;?>: <?=$dow[$key];?></h4> <?
                   foreach($val as $p) {
                   // Here is where the fun happens for the sessions
                   ?>
-                    <div style="margin-top: 30px; margin-bottom: 30px; overflow: auto;">
+                    <div class="session-area">
                       <? $image = wp_get_attachment_image_src( get_post_thumbnail_id( $p->ID ), 'single-post-thumbnail' ); ?>
-                      <div class="span3 pull-left" style="margin-right: 30px; margin-left: 0px"><img src="<?=$image[0]; ?>"></div>
-                      <div class="session-container" style="overflow: hidden">
+                      <div class="session-image span3 pull-left"><img src="<?=$image[0]; ?>"></div>
+                      <div class="session-container">
                         <h5 class="title"><?=$p->post_title?></h5>
                         <?
                           $post_makers = unserialize(get_post_meta(absint($p->ID), 'session-makers', true));
-
                           $my_makers = array();
                           $post_makers_list = make_maker_get_list();
                           if(count($post_makers_list) > 0 && is_array($post_makers)) {
                             foreach($post_makers_list as $pml) {
                               if(in_array($pml->ID, $post_makers)) {
-                                $my_makers[] = $pml->post_title;
+                                $modal .= create_maker_modal($pml);
+                                $my_makers[] = '<a href="#" data-toggle="modal" data-target="#'.$pml->post_name.'">'.$pml->post_title.'</a>';
                               }
                             }
                           }
@@ -137,25 +134,53 @@
                           <?=join(", ", $my_makers);?>
                         <? } ?>
                         </div>
-                        <p class="session-description" style="margin: 20px 0px 20px 0px;">
+                        <p class="session-description">
                           <?=$p->post_content;?>
                         </p>
                         <? if(unserialize(get_post_meta($p->ID, 'session-link-btn-url', true)) != '') { ?>
-                          <a class="btn btn-danger" href="<?=unserialize(get_post_meta($p->ID, 'session-link-btn-url', true));?>"><?=unserialize(get_post_meta($p->ID, 'session-link-btn-title', true));?></a>
+                          <a class="btn btn-danger" href="<?=unserialize(get_post_meta($p->ID, 'session-link-btn-url', true));?>" target="_blank"><?=unserialize(get_post_meta($p->ID, 'session-link-btn-title', true));?></a>
                         <? } ?>
+
                         <? $daily = unserialize(get_post_meta($p->ID, 'session-daily-project', true)); ?>
                         <? if(is_array($daily) && $daily['url'] != '') { ?>
-                          <a class="btn" href="<?=$daily['url'];?>">Daily Project</a>
+                          <div class="project-item">
+                            <span class="project-item-title">Daily project:</span>
+                            <a href="<?=$daily['url'];?>" target="_blank">
+                              <?=$daily['title']?>
+                            </a>
+                          </div>
                         <? }; ?>
-                        <div class="advanced-project" style="margin-top: 20px;">
+
                         <? $sap = unserialize(get_post_meta($p->ID, 'session-adv-project', true)); ?>
                         <? if(is_array($sap) && $sap['url'] != ''): ?>
-                          <span class="advanced-project-title">Advanced project:</span>
-                          <a style="color: red;" href="<?=$sap['url'];?>">
-                            <?=$sap['title']?>
-                          </a>
+                          <div class="project-item">
+                            <span class="project-item-title">Advanced project:</span>
+                            <a href="<?=$sap['url'];?>" target="_blank">
+                              <?=$sap['title']?>
+                            </a>
+                          </div>
                         <? endif; ?>
-                        </div>
+
+                        <? $skill = unserialize(get_post_meta($p->ID, 'session-skill-project', true)); ?>
+                        <? if(is_array($skill) && $skill['url'] != '') { ?>
+                          <div class="project-item">
+                            <span class="project-item-title">Skill builder project:</span>
+                            <a href="<?=$skill['url'];?>" target="_blank">
+                              <?=$skill['title']?>
+                            </a>
+                          </div>
+                        <? }; ?>
+
+                        <? $weekend = unserialize(get_post_meta($p->ID, 'session-weekend-project', true)); ?>
+                        <? if(is_array($weekend) && $weekend['url'] != '') { ?>
+                          <div class="project-item">
+                            <span class="project-item-title">Weekend project:</span>
+                            <a href="<?=$weekend['url'];?>" target="_blank">
+                              <?=$weekend['title']?>
+                            </a>
+                          </div>
+                        <? }; ?>
+
                       </div>
                     </div>
                     <div class="clearfix"></div>
@@ -169,7 +194,24 @@
         </div>
       </div>
     </div>
+    <div class="row-fluid">
+      <div class="span12 past-camps">
+        <h3>Past Camps</h3>
+        <ul>
+          <li><a href="http://makercamp.com/summer-2013/schedule/">2013 Camp Schedule</a></li>
+          <li><a href="http://makercamp.com/summer-2012/schedule/">2012 Camp Schedule</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
   </section>
-</div>
 
+<?=$modal;?>
+<style>
+  /* Adding this because without it, the modals seem to overlay dom elements when not in use. */
+  .modal {
+    display: none;
+  }
+</style>
+</div>
 <?php get_footer( 'makercamp' ); ?>
