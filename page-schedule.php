@@ -144,19 +144,49 @@
                         <? if(unserialize(get_post_meta($p->ID, 'session-link-btn-url', true)) != '') { ?>
                           <a class="btn btn-danger" href="<?=unserialize(get_post_meta($p->ID, 'session-link-btn-url', true));?>"><?=unserialize(get_post_meta($p->ID, 'session-link-btn-title', true));?></a>
                         <? } ?>
+
                         <? $daily = unserialize(get_post_meta($p->ID, 'session-daily-project', true)); ?>
                         <? if(is_array($daily) && $daily['url'] != '') { ?>
-                          <a class="btn" href="<?=$daily['url'];?>">Daily Project</a>
+                          <div class="advanced-project" style="margin-top: 20px;">
+                            <span class="advanced-project-title">Daily project:</span>
+                            <a style="color: red;" href="<?=$daily['url'];?>">
+                              <?=$daily['title']?>
+                            </a>
+                          </div>
                         <? }; ?>
-                        <div class="advanced-project" style="margin-top: 20px;">
+
                         <? $sap = unserialize(get_post_meta($p->ID, 'session-adv-project', true)); ?>
                         <? if(is_array($sap) && $sap['url'] != ''): ?>
-                          <span class="advanced-project-title">Advanced project:</span>
-                          <a style="color: red;" href="<?=$sap['url'];?>">
-                            <?=$sap['title']?>
-                          </a>
+                          <div class="advanced-project" style="margin-top: 20px;">
+                            <span class="advanced-project-title">Advanced project:</span>
+                            <a style="color: red;" href="<?=$sap['url'];?>">
+                              <?=$sap['title']?>
+                            </a>
+                          </div>
                         <? endif; ?>
-                        </div>
+
+                        <? $skill = unserialize(get_post_meta($p->ID, 'session-skill-project', true)); ?>
+                        <? if(is_array($skill) && $skill['url'] != '') { ?>
+                          <div class="skill-project" style="margin-top: 20px;">
+                            <span class="skill-project-title">Skill builder project:</span>
+                            <a style="color: red;" href="<?=$skill['url'];?>">
+                              <?=$skill['title']?>
+                            </a>
+                          </div>
+                        <? }; ?>
+
+                        <? $weekend = unserialize(get_post_meta($p->ID, 'session-weekend-project', true)); ?>
+                        <? if(is_array($weekend) && $weekend['url'] != '') { ?>
+                          <div class="weekend-project" style="margin-top: 20px;">
+                            <span class="weekend-project-title">Weekend project:</span>
+                            <a style="color: red;" href="<?=$weekend['url'];?>">
+                              <?=$weekend['title']?>
+                            </a>
+                          </div>
+                        <? }; ?>
+
+
+
                       </div>
                     </div>
                     <div class="clearfix"></div>

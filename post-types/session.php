@@ -72,6 +72,8 @@ function make_session_add_meta_boxes() {
   add_meta_box( 'make-sessions-link', 'Session Link', 'make_sessions_link', 'session', 'side', 'core' );
   add_meta_box( 'make-sessions-advanced-project', 'Advanced Project', 'make_sessions_advanced_project', 'session', 'side', 'default' );
   add_meta_box( 'make-sessions-daily-project', 'Daily Project', 'make_sessions_daily_project', 'session', 'side', 'default' );
+  add_meta_box( 'make-sessions-skill-project', 'Skill Project', 'make_sessions_skill_project', 'session', 'side', 'default' );
+  add_meta_box( 'make-sessions-weekend-project', 'Weekend Project', 'make_sessions_weekend_project', 'session', 'side', 'default' );
 }
 add_action( 'add_meta_boxes', 'make_session_add_meta_boxes' );
 
@@ -131,7 +133,6 @@ function make_sessions_daily_project($post) {
   <input type="text" name="daily-project[url]" id="daily-link" value="<?php echo ( ! empty( $daily_project['url'] ) ) ? esc_url( $daily_project['url'] ) : ''; ?>" style="display:block;width:100%;">
 
   <?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
-
 }
 
 
@@ -151,6 +152,37 @@ function make_sessions_advanced_project( $post ) {
   <?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
 }
 
+/**
+ * Displays the meta box for adding the skill project urls
+ * @param  object $post The post object of the current post being edited
+ * @return html
+ */
+function make_sessions_skill_project( $post ) {
+
+  // Get the data
+  $skill_project = unserialize( get_post_meta( absint( $post->ID ), 'session-skill-project', true ) ); ?>
+  <label for="skill-title"><strong>Project Title</strong></label>
+  <input type="text" name="skill-project[title]" id="skill-title-WHY-IS-THIS-HIDDEN" value="<?php echo ( ! empty( $skill_project['title'] ) ) ? sanitize_text_field( $skill_project['title'] ) : ''; ?>" style="display:block;width:100%;">
+  <label for="skill-link" style="margin-top:10px;"><strong>Project URL</strong></label>
+  <input type="text" name="skill-project[url]" id="skill-link" value="<?php echo ( ! empty( $skill_project['url'] ) ) ? esc_url( $skill_project['url'] ) : ''; ?>" style="display:block;width:100%;">
+  <?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
+}
+
+/**
+ * Displays the meta box for adding the weekend project urls
+ * @param  object $post The post object of the current post being edited
+ * @return html
+ */
+function make_sessions_weekend_project( $post ) {
+
+  // Get the data
+  $weekend_project = unserialize( get_post_meta( absint( $post->ID ), 'session-weekend-project', true ) ); ?>
+  <label for="weekend-title"><strong>Project Title</strong></label>
+  <input type="text" name="weekend-project[title]" id="weekend-title-WHY-IS-THIS-HIDDEN" value="<?php echo ( ! empty( $weekend_project['title'] ) ) ? sanitize_text_field( $weekend_project['title'] ) : ''; ?>" style="display:block;width:100%;">
+  <label for="weekend-link" style="margin-top:10px;"><strong>Project URL</strong></label>
+  <input type="text" name="weekend-project[url]" id="weekend-link" value="<?php echo ( ! empty( $weekend_project['url'] ) ) ? esc_url( $weekend_project['url'] ) : ''; ?>" style="display:block;width:100%;">
+  <?php wp_nonce_field( 'session-meta-box-save', 'session-nonce' );
+}
 
 /**
  * Displays the meta box for scheduling a session and adding or creating a Week
@@ -206,6 +238,12 @@ function make_sessions_save_meta_boxes( $post_id ) {
 
   if ( isset( $_POST['daily-project'] ) )
     update_post_meta( absint( $post_id ), 'session-daily-project', serialize( $_POST['daily-project'] ) );
+
+  if ( isset( $_POST['skill-project'] ) )
+    update_post_meta( absint( $post_id ), 'session-skill-project', serialize( $_POST['skill-project'] ) );
+
+  if ( isset( $_POST['weekend-project'] ) )
+    update_post_meta( absint( $post_id ), 'session-weekend-project', serialize( $_POST['weekend-project'] ) );
 
   if ( isset( $_POST['schedule']['date'] ) ) {
     update_post_meta ( absint( $post_id ), 'schedule-date', serialize( $_POST['schedule']['date']));
