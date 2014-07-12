@@ -7879,6 +7879,12 @@ body.makercamp .schedule-content .maker .project-title {
   line-height: 1em;
   color: #005d8f;
 }
+body.makercamp .schedule-content .past-camps h3 {
+  color: #033978;
+}
+body.makercamp .schedule-content .past-camps ul li {
+  list-style-type: none;
+}
 body.makercamp .schedule-content .tab-content .btn-danger,
 body.makercamp .schedule-content .tab-content .btn {
   font-size: 16px;

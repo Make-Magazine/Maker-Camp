@@ -193,13 +193,12 @@
           </div><!-- /tab-content -->
         </div>
       </div>
-    </div>
     <div class="row-fluid">
       <div class="span12 past-camps">
         <h3>Past Camps</h3>
         <ul>
-          <li><a href="http://makercamp.com/summer-2013/schedule/">2013 Camp Schedule</a></li>
-          <li><a href="http://makercamp.com/summer-2012/schedule/">2012 Camp Schedule</a></li>
+          <li><a href="http://makercamp.com/summer-2013/schedule/">Maker Camp 2013</a></li>
+          <li><a href="http://makercamp.com/summer-2012/schedule/">Maker Camp 2012</a></li>
         </ul>
       </div>
       </div>
