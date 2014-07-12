@@ -7882,6 +7882,9 @@ body.makercamp .schedule-content .maker .project-title {
 body.makercamp .schedule-content .past-camps h3 {
   color: #033978;
 }
+body.makercamp .schedule-content .past-camps ul {
+  margin-left: 0px;
+}
 body.makercamp .schedule-content .past-camps ul li {
   list-style-type: none;
 }
