@@ -1,0 +1,181 @@
+	// Schedule Page
+body.makercamp {
+	.schedule-content {
+	    background: #fff;
+	    color: #5c5b5b;
+	    border-top: 1px solid #8ca9c8;
+	    .tab-navigation {
+	        h2 {
+	            margin-bottom: 30px;
+	            color: red;
+	        }
+	    }
+	    .tab-content {
+	        position: relative;
+	        overflow: visible;
+	        span {
+	            display: block;
+	        }
+	        .black {
+	            display: inline;
+	        }
+	        .tab-pane {
+	            .week-container {
+	                padding-bottom: 10px;
+	                margin-bottom: 40px;
+	                overflow: auto;
+	                .week-image {
+	                    margin: 0px 30px 0px 0px;
+	                }
+	                .week-info {
+	                    overflow: hidden;
+	                    ul {
+	                        padding: 0px 0px 10px 0px;
+	                        margin: 0px;
+	                        li {
+	                            float: left;
+	                            list-style: none;
+	                            margin-right: 10px;
+	                            a:link {
+	                                color: #1a4e7e;
+	                                background-color: #8fd5f7;
+	                                padding: 10px;
+	                            }
+	                        }
+	                    }
+	                }
+	            }
+	            h4.schedule-day {
+	                background-color: #999;
+	                padding: 10px;
+	                color: #FFF;
+	            }
+	            .session-area {
+	                margin-top: 30px;
+	                margin-bottom: 30px;
+	                overflow: auto;
+	                .session-image {
+	                    margin-right: 30px;
+	                    margin-left: 0px;
+	                }
+	                .session-container {
+	                    overflow: hidden;
+	                    .session-description {
+	                        margin: 20px 0px 20px 0px;
+	                    }
+	                }
+	            }
+	            .session-container {
+	                h5.title {
+	                    color: #267047;
+	                    font-weight: bold;
+	                }
+	                .makers {
+	                    font-weight: bold;
+	                }
+	                .project-item {
+	                    margin-top: 20px;
+	                    .project-item-title {
+	                        color: #267047;
+	                        font-weight: bold;
+	                        a.link {
+	                            color: #e1272e;
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	        .week-container {
+	            .week-info {
+	                h3 {
+	                    color: #033978;
+	                }
+	            }
+	        }
+	    }
+	    #schedule {
+	        border: none;
+	        a {
+	            background: #8ed5f6;
+	            color: #033978;
+	            font-weight: bold;
+	            font-size: .9em;
+	        }
+	        .active {
+	            a {
+	                border-color: #acd3fc;
+	                border-bottom-color: #fff;
+	                background: #fff;
+	                color: #000;
+	                padding-bottom: 9px;
+	            }
+	        }
+	    }
+	    .maker {
+	        a {
+	            color: #005d8f;
+	        }
+	        h5 {
+	            font-size: 16px;
+	            line-height: 18px;
+	            font-weight: bold;
+	        }
+	        .project-title {
+	            font-size: 1.285714286em;
+	            line-height: 1em;
+	            color: #005d8f;
+	        }
+	    }
+	}
+	.schedule-content .tab-content .btn-danger,.schedule-content .tab-content .btn {
+	    font-size: 16px;
+	    padding: 8px 12px;
+	}
+	.schedule-content #schedule a:hover,.schedule-content #schedule a:active {
+	    border-color: #acd3fc;
+	    background: #8ed5f6;
+	    color: #033978;
+	}
+	.schedule-content .maker .date,.schedule-content .maker .mentor {
+	    font-size: 1.142857143em;
+	    line-height: 1em;
+	    font-weight: normal;
+	    color: #252525;
+	    margin: 5px 0 !important;
+	    display: inline-block;
+	}
+	.schedule-content .maker.row,.schedule-content .tab-navigation.row {
+	    margin-left: 0px;
+	}
+
+	//SIGN UP
+	.make-sign-up {
+		min-height:620px;
+	}
+
+	// FAQs
+	.faq-content {
+		margin-bottom:20px;
+		ul { margin-bottom:25px !important; }
+	}
+
+	// Register Summer Program
+	.ss-form {
+		form {
+			background:#fff;
+			padding:15px 10px 10px 20px;
+			color:#6e6e6e;
+			margin:20px 20px 0 0;
+		}
+		label.ss-q-title { font-weight:bold; }
+		input, textarea { width:95%; }
+	}
+	.ss-form-entry input.button {
+		margin-top:-5px;
+		width:100%;
+		text-align:center;
+		padding:10px;
+		font-size:25px;
+		border:0;
+	}
+}
