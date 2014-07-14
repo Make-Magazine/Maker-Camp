@@ -65,6 +65,12 @@ function home_carousel_function($atts) {
 
   error_log("Start of week: " . $start_of_week);
   error_log("End of week: " . $end_of_week);
+  $rs .= '<!-- Go ahead and load up debugging things:';
+  $rs .= "Posts Start: ".$posts_start;
+  $rs .= "Posts Finish: ".$posts_finish;
+  $rs .= "Start of Week: ".$start_of_week;
+  $rs .= "End of week: ".$end_of_week;
+  $rs .= "-->";
 
   // now let's filter out our posts
   $i = 0;
@@ -91,26 +97,24 @@ function home_carousel_function($atts) {
   foreach($ordered as $s) {
     $week = wp_get_post_terms($s->ID, 'week');
     $week_slug = $week[0]->slug;
-    #foreach($o as $s) {
-      $schedule_date = unserialize(get_post_meta($s->ID, 'schedule-date', true));
-      $today = strftime("%Y-%m-%d", $now);
-      if($schedule_date == $today) {
-        $rs .= '<li class="today">';
-      } else {
-        $rs .= '<li>';
-      }
-      $rs .= '<h3>'.strftime("%A", strtotime($schedule_date)).'</h3>';
-      $rs .= '<div class="session-image" style="margin-bottom: 10px;">';
-      $image = wp_get_attachment_image_src( get_post_thumbnail_id( $s->ID ), 'single-post-thumbnail' );
-      $rs .= '<a href="'.$schedule_url.'#'.$week_slug.'">';
-      $rs .= '<img width="200px" src="'.$image[0].'">';
-      $rs .= '</a>';
-      $rs .= '</div>';
-      $rs .= '<div class="session-title"><a href="'.$schedule_url.'#'.$week_slug.'">'.$s->post_title.'</a></div>';
-      #$rs .= '<div class="session-content">';
-      #$rs .= $s->post_content;
-      #$rs .= '</div>';
-    #}
+    $schedule_date = unserialize(get_post_meta($s->ID, 'schedule-date', true));
+    $today = strftime("%Y-%m-%d", $now);
+    if($schedule_date == $today) {
+      $rs .= '<li class="today">';
+    } else {
+      $rs .= '<li>';
+    }
+    $rs .= '<h3>'.strftime("%A", strtotime($schedule_date)).'</h3>';
+    $rs .= '<div class="session-image" style="margin-bottom: 10px;">';
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $s->ID ), 'single-post-thumbnail' );
+    $rs .= '<a href="'.$schedule_url.'#'.$week_slug.'">';
+    $rs .= '<img width="200px" src="'.$image[0].'">';
+    $rs .= '</a>';
+    $rs .= '</div>';
+    $rs .= '<div class="session-title"><a href="'.$schedule_url.'#'.$week_slug.'">'.$s->post_title.'</a></div>';
+    #$rs .= '<div class="session-content">';
+    #$rs .= $s->post_content;
+    #$rs .= '</div>';
   }
   #error_log(print_r($rs, true));
 
