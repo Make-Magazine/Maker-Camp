@@ -9,26 +9,35 @@ function home_carousel_function($atts) {
 
   $posts = get_posts(array('post_type' => 'session', 'camp' => 'maker-camp-'.$year, 'posts_per_page' => -1));
   error_log("Post count: " . count($posts));
-  #print_r($posts);
 
   // Let's figure out what our posts date blocks look like...
   $posts_start = NULL;
   $posts_finish = NULL;
+
   foreach($posts as $p) {
     $my_date = strtotime(unserialize(get_post_meta($p->ID, 'schedule-date', true)));
+    error_log("Post title: ".$p->post_title.", Date: ".$my_date);
 
     if($posts_start == NULL) {
       $posts_start = $my_date;
+      error_log("Post start!! - Post title: ".$p->post_title.", Date: ".$my_date);
     }
-    if($posts_end == NULL) {
+
+    if($posts_finish == NULL) {
       $posts_finish = $my_date;
+      error_log("Post finish!! - Post title: ".$p->post_title.", Date: ".$my_date);
     }
+
     if($my_date < $posts_start) {
       $posts_start = $my_date;
+      error_log("New post start!! - Post title: ".$p->post_title.", Date: ".$my_date);
     }
+
     if($my_date > $posts_finish) {
+      error_log("New post finish!! - Post title: ".$p->post_title.", Date: ".$my_date);
       $posts_finish = $my_date;
     }
+
   }
 
   error_log("Posts Start: " . $posts_start);
@@ -36,6 +45,7 @@ function home_carousel_function($atts) {
 
   // Now let's figure out what week we're going to display...
   $now = strtotime("now");
+  error_log("Now: ".$now);
   if($now < $posts_start) {
     error_log("It's coming up.");
     // display the first week
