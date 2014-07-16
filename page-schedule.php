@@ -197,8 +197,8 @@
       <div class="span12 past-camps">
         <h3>Past Camps</h3>
         <ul>
-          <li><a href="http://makercamp.com/summer-2013/schedule/">Maker Camp 2013</a></li>
-          <li><a href="http://makercamp.com/summer-2012/schedule/">Maker Camp 2012</a></li>
+          <li><a href="http://makercamp.com/summer-2013/">Maker Camp 2013</a></li>
+          <li><a href="http://makercamp.com/summer-2012/">Maker Camp 2012</a></li>
         </ul>
       </div>
       </div>
