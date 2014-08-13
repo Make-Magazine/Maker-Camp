@@ -30,7 +30,7 @@
 			<div class="span3 trending">
 				<h5>Maker Camp Resources</h5>
 				<ul>
-					<li><a href="http://makercamp.com/wp-content/uploads/2014/08/Maker-Camp-License-Release-and-Waiver-2014-2.0.pdf" target="_blank">Hangout Participant Release Form</a></li>
+					<li><a href="http://makercamp.com/wp-content/uploads/2014/08/Maker-Camp-License-Release-and-Waiver-2014-3.0.pdf" target="_blank">Hangout Participant Release Form</a></li>
 					<li><a href="https://support.google.com/plus/answer/2407397?hl=en&amp;topic=2409412&amp;ctx=topic" target="_blank">G+ Teen Safety Guide</a></li>
 					<li><a href="http://www.google.com/intl/en/+/safety/" target="_blank">Safety Center</a></li>
 					<li><a href="https://support.google.com/plus/answer/2423637?hl=en&amp;topic=2401644&amp;ctx=topic" target="_blank">For Parents</a></li>
