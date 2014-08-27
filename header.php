@@ -24,6 +24,18 @@
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		
+		<script>
+			var _prum = [['id', '53fcea2fabe53d341d4ae0eb'],
+			            ['mark', 'firstbyte', (new Date()).getTime()]];
+			(function() {
+			    var s = document.getElementsByTagName('script')[0]
+			      , p = document.createElement('script');
+			    p.async = 'async';
+			    p.src = '//rum-static.pingdom.net/prum.min.js';
+			    s.parentNode.insertBefore(p, s);
+			})();
+		</script>
 
 		<?php wp_head( 'makercamp' ); ?>
 
