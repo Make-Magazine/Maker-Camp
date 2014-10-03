@@ -1,10 +1,6 @@
 // This file contains common JavaScript that is loaded into every page.
 // We want to register and enqueue these scripts with WordPress.
 
-// Load Typekit
-try{Typekit.load();}catch(e){}
-
-
 // Load Google Analytics
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-51157-25']);

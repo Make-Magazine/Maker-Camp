@@ -51,8 +51,6 @@ function make_load_resources() {
 	wp_enqueue_style( 'make-print', get_stylesheet_directory_uri() . '/css/print.css', array(), false, 'print' );
 
 	// Load our common scripts first. These should not require jQuery
-	wp_enqueue_script( 'make-typekit', 'http://use.typekit.com/fzm8sgx.js', array() );
-
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'make-bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'maker-camp-js', get_stylesheet_directory_uri() . '/js/common.js', array('jquery'), '1.0', true );
