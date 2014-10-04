@@ -258,9 +258,18 @@ function make_copyright_footer() { ?>
 /**
  * Get a volume cover image
  */
-function make_get_cover_image( $number = 39 ) {
+function make_get_cover_image( $number = 41 ) {
 	$url = esc_url( 'http://cdn.makezine.com/make/covers/MAKE_V' . absint( $number ) . '_high.jpg' );
 	return $url;
+}
+
+
+function make_get_resized_cover_image( $number = 41 ) {
+	if ( ! function_exists( 'wpcom_is_vip' ) || ! wpcom_is_vip() ) {
+		return str_replace("_high.", "_web.", make_get_cover_image( $number) );
+	} else {
+		return wpcom_vip_get_resized_remote_image_url( make_get_cover_image(), '128', '181' );
+	}
 }
 
 /**
