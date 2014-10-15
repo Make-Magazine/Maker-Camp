@@ -193,7 +193,7 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "tk-proxima-nova", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
@@ -872,7 +872,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "tk-proxima-nova", sans-serif;
+  font-family: "proxima-nova", sans-serif;
 }
 label {
   display: block;
@@ -3784,7 +3784,7 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 0;
   padding: 4px 14px;
   width: 126px;
-  font-family: "tk-proxima-nova", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -6481,6 +6481,54 @@ a.button.big {
 a.button.small-button {
   line-height: inherit !important;
 }
+.custom-feed.simple {
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  padding: 13px;
+  margin-bottom: 25px;
+}
+.custom-feed.simple .feed-thumb {
+  display: block;
+}
+.custom-feed.simple .feed-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #005d8f;
+  line-height: 20px;
+  display: block;
+}
+.custom-feed.simple .feed-title.has-image {
+  margin-top: 14px;
+}
+.custom-feed.col-2 {
+  width: 268px;
+  margin-left: 27px;
+  background: #fff;
+  float: left;
+}
+.custom-feed.col-2.odd {
+  clear: left;
+  margin-left: 0;
+}
+.feed-wrapper {
+  *zoom: 1;
+}
+.feed-wrapper:before,
+.feed-wrapper:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.feed-wrapper:after {
+  clear: both;
+}
+.share-email {
+  position: relative;
+  top: -2px;
+}
+.show-print {
+  display: none;
+}
 .new-footer {
   background-color: transparent;
   width: 100%;
@@ -6501,7 +6549,7 @@ a.button.small-button {
 .new-footer h4,
 .new-footer h5,
 .new-footer h6 {
-  color: #333 !important:;
+  color: #333 !important;
 }
 .new-footer label {
   display: block;
@@ -6562,7 +6610,7 @@ a.button.small-button {
 }
 .new-footer h5 {
   margin-bottom: 0px !important;
-  font-family: "tk-proxima-nova", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   font-size: 16px;
   font-weight: bold;
 }
@@ -7928,7 +7976,7 @@ article ul li {
   margin-bottom: 30px;
 }
 .masthead {
-  font-family: "tk-proxima-nova", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   padding-top: 20px;
 }
 .masthead h1 {
