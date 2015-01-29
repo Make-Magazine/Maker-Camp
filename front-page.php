@@ -20,7 +20,7 @@
 									<h1>A <strong>FREE</strong>
 										summer camp from Google and Make for building, tinkering and exploring. Online and in your neighborhood!
 									</h1>
-									<h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
+									<h1><strong>July 6 - August 15, 2015</strong><h1>
 								</div>
 								<div class="cta">
 									<a class="button big block" href="http://makercamp.com/sign-up-for-camp/">Sign Up Today!</a>
@@ -38,7 +38,7 @@
 									<h1>A <strong>FREE</strong>
 										summer camp from Google and Make for building, tinkering and exploring. Online and in your neighborhood!
 									</h1>
-									<h1><strong>July 7th-August 15th, 2014</strong><br />Daily at 11am Pacific Time<h1>
+									<h1><strong>July 6 - August 15, 2015</strong><h1>
 								</div>
 
 								<div class="cta">
