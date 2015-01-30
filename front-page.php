@@ -18,7 +18,7 @@
 								<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>" />
 								<div class="tagline">
 									<h1>A <strong>FREE</strong>
-										summer camp from Google and Make for building, tinkering and exploring. Online and in your neighborhood!
+										summer camp from Google and Make: for building, tinkering and exploring. Online and in your neighborhood!
 									</h1>
 									<h1><strong>July 6 - August 15, 2015</strong><h1>
 								</div>
@@ -36,7 +36,7 @@
 							<div class="span6">
 								<div class="tagline">
 									<h1>A <strong>FREE</strong>
-										summer camp from Google and Make for building, tinkering and exploring. Online and in your neighborhood!
+										summer camp from Google and Make: for building, tinkering and exploring. Online and in your neighborhood!
 									</h1>
 									<h1><strong>July 6 - August 15, 2015</strong><h1>
 								</div>
