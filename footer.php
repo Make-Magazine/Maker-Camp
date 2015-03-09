@@ -75,8 +75,7 @@
 				<div class="row-fluid">
 					<div class="span6">
 						<ul>
-							<li><a href="http://makezine.com/how-to-get-help/">Help</a></li>
-							<li><a href="http://makermedia.com/contact-us/" target="_blank">Contact</a></li>
+							<li><a href="https://help.makercamp.com/hc/en-us">Help</a></li>
 							<li><a href="https://www.pubservice.com/MK/subscribe.aspx?PC=MK&amp;PK=M3AMZF">Subscribe</a></li>
 							<li><a href="http://makermedia.com/work-with-us/advertising/" target="_blank">Advertise</a></li>
 							<li><a href="http://makermedia.com/privacy/" target="_blank">Privacy</a></li>
@@ -85,7 +84,6 @@
 					<div class="span6">
 						<ul>
 							<li><a href="http://makermedia.com" target="_blank">About Us</a></li>
-							<li><a href="http://makezine.com/faq/" target="_blank">FAQ</a></li>
 							<li><a href="http://makezine.com/forums/" target="_blank">Forums</a></li>
 							<li><a href="http://makezine.com/contribute/" target="_blank">Contribute to MAKE</a></li>
 						</ul>
