@@ -75,7 +75,7 @@
 				<div class="row-fluid">
 					<div class="span6">
 						<ul>
-							<li><a href="https://help.makercamp.com/hc/en-us">Help</a></li>
+							<li><a href="https://help.makercamp.com/hc/en-us" target="_blank">Help</a></li>
 							<li><a href="https://www.pubservice.com/MK/subscribe.aspx?PC=MK&amp;PK=M3AMZF">Subscribe</a></li>
 							<li><a href="http://makermedia.com/work-with-us/advertising/" target="_blank">Advertise</a></li>
 							<li><a href="http://makermedia.com/privacy/" target="_blank">Privacy</a></li>
