@@ -7,14 +7,16 @@
     border-top: 3px solid #DBDBDB;
     background-image: url('../img/header_bg.jpg');
     p {
-        font-size: 14px !important;
-        line-height: 19px !important;
+        font-size: 18px !important;
+        line-height: 24px !important;
         margin-bottom: 5px;
     }
         h1, h2, h3, h4, h5, h6 {
             color:#333 !important;
         }
     label {
+        font-size:18px;
+        line-height:24px;
         display: block;
         margin-bottom: 0;
         margin-top:0;
@@ -23,12 +25,12 @@
         font-weight:bold;
     }
     .about-us {
-        width: 86px;
+        width: 425px !important;
         float:left;
         ul {
             margin-top:0px;
             li {
-                line-height: 20px;
+                line-height: 24px;
                 a {
                     margin-left: -2px;
                 }
@@ -52,7 +54,7 @@
             color:#fff;
             font-weight:400;
             font-size:18px;
-            line-height:26px;
+            line-height:24px;
             border-radius: 0;
             background-image: none;
             height:30px;
@@ -65,7 +67,8 @@
         list-style-type: disc !important;
         color:#000 !important;
         li {
-            font-size:14px !important;
+            font-size:18px !important;
+            line-height: 24px;
             display: list-item;
              color:#000 !important;
         }
@@ -76,7 +79,8 @@
     h5 {
         margin-bottom:0px !important;
         font-family: "proxima-nova", sans-serif;
-        font-size: 16px;
+        font-size: 20px;
+        margin-bottom:5px !important;
         font-weight: bold;
     }
     .clearfix {
@@ -117,6 +121,16 @@
             margin-top: -35px;
         }
     }
+    .about-column-01 {
+        width: 210px;
+        float: left;
+        margin-left: 0;
+    }
+    .about-column-02 {
+        width: 210px;
+        float: left;
+        margin-left: 0;
+    }
     .container {
         margin: 0 auto;
         text-align: left;
@@ -151,10 +165,15 @@
 .new-footer input[type="radio"], .new-footer input[type="checkbox"] {
     margin: 0;
 }
-.new-footer .trending, .new-footer .newsletter, .new-footer .about-us, .new-footer .subscribe {
-    width:220px;
+.new-footer .newsletter, .new-footer .about-us, .new-footer .subscribe {
+    width:385px;
     float:left;
-    border-top:1px solid #ccc;
+    text-align:left;
+    padding-top:10px;
+}
+.new-footer .trending {
+    width:300px;
+    float:left;
     text-align:left;
     padding-top:10px;
 }

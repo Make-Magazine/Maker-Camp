@@ -6539,8 +6539,8 @@ a.button.small-button {
   background-image: url('../img/header_bg.jpg');
 }
 .new-footer p {
-  font-size: 14px !important;
-  line-height: 19px !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
   margin-bottom: 5px;
 }
 .new-footer h1,
@@ -6552,6 +6552,8 @@ a.button.small-button {
   color: #333 !important;
 }
 .new-footer label {
+  font-size: 18px;
+  line-height: 24px;
   display: block;
   margin-bottom: 0;
   margin-top: 0;
@@ -6560,14 +6562,14 @@ a.button.small-button {
   font-weight: bold;
 }
 .new-footer .about-us {
-  width: 86px;
+  width: 425px !important;
   float: left;
 }
 .new-footer .about-us ul {
   margin-top: 0px;
 }
 .new-footer .about-us ul li {
-  line-height: 20px;
+  line-height: 24px;
 }
 .new-footer .about-us ul li a {
   margin-left: -2px;
@@ -6588,7 +6590,7 @@ a.button.small-button {
   color: #fff;
   font-weight: 400;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 24px;
   border-radius: 0;
   background-image: none;
   height: 30px;
@@ -6601,7 +6603,8 @@ a.button.small-button {
   color: #000 !important;
 }
 .new-footer ul li {
-  font-size: 14px !important;
+  font-size: 18px !important;
+  line-height: 24px;
   display: list-item;
   color: #000 !important;
 }
@@ -6611,7 +6614,8 @@ a.button.small-button {
 .new-footer h5 {
   margin-bottom: 0px !important;
   font-family: "proxima-nova", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
+  margin-bottom: 5px !important;
   font-weight: bold;
 }
 .new-footer .clearfix {
@@ -6650,6 +6654,16 @@ a.button.small-button {
   border: 1px solid #ccc;
   margin-top: -35px;
 }
+.new-footer .about-column-01 {
+  width: 210px;
+  float: left;
+  margin-left: 0;
+}
+.new-footer .about-column-02 {
+  width: 210px;
+  float: left;
+  margin-left: 0;
+}
 .new-footer .container {
   margin: 0 auto;
   text-align: left;
@@ -6682,13 +6696,17 @@ a.button.small-button {
 .new-footer input[type="checkbox"] {
   margin: 0;
 }
-.new-footer .trending,
 .new-footer .newsletter,
 .new-footer .about-us,
 .new-footer .subscribe {
-  width: 220px;
+  width: 385px;
   float: left;
-  border-top: 1px solid #ccc;
+  text-align: left;
+  padding-top: 10px;
+}
+.new-footer .trending {
+  width: 300px;
+  float: left;
   text-align: left;
   padding-top: 10px;
 }
@@ -7646,16 +7664,6 @@ body.makercamp .ytube_intro {
   body.makercamp .new-footer .main,
   body.makercamp.admin-bar .new-footer .main {
     width: 1000px !important;
-  }
-  body.makercamp .new-footer .trending,
-  body.makercamp.admin-bar .new-footer .trending,
-  body.makercamp .new-footer .newsletter,
-  body.makercamp.admin-bar .new-footer .newsletter,
-  body.makercamp .new-footer .about-us,
-  body.makercamp.admin-bar .new-footer .about-us,
-  body.makercamp .new-footer .subscribe,
-  body.makercamp.admin-bar .new-footer .subscribe {
-    width: 270px !important;
   }
 }
 @media (min-width: 979px) and (max-width: 1200px) {
