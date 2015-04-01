@@ -32,35 +32,21 @@
 		</div>
 		<div class="span5 newsletter visible-desktop">
 			<h5>Get our Newsletters</h5>
-			<form action="http://makermedia.createsend.com/t/r/s/jrsydu/" method="post" id="subForm">
-				<fieldset>
-					<div class="control-group">
-						<label class="control-label" for="optionsCheckbox">Sign up to receive exclusive content and offers.</label>
-						<div class="controls">
-							<label for="MAKENewsletter">
-							<input type="checkbox" name="cm-ol-jjuylk" id="MAKENewsletter" /> Make: News
-							</label>
-							<label for="MarketWireNewsletter">
-							<input type="checkbox" name="cm-ol-jrsydu" id="MAKEMarketWirenewsletter" /> Maker Pro 
-							</label>
-							<label for="MakerFaireNewsletter">
-							<input type="checkbox" name="cm-ol-jjuruj" id="MakerFaireNewsletter" /> Maker Faire 
-							</label>
-							<label for="MakerShed-MasterList">
-							<input type="checkbox" name="cm-ol-tyvyh" id="MakerShed-MasterList" /> Maker Shed
-							</label>
-							<!-- END controls -->
-						</div>
-						<!-- control-group -->
-					</div>
-					<div class="input-append control-group email-area">
-						<input class="span2" id="appendedInputButton" name="cm-jrsydu-jrsydu" type="text" placeholder="Enter your email">
-						<button type="submit" class="btn" value="Subscribe">JOIN</button>
-						<!-- control-group email-area -->
-					</div>
-				</fieldset>
+			<form action="http://whatcounts.com/bin/listctrl" method="POST">
+				<input type="hidden" name="slid" value="6B5869DC547D3D4658DF84D7F99DCB43" />
+				<label class="control-label" for="optionsCheckbox">Sign up to receive exclusive content and offers.</label>
+				<br/>
+				<input type="hidden" name="cmd" value="subscribe" />
+				<input type="hidden" name="custom_host" value="makercamp.com" />
+				<input type="hidden" name="custom_incentive" value="none" />
+				<input type="hidden" name="custom_source" value="footer" />
+				<input type="hidden" name="custom_url" value="<?php echo $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>" />
+				<input type="hidden" name="errors_to" value="" />
+				<div class="input-append control-group email-area">
+					<input class="span2" id="appendedInputButton" name="email" type="text" placeholder="Enter your email">
+					<button type="submit" class="btn" name="email" value="Subscribe">JOIN</button>
+				</div>
 			</form>
-			<!-- END span newsletter -->
 		</div>
 		<div class="span5 about-us">
 			<h5>About Maker Media</h5>
