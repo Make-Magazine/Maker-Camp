@@ -6931,15 +6931,8 @@ body.home .white-bg.home-ground {
   background-image: url(../img/hills-large-02.png);
   background-repeat: no-repeat;
   background-position: center bottom;
-  min-height: 494px;
   border-bottom: 20px solid #4cb679;
   padding-top: 40 !important;
-}
-body.home .white-bg.home-ground .sponsors-area {
-  margin-top: 76px;
-}
-body.home .white-bg.home-ground .sponsors-area .shed-promo {
-  margin-top: 62px;
 }
 body.home .white-bg.home-ground .sponsors-area h1 {
   font-size: 28px;
