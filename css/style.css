@@ -6928,7 +6928,7 @@ body.home .white-bg.intro .welcome-area {
 }
 body.home .white-bg.home-ground {
   background-color: #b8edfc !important;
-  background-image: url(../img/home-hills-07.png);
+  background-image: url(../img/hills-large-02.png);
   background-repeat: no-repeat;
   background-position: center bottom;
   min-height: 494px;
@@ -7029,7 +7029,7 @@ body.home > .container-fluid {
 }
 .cta {
   margin: 25px auto;
-  text-align: right;
+  text-align: left;
 }
 .cta a.sign-btn {
   background-color: #e1272e;
