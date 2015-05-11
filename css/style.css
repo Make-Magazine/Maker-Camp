@@ -7108,9 +7108,6 @@ body.makercamp .mc-description h4 {
   position: relative;
   top: 10px;
 }
-body.makercamp .cta {
-  text-align: center;
-}
 body.makercamp .cta a.button {
   margin: 36px auto 0 auto;
   color: #fff !important;
@@ -9661,10 +9658,4 @@ ul.schedule-list li em {
 }
 body.makercamp .white-bg ul li {
   margin-bottom: 5px !important;
-}
-body.home .white-bg.home-ground .sponsors-area {
-  margin-top: 95px !important;
-}
-body.home .white-bg.home-ground .sponsors-area .shed-promo {
-  margin-top: 51px !important;
 }
