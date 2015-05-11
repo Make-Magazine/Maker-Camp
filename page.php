@@ -16,7 +16,7 @@ get_header(); ?>
             <div class="span12">
               <img  class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
               <div class="tagline">
-                <h1>A <strong>FREE</strong> summer camp for building, tinkering and exploring. Online and in your neighborhood!</h1>
+                <h1>A <strong>FREE</strong> summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood! (2015 Camp Hosts coming soon!)</h1>
                  <!-- <h1><strong>July 6 - August 15, 2015</strong><h1> -->
               </div>
             </div>
@@ -27,7 +27,7 @@ get_header(); ?>
             </div>
             <div class="span6" style="">
               <div class="tagline">
-                <h1>A <strong>FREE</strong> summer camp for building, tinkering and exploring. Online and in your neighborhood!</h1>
+                <h1>A <strong>FREE</strong> summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood! (2015 Camp Hosts coming soon!)</h1>
                 <!-- <h1><strong>July 6 - August 15, 2015</strong><h1> -->
               </div>
             </div>
