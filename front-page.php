@@ -17,9 +17,7 @@
 							<div class="span12">
 								<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>" />
 								<div class="tagline">
-									<h1>A <strong>FREE</strong>
-										summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood! (2015 Camp Hosts coming&nbsp;soon!)
-									</h1>
+									<h1>A <strong>FREE</strong> summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood! (2015 Camp Hosts coming&nbsp;soon!)</h1>
 									<h1><strong>July 6th–August 14th, 2015</strong><h1>
 								</div>
 								<div class="cta">

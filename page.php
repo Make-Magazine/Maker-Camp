@@ -14,7 +14,7 @@ get_header(); ?>
         <div class="row-fluid" >
           <div class="hidden-desktop text-center">
             <div class="span12">
-              <img  class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
+              <img  class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
               <div class="tagline">
                 <h1>A <strong>FREE</strong> summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood! (2015 Camp Hosts coming soon!)</h1>
                  <!-- <h1><strong>July 6 - August 15, 2015</strong><h1> -->
@@ -23,7 +23,7 @@ get_header(); ?>
           </div>
           <div class="visible-desktop">
             <div class="span6">
-              <img class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/mc-logo-2014.gif' ); ?>" />
+              <img class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
             </div>
             <div class="span6" style="">
               <div class="tagline">
