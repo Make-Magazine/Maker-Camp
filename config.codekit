@@ -2237,6 +2237,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/maker-camp-kid-super-hero.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 36154,
+		"inputAbbreviatedPath": "\/img\/maker-camp-kid-super-hero.jpg",
+		"outputAbbreviatedPath": "\/img\/maker-camp-kid-super-hero.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/maker-camp-map.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

@@ -142,7 +142,7 @@
 									</div>
 								</div>
 								<div class="col-sm-6 padright padleft text-center">
-									<img src="/wp-content/themes/Maker-Camp/img/Kids_1.png" class="img-circle padbottom" />
+									<img src="/wp-content/themes/Maker-Camp/img/maker-camp-kid-super-hero.jpg" class="img-circle padbottom" />
 									<h4 class="padtop text-light-blue">Participate online from home</h4>
 									<p class="padtop padbottom">Join us at Makercamp.com to explore a new project every day. Videos give you an overview about the project. We give you links to projects you can work out at home.</p>
 									<div class="row">	
