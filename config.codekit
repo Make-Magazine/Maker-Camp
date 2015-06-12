@@ -1324,6 +1324,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/coming-soon-temporary-map-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 144768,
+		"inputAbbreviatedPath": "\/img\/coming-soon-temporary-map-2.jpg",
+		"outputAbbreviatedPath": "\/img\/coming-soon-temporary-map-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/coming-soon-temporary-map.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 168765,
+		"inputAbbreviatedPath": "\/img\/coming-soon-temporary-map.jpg",
+		"outputAbbreviatedPath": "\/img\/coming-soon-temporary-map.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/comment-arrow-blank.png": {
 		"fileType": 32768,
 		"ignore": 0,

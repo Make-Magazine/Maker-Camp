@@ -8,61 +8,52 @@
  *
  */
 get_header(); ?>
-<div class="makercamp-new page-404">
-		<div class="main-header">
-			<div class="container">
-				<div class="row" >
-					<div class="hidden-lg hidden-md text-center">
-						<div class="col-md-12">
-							<img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
-							<div class="tagline" style="margin-top:25px;">
-								<h1>A <strong>FREE</strong> summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood! (2015 Camp Hosts coming&nbsp;soon!)</h1>
-								<h1><strong>July 6th–August 14th, 2015</strong><h1>
-							</div>
+          <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">Basecamp</a> 
+        </div> 
+        <!-- Collect the nav links, forms, and other content for toggling --> 
+        <div class="pull-right collapse navbar-collapse navbar-ex1-collapse"> 
+          <ul class="nav navbar-nav"> 
+            <li><a href="/sign-up-for-camp">Sign Up</a></li> 
+            <li><a href="/map">Find a Camp</a></li>
+            <li><a href="/affiliate-program">Host a Camp</a></li>
+            <li><a href="https://plus.google.com/communities/107377046073638428310" target="_blank">Community</a></li>
+            <li><a href="https://help.makercamp.com/hc/en-us" target="_blank">Help</a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>    
+</header>
+<div class="makercamp-new ">
+    <div class="main-header">
+        <div class="container">
+          <div class="row header-inner">
+              <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3">
+                  <img class="img-responsive" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
+              </div>
+              <div class="col-xs-12 col-sm-6 col-sm-offset-2">
+                <div class="text-center">
+                  <h1>July 6th-August 14th, 2015</h1>
+                </div>
 
-						</div>
-					</div>
-					<div class="visible-lg visible-md">
-						<div class="col-md-6">
-							<img style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
-						</div>
-						<div class="col-md-6" style="">
-							<div class="tagline" style="margin-top:25px;">
+                <div class="padbottom">
+                  <h4>A FREE summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood!</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  <section class="white-bg padbottom">
+    <div class="container padbottom">
+      <div class="row">
+        <div class="col-sm-12 padbottom text-center">
 
-							</div>
+			<h1 class="404">Oh Nooo! A 404 Page!</h1>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	<section class="white-bg">
-		<div class="container ">
-			<div class="row">
-				<div class="col-md-12">
+            <p>Looks like we can't find the page that you are looking for. Sorry about that.</p>
 
-					<h1 class="404">Oh Nooo! A 404 Page!</h1>
-
-                                <p>Looks like we can't find the page that you are looking for. Sorry about that.</p>
-
-                                <!-- <p>Let's see if we can make it up to you. First off, let's try searching for the content. You can do that in the search form below.</p>
-
-                                <form action="<?php echo home_url(); ?>" class="search-make open">
-                                    <div class="input-append">
-                                        <input type="text" class="search-field" name="s">
-                                        <button type="submit" class="btn btn-primary" value="Search"><i class="icon icon-search icon-white"></i> Search</button>
-                                    </div>
-                                </form>
-
-                                <p>If that doesn't work, why not try browsing from popular categories?</p>
-
-                                <ul class="columns">
-                                    <?php wp_list_categories( 'title_li=' ); ?>
-                                </ul> -->
-
-				</div>
-			</div>
-		</div>
-	</section>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 <?php get_footer(); ?>
