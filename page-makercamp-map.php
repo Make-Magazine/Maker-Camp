@@ -1,7 +1,6 @@
 <?php
 /**
  * Template Name: Maker Camp Map
- * Nothing fancy but a template holder... Add all content via the post editor.
  *
  * @package    makeblog
  * @license    http://opensource.org/licenses/gpl-license.php  GNU Public License
@@ -11,6 +10,21 @@
 ?>
 
 <?php get_header(); ?>
+          <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">Basecamp</a> 
+        </div> 
+        <!-- Collect the nav links, forms, and other content for toggling --> 
+        <div class="pull-right collapse navbar-collapse navbar-ex1-collapse"> 
+          <ul class="nav navbar-nav">
+            <li><a href="/sign-up-for-camp">Sign Up</a></li> 
+            <li><a class="active-hover" href="/map">Find a Camp</a></li>
+            <li><a href="/affiliate-program">Host a Camp</a></li>
+            <li><a href="https://plus.google.com/communities/107377046073638428310" target="_blank">Community</a></li>
+            <li><a href="https://help.makercamp.com/hc/en-us" target="_blank">Help</a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>    
+</header>
 	<?php
 		$get_addresses = get_post_meta( get_the_ID(), 'makercamp-maps-data', false );
 		$addresses = json_decode( str_replace( '&quot;', '"', $get_addresses[0] ), true );
@@ -22,46 +36,59 @@
 	</script>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="makercamp-new ">
-		<div class="main-header">
-			<div class="container">
-				<div class="row-fluid" >
-					<div class="hidden-desktop text-center">
-						<div class="span12">
-							<img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
-							<div class="tagline" style="margin-top:25px;">
-								<h1>A <strong>FREE</strong> summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood! (2015 Camp Hosts coming&nbsp;soon!)</h1>
-								<h1><strong>July 6th–August 14th, 2015</strong><h1>
-							</div>
-						</div>
-					</div>
-					<div class="visible-desktop">
-						<div class="span6">
-							<img style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
-						</div>
-						<div class="span6" style="">
-							<div class="tagline" style="margin-top:25px;">
-								<h1>A <strong>FREE</strong> summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood! (2015 Camp Hosts coming&nbsp;soon!)</h1>
-								<h1><strong>July 6th–August 14th, 2015</strong><h1>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="main-header">
+        <div class="container">
+        	<div class="row header-inner">
+	            <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3">
+	                <img class="img-responsive" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
+	            </div>
+				<div class="col-xs-12 col-sm-6 col-sm-offset-2">
+	                <div class="text-center padtop padbottom">
+	                  <h1 class="padtop">2015 Campsites</h1>
+	                </div>
+	            </div>
+	        </div>
+          </div>
+        </div>
+    </div>
 	<section class="white-bg map-page">
 		<div class="container ">
+			<div class="row">
+				<div class="col-md-12 padtop">
 
-			<div class="row-fluid">
+			        <div class="google-maps">
+			          <iframe src="https://www.google.com/maps/d/embed?mid=znSdL4uF4CiE.k7sHDldZCKys"></iframe>
+			        </div>
 
-				<div class="span12">
-
-							<?php the_content(); ?>
-
+					<div class="row padtop">
+						<div class="col-sm-6 padbottom">
+							<h3>Maker Camp 2015 will launch July 6th</h3> 
+							<h4 class="text-red padbottom">To find out if a Maker Camp affiliate site near you is currently running making programs or will rejoin in July, check their website, or send an email inquiry.</h4>
+							
+							<p class="padbottom">Maker Camp is an online summer camp that happens everywhere around the world. But you can meet your neighbors who are taking part in Maker Camp too! Many libraries, makerspaces, and community centers are hosting Maker Camps for the kids in their communities!</p>
+							<p class="padbottom">Find out if there’s one close to you and join the fun.</p>
+							<ul class="stars">
+								<li>Search by map pins or on the list below.</li>
+								<li>Visit the affiliate's website to check the hours they’re hosting Maker Camp.</li>
+								<li>Bring your maker friends, too!</li>
+							</ul>
+						</div>
+						<div class="col-sm-6 padbottom">
+							<h3>Add a Maker Camp near you</h3>
+							<p class="padbottom">If you can't find a nearby site in the list or the map, talk to your local library, makerspace, Boys &amp; Girls Club, or community center about <a href="/affiliate-program">hosting Maker Camp</a> for the kids in your community.</p>
+							<p class="padbottom">Maker Camp Affiliate Sites often get a package of materials for making and for promoting the camp.</p>
+							<p class="padbottom">Whether or not you are able to find an organization to host Maker Camp, you can still be a part of Maker Camp no matter where you are!</p>
+						</div>
+					</div>
+					<div class="row padtop">
+						<div class="col-xs-12 padbottom">
+							<h3>Find a Camp</h3>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="span12">
+				<div class="col-md-12">
 					<table class="table table-striped map-list">
 						<thead class="map-list-header">
 							<tr>

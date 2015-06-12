@@ -65,12 +65,12 @@
 
 		// Load the project photo
 		if ( ! empty( $img ) ) {
-			$output .= '<div class="span3 project-photo"><img src="' . wpcom_vip_get_resized_remote_image_url( esc_url( $img ), 270, 174 ) . '" /></div>';
+			$output .= '<div class="col-sm-3 project-photo"><img src="' . wpcom_vip_get_resized_remote_image_url( esc_url( $img ), 270, 174 ) . '" /></div>';
 		} else {
-			$output .= '<div class="span3 project-photo"><img src="' . get_stylesheet_directory_uri() . '/img/makercamp/schedule-placeholder.png" /></div>';
+			$output .= '<div class="col-sm-3 project-photo"><img src="' . get_stylesheet_directory_uri() . '/img/makercamp/schedule-placeholder.png" /></div>';
 		}
 
-		$output .= '<div class="span6 project-body">';
+		$output .= '<div class="col-sm-6 project-body">';
 
 		// Load the project title
 		if ( ! empty( $title ) )
@@ -121,7 +121,7 @@
 		$output .= '</div>';
 
 		// Start the right sidebar
-		$output .= '<div class="span3 project-link">';
+		$output .= '<div class="col-sm-3 project-link">';
 
 		// Let's get the links, and if there isn't one, setup the default.
 		$link  = ( ! empty( $link ) ) ? esc_url( $link ) : 'http://google.com/+make';

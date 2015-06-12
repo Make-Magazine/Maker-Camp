@@ -25,6 +25,12 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
+		<!-- localhost -->
+		<!--script type="text/javascript" src="https://use.typekit.com/fzm8sgx.js"></script-->
+		<!-- staging.makercamp.com -->
+		<script src="//use.typekit.net/zaa4pqy.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+
 		<script>
 			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -55,30 +61,13 @@
 	</head>
 	<body <?php body_class( 'makercamp' ); ?>>
 		<header>
-			<div class="navbar main-nav navbar-fixed-top">
-				<div class="navbar-inner">
-					<div class="container">
-						<div class="row-fluid">
-							<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</a>
-							<a href="<?php echo esc_url( home_url() ); ?>" class="brand visible-phone visible-tablet">Maker Camp</a>
-							<div class="nav-collapse in collapse">
-								<?php
-									// All Navigational items are controlled in Appearance > Menus : Maker Camp Nav
-									wp_nav_menu( array(
-										'theme_location' => 'mc-header-menu',
-										'container' => '',
-										'menu_class' => 'nav primary-nav nav-inline',
-										'walker' => new Bootstrap_Walker_Nav_Menu(),
-									) );
-								?>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-
+			<nav class="navbar navbar-default" role="navigation"> 
+				<!-- Brand and toggle get grouped for better mobile display --> 
+				<div class="container">
+					  <div class="navbar-header"> 
+					    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> 
+					      <span class="sr-only">Toggle navigation</span> 
+					      <span class="icon-bar"></span> 
+					      <span class="icon-bar"></span> 
+					      <span class="icon-bar"></span> 
+					    </button> 

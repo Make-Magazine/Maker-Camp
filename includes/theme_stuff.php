@@ -53,7 +53,11 @@ function make_load_resources() {
 	// Load our common scripts first. These should not require jQuery
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'make-bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), false, true );
-	wp_enqueue_script( 'maker-camp-js', get_stylesheet_directory_uri() . '/js/common.js', array('jquery'), '1.0', true );
+	//wp_enqueue_script( 'maker-camp-js', get_stylesheet_directory_uri() . '/js/common.js', array('jquery'), '1.0', true );
+
+	// Load our common scripts first. These should not require jQuery
+	//wp_enqueue_script( 'make-typekit', 'https://use.typekit.com/fzm8sgx.js', array() );
+	//wp_enqueue_script( 'make-common', get_stylesheet_directory_uri() . '/js/common.js', array( 'make-typekit' ) );
 
 	// display our map sort plugin for Maker Camp
 	if ( is_page( 20 ) ) // TODO: Update page id to match new page created
@@ -247,10 +251,10 @@ function make_generate_description() {
  * Adds footer copyright information
  */
 function make_copyright_footer() { ?>
-	<div class="row">
-		<div class="span12 footer_copyright text-center">
-			<p><a href="http://makezine.com/">Make:</a> and <a href="http://makerfaire.com/">Maker Faire</a> are registered trademarks of <a href="http://makermedia.com/">Maker Media, Inc.</a></p>
-			<p>Copyright &copy; 2004-<?php echo date("Y") ?> Maker Media, Inc.  All rights reserved</p>
+	<div class="col-xs-12 footer_copyright">
+		<div class="text-center">
+			<p class="muted"><small>Make: and Maker Faire are registered trademarks of Maker Media, Inc.</small></p>
+			<p class="muted"><small>Copyright &copy; 2004-<?php echo date("Y") ?> Maker Media, Inc.  All rights reserved</small></p>
 		</div>
 	</div>
 <?php }

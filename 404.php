@@ -11,9 +11,9 @@ get_header(); ?>
 <div class="makercamp-new page-404">
 		<div class="main-header">
 			<div class="container">
-				<div class="row-fluid" >
-					<div class="hidden-desktop text-center">
-						<div class="span12">
+				<div class="row" >
+					<div class="hidden-lg hidden-md text-center">
+						<div class="col-md-12">
 							<img  style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
 							<div class="tagline" style="margin-top:25px;">
 								<h1>A <strong>FREE</strong> summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood! (2015 Camp Hosts coming&nbsp;soon!)</h1>
@@ -22,11 +22,11 @@ get_header(); ?>
 
 						</div>
 					</div>
-					<div class="visible-desktop">
-						<div class="span6">
+					<div class="visible-lg visible-md">
+						<div class="col-md-6">
 							<img style="margin:30px auto" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
 						</div>
-						<div class="span6" style="">
+						<div class="col-md-6" style="">
 							<div class="tagline" style="margin-top:25px;">
 
 							</div>
@@ -38,8 +38,8 @@ get_header(); ?>
 		</div>
 	<section class="white-bg">
 		<div class="container ">
-			<div class="row-fluid">
-				<div class="span12">
+			<div class="row">
+				<div class="col-md-12">
 
 					<h1 class="404">Oh Nooo! A 404 Page!</h1>
 

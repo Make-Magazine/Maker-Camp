@@ -1,486 +1,484 @@
-body.makercamp {
-	// apply a natural box layout model to all elements. sadly this breaks everything when it should fix...
-	//* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+// body.makercamp {
+// 	// apply a natural box layout model to all elements. sadly this breaks everything when it should fix...
+// 	//* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-	background:url(../img/sky.png) 0 20px repeat;
-	text-rendering: optimizeLegibility;
-	padding-bottom: 0 !important;
-	padding-top: 0px !important;
-	margin: 0;
-	font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	line-height: 20px;
-	color: #fff;
-	h1 {
-		font-size:36px;
-		color:#e1272e;
-	}
-	h2, h3, h4, h5, h6 {
-		color:#333;
-		margin:auto;
-	}
-	h3 {
-		line-height:40px;
-	}
-	p {
-		font-size: 1em;
-		line-height: 1.8em;
-	}
-	.small {
-		font-size:14px !important;
-		color:#666 !important;
-		line-height: 16px !important;
-	}
-	iframe {
-		max-width:100%;
-	}
-	.main-content {
-		a, a:visited { color:#acd3fc; }
-		a:hover, a:active { color:#acd3fc; text-decoration:underline !important; }
-	}
+// 	background:url(../img/sky.png) 0 20px repeat;
+// 	text-rendering: optimizeLegibility;
+// 	padding-bottom: 0 !important;
+// 	padding-top: 0px !important;
+// 	margin: 0;
+// 	font-size: 16px;
+// 	line-height: 20px;
+// 	color: #fff;
+// 	h1 {
+// 		font-size:36px;
+// 		color:#e1272e;
+// 	}
+// 	h2, h3, h4, h5, h6 {
+// 		color:#333;
+// 		margin:auto;
+// 	}
+// 	h3 {
+// 		line-height:40px;
+// 	}
+// 	p {
+// 		font-size: 1em;
+// 		line-height: 1.8em;
+// 	}
+// 	.small {
+// 		font-size:14px !important;
+// 		color:#666 !important;
+// 		line-height: 16px !important;
+// 	}
+// 	iframe {
+// 		max-width:100%;
+// 	}
+// 	.main-content {
+// 		a, a:visited { color:#acd3fc; }
+// 		a:hover, a:active { color:#acd3fc; text-decoration:underline !important; }
+// 	}
 
-	.search-query {
-		width:110px !important;
-	}
+// 	.search-query {
+// 		width:110px !important;
+// 	}
 
-	.mc-description {
-		font-size:48px;
-		line-height:48px;
-		h2 { font-size:48px;
-			 line-height:1em;
-		}
-		h4{ font-weight:normal;
-			font-size:25px;
-			line-height:32px;
-			position:relative;
-			top:10px;
-		}
-	}
+// 	.mc-description {
+// 		font-size:48px;
+// 		line-height:48px;
+// 		h2 { font-size:48px;
+// 			 line-height:1em;
+// 		}
+// 		h4{ font-weight:normal;
+// 			font-size:25px;
+// 			line-height:32px;
+// 			position:relative;
+// 			top:10px;
+// 		}
+// 	}
 
-	.cta {
-			a.button {
-				margin: 36px auto 0 auto;
-				color: #fff !important;
-				font-weight: bold;
-				font-size: 36px;
-				padding: 20px 10px;
-				width: 260px;
-				font-size:36px;
-				line-height:42px;
-				background-color: #e01b23;
-				border-radius: 0;
-			}
-			a.button:hover{
-				background-color:#c9181f !important;
-			}
-	}
+// 	.cta {
+// 			a.button {
+// 				margin: 36px auto 0 auto;
+// 				color: #fff !important;
+// 				font-weight: bold;
+// 				font-size: 36px;
+// 				padding: 20px 10px;
+// 				width: 260px;
+// 				font-size:36px;
+// 				line-height:42px;
+// 				background-color: #e01b23;
+// 				border-radius: 0;
+// 			}
+// 			a.button:hover{
+// 				background-color:#c9181f !important;
+// 			}
+// 	}
 
-	.waist {
-	  background-image:url(http://makezineblog.files.wordpress.com/2013/05/hills.png);
-	  background-repeat:no-repeat;
-	  background-position:bottom center;
-	  padding-bottom:30px;
-	  margin-top:40px;
-	  border:none;
-	  	.cap {
-			color:#acd3fc;
-			font-weight:bold;
-			font-size:32px;
-			margin-top:0;
-			padding-top:0;
-		  	margin-right:5px;
-		  	font-family:inherit !important;
-			}
-	  	p { margin-top:30px;
-			line-height:24px;
-		}
-		h3 {
-			margin: 5px 0 20px 0 !important;
-			font-size:19px;
-			line-height:1.3em;
-			color: #acd3fc;
-			font-weight: normal;
-				span{font-size:16px;}
-			&.last {
-				margin-bottom:0 !important;
-			}
-		}
-		.span4 h3 {
-			margin: 10px 0 0px 0 !important;
-			font-size:1.7em;
-		}
-		.blue {
-			background-color: #032042;
-			color: #acd3fc;
-			text-align: center;
-			h4 {
-				padding-bottom:12px;
-			}
-		}
-		.button {
-			border-radius:5px;
-			font-weight:400;
-			width:87%;
-		}
-	}
-	.join {
-		margin:10px 0;
-		> .span9 {
-			margin-left:0;
-		}
-		a { font-size:22px; }
-	}
+// 	.waist {
+// 	  background-image:url(http://makezineblog.files.wordpress.com/2013/05/hills.png);
+// 	  background-repeat:no-repeat;
+// 	  background-position:bottom center;
+// 	  padding-bottom:30px;
+// 	  margin-top:40px;
+// 	  border:none;
+// 	  	.cap {
+// 			color:#acd3fc;
+// 			font-weight:bold;
+// 			font-size:32px;
+// 			margin-top:0;
+// 			padding-top:0;
+// 		  	margin-right:5px;
+// 		  	font-family:inherit !important;
+// 			}
+// 	  	p { margin-top:30px;
+// 			line-height:24px;
+// 		}
+// 		h3 {
+// 			margin: 5px 0 20px 0 !important;
+// 			font-size:19px;
+// 			line-height:1.3em;
+// 			color: #acd3fc;
+// 			font-weight: normal;
+// 				span{font-size:16px;}
+// 			&.last {
+// 				margin-bottom:0 !important;
+// 			}
+// 		}
+// 		.col-sm-4 h3 {
+// 			margin: 10px 0 0px 0 !important;
+// 			font-size:1.7em;
+// 		}
+// 		.blue {
+// 			background-color: #032042;
+// 			color: #acd3fc;
+// 			text-align: center;
+// 			h4 {
+// 				padding-bottom:12px;
+// 			}
+// 		}
+// 		.button {
+// 			border-radius:5px;
+// 			font-weight:400;
+// 			width:87%;
+// 		}
+// 	}
+// 	.join {
+// 		margin:10px 0;
+// 		> .col-sm-9 {
+// 			margin-left:0;
+// 		}
+// 		a { font-size:22px; }
+// 	}
 
-	.white-bg {
-		background-color: #fff;
-	}
+// 	.white-bg {
+// 		background-color: #fff;
+// 	}
 
-	.beige-bg {
-		background-color: #f1f3f4;
-		border-top: 1px solid #d1d7db;
-		border-bottom: 1px solid #d1d7db
-	}
+// 	.beige-bg {
+// 		background-color: #f1f3f4;
+// 		border-top: 1px solid #d1d7db;
+// 		border-bottom: 1px solid #d1d7db
+// 	}
 
-	.white-bg, .beige-bg {
-		color: black;
-		padding: 40px 0;
-		h4 {
-			margin-top: 10px;
-			margin-bottom:10px;
-			font-size: 21px;
-			line-height: 30px;
-			a:link, a:visited {color:#005d8f}
-		}
-		h5 {
-		  font-size:18px;
-		  text-transform:uppercase;
-		  color:#6e6e6e;
-		  font-weight:normal;
-		  	a, a:visited {
-				color: #005d8f !important;
-				text-decoration: none;
-			}
-		}
-		h6 {
-			font-size:16px;
-			a, a:visited {
-				color: #005d8f !important;
-				text-decoration: none;
-			}
-			&:hover { text-decoration:underline; }
-		}
-		p {
-			a, a:visited {
-				color: #005d8f !important;
-				text-decoration: none;
-			}
-		}
-		ul, ol {
-			li {margin-bottom:10px;}
-		}
-		.logo {
-			h5{padding-top: 25px !important;}
-			}
-		.featured {
-			padding:30px 0 0;
-			margin-left:6px;
-			float:left;
-			width:15.8%;
-			height:auto !important;
+// 	.white-bg, .beige-bg {
+// 		color: black;
+// 		padding: 40px 0;
+// 		h4 {
+// 			margin-top: 10px;
+// 			margin-bottom:10px;
+// 			font-size: 21px;
+// 			line-height: 30px;
+// 			a:link, a:visited {color:#005d8f}
+// 		}
+// 		h5 {
+// 		  font-size:18px;
+// 		  text-transform:uppercase;
+// 		  color:#6e6e6e;
+// 		  font-weight:normal;
+// 		  	a, a:visited {
+// 				color: #005d8f !important;
+// 				text-decoration: none;
+// 			}
+// 		}
+// 		h6 {
+// 			font-size:16px;
+// 			a, a:visited {
+// 				color: #005d8f !important;
+// 				text-decoration: none;
+// 			}
+// 			&:hover { text-decoration:underline; }
+// 		}
+// 		p {
+// 			a, a:visited {
+// 				color: #005d8f !important;
+// 				text-decoration: none;
+// 			}
+// 		}
+// 		ul, ol {
+// 			li {margin-bottom:10px;}
+// 		}
+// 		.logo {
+// 			h5{padding-top: 25px !important;}
+// 			}
+// 		.featured {
+// 			padding:30px 0 0;
+// 			margin-left:6px;
+// 			float:left;
+// 			width:15.8%;
+// 			height:auto !important;
 
-			h4 {
-				color:@gray;
-				margin:10px;
-				font-size:16px;
-				/* height:40px; */
-				height:54px;
-			}
-		}
-		a.small-button {
-			font-size: 16px !important;
-		    font-weight: 600 !important;
-		    line-height: 12px !important;
-		    padding:12px 15px 8px !important;
-		    margin-right:10px;
-		}
-		.weekly-projects {
-			h5 {
-				text-transform:capitalize;
-				font-size:19px;
-			}
-			h6 {color:#005d8f;
-				a:link, a:visited:color:#005d8f;
-			}
-		}
-	}
+// 			h4 {
+// 				color:@gray;
+// 				margin:10px;
+// 				font-size:16px;
+// 				/* height:40px; */
+// 				height:54px;
+// 			}
+// 		}
+// 		a.small-button {
+// 			font-size: 16px !important;
+// 		    font-weight: 600 !important;
+// 		    line-height: 12px !important;
+// 		    padding:12px 15px 8px !important;
+// 		    margin-right:10px;
+// 		}
+// 		.weekly-projects {
+// 			h5 {
+// 				text-transform:capitalize;
+// 				font-size:19px;
+// 			}
+// 			h6 {color:#005d8f;
+// 				a:link, a:visited:color:#005d8f;
+// 			}
+// 		}
+// 	}
 
-	.windows {
-		background-color:#fff;
-		border-top:none;
-		padding:20px 0;
-		color: @grayDark;
-		height:110px;
-		.border-radius(5px);
-		border-radius:5px;
-		-webkit-border-radius:5px;
-		-moz-border-radius:5px;
-		.span2 {
-			text-align: center;
-		}
-		.nobg {
-			background-color: none;
-		}
-		#subForm {
-			input[type="text"] {
-				margin:26px 0;
-				padding:8px;
-				width:82%;
-				border: 1px solid #2e7085;
-				font-size:1.3em;
-			}
-			input[type="submit"] {
-				width:90%;
-			}
-		}
-	}
-	.window.yellow {
-		border-top:6px solid #DBC52D;
-	}
+// 	.windows {
+// 		background-color:#fff;
+// 		border-top:none;
+// 		padding:20px 0;
+// 		color: @gray;
+// 		height:110px;
+// 		border-radius:5px;
+// 		-webkit-border-radius:5px;
+// 		-moz-border-radius:5px;
+// 		.col-md-2 {
+// 			text-align: center;
+// 		}
+// 		.nobg {
+// 			background-color: none;
+// 		}
+// 		#subForm {
+// 			input[type="text"] {
+// 				margin:26px 0;
+// 				padding:8px;
+// 				width:82%;
+// 				border: 1px solid #2e7085;
+// 				font-size:1.3em;
+// 			}
+// 			input[type="submit"] {
+// 				width:90%;
+// 			}
+// 		}
+// 	}
+// 	.window.yellow {
+// 		border-top:6px solid #DBC52D;
+// 	}
 
-	.test {
-		height:20px;
-	}
+// 	.test {
+// 		height:20px;
+// 	}
 
-	.lower-area {
-		margin-top:30px;
-		margin-bottom:50px;
-		h4 {
-			font-size:24px;
-			line-height:32px;
-		}
-	}
+// 	.lower-area {
+// 		margin-top:30px;
+// 		margin-bottom:50px;
+// 		h4 {
+// 			font-size:24px;
+// 			line-height:32px;
+// 		}
+// 	}
 
-	.feature-box {
-		min-height:380px;
-		padding-left:auto;
-		padding-right:auto;
-		text-align: center;
-		p {
-			font-size: 16px;
-		    line-height: 21px;
-		    margin-top:0 !important;
-		    margin-bottom:0 !important;
-		}
-		h4 {
-			font-size:1.6em;
-			margin-top:0 !important;
-			margin-bottom:0 !important;
-				span {font-weight: normal;}
-		}
-		h5 {
-			font-size:1.4em;
-			line-height: 28px;
-			margin-bottom:0 !important;
-			margin-top:0 !important;
-			font-weight: normal;
-		}
-		img.register {margin:70px 0; }
-	}
+// 	.feature-box {
+// 		min-height:380px;
+// 		padding-left:auto;
+// 		padding-right:auto;
+// 		text-align: center;
+// 		p {
+// 			font-size: 16px;
+// 		    line-height: 21px;
+// 		    margin-top:0 !important;
+// 		    margin-bottom:0 !important;
+// 		}
+// 		h4 {
+// 			font-size:1.6em;
+// 			margin-top:0 !important;
+// 			margin-bottom:0 !important;
+// 				span {font-weight: normal;}
+// 		}
+// 		h5 {
+// 			font-size:1.4em;
+// 			line-height: 28px;
+// 			margin-bottom:0 !important;
+// 			margin-top:0 !important;
+// 			font-weight: normal;
+// 		}
+// 		img.register {margin:70px 0; }
+// 	}
 
-	.features-box-content {
-		min-height:310px;
-		margin:0 25px;
-			h4 {
-				font-weight:normal;
-				line-height:34px;
-			}
-	}
+// 	.features-box-content {
+// 		min-height:310px;
+// 		margin:0 25px;
+// 			h4 {
+// 				font-weight:normal;
+// 				line-height:34px;
+// 			}
+// 	}
 
-	.lower-gradation {
-		padding:20px 0;
-	}
+// 	.lower-gradation {
+// 		padding:20px 0;
+// 	}
 
-	// Schedule Page
-	.schedule-content {
-		background:#fff;
-		color:#5c5b5b;
-		border-top:1px solid #8ca9c8;
-		.tab-content {
-			position:relative;
-			overflow:visible;
-			.btn-danger, .btn {
-				font-size:16px;
-				padding:8px 12px;
-			}
-			.week-container {
-				.week-info {
-					h3 {
-						color:#033978;
-					}
-				}
-			}
-			.tab-pane {
-				.session-container {
-					h5.title {
-						color: #267047;
-						font-weight:bold;
-					}
-					.makers {
-						font-weight:bold;
-					}
-					.project-item {
-						margin-top: 20px;
-						.project-item-title {
-							color: #267047;
-							font-weight:bold;
-						}
-					}
+// 	// Schedule Page
+// 	.schedule-content {
+// 		background:#fff;
+// 		color:#5c5b5b;
+// 		border-top:1px solid #8ca9c8;
+// 		.tab-content {
+// 			position:relative;
+// 			overflow:visible;
+// 			.btn-danger, .btn {
+// 				font-size:16px;
+// 				padding:8px 12px;
+// 			}
+// 			.week-container {
+// 				.week-info {
+// 					h3 {
+// 						color:#033978;
+// 					}
+// 				}
+// 			}
+// 			.tab-pane {
+// 				.session-container {
+// 					h5.title {
+// 						color: #267047;
+// 						font-weight:bold;
+// 					}
+// 					.makers {
+// 						font-weight:bold;
+// 					}
+// 					.project-item {
+// 						margin-top: 20px;
+// 						.project-item-title {
+// 							color: #267047;
+// 							font-weight:bold;
+// 						}
+// 					}
 
-				}
-			}
-		}
-		#schedule {
-			border:none;
-			a {
-				background:#8ed5f6;
-				color:#033978;
-				font-weight:bold;
-				font-size:.9em;
-				&:hover, &:active {
-					border-color:#acd3fc;
-					background:#8ed5f6;
-					color:#033978;
-				}
-			}
-			.active a {
-				border-color:#acd3fc;
-				border-bottom-color:#fff;
-				background:#fff;
-				color:#000;
-				padding-bottom:9px;
-			}
-		}
-		.maker {
-			a { color:#005d8f; }
+// 				}
+// 			}
+// 		}
+// 		#schedule {
+// 			border:none;
+// 			a {
+// 				background:#8ed5f6;
+// 				color:#033978;
+// 				font-weight:bold;
+// 				font-size:.9em;
+// 				&:hover, &:active {
+// 					border-color:#acd3fc;
+// 					background:#8ed5f6;
+// 					color:#033978;
+// 				}
+// 			}
+// 			.active a {
+// 				border-color:#acd3fc;
+// 				border-bottom-color:#fff;
+// 				background:#fff;
+// 				color:#000;
+// 				padding-bottom:9px;
+// 			}
+// 		}
+// 		.maker {
+// 			a { color:#005d8f; }
 
-			h5 {
-				font-size:16px;
-				line-height:18px;
-				font-weight:bold;
-			}
+// 			h5 {
+// 				font-size:16px;
+// 				line-height:18px;
+// 				font-weight:bold;
+// 			}
 
-			.project-title {
-				font-size:1.285714286em;
-				line-height:1em;
-				color:#005d8f;
-			}
-			.date, .mentor {
-				font-size:1.142857143em;
-				line-height:1em;
-				font-weight:normal;
-				color:#252525;
-				margin:5px 0 !important;
-				display:inline-block;
-			}
-		}
-		.maker.row, .tab-navigation.row {margin-left:0px;}
-	}
+// 			.project-title {
+// 				font-size:1.285714286em;
+// 				line-height:1em;
+// 				color:#005d8f;
+// 			}
+// 			.date, .mentor {
+// 				font-size:1.142857143em;
+// 				line-height:1em;
+// 				font-weight:normal;
+// 				color:#252525;
+// 				margin:5px 0 !important;
+// 				display:inline-block;
+// 			}
+// 		}
+// 		.maker.row, .tab-navigation.row {margin-left:0px;}
+// 	}
 
-	//SIGN UP
-	.make-sign-up {
-		min-height:620px;
-	}
+// 	//SIGN UP
+// 	.make-sign-up {
+// 		min-height:620px;
+// 	}
 
-	// FAQs
-	.faq-content {
-		margin-bottom:20px;
-		ul { margin-bottom:25px !important; }
-	}
+// 	// FAQs
+// 	.faq-content {
+// 		margin-bottom:20px;
+// 		ul { margin-bottom:25px !important; }
+// 	}
 
-	// Register Summer Program
-	.ss-form {
-		form {
-			background:#fff;
-			padding:15px 10px 10px 20px;
-			color:#6e6e6e;
-			margin:20px 20px 0 0;
-		}
-		label.ss-q-title { font-weight:bold; }
-		input, textarea { width:95%; }
-	}
-	.ss-form-entry input.button {
-		margin-top:-5px;
-		width:100%;
-		text-align:center;
-		padding:10px;
-		font-size:25px;
-		border:0;
-	}
-	//Sessions  Intro
-	.sessions-info {
-	}
+// 	// Register Summer Program
+// 	.ss-form {
+// 		form {
+// 			background:#fff;
+// 			padding:15px 10px 10px 20px;
+// 			color:#6e6e6e;
+// 			margin:20px 20px 0 0;
+// 		}
+// 		label.ss-q-title { font-weight:bold; }
+// 		input, textarea { width:95%; }
+// 	}
+// 	.ss-form-entry input.button {
+// 		margin-top:-5px;
+// 		width:100%;
+// 		text-align:center;
+// 		padding:10px;
+// 		font-size:25px;
+// 		border:0;
+// 	}
+// 	//Sessions  Intro
+// 	.sessions-info {
+// 	}
 
-	//404 Page
-	.page-404 {
-		.white-bg {
-			min-height: 620px;
-		}
-	}
+// 	//404 Page
+// 	.page-404 {
+// 		.white-bg {
+// 			min-height: 620px;
+// 		}
+// 	}
 
-	// Map
-	.map-wrapper {
-		li {
-			margin:15px 15px 25px 0 !important;
-			font-size:16px;
-			line-height:1.3em;
-		}
-	}
-	.map-title {
-		background:#011f43;
-		margin:0 !important;
-		font-size:1.637142857em;
-		font-family:sans-serif;
-		font-weight:normal;
-	}
-	h1.map-title {
-		color:#fff;
-		padding-top:15px;
-	}
-	.map-list {
-		background:#fff;
-		color:#333;
-		margin-top:20px;
-		border:1px solid #333;
-		th {
-			color:#fff;
-			border-bottom:1px solid #333;
-			cursor:pointer;
-		}
-		a { color:#005d8f !important; }
-	}
-	.map-list-header {
-		font-weight:normal;
-		background-color: #011f43 !important;
-	}
+// 	// Map
+// 	.map-wrapper {
+// 		li {
+// 			margin:15px 15px 25px 0 !important;
+// 			font-size:16px;
+// 			line-height:1.3em;
+// 		}
+// 	}
+// 	.map-title {
+// 		background:#011f43;
+// 		margin:0 !important;
+// 		font-size:1.637142857em;
+// 		font-family:sans-serif;
+// 		font-weight:normal;
+// 	}
+// 	h1.map-title {
+// 		color:#fff;
+// 		padding-top:15px;
+// 	}
+// 	.map-list {
+// 		background:#fff;
+// 		color:#333;
+// 		margin-top:20px;
+// 		border:1px solid #333;
+// 		th {
+// 			color:#fff;
+// 			border-bottom:1px solid #333;
+// 			cursor:pointer;
+// 		}
+// 		a { color:#005d8f !important; }
+// 	}
+// 	.map-list-header {
+// 		font-weight:normal;
+// 		background-color: #011f43 !important;
+// 	}
 
-	// Misc styles
-	.orange { color:#f6ba65 !important; }
-	.red { color:#c7171d; }
-	.blue { color:#acd3fc; }
-	ul.stars {
-		list-style-image: url(../img/makercamp/stars.png);
-		li {
-			margin: 15px 15px 5px 0;
-			font-size: 1em;
-			line-height:1.8em;
-			}
-	}
+// 	// Misc styles
+// 	.orange { color:#f6ba65 !important; }
+// 	.red { color:#c7171d; }
+// 	.blue { color:#acd3fc; }
+// 	ul.stars {
+// 		list-style-image: url(../img/makercamp/stars.png);
+// 		li {
+// 			margin: 15px 15px 5px 0;
+// 			font-size: 1em;
+// 			line-height:1.8em;
+// 			}
+// 	}
 
-	.ss-form input, .ss-form textarea {
-		width:70%;
-	}
+// 	.ss-form input, .ss-form textarea {
+// 		width:70%;
+// 	}
 
-	.ytube_intro {
-		margin-top:30px;
-	}
-}
+// 	.ytube_intro {
+// 		margin-top:30px;
+// 	}
+// }

@@ -1,8 +1,5 @@
 <?php 
 
-// Load any VIP requirements
-require_once( WP_CONTENT_DIR . '/themes/vip/plugins/vip-init.php' );
-
 // Load our generic theme functions
 include_once( 'includes/theme_stuff.php' );
 

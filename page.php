@@ -10,49 +10,25 @@
 get_header(); ?>
 <div class="makercamp-new ">
     <div class="main-header">
-      <div class="container">
-        <div class="row-fluid" >
-          <div class="hidden-desktop text-center">
-            <div class="span12">
-              <img  class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
-              <div class="tagline">
-                <h1>A <strong>FREE</strong> summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood! (2015 Camp Hosts coming soon!)</h1>
-                 <!-- <h1><strong>July 6 - August 15, 2015</strong><h1> -->
-              </div>
+        <div class="container">
+          <div class="row padtop">
+            <div class="col-md-6">
+                <img class="img-responsive" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo.png' ); ?>" />
             </div>
-          </div>
-          <div class="visible-desktop">
-            <div class="span6">
-              <img class="logo" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-no-makey.jpg' ); ?>" />
-            </div>
-            <div class="span6" style="">
-              <div class="tagline">
-                <h1>A <strong>FREE</strong> summer camp from Make: for building, tinkering and exploring. Participate online from home or find a camp host in your neighborhood! (2015 Camp Hosts coming soon!)</h1>
-                <!-- <h1><strong>July 6 - August 15, 2015</strong><h1> -->
-              </div>
+            <div class="col-md-6">
+                <div class="text-center padtop padbottom">
+                  <h1></h1>
+                </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
-  <section class="white-bg">
-    <div class="container ">
-      <div class="row-fluid">
-        <div class="span12">
+  <section class="white-bg padbottom">
+    <div class="container padbottom">
+      <div class="row">
+        <div class="col-sm-12 padbottom">
 
-          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-            <article <?php post_class(); ?>>
-
-              <?php the_content(); ?>
-
-            </article>
-
-          <?php endwhile; else: ?>
-
-            <p><?php _e( 'Sorry, no page found.', 'makercamp' ); ?></p>
-
-          <?php endif; ?>
+          <?php the_content(); ?>
 
         </div>
       </div>
