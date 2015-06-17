@@ -125,7 +125,7 @@
 													<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 												</div>
 												<div class="col-xs-11 icon-a-tag">
-													<a class="pull-left" href="/map"><strong>Find a campsite in your neightborhood</strong></a>
+													<a class="pull-left" href="/map"><strong>Find a campsite in your neighborhood</strong></a>
 												</div>
 											</div>
 										</div>

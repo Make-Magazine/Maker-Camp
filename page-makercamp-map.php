@@ -56,13 +56,13 @@
 			<div class="row">
 				<div class="col-md-12 padtop">
 
-					<img class="img-responsive padbottom" style="width:100%;" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/coming-soon-temporary-map-2.jpg' ); ?>" />
+<!-- 					<img class="img-responsive padbottom" style="width:100%;" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/coming-soon-temporary-map-2.jpg' ); ?>" /> -->
 
-<!-- 			        <div class="google-maps">
+			        <div class="google-maps">
 			          <iframe src="https://www.google.com/maps/d/embed?mid=znSdL4uF4CiE.k7sHDldZCKys"></iframe>
-			        </div> -->
+			        </div>
 
-<!-- 					<div class="row padtop">
+					<div class="row padtop">
 						<div class="col-sm-6 padbottom">
 							<h3>Maker Camp 2015 will launch July 6th</h3> 
 							<h4 class="text-red padbottom">To find out if a Maker Camp affiliate site near you is currently running making programs or will rejoin in July, check their website, or send an email inquiry.</h4>
@@ -81,10 +81,10 @@
 							<p class="padbottom">Maker Camp Affiliate Sites often get a package of materials for making and for promoting the camp.</p>
 							<p class="padbottom">Whether or not you are able to find an organization to host Maker Camp, you can still be a part of Maker Camp no matter where you are!</p>
 						</div>
-					</div> -->
+					</div>
 				</div>
 			</div>
-<!-- 			<div class="row padtop">
+ 			<div class="row padtop">
 				<div class="col-xs-12 padbottom">
 					<h3>Find a Camp</h3>
 				</div>
@@ -119,7 +119,7 @@
 						</tbody>
 					</table>
 				</div>
-			</div> -->
+			</div>
 		</div>
 	</section>
 	<?php endwhile; endif; ?>
