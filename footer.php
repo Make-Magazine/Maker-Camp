@@ -51,7 +51,7 @@
 							<span class="sprite"></span>
 						</div>
 					</a>
-					<a class="sprite-twitter-32" href="//twitter.com/make" title="Twitter" target="_blank">
+					<a class="sprite-twitter-32" href="//twitter.com/makercamp" title="Twitter" target="_blank">
 						<div class="social-profile-cont">	
 							<span class="sprite"></span>
 						</div>
@@ -100,7 +100,7 @@
 							<span class="sprite"></span>
 						</div>
 					</a>
-					<a class="sprite-twitter-32" href="//twitter.com/make" title="Twitter" target="_blank">
+					<a class="sprite-twitter-32" href="//twitter.com/makercamp" title="Twitter" target="_blank">
 						<div class="social-profile-cont">	
 							<span class="sprite"></span>
 						</div>
